@@ -4,15 +4,18 @@
 #include <create_presets.au3>
 #include <mainFunctions.au3>
 #include <_XMLDomWrapper.au3>
-SetGameDataPath()
+
+
 ; TODO TExture path anpassen für alle rassen torso Hands an Feet. Schwarze haut bug fixen
 ;generateAAMeshesTBBPList()
 ;global $skyrimPath="c:\spiele\skyrim\Data\"
 
-global $MeshesPath = _PathFull (@ScriptDir&"\..\..\meshes")
-Global $BodySlidePath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\BodySlide.exe")
+global $MeshesPath = _PathFull (@ScriptDir&"\..\..\..\meshes")
+global $BodySlidePath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide")
+global $BodySlideSourcesPath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\sources")
+SetGameDataPath()
 ;global $MeshesPath = "S:\Mod Organizer\mods\RBS\meshes"
-DirRemove($MeshesPath,1)
+;DirRemove($MeshesPath,1)
 global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
@@ -23,17 +26,17 @@ global $windowName = "Caliente's BodySlide"
 ;global $arr_races = StringSplit("ArgonianRace,BretonRace,DarkElfRace,HighElfRace,ImperialRace,KhajiitRace,NordRace,OrcRace,RedguardRace,WoodElfRace", ",")
 global $arr_races = StringSplit("BretonRace,DarkElfRace,HighElfRace,ImperialRace,NordRace,OrcRace,RedguardRace,WoodElfRace", ",") ; only human
 ;ChangeSkeleton()
-createPresetFiles()
-cleanBodySlideDirectory()
-createList()
-
+;cleanBodySlideDirectory()
+;createList();
+;createPresetFiles()
 ;Dircopy ("SliderPresets", $bodyslidePath & "SliderPresets",1)
-
 global $pos = OpenBodySlide()
-createBodies("body","CalienteBodyAdvanced TBBP")
+;createBodies("body","CalienteBodyAdvanced TBBP")
+
 createBodies("standard","TBBP")
 createBodies("ct77","CT77")
 WinClose ("Caliente's BodySlide")
+
 
 
 ;ControlSend("Caliente", "", "[CLASS:Edit; INSTANCE:2]", "TBBP")

@@ -6,7 +6,7 @@ EndFunc
 Func createPresetFiles()
    $bodyName = "RBS" & StringFormat ("%03d", 1)
    ;Local $file = FileOpen("SliderPresets\" & $bodyName & ".xml", 2)
-   Local $file = FileOpen("SliderPresets\RBS_Presets.xml", 2)
+   Local $file = FileOpen($BodySlidePath & "\SliderPresets\RBS_Presets.xml", 2)
    FileWriteLine($file, "<SliderPresets>")
    For $i = 0 To $amountBodyTypes step 1
    $tmp =  "RBS" & StringFormat ("%03d", $i)
