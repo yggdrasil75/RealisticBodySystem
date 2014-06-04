@@ -46,10 +46,11 @@ public class RBS_File {
         }
     }
 
-    public static String[] GetArrayFromListOfGeneratedMeshes() throws IOException {
-        Path filePath = Paths.get(SkyProcStarter.path+"tool");
+    public static void GetArrayFromListOfGeneratedMeshes() throws IOException {
+        Path filePath = Paths.get(SkyProcStarter.path + "tool");
         List<String> stringList = Files.readAllLines(filePath, charset);
-        return (stringList.toArray(new String[]{}));
+        m_filelist.add(stringList.toArray(new String[]{}));
+        //return (stringList.toArray(new String[]{}));
     }
 
     public static String readFromFile(String strFile) {
