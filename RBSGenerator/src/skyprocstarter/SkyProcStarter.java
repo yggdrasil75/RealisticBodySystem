@@ -2,7 +2,6 @@ package skyprocstarter;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import javax.swing.JFrame;
@@ -20,21 +19,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import lev.Ln;
 import skyproc.ARMA;
-import skyproc.ARMO;
-import skyproc.FormID;
-import skyproc.LVLI;
-import skyproc.LeveledEntry;
 import skyproc.MajorRecord;
-import skyproc.NPC_;
 import skyproc.NiftyFunc;
-import skyproc.OTFT;
-import skyproc.SPDatabase;
 import skyproc.gui.SPProgressBarPlug;
 
-/**
- *
- * @author Your Name Here
- */
 public class SkyProcStarter implements SUM {
 
     /* The important functions to change are:
@@ -87,7 +75,6 @@ public class SkyProcStarter implements SUM {
             }
         } catch (IOException | InterruptedException e) {
         }
-
 
         save.init();
         try {
@@ -226,48 +213,7 @@ public class SkyProcStarter implements SUM {
         if (save.getBool(Settings.DISABLE_MOD_SUPPORT_ON)) {
             SPGlobal.addModToWhiteList(new ModListing("Skyrim.esm"));
         }
-
-        //SkyProcStarter.path = "s:\\skyrim\\data\\";
-        //SkyProcStarter.path = "..\\..\\";
         SPGlobal.addModToSkip(new ModListing("EMCompViljaSkyrim.esp"));
-        /*
-         SPGlobal.addModToSkip(new ModListing("Alternate Start - Live Another Life.esp"));
-         SPGlobal.addModToSkip(new ModListing("AmazingFollowerTweaks.esp"));
-         SPGlobal.addModToSkip(new ModListing("Hunting in Skyrim - No Perks.esp"));
-         SPGlobal.addModToSkip(new ModListing("PIVariety.esp"));
-         SPGlobal.addModToSkip(new ModListing("Skyrim Immersive Creatures.esp"));
-         SPGlobal.addModToSkip(new ModListing("Chesko_Frostfall.esp"));
-         SPGlobal.addModToSkip(new ModListing("SPTDiverseGuardsSkyrim.esp"));
-         SPGlobal.addModToSkip(new ModListing("Immersive Patrols Merged.esp"));
-         SPGlobal.addModToSkip(new ModListing("Dr_Bandolier.esp"));
-         SPGlobal.addModToSkip(new ModListing("Requiem.esp"));
-         SPGlobal.addModToSkip(new ModListing("Radiance.esp"));
-         SPGlobal.addModToSkip(new ModListing("Helgen Reborn.esp"));
-         SPGlobal.addModToSkip(new ModListing("Wyrmstooth.esp"));
-         SPGlobal.addModToSkip(new ModListing("JobsOfSkyrim.esp"));
-         SPGlobal.addModToSkip(new ModListing("Inconsequential NPCs.esp"));
-         SPGlobal.addModToSkip(new ModListing("Unofficial Skyrim Patch.esp"));
-         SPGlobal.addModToSkip(new ModListing("Unofficial Dawnguard Patch.esp"));
-         SPGlobal.addModToSkip(new ModListing("Unofficial Dragonborn Patch.esp"));
-         SPGlobal.addModToSkip(new ModListing("Unofficial Hearthfire Patch.esp"));
-         SPGlobal.addModToSkip(new ModListing("Cloaks.esp"));
-         SPGlobal.addModToSkip(new ModListing("Cloaks - Dawnguard.esp"));
-         SPGlobal.addModToSkip(new ModListing("SleepingDangers-SandsofTime.esp"));
-         SPGlobal.addModToSkip(new ModListing("TravellersOfSkyrim - Vanilla.esp"));
-         SPGlobal.addModToSkip(new ModListing("TravellersOfSkyrim.esm"));
-         SPGlobal.addModToSkip(new ModListing("FishingInSkyrim.esp"));
-         SPGlobal.addModToSkip(new ModListing("Bring Out Your Dead.esp"));
-         SPGlobal.addModToSkip(new ModListing("HearthFires.esm"));
-         SPGlobal.addModToSkip(new ModListing("Dragonborn.esm"));
-         SPGlobal.addModToSkip(new ModListing("Dawnguard.esm"));
-         SPGlobal.addModToSkip(new ModListing("Update.esm"));
-        
-        
-         */
-
-        //   SPGlobal.addModToSkip(new ModListing("RBS_Hair.esp"));
-        //SPGlobal.language = SPGlobal.Language.values()[save.getInt(Settings.LANGUAGE)];
-        //SPGlobal.logMain("On Start", "Language: " + SPGlobal.language);
     }
 
     // This function runs right as the program is about to close.
@@ -277,127 +223,13 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public String description() {
-
         String text = "";
         return text;
     }
-    /*
-     @Override
-     public ArrayList<ModListing> requiredMods() {
-     throw new UnsupportedOperationException("2 Not supported yet.");
-     }
-     */
 
     @Override
     public ArrayList<ModListing> requiredMods() {
         return requiredMods;
-    }
-
-    public static void cleanUnusedData() {
-        for (NPC_ n : SkyProcStarter.patch.getNPCs().getRecords()) {
-            if (!SkyProcStarter.usedDefaultOutfits.contains(SkyProcStarter.patch.getOutfits().get(n.getDefaultOutfit()))) {
-                if (SkyProcStarter.patch.getOutfits().contains(n.getDefaultOutfit())) {
-                    SkyProcStarter.usedDefaultOutfits.add(SkyProcStarter.patch.getOutfits().get(n.getDefaultOutfit()));
-                }
-            }
-
-            if (SkyProcStarter.patch.getArmors().contains(n.getSkin())) {
-                if (!SkyProcStarter.usedArmors.contains(SkyProcStarter.patch.getArmors().get(n.getSkin()))) {
-                    usedArmors.add(SkyProcStarter.patch.getArmors().get(n.getSkin()));
-                }
-            }
-        }
-
-        SkyProcStarter.patch.getOutfits().clear();
-        for (MajorRecord Outfit : SkyProcStarter.usedDefaultOutfits) {
-            SkyProcStarter.patch.addRecord(Outfit);
-        }
-
-        for (OTFT Outfit : SkyProcStarter.patch.getOutfits().getRecords()) {
-            for (FormID ID : Outfit.getInventoryList()) {
-                if (SkyProcStarter.patch.getLeveledItems().contains(ID)) {
-                    if (!SkyProcStarter.usedLeveledItems.contains(SkyProcStarter.patch.getLeveledItems().get(ID))) {
-                        SkyProcStarter.usedLeveledItems.add(SkyProcStarter.patch.getLeveledItems().get(ID));
-                    }
-
-                }
-                if (SkyProcStarter.patch.getArmors().contains(ID)) {
-                    if (!SkyProcStarter.usedArmors.contains(SkyProcStarter.patch.getArmors().get(ID))) {
-                        SkyProcStarter.usedArmors.add(SkyProcStarter.patch.getArmors().get(ID));
-                    }
-                }
-            }
-        }
-
-        for (LVLI leveledItem : SkyProcStarter.patch.getLeveledItems()) {
-            for (LeveledEntry entry : leveledItem.getEntries()) {
-                if (SkyProcStarter.patch.getArmors().contains(entry.getForm())) {
-                    if (!SkyProcStarter.usedArmors.contains(SkyProcStarter.patch.getArmors().get(entry.getForm()))) {
-                        SkyProcStarter.usedArmors.add(SkyProcStarter.patch.getArmors().get(entry.getForm()));
-                    }
-                }
-            }
-        }
-
-        SkyProcStarter.patch.getLeveledItems().clear();
-        for (MajorRecord LeveledItem : SkyProcStarter.usedLeveledItems) {
-            SkyProcStarter.patch.addRecord(LeveledItem);
-        }
-
-        SkyProcStarter.patch.getArmors().clear();
-
-        for (MajorRecord Armor : SkyProcStarter.usedArmors) {
-
-            SkyProcStarter.patch.addRecord(Armor);
-            // armors ist wohl wenigstens einmal null, wo kommt das her, steckt das in den leveled lists oder in armor?
-
-        }
-
-        for (ARMO armor : SkyProcStarter.patch.getArmors()) {
-            for (FormID ID : armor.getArmatures()) {
-                if (SkyProcStarter.patch.getArmatures().get(ID) != null) {
-                    if (!SkyProcStarter.usedArmatures.contains(SkyProcStarter.patch.getArmatures().get(ID))) {
-                        SkyProcStarter.usedArmatures.add(SkyProcStarter.patch.getArmatures().get(ID));
-                    }
-                }
-            }
-        }
-        SkyProcStarter.patch.getArmatures().clear();
-        for (MajorRecord armature : SkyProcStarter.usedArmatures) {
-            if (armature != null) {
-                SkyProcStarter.patch.addRecord(armature);
-            } else {
-                JOptionPane.showMessageDialog(null, "null" + armature.getEDID());
-            }
-        }
-        /*
-         for (NPC_ n : SkyProcStarter.patch.getNPCs()) {
-         if (n.getSkin() == null) {
-         JOptionPane.showMessageDialog(null, n.getEDID() + " ist null");
-         }
-         else {
-         if (SkyProcStarter.patch.getArmors().get(n.getSkin()) == null) {
-         if (SkyProcStarter.patch.getOutfits().get(n.getDefaultOutfit()) != null) {
-         JOptionPane.showMessageDialog(null, SkyProcStarter.patch.getOutfits().get(n.getDefaultOutfit()).getEDID());
-         }
-         n.setSkin(SkyProcStarter.merger.getArmors().get("SkinNaked").getForm());
-         SkyProcStarter.patch.addRecord(n);
-         }
-         }
-         }
-        
-         for (NPC_ n : SkyProcStarter.patch.getNPCs()) {
-         if (n.getSkin() == null) {
-         JOptionPane.showMessageDialog(null, n.getEDID() + " ist null");
-         }
-         else {
-         if (SkyProcStarter.patch.getArmors().get(n.getSkin()) == null && SkyProcStarter.merger.getArmors().get(n.getSkin()) == null) {
-                    
-         JOptionPane.showMessageDialog(null, n.getEDID() + n.getSkin() + "  hatt keine Armor");
-         }
-         }
-         }
-         */
     }
 
     @Override
@@ -418,10 +250,11 @@ public class SkyProcStarter implements SUM {
         RBS_Main rbs_main = new RBS_Main();
         RBS_Hair rbs_hair = new RBS_Hair();
         RBS_Statics rbs_statics = new RBS_Statics();
+        RBS_CleanUnusedData rbs_cleanUnusedData = new RBS_CleanUnusedData();
         long startall = System.currentTimeMillis();
         long start;
-        File f = new File("..\\..\\");
-        path = f.getCanonicalPath() + File.separator;
+
+
         SkyProcStarter.merger.getSpells().clear();
         SPProgressBarPlug.reset();
         start = System.currentTimeMillis();
@@ -523,7 +356,6 @@ public class SkyProcStarter implements SUM {
 
         rbs_leveledList.exchangeLeveledLists();
         rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
-
-        cleanUnusedData();
+        rbs_cleanUnusedData.cleanUnusedData();
     }
 }
