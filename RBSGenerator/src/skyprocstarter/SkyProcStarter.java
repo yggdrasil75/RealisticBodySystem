@@ -2,6 +2,7 @@ package skyprocstarter;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import javax.swing.JFrame;
@@ -59,7 +60,10 @@ public class SkyProcStarter implements SUM {
     public static Color settingsColor = new Color(72, 179, 58);  // Green
     public static Font settingsFont = new Font("Serif", Font.BOLD, 15);
     public static LSaveFile save = new YourSaveFile();
-    public static String path = "";
+    public static String path;
+    public static String pathCharacterVanilla;
+    public static String pathNewAnimationsSource;
+    public static String pathHKX;
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -238,6 +242,10 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
+        SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
+        SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
+        SkyProcStarter.pathNewAnimationsSource = pathCharacterVanilla + "animations" + File.separator + "RBS" + File.separator + "female" + File.separator;
+        SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -253,7 +261,6 @@ public class SkyProcStarter implements SUM {
         RBS_CleanUnusedData rbs_cleanUnusedData = new RBS_CleanUnusedData();
         long startall = System.currentTimeMillis();
         long start;
-
 
         SkyProcStarter.merger.getSpells().clear();
         SPProgressBarPlug.reset();

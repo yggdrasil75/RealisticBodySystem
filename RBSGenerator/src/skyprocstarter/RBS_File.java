@@ -36,16 +36,6 @@ public class RBS_File {
         }
     }
 
-    public static void GetFolderContents() throws IOException {
-        //unused
-        Path dir = FileSystems.getDefault().getPath(SkyProcStarter.path);
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
-            for (Path path : stream) {
-                m_filelist.add(path.getFileName());
-            }
-        }
-    }
-
     public static void GetArrayFromListOfGeneratedMeshes() throws IOException {
         Path filePath = Paths.get(SkyProcStarter.path + "tool");
         List<String> stringList = Files.readAllLines(filePath, charset);
@@ -75,37 +65,30 @@ public class RBS_File {
         }
     }
 
+    
     public static void generateHKPFile() throws Exception {
         String ID;
         String targetPathSource;
         String targetPathConverted;
         String tmpHKX;
         String targetPathRenamed;
-        String pathofHKX;
         String animationPath;
         String animationSourcePath;
-        String pathCharacter;
-
         int counter = 0;
         ArrayList<File> animationFileList;
         ArrayList<File> animationFolderList;
-
-        pathCharacter = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
-        animationSourcePath = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator + "animations" + File.separator + "RBS" + File.separator + "female" + File.separator;
-        pathofHKX = pathCharacter + "characters female" + File.separator;
-
-        animationFolderList = getFolderList(animationSourcePath);
-        cleanFiles(pathofHKX);
-        cleanFiles(pathCharacter);
+        
+        animationFolderList = getFolderList(SkyProcStarter.pathNewAnimationsSource);
+        cleanFiles(SkyProcStarter.pathHKX);
+        cleanFiles(SkyProcStarter.pathCharacterVanilla);
         for (File animationFolder : animationFolderList) {
             counter++;
             ID = RBS_Randomize.createID(counter, 2);
             animationSourcePath = animationFolder.getCanonicalPath();
-
-            targetPathSource = pathofHKX + "defaultfemale.hkx";
-            targetPathConverted = pathofHKX + "defaultfemale.xml";
-            tmpHKX = pathofHKX + "tmp.hkx";
-            targetPathRenamed = pathofHKX + "defaultfemale.h" + ID;
+            targetPathSource = SkyProcStarter.pathHKX + "defaultfemale.hkx";
+            targetPathConverted = SkyProcStarter.pathHKX + "defaultfemale.xml";
+            tmpHKX = SkyProcStarter.pathHKX + "tmp.hkx";
+            targetPathRenamed = SkyProcStarter.pathHKX + "defaultfemale.h" + ID;
 
             String command = SkyProcStarter.path + "rbs" + File.separator + "hkxcmd.exe convert \"" + targetPathSource + "\"" + " \"" + targetPathConverted + "\" -f:SAVE_TEXT_FORMAT";
             Process process = Runtime.getRuntime().exec("cmd /c " + command);
