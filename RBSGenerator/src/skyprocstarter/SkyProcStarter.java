@@ -64,6 +64,7 @@ public class SkyProcStarter implements SUM {
     public static String pathCharacterVanilla;
     public static String pathNewAnimationsSource;
     public static String pathHKX;
+    public static String pathToHKXcmd;
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -246,6 +247,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = pathCharacterVanilla + "animations" + File.separator + "RBS" + File.separator + "female" + File.separator;
         SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "rbs" + File.separator + "hkxcmd.exe";
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -257,6 +259,8 @@ public class SkyProcStarter implements SUM {
         RBS_File rbs_file = new RBS_File();
         RBS_Main rbs_main = new RBS_Main();
         RBS_Hair rbs_hair = new RBS_Hair();
+        RBS_Animation rbs_animation = new RBS_Animation();
+        
         RBS_Statics rbs_statics = new RBS_Statics();
         RBS_CleanUnusedData rbs_cleanUnusedData = new RBS_CleanUnusedData();
         long startall = System.currentTimeMillis();
@@ -268,7 +272,7 @@ public class SkyProcStarter implements SUM {
         //RBS_File.GetFolderContents();
         System.out.println(Arrays.toString(RBS_File.m_filelist.toArray()));
         if (save.getBool(Settings.DIVERSIFIED_ANIMATIONS_ON)) {
-            RBS_File.generateHKPFile();
+            RBS_Animation.generateHKPFile();
             rbs_race.createForNewAnimations();
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
