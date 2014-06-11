@@ -65,6 +65,8 @@ public class SkyProcStarter implements SUM {
     public static String pathNewAnimationsSource;
     public static String pathHKX;
     public static String pathToHKXcmd;
+    public static String pathToDefaultFemaleHKX;
+    public static String pathToDefaultFemaleXML;
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -248,6 +250,8 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathNewAnimationsSource = pathCharacterVanilla + "animations" + File.separator + "RBS" + File.separator + "female" + File.separator;
         SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "rbs" + File.separator + "hkxcmd.exe";
+        SkyProcStarter.pathToDefaultFemaleHKX = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.hkx";
+        SkyProcStarter.pathToDefaultFemaleXML = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.xml";
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
