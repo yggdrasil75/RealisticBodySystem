@@ -90,8 +90,8 @@ public class RBS_File {
     }
 
     public static ArrayList getFileList(String path, String include) {
-        File folder = new File(path);
         ArrayList filelist = new ArrayList();
+        File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             if (file.isFile() && file.getName().toLowerCase().contains(include)) {
@@ -102,8 +102,8 @@ public class RBS_File {
     }
 
     public static ArrayList getFileList(String path, String include, String exclude) {
-        File folder = new File(path);
         ArrayList filelist = new ArrayList();
+        File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             if (file.isFile() && file.getName().toLowerCase().contains(include)) {
@@ -117,20 +117,14 @@ public class RBS_File {
     }
 
     public static ArrayList getFolderList(String path) {
-        File folder = new File(path);
-
         ArrayList filelist = new ArrayList();
+        File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
-
         for (File file : listOfFiles) {
-
             if (file.isDirectory()) {
                 filelist.add(file);
-
             }
-
         }
-
         return (filelist);
     }
 

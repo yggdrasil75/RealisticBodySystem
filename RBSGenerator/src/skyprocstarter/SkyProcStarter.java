@@ -247,7 +247,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
         SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
-        SkyProcStarter.pathNewAnimationsSource = pathCharacterVanilla + "animations" + File.separator + "RBS" + File.separator + "female" + File.separator;
+        SkyProcStarter.pathNewAnimationsSource = path + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "rbs" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToDefaultFemaleHKX = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.hkx";
