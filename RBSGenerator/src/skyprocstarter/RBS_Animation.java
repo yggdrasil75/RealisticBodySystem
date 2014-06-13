@@ -21,6 +21,14 @@ public class RBS_Animation {
     public static String DefaultFemaleXMLContent;
     public static String[][] animations;
 
+    RBS_Animation() throws Exception{
+        ReadIntoAnimations();
+        CopyDefaultFemaleHKXFromRBSFolderIfNotExists();
+        ConvertHKXToXML(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML);
+        ReadXMLintoDefaultFemaleXMLContent();
+        ExchangeEntriesInDefaultFemaleXMLContent("");
+    }
+    
     public static void ConvertHKXToXML(String source, String destination) throws Exception {
         String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:SAVE_TEXT_FORMAT";
         Process process = Runtime.getRuntime().exec("cmd /c " + command);
@@ -31,7 +39,7 @@ public class RBS_Animation {
     public static void CopyDefaultFemaleHKXFromRBSFolderIfNotExists() throws Exception {
         File f = new File(SkyProcStarter.pathToDefaultFemaleHKX + "defaultfemale.hkx");
         if (!f.exists()) {
-            SkyProcstarter.fileCopy(SPGlobal.pathToData + "rbs" + File.separator + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
+            RBS_File.fileCopy(SPGlobal.pathToData + "rbs" + File.separator + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
         }
     }
 
@@ -49,15 +57,17 @@ public class RBS_Animation {
         }
     }
     
-    public static void ExchangeEntriesInDefaultFemaleXMLContent(String OldAnimation, String NewAnimation) {
+    public static void ExchangeEntriesInDefaultFemaleXMLContent(String NewAnimation) {
         String DefaultFemaleXMLContentNew = DefaultFemaleXMLContent.replaceAll("(?i)<hkcstring>(.+?)" + OldAnimation + "</hkcstring>", "<hkcstring>" + NewAnimation + "</hkcstring>");
     }
     
+    public static void ReadXMLintoDefaultFemaleXMLContent(){
+        DefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);
+    }
+    
     public static void main() throws Exception{
-        ReadIntoAnimations();
-        CopyDefaultFemaleHKXFromRBSFolderIfNotExists();
-        ConvertHKXToXML(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML);
-        DefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);        
+
+        
     }
     public static void ExchangeAnimationsInFile(String source) {
         
