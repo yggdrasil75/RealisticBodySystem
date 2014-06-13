@@ -7,15 +7,8 @@ package skyprocstarter;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 import skyproc.SPGlobal;
-import static skyprocstarter.RBS_File.cleanFiles;
-import static skyprocstarter.RBS_File.fileCopy;
-import static skyprocstarter.RBS_File.getFileList;
-import static skyprocstarter.RBS_File.getFolderList;
-import static skyprocstarter.RBS_File.readFromFile;
-import static skyprocstarter.RBS_File.writeToFile;
 
 /**
  *
@@ -23,23 +16,10 @@ import static skyprocstarter.RBS_File.writeToFile;
  */
 public class RBS_Animation {
 
-    ArrayList<File> animationFolderList;
-    ArrayList<File> animationFileList;
-    String[][] animations;
-
-    RBS_Animation() {
-        int folder = 0;
-        int animation = 0;
-        animationFolderList = getFolderList(SkyProcStarter.pathNewAnimationsSource);
-        for (File animationFolder : animationFolderList) {
-            animationFileList = getFileList(animationFolder.toString(), ".hkx");
-            for (File animationFile : animationFileList) {
-                animations[folder][animation] = animationFolder + File.separator + animationFile ;
-                animation++;
-            }
-            folder++;
-        }
-    }
+    public static ArrayList<File> animationFolderList;
+    public static ArrayList<File> animationFileList;
+    public static String DefaultFemaleXMLContent;
+    public static String[][] animations;
 
     public static void ConvertHKXToXML(String source, String destination) throws Exception {
         String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:SAVE_TEXT_FORMAT";
@@ -48,20 +28,39 @@ public class RBS_Animation {
         Thread.sleep(200);
     }
 
-    public static void CopyDefaultFemaleHKXFromRBSFolderIfNotExists() {
+    public static void CopyDefaultFemaleHKXFromRBSFolderIfNotExists() throws Exception {
         File f = new File(SkyProcStarter.pathToDefaultFemaleHKX + "defaultfemale.hkx");
         if (!f.exists()) {
-            fileCopy(SPGlobal.pathToData + "rbs" + File.separator + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
+            SkyProcstarter.fileCopy(SPGlobal.pathToData + "rbs" + File.separator + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
         }
     }
 
+    public static void ReadIntoAnimations() throws Exception {
+        int folder = 0;
+        int animation = 0;
+        animationFolderList = RBS_File.getFolderList(SkyProcStarter.pathNewAnimationsSource);
+        for (File animationFolder : animationFolderList) {
+            animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
+            for (File animationFile : animationFileList) {
+                animations[folder][animation] = animationFolder + File.separator + animationFile ;
+                animation++;
+            }
+            folder++;
+        }
+    }
+    
+    public static void ExchangeEntriesInDefaultFemaleXMLContent(String OldAnimation, String NewAnimation) {
+        String DefaultFemaleXMLContentNew = DefaultFemaleXMLContent.replaceAll("(?i)<hkcstring>(.+?)" + OldAnimation + "</hkcstring>", "<hkcstring>" + NewAnimation + "</hkcstring>");
+    }
+    
     public static void main() throws Exception{
+        ReadIntoAnimations();
         CopyDefaultFemaleHKXFromRBSFolderIfNotExists();
         ConvertHKXToXML(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML);
-        
+        DefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);        
     }
     public static void ExchangeAnimationsInFile(String source) {
-        String content = RBS_File.readFromFile(targetPathConverted);
+        
 
         for (File animationFile : animationFileList) {
             animationPath = animationFile.getPath();
