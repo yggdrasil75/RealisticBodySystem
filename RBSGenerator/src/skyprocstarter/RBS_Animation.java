@@ -6,31 +6,29 @@
 package skyprocstarter;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-
 import skyproc.SPGlobal;
 
-/**
- *
- * @author itv-braea1
- */
 public class RBS_Animation {
 
-    public static ArrayList<File> animationFolderList;
-    public static ArrayList<File> animationFileList;
-    public static String DefaultFemaleXMLContent;
-    public static String[][] animations;
+    private static ArrayList<File> animationFolderList;
+    private static ArrayList<File> animationFileList;
+    private static String DefaultFemaleXMLContent;
+    private static String[][] a_animations;
+    private static String[] a_ChangedDefaultFemaleXML;
 
-    RBS_Animation() throws Exception{
+    RBS_Animation() throws Exception {
         ReadIntoAnimations();
         CopyDefaultFemaleHKXFromRBSFolderIfNotExists();
-        ConvertHKXToXML(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML);
+        HKXcmd(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML, "SAVE_TEXT_FORMAT");
         ReadXMLintoDefaultFemaleXMLContent();
-        ExchangeEntriesInDefaultFemaleXMLContent("");
+        ExchangeEntriesInDefaultFemaleXMLContent();
+        SaveChangedDefaultFemaleAsHKX();
     }
-    
-    public static void ConvertHKXToXML(String source, String destination) throws Exception {
-        String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:SAVE_TEXT_FORMAT";
+
+    public static void HKXcmd(String source, String destination, String mode) throws Exception {
+        String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:" + mode;
         Process process = Runtime.getRuntime().exec("cmd /c " + command);
         process.waitFor();
         Thread.sleep(200);
@@ -50,36 +48,34 @@ public class RBS_Animation {
         for (File animationFolder : animationFolderList) {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
             for (File animationFile : animationFileList) {
-                animations[folder][animation] = animationFolder + File.separator + animationFile ;
+                a_animations[folder][animation] = animationFolder + File.separator + animationFile;
                 animation++;
             }
             folder++;
         }
     }
-    
-    public static void ExchangeEntriesInDefaultFemaleXMLContent(String NewAnimation) {
-        String DefaultFemaleXMLContentNew = DefaultFemaleXMLContent.replaceAll("(?i)<hkcstring>(.+?)" + OldAnimation + "</hkcstring>", "<hkcstring>" + NewAnimation + "</hkcstring>");
+
+    public static void ExchangeEntriesInDefaultFemaleXMLContent() {
+        for (int folder = 1; folder == a_animations.length; folder++) {
+            a_ChangedDefaultFemaleXML[folder] = DefaultFemaleXMLContent;
+            for (int animation = 1; animation == a_animations[folder].length; animation++) {
+                a_ChangedDefaultFemaleXML[folder] = a_ChangedDefaultFemaleXML[folder].replaceAll("(?i)<hkcstring>(.+?)" + "Animations" + File.separator + (Paths.get(a_animations[folder][animation]).getFileName()) + "</hkcstring>", "<hkcstring>" + a_animations[folder][animation] + "</hkcstring>");
+            }
+        }
     }
+
     
-    public static void ReadXMLintoDefaultFemaleXMLContent(){
+    public static void ReadXMLintoDefaultFemaleXMLContent() {
         DefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);
     }
-    
-    public static void main() throws Exception{
 
-        
-    }
-    public static void ExchangeAnimationsInFile(String source) {
-        
-
-        for (File animationFile : animationFileList) {
-            animationPath = animationFile.getPath();
-            animationPath = animationPath.substring(animationPath.indexOf("animations"));
-            animationPath = animationPath.replace("\\", "\\\\");
-            String animationName = animationFile.getName();
-            content = content.replaceAll("(?i)<hkcstring>(.+?)" + animationName + "</hkcstring>", "<hkcstring>" + animationPath + "</hkcstring>");
+    public static void SaveChangedDefaultFemaleAsHKX() throws Exception {
+        int i = 0;
+        for (String ChangedDefaultFemaleXML : a_ChangedDefaultFemaleXML) {
+            i++;
+            RBS_File.writeToFile(ChangedDefaultFemaleXML, SkyProcStarter.pathToDefaultFemaleHKX + "defaultfemale.tmp");
+            HKXcmd(SkyProcStarter.pathToDefaultFemaleHKX + "defaultfemale.tmp", SkyProcStarter.pathToDefaultFemaleXML + "defaultfemale." + RBS_Randomize.createID(i), "SAVE_BINARY_FORMAT");
         }
-        RBS_File.writeToFile(content, targetPathConverted);
     }
 
     public static void generateHKPFile() throws Exception {
