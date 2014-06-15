@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import static java.nio.file.StandardCopyOption.*;
+import javax.swing.JOptionPane;
 public class RBS_Animation {
     
     public static int amountOfAnimationFolders;
@@ -37,6 +38,8 @@ public class RBS_Animation {
 
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
         String command = "\"" + SkyProcStarter.pathToHKXcmd + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
+        JOptionPane.showMessageDialog(null, command, "Test Titel", JOptionPane.OK_CANCEL_OPTION);
+
         ProcessBuilder pb = new ProcessBuilder(command);
         Process p = pb.start();
         p.waitFor();

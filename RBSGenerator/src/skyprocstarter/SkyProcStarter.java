@@ -61,6 +61,7 @@ public class SkyProcStarter implements SUM {
     public static Font settingsFont = new Font("Serif", Font.BOLD, 15);
     public static LSaveFile save = new YourSaveFile();
     public static String path;
+    public static String canonicalPath;
     public static String pathSources;
 
     public static String pathNewAnimationsSource;
@@ -77,6 +78,7 @@ public class SkyProcStarter implements SUM {
 
     public static void main(String[] args) {
         try {
+               SPGlobal.pathToData = "..\\";
             ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
             if (handleArgs(arguments)) {
                 SPGlobal.closeDebug();
@@ -243,17 +245,20 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
+     
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
-        SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
-        SkyProcStarter.pathSources = SkyProcStarter.path + "RBSGenerator" + File.separator + "sources" + File.separator;
-        SkyProcStarter.pathToCharacter = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
-        SkyProcStarter.pathNewAnimationsSource = path + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "RBSGenerator" + File.separator + "tools" +  File.separator + "hkxcmd.exe";
+        SkyProcStarter.path = SPGlobal.pathToData;
+        SkyProcStarter.canonicalPath = new File("..\\").getCanonicalPath()+ File.separator;
+       // SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
+        //SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
+        SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
+        SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
+        SkyProcStarter.pathNewAnimationsSource = canonicalPath + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" +  File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-        
+         
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -278,6 +283,7 @@ public class SkyProcStarter implements SUM {
         //RBS_File.GetFolderContents();
         System.out.println(Arrays.toString(RBS_File.m_filelist.toArray()));
         if (save.getBool(Settings.DIVERSIFIED_ANIMATIONS_ON)) {
+            
             RBS_Animation rbs_animation = new RBS_Animation();
             rbs_race.createForNewAnimations();
         }
