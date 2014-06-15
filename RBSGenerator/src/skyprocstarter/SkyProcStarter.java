@@ -62,12 +62,13 @@ public class SkyProcStarter implements SUM {
     public static LSaveFile save = new YourSaveFile();
     public static String path;
     public static String pathSources;
-    public static String pathCharacterVanilla;
+
     public static String pathNewAnimationsSource;
     public static String pathHKX;
     public static String pathToHKXcmd;
-    public static String pathToDefaultFemaleHKX;
-    public static String pathToDefaultFemaleXML;
+
+    public static String pathToCharactersFemale;
+    public static String pathToCharacter;
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -242,20 +243,17 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
-        
-
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
         SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
         SkyProcStarter.pathSources = SkyProcStarter.path + "RBSGenerator" + File.separator + "sources" + File.separator;
-        SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
+        SkyProcStarter.pathToCharacter = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = path + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
-        SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "RBSGenerator" + File.separator + "tools" +  File.separator + "hkxcmd.exe";
-        SkyProcStarter.pathToDefaultFemaleHKX = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.hkx";
-        SkyProcStarter.pathToDefaultFemaleXML = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.xml";
+        SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
+        
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();

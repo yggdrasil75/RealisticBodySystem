@@ -68,7 +68,7 @@ public class RBS_File {
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
                 bw.write(msg);
- 
+
                 bw.close();
                 
             }

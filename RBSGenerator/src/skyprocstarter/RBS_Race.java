@@ -24,7 +24,6 @@ public class RBS_Race {
     public static Map<FormID, String> vanillaRacesMapKeyForm = new HashMap<>();
     public static ArrayList<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
     public static ArrayList<RACE> ListRBSRacesPatch = new ArrayList<>();
-    public static int amountFilesHKX;
 
     RBS_Race() {
         for (RACE r : SkyProcStarter.merger.getRaces()) {
@@ -59,7 +58,6 @@ public class RBS_Race {
 
                 FormID RaceID = new FormID(r.getForm());
                 String RaceEDID = copiedRace.getEDID();
-
 
                 copiedRace.set(RACE.RACEFlags.Playable, false);
                 copiedRace.setModel(Gender.MALE, "RBS\\Skeletons\\skeletonRBS_M" + s + ".nif");
@@ -96,7 +94,7 @@ public class RBS_Race {
     }
 
     public void createForNewAnimations() throws Exception {
-        
+
         SPProgressBarPlug.setStatus("Creating races");
         NumberFormat formatter = new DecimalFormat("00");
         NumberFormat formatter2 = new DecimalFormat("000");
@@ -118,11 +116,9 @@ public class RBS_Race {
                 + "Character"
                 + File.separator;
 
-        RBS_Race.amountFilesHKX = RBS_File.countFiles(path2,".hkx", "defaultfemale.h");
-       
         for (RACE r : ListRBSRacesMerger) {
-               if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
-                for (int i = 1; i < RBS_Race.amountFilesHKX + 1; i++) {
+            if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
+                for (int i = 1; i <= RBS_Animation.amountOfAnimationFolders; i++) {
                     String s = formatter.format(i);
                     String t = formatter2.format(i);
                     RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_F" + t);
@@ -137,14 +133,14 @@ public class RBS_Race {
     public void AttachNPCsToRaces() throws Exception {
         SPProgressBarPlug.setStatus("Attaching all Female NPCs to new animation races");
         for (NPC_ n : RBS_NPC.ListNPCFemale) {
-            if (n.getWeight()<60) {
-            String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, RBS_Race.amountFilesHKX);
-            String sourceName = SkyProcStarter.merger.getRaces().get(new FormID(n.getRace())).getEDID() + "RBS_F" + bodyID;
-            for (RACE r : SkyProcStarter.patch.getRaces()) {
-                if (r.getEDID().equals(sourceName)) {
-                    n.setRace(r.getForm());
+            if (n.getWeight() < 60) {
+                String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, RBS_Animation.amountOfAnimationFolders);
+                String sourceName = SkyProcStarter.merger.getRaces().get(new FormID(n.getRace())).getEDID() + "RBS_F" + bodyID;
+                for (RACE r : SkyProcStarter.patch.getRaces()) {
+                    if (r.getEDID().equals(sourceName)) {
+                        n.setRace(r.getForm());
+                    }
                 }
-            }
             }
         }
     }

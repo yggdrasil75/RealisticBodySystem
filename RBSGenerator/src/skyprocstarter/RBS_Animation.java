@@ -16,9 +16,10 @@ import java.util.Collection;
 import static java.nio.file.StandardCopyOption.*;
 public class RBS_Animation {
     
+    public static int amountOfAnimationFolders;
+    
     private static ArrayList<File> animationFolderList;
     private static ArrayList<File> animationFileList;
-    private static int amountOfAnimationFolders;
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
     private static final Multimap<Integer, String> a_animations = ArrayListMultimap.create();
@@ -27,7 +28,7 @@ public class RBS_Animation {
     RBS_Animation() throws Exception {
         readIntoAnimations();
         copyDefaultFemaleHKXFromRBSFolderIfNotExists();
-        HKXcmd(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML, "SAVE_TEXT_FORMAT");
+        HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
         readXMLintoDefaultFemaleXMLContent();
         exchangeEntriesInDefaultFemaleXMLContent();
         readDUMMYIntoDefaultFemaleXMLContent();
@@ -42,9 +43,9 @@ public class RBS_Animation {
     }
 
     public static void copyDefaultFemaleHKXFromRBSFolderIfNotExists() throws Exception {
-        File f = new File(SkyProcStarter.pathToDefaultFemaleHKX);
+        File f = new File(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx");
         if (!f.exists()) {
-            RBS_File.fileCopy(SkyProcStarter.pathSources + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
+            RBS_File.fileCopy(SkyProcStarter.pathSources + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx");
         }
     }
 
@@ -83,7 +84,7 @@ public class RBS_Animation {
     }
 
     public static void readXMLintoDefaultFemaleXMLContent() throws Exception {
-        defaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);
+        defaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml");
     }
 
     public static void readDUMMYIntoDefaultFemaleXMLContent() {
@@ -93,21 +94,21 @@ public class RBS_Animation {
     public static void saveChangedDefaultFemaleAsHKX(String ChangedDefaultFemaleXML, int i) throws Exception {
         Path oldFile;
         Path newFile;
-        RBS_File.writeToFile(ChangedDefaultFemaleXML, SkyProcStarter.pathCharacterVanilla + "defaultfemale.xml");
-        HKXcmd(SkyProcStarter.pathCharacterVanilla +"defaultfemale.xml", SkyProcStarter.pathCharacterVanilla +i+".hkx", "SAVE_BINARY_FORMAT");
-        oldFile = Paths.get(SkyProcStarter.pathCharacterVanilla + i + ".hkx");
-        newFile = Paths.get(SkyProcStarter.pathCharacterVanilla + "defaultfemale.h" + RBS_Randomize.createID(i, 2));
+        RBS_File.writeToFile(ChangedDefaultFemaleXML, SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml");
+        HKXcmd(SkyProcStarter.pathToCharactersFemale +"defaultfemale.xml", SkyProcStarter.pathToCharactersFemale +i+".hkx", "SAVE_BINARY_FORMAT");
+        oldFile = Paths.get(SkyProcStarter.pathToCharactersFemale + i + ".hkx");
+        newFile = Paths.get(SkyProcStarter.pathToCharactersFemale + "defaultfemale.h" + RBS_Randomize.createID(i, 2));
         Files.move(oldFile, newFile,REPLACE_EXISTING);
     }
 
     public static void createNewDefaultFemaleXMLs() throws Exception {
-        for (int i = 1; i == amountOfAnimationFolders; i++) {
+        for (int i = 1; i < amountOfAnimationFolders; i++) {
             String newContent = dummyDefaultFemaleXMLContent;
-            newContent = newContent.replace("RBS_DUMMY", "defaultfemale.h" + RBS_Randomize.createID(i));
-            RBS_File.writeToFile(newContent, SkyProcStarter.pathCharacterVanilla + "defaultfemale.xml");
-            HKXcmd(SkyProcStarter.pathCharacterVanilla + "defaultfemale.xml", SkyProcStarter.pathCharacterVanilla + "defaultfemale.hkx", "-f:SAVE_BINARY_FORMAT");
-            File oldFile = new File(SkyProcStarter.pathCharacterVanilla + "defaultfemale.hkx");
-            oldFile.renameTo(new File(SkyProcStarter.pathCharacterVanilla + "defaultfemale.h" + RBS_Randomize.createID(i)));
+            newContent = newContent.replace("RBS_DUMMY", "Characters Female\\defaultfemale.h" + RBS_Randomize.createID(i,2));
+            RBS_File.writeToFile(newContent, SkyProcStarter.pathToCharacter + "defaultfemale.xml");
+            HKXcmd(SkyProcStarter.pathToCharacter + "defaultfemale.xml", SkyProcStarter.pathToCharacter + "defaultfemale.hkx", "-f:SAVE_BINARY_FORMAT");
+            File oldFile = new File(SkyProcStarter.pathToCharacter + "defaultfemale.hkx");
+            oldFile.renameTo(new File(SkyProcStarter.pathToCharacter + "defaultfemale.h" + RBS_Randomize.createID(i,2)));
         }
     }
     /*
