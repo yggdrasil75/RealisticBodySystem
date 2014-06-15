@@ -14,36 +14,40 @@ public class RBS_Animation {
 
     private static ArrayList<File> animationFolderList;
     private static ArrayList<File> animationFileList;
-    private static String DefaultFemaleXMLContent;
+    private static int amountOfAnimationFolders;
+    private static String defaultFemaleXMLContent;
+    private static String dummyDefaultFemaleXMLContent;
     private static String[][] a_animations;
     private static String[] a_ChangedDefaultFemaleXML;
 
     RBS_Animation() throws Exception {
-        ReadIntoAnimations();
-        CopyDefaultFemaleHKXFromRBSFolderIfNotExists();
+        readIntoAnimations();
+        copyDefaultFemaleHKXFromRBSFolderIfNotExists();
         HKXcmd(SkyProcStarter.pathToDefaultFemaleHKX, SkyProcStarter.pathToDefaultFemaleXML, "SAVE_TEXT_FORMAT");
-        ReadXMLintoDefaultFemaleXMLContent();
-        ExchangeEntriesInDefaultFemaleXMLContent();
-        SaveChangedDefaultFemaleAsHKX();
+        readXMLintoDefaultFemaleXMLContent();
+        exchangeEntriesInDefaultFemaleXMLContent();
+        saveChangedDefaultFemaleAsHKX();
+        readDUMMYIntoDefaultFemaleXMLContent();
+        createNewDefaultFemaleXMLs();
     }
 
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
         String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:" + mode;
-        Process process = Runtime.getRuntime().exec("cmd /c " + command);
-        process.waitFor();
-        Thread.sleep(200);
+        ProcessBuilder pb = new ProcessBuilder( command );
+        Process p = pb.start();
+        p.waitFor();
     }
 
-    public static void CopyDefaultFemaleHKXFromRBSFolderIfNotExists() throws Exception {
+    public static void copyDefaultFemaleHKXFromRBSFolderIfNotExists() throws Exception {
         File f = new File(SkyProcStarter.pathToDefaultFemaleHKX + "defaultfemale.hkx");
         if (!f.exists()) {
             RBS_File.fileCopy(SPGlobal.pathToData + "rbs" + File.separator + "defaultfemale.hkx", SkyProcStarter.pathToDefaultFemaleHKX);
         }
     }
 
-    public static void ReadIntoAnimations() throws Exception {
-        int folder = 0;
-        int animation = 0;
+    public static void readIntoAnimations() throws Exception {
+        int folder = 1;
+        int animation = 1;
         animationFolderList = RBS_File.getFolderList(SkyProcStarter.pathNewAnimationsSource);
         for (File animationFolder : animationFolderList) {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
@@ -53,23 +57,27 @@ public class RBS_Animation {
             }
             folder++;
         }
+        amountOfAnimationFolders = folder;
     }
 
-    public static void ExchangeEntriesInDefaultFemaleXMLContent() {
+    public static void exchangeEntriesInDefaultFemaleXMLContent() {
         for (int folder = 1; folder == a_animations.length; folder++) {
-            a_ChangedDefaultFemaleXML[folder] = DefaultFemaleXMLContent;
+            a_ChangedDefaultFemaleXML[folder] = defaultFemaleXMLContent;
             for (int animation = 1; animation == a_animations[folder].length; animation++) {
                 a_ChangedDefaultFemaleXML[folder] = a_ChangedDefaultFemaleXML[folder].replaceAll("(?i)<hkcstring>(.+?)" + "Animations" + File.separator + (Paths.get(a_animations[folder][animation]).getFileName()) + "</hkcstring>", "<hkcstring>" + a_animations[folder][animation] + "</hkcstring>");
             }
         }
     }
 
-    
-    public static void ReadXMLintoDefaultFemaleXMLContent() {
-        DefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);
+    public static void readXMLintoDefaultFemaleXMLContent() {
+        defaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToDefaultFemaleXML);
     }
 
-    public static void SaveChangedDefaultFemaleAsHKX() throws Exception {
+    public static void readDUMMYIntoDefaultFemaleXMLContent() {
+        dummyDefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathSources + "defaultfemale.xml");
+    }
+
+    public static void saveChangedDefaultFemaleAsHKX() throws Exception {
         int i = 0;
         for (String ChangedDefaultFemaleXML : a_ChangedDefaultFemaleXML) {
             i++;
@@ -78,6 +86,17 @@ public class RBS_Animation {
         }
     }
 
+    public static void createNewDefaultFemaleXMLs() throws Exception {
+        for (int i = 1; i == amountOfAnimationFolders; i++) {
+            String newContent = dummyDefaultFemaleXMLContent;
+            newContent = newContent.replace("RBS_DUMMY", "defaultfemale.h" + RBS_Randomize.createID(i));
+            RBS_File.writeToFile(newContent, SkyProcStarter.pathCharacterVanilla + "defaultfemale.xml");
+            HKXcmd(SkyProcStarter.pathCharacterVanilla  + "defaultfemale.xml", SkyProcStarter.pathCharacterVanilla + "defaultfemale.hkx", "-f:SAVE_BINARY_FORMAT");
+            File oldFile = new File(SkyProcStarter.pathCharacterVanilla + "defaultfemale.hkx");
+            oldFile.renameTo(new File(SkyProcStarter.pathCharacterVanilla + "defaultfemale.h"+RBS_Randomize.createID(i)));
+        }
+    }
+/*
     public static void generateHKPFile() throws Exception {
         // creates a list of animation files in pathNewAnimationsSource
         // go though that list and creates canonical paths out of every entry
@@ -148,5 +167,5 @@ public class RBS_Animation {
         //file.renameTo(new File(pathCharacter + "defaultfemale.x" + ID));
         //file.delete();
     }
-
+*/
 }

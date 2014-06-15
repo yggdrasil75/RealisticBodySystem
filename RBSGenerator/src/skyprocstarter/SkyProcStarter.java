@@ -61,6 +61,7 @@ public class SkyProcStarter implements SUM {
     public static Font settingsFont = new Font("Serif", Font.BOLD, 15);
     public static LSaveFile save = new YourSaveFile();
     public static String path;
+    public static String pathSources;
     public static String pathCharacterVanilla;
     public static String pathNewAnimationsSource;
     public static String pathHKX;
@@ -246,6 +247,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
+        SkyProcStarter.pathSources = SkyProcStarter.path + "sources" + File.separator;
         SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = path + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
@@ -263,7 +265,7 @@ public class SkyProcStarter implements SUM {
         RBS_File rbs_file = new RBS_File();
         RBS_Main rbs_main = new RBS_Main();
         RBS_Hair rbs_hair = new RBS_Hair();
-        RBS_Animation rbs_animation = new RBS_Animation();
+        
         
         RBS_Statics rbs_statics = new RBS_Statics();
         RBS_CleanUnusedData rbs_cleanUnusedData = new RBS_CleanUnusedData();
@@ -276,7 +278,7 @@ public class SkyProcStarter implements SUM {
         //RBS_File.GetFolderContents();
         System.out.println(Arrays.toString(RBS_File.m_filelist.toArray()));
         if (save.getBool(Settings.DIVERSIFIED_ANIMATIONS_ON)) {
-            RBS_Animation.generateHKPFile();
+            RBS_Animation rbs_animation = new RBS_Animation();
             rbs_race.createForNewAnimations();
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
