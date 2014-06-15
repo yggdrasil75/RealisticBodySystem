@@ -9,10 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.StringWriter;
 import java.net.URI;
 import java.nio.charset.Charset;
-import java.nio.file.DirectoryStream;
-import java.nio.file.FileSystems;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -20,6 +20,14 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.xml.sax.SAXException;
 import skyproc.SPGlobal;
 
 public class RBS_File {
@@ -56,10 +64,13 @@ public class RBS_File {
         return new String(bytes);
     }
 
-    public static void writeToFile(String msg, String path) {
+    public static void writeToFile(String msg, String path) throws InterruptedException {
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
                 bw.write(msg);
+ 
+                bw.close();
+                
             }
         } catch (IOException e) {
         }
@@ -178,4 +189,21 @@ public class RBS_File {
             animationFile.delete();
         }
     }
+    
+        public static String convertXMLFileToString(String fileName)
+        {
+          try{
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+            InputStream inputStream = new FileInputStream(new File(fileName));
+            org.w3c.dom.Document doc = documentBuilderFactory.newDocumentBuilder().parse(inputStream);
+            StringWriter stw = new StringWriter();
+            Transformer serializer = TransformerFactory.newInstance().newTransformer();
+            serializer.transform(new DOMSource(doc), new StreamResult(stw));
+            return stw.toString();
+          }
+          catch (IOException | ParserConfigurationException | TransformerException | SAXException e) {
+          }
+            return null;
+        }
+    
 }

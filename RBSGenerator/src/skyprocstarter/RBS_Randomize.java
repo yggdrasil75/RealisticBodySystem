@@ -4,6 +4,7 @@ import java.util.Random;
 import skyprocstarter.YourSaveFile.Settings;
 import java.text.*;
 
+
 public class RBS_Randomize {
 
     public static String createID(int Number) {
@@ -82,4 +83,6 @@ public class RBS_Randomize {
         int x = ran.nextInt(max - min) + min;
         return (x);
     }
+    
+
 }

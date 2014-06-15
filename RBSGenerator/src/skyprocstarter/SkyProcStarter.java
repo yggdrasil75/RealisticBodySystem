@@ -242,16 +242,18 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
+        
 
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
-        SkyProcStarter.pathSources = SkyProcStarter.path + "sources" + File.separator;
+        SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
+        SkyProcStarter.pathSources = SkyProcStarter.path + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathCharacterVanilla = SkyProcStarter.path + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = path + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathHKX = pathCharacterVanilla + "characters female" + File.separator;
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "rbs" + File.separator + "hkxcmd.exe";
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.path + "RBSGenerator" + File.separator + "tools" +  File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToDefaultFemaleHKX = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.hkx";
         SkyProcStarter.pathToDefaultFemaleXML = SkyProcStarter.pathCharacterVanilla + "DefaultFemale.xml";
         RBS_Race rbs_race = new RBS_Race();
