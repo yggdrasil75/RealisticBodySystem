@@ -28,6 +28,9 @@ public class RBS_Animation {
 
     RBS_Animation() throws Exception {
         readIntoAnimations();
+       
+        
+       
         copyDefaultFemaleHKXFromRBSFolderIfNotExists();
         HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
         readXMLintoDefaultFemaleXMLContent();
@@ -38,7 +41,7 @@ public class RBS_Animation {
 
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
         String command = "\"" + SkyProcStarter.pathToHKXcmd + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
-        JOptionPane.showMessageDialog(null, command, "Test Titel", JOptionPane.OK_CANCEL_OPTION);
+       
 
         ProcessBuilder pb = new ProcessBuilder(command);
         Process p = pb.start();
@@ -54,6 +57,7 @@ public class RBS_Animation {
 
     public static void readIntoAnimations() throws Exception {
         int folder = 1;
+         JOptionPane.showMessageDialog(null, SkyProcStarter.pathNewAnimationsSource, "Test Titel", JOptionPane.OK_CANCEL_OPTION);
         animationFolderList = RBS_File.getFolderList(SkyProcStarter.pathNewAnimationsSource);
         for (File animationFolder : animationFolderList) {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");

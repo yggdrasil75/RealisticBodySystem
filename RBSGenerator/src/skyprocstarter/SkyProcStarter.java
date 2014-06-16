@@ -78,7 +78,7 @@ public class SkyProcStarter implements SUM {
 
     public static void main(String[] args) {
         try {
-               SPGlobal.pathToData = "..\\";
+            
             ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
             if (handleArgs(arguments)) {
                 SPGlobal.closeDebug();
@@ -250,7 +250,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = SPGlobal.pathToData;
-        SkyProcStarter.canonicalPath = new File("..\\").getCanonicalPath()+ File.separator;
+        SkyProcStarter.canonicalPath = new File(SPGlobal.pathToData).getCanonicalPath()+ File.separator;
        // SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
         //SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
@@ -286,6 +286,7 @@ public class SkyProcStarter implements SUM {
             
             RBS_Animation rbs_animation = new RBS_Animation();
             rbs_race.createForNewAnimations();
+            JOptionPane.showMessageDialog(null,"Animation done", "Test Titel", JOptionPane.OK_CANCEL_OPTION);
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
             rbs_texture.textures();
