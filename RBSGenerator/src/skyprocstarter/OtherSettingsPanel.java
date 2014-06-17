@@ -74,7 +74,7 @@ public class OtherSettingsPanel extends SPSettingPanel {
         setPlacement(fixedRandomness);
         AddSetting(fixedRandomness);
 
-        changeBodies = new LCheckBox("asdfsdfAdd KillerKeo armors and clothes", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
+        changeBodies = new LCheckBox("Change Body Shapes", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         changeBodies.tie(YourSaveFile.Settings.CHANGE_BODIES_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
         changeBodies.setOffset(2);
         changeBodies.addShadow();

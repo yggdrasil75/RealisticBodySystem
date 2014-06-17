@@ -6,6 +6,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 import skyproc.ARMA;
 import skyproc.FormID;
 import skyproc.TXST;
@@ -37,25 +38,33 @@ public class RBS_ARMA {
         }
     }
 
-    private void hasRBSModel(String sourcePath, String folder) {
-        /*
-         if (!(sourcePath).equals("")) {
-         String s = formatter.format(i);
-         if (sourceAA.getEDID().contains("NakedTorso") || sourceAA.getEDID().contains("NakedHands")) {
-         fileName = SkyProcStarter.path + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();
-         fileNamePatch = "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();
-         } else {
-         fileName = SkyProcStarter.path + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
-         fileNamePatch = "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
-         }
-         File targetPath = new File(fileName);
-         if (targetPath.exists()) {
-         ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + s);
-         }
-         }
-         */
+    private String hasRBSModel(String sourcePath, String folder, String id) {
+        String rbs_path;
+        rbs_path = "meshes" + File.separator + "RBS" + File.separator + "female" + File.separator + id + File.separator + folder + File.separator + sourcePath;
+        if (RBS_File.filelist.contains(rbs_path)) {
+            //JOptionPane.showMessageDialog(null, rbs_path, folder, JOptionPane.OK_CANCEL_OPTION);    
+            return (rbs_path);
+        }
+        return ("");
     }
 
+    /*
+        
+     if (!(sourcePath).equals("")) {
+     String s = formatter.format(i);
+     if (sourceAA.getEDID().contains("NakedTorso") || sourceAA.getEDID().contains("NakedHands")) {
+     fileName = SkyProcStarter.path + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();
+     fileNamePatch = "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();
+     } else {
+     fileName = SkyProcStarter.path + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
+     fileNamePatch = "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
+     }
+     File targetPath = new File(fileName);
+     if (targetPath.exists()) {
+     ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + s);
+     }
+     }
+     */
     public void CreateNewAA(String folder, String body) throws Exception {
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         String nakedBodyType = "";
@@ -80,7 +89,7 @@ public class RBS_ARMA {
         String fileNamePatch;
         NumberFormat formatter = new DecimalFormat("000");
         for (ARMA sourceAA : ListVanillaAA) {
-            if (sourceAA.getEDID().contains("Naked") && (folder.equals("killerkeo") || folder.equals("mak"))) {
+            if (sourceAA.getEDID().contains("Naked") && (folder.equals("killerkeo") || folder.equals("ct77"))) {
             } else {
                 if (sourceAA.getEDID().contains("Ench")
                         || sourceAA.getEDID().toLowerCase().contains("child")
@@ -104,10 +113,10 @@ public class RBS_ARMA {
 
         for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
             for (ARMA sourceAA : ListAARBS) {
+                String s = formatter.format(i);
                 String sourcePath = sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase();
-                hasRBSModel(sourcePath, folder);
+                hasRBSModel(sourcePath, folder, "RBS" + s);
                 if (!(sourcePath).equals("")) {
-                    String s = formatter.format(i);
                     if (sourceAA.getEDID().contains("NakedTorso") || sourceAA.getEDID().contains("NakedHands")) {
                         fileName = SkyProcStarter.path + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();
                         fileNamePatch = "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + nakedBodyType + File.separator + sourcePath + "".toLowerCase();

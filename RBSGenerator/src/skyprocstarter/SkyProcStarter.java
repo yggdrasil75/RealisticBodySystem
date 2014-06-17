@@ -78,7 +78,7 @@ public class SkyProcStarter implements SUM {
 
     public static void main(String[] args) {
         try {
-            
+
             ArrayList<String> arguments = new ArrayList<>(Arrays.asList(args));
             if (handleArgs(arguments)) {
                 SPGlobal.closeDebug();
@@ -245,20 +245,20 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
-     
+
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.path = SPGlobal.pathToData;
-        SkyProcStarter.canonicalPath = new File(SPGlobal.pathToData).getCanonicalPath()+ File.separator;
-       // SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
+        SkyProcStarter.canonicalPath = new File(SPGlobal.pathToData).getCanonicalPath() + File.separator;
+        // SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
         //SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = canonicalPath + "meshes" + File.separator + "RBS" + File.separator + "animations" + File.separator;
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" +  File.separator + "hkxcmd.exe";
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-         
+
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -270,8 +270,7 @@ public class SkyProcStarter implements SUM {
         RBS_File rbs_file = new RBS_File();
         RBS_Main rbs_main = new RBS_Main();
         RBS_Hair rbs_hair = new RBS_Hair();
-        
-        
+
         RBS_Statics rbs_statics = new RBS_Statics();
         RBS_CleanUnusedData rbs_cleanUnusedData = new RBS_CleanUnusedData();
         long startall = System.currentTimeMillis();
@@ -279,23 +278,21 @@ public class SkyProcStarter implements SUM {
 
         SkyProcStarter.merger.getSpells().clear();
         SPProgressBarPlug.reset();
+
         start = System.currentTimeMillis();
         //RBS_File.GetFolderContents();
-        System.out.println(Arrays.toString(RBS_File.m_filelist.toArray()));
+
         if (save.getBool(Settings.DIVERSIFIED_ANIMATIONS_ON)) {
-            
             RBS_Animation rbs_animation = new RBS_Animation();
             rbs_race.createForNewAnimations();
-            JOptionPane.showMessageDialog(null,"Animation done", "Test Titel", JOptionPane.OK_CANCEL_OPTION);
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
+            RBS_File.GetArrayFromListOfGeneratedMeshes();
             rbs_texture.textures();
             if (save.getBool(Settings.TEXTURE_DEPLOYMENT_ON)) {
                 rbs_texture.CreateTextureSetsSkinBodyFemale_1RBS();
             }
-
             rbs_arma.CreateNewAA("standard", save.getStr(Settings.BODY)); // use mesh files for body choosen by option in user interface.
-
             if (save.getBool(Settings.KILLERKEO_CLOTHES_ON)) {
                 rbs_arma.CreateNewAA("killerkeo", "body");
             }

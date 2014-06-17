@@ -4,7 +4,9 @@
 #include <create_presets.au3>
 #include <mainFunctions.au3>
 #include <_XMLDomWrapper.au3>
+
 global $MeshesPath = _PathFull (@ScriptDir&"\..\..\..\meshes")
+global $SourcesPath = _PathFull (@ScriptDir&"\..\..\sources")
 global $BodySlidePath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide")
 global $BodySlideSourcesPath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\sources")
 
@@ -30,3 +32,4 @@ createBodies("body","CalienteBodyAdvanced TBBP")
 createBodies("standard","TBBP")
 createBodies("ct77","CT77")
 WinClose ("Caliente's BodySlide")
+CreateListGeneratedMeshes();

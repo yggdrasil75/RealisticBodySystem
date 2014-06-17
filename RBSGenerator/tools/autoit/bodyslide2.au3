@@ -153,7 +153,6 @@ Func SetGameDataPath()
 EndFunc
 
 Func cleanBodySlideDirectory()
-
    Local $sDrive = "", $sDir = "", $sFilename = "", $sExtension = ""
    Local $aPathSplit = _PathSplit(@ScriptFullPath, $sDrive, $sDir, $sFilename, $sExtension)
    RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (wav-TBBP*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
@@ -168,4 +167,13 @@ Func cleanBodySlideDirectory()
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\SliderSets\CB++*.*"" """ & $bodySlidePath & "\SliderSets\"" /e /s /v /c /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\SliderSets\CT77*.*"" """ & $bodySlidePath & "\SliderSets\"" /e /s /v /c /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\SliderSets\CalienteSets.xml"" """ & $bodySlidePath &"\SliderSets\"" /e /s /v /c /Y")
+EndFunc
+
+Func CreateListGeneratedMeshes()
+   $array = _FileListToArrayRec ($MeshesPath,"*.nif",1,1,0,2)
+   For $i = 0 To UBound($array) - 1
+	  $array[$i] = StringReplace($array[$i], "D:\Mod Organizer\mods\RealisticBodySystem\", "")
+   Next
+   FileDelete(@ScriptDir & "\ListGeneratedMeshes.txt")
+   _FileWriteFromArray ($SourcesPath & "\ListGeneratedMeshes.txt", $array)
 EndFunc
