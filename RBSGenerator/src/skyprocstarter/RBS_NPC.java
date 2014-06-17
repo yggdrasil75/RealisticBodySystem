@@ -167,7 +167,7 @@ public class RBS_NPC {
         MajorRecord MJ;
         MJ = SkyProcStarter.patch.getOutfits().get(RBS_NPC.m_outfitName + "RBS_F" + "standard" + RBS_NPC.m_RBSNumber);
         if (MJ == null) {
-            MJ = SkyProcStarter.patch.getOutfits().get(RBS_NPC.m_outfitName + "RBS_F" + "mak" + RBS_NPC.m_RBSNumber);
+            MJ = SkyProcStarter.patch.getOutfits().get(RBS_NPC.m_outfitName + "RBS_F" + "ct77" + RBS_NPC.m_RBSNumber);
             if (MJ == null) {
                 MJ = SkyProcStarter.patch.getOutfits().get(RBS_NPC.m_outfitName + "RBS_F" + "killerkeo" + RBS_NPC.m_RBSNumber);
                 if (MJ == null) {
@@ -232,7 +232,7 @@ public class RBS_NPC {
             if (patchOutfits) {
                 setDefaultOutfit();
             }
-            changeSkin();
+            //changeSkin();
             //  }
             //}
 
