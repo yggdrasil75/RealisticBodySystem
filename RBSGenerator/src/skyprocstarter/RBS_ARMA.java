@@ -23,16 +23,20 @@ public class RBS_ARMA {
     public static Map<FormID, String> patchAAMapKeyForm = new HashMap<>();
 
     RBS_ARMA() {
-        for (ARMA aa : SkyProcStarter.merger.getArmatures()) {
-            if (RBS_Race.vanillaRacesMapKeyEDID.containsValue(aa.getRace())) {
-                if (!aa.getEDID().toLowerCase().contains("child")) {
-                    if (aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("clothes\\")
-                            || aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("armor\\")
-                            || aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("actors\\character\\character")) {
-                        ListVanillaAA.add(aa);
-                        vanillaAAMapKeyEDID.put(aa.getEDID(), aa.getForm());
-                        vanillaAAMapKeyForm.put(aa.getForm(), aa.getEDID());
-                    }
+        SkyProcStarter.merger.getArmatures().getRecords().stream().parallel().forEach((aa) -> {
+            FilterAndFillListVanillaAA(aa);
+        });
+    }
+
+    public static void FilterAndFillListVanillaAA(ARMA aa) {
+        if (RBS_Race.vanillaRacesMapKeyEDID.containsValue(aa.getRace())) {
+            if (!aa.getEDID().toLowerCase().contains("child")) {
+                if (aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("clothes\\")
+                        || aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("armor\\")
+                        || aa.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("actors\\character\\character")) {
+                    ListVanillaAA.add(aa);
+                    vanillaAAMapKeyEDID.put(aa.getEDID(), aa.getForm());
+                    vanillaAAMapKeyForm.put(aa.getForm(), aa.getEDID());
                 }
             }
         }
@@ -42,7 +46,6 @@ public class RBS_ARMA {
         String rbs_path;
         rbs_path = "meshes" + File.separator + "RBS" + File.separator + "female" + File.separator + id + File.separator + folder + File.separator + sourcePath;
         if (RBS_File.filelist.contains(rbs_path)) {
-            //JOptionPane.showMessageDialog(null, rbs_path, folder, JOptionPane.OK_CANCEL_OPTION);    
             return (rbs_path);
         }
         return ("");
@@ -66,6 +69,7 @@ public class RBS_ARMA {
      }
      */
     public void CreateNewAA(String folder, String body) throws Exception {
+        //for (ARMA sourceAA : ListVanillaAA) {
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         String nakedBodyType = "";
         if (body.equals("0")) {
@@ -88,7 +92,8 @@ public class RBS_ARMA {
         String fileName;
         String fileNamePatch;
         NumberFormat formatter = new DecimalFormat("000");
-        for (ARMA sourceAA : ListVanillaAA) {
+
+        ListVanillaAA.stream().parallel().forEach((sourceAA) -> {
             if (sourceAA.getEDID().contains("Naked") && (folder.equals("killerkeo") || folder.equals("ct77"))) {
             } else {
                 if (sourceAA.getEDID().contains("Ench")
@@ -109,10 +114,11 @@ public class RBS_ARMA {
                     }
                 }
             }
-        }
+        });
 
         for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
             for (ARMA sourceAA : ListAARBS) {
+
                 String s = formatter.format(i);
                 String sourcePath = sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase();
                 hasRBSModel(sourcePath, folder, "RBS" + s);
