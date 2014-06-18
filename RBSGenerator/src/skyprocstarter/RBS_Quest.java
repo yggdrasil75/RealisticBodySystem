@@ -3,6 +3,7 @@ package skyprocstarter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import skyproc.FLST;
 import skyproc.FormID;
@@ -21,8 +22,8 @@ public class RBS_Quest {
  
     public void addQuest() throws Exception {
         
-        ArrayList<FormID> achrFormList = new ArrayList<>();
-        ArrayList<ModListing> ModList;
+        List<FormID> achrFormList = new ArrayList<>();
+        List<ModListing> ModList;
         FormID[] form;
         SPProgressBarPlug.setStatus("Getting ACHRs");
         FLST formList = new FLST("form1");

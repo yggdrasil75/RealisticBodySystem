@@ -4,18 +4,20 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_ARMO {
 
-    public static Map<String, FormID> vanillaArmorsMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> vanillaArmorsMapKeyForm = new HashMap<>();
-    public static Map<String, FormID> patchArmorsMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> patchArmorsMapKeyForm = new HashMap<>();
-    public static ArrayList<ARMO> ListVanillaArmors = new ArrayList<>();
+    public static Map<String, FormID> vanillaArmorsMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaArmorsMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<String, FormID> patchArmorsMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchArmorsMapKeyForm = new ConcurrentHashMap<>();
+    public static List<ARMO> ListVanillaArmors = new ArrayList<>();
 
     RBS_ARMO() {
         for (ARMO a : SkyProcStarter.merger.getArmors()) {

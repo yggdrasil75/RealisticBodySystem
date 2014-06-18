@@ -32,7 +32,7 @@ import skyproc.SPGlobal;
 
 public class RBS_File {
 
-    public static ArrayList filelist = new ArrayList();
+    public static List filelist = new ArrayList();
     private static Charset charset;
 
     public static boolean fileExists(String path) {
@@ -101,8 +101,8 @@ public class RBS_File {
         return (counter);
     }
 
-    public static ArrayList getFileList(String path, String include) {
-        ArrayList filelist = new ArrayList();
+    public static List getFileList(String path, String include) {
+        List filelist = new ArrayList();
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -113,8 +113,8 @@ public class RBS_File {
         return (filelist);
     }
 
-    public static ArrayList getFileList(String path, String include, String exclude) {
-        ArrayList filelist = new ArrayList();
+    public static List getFileList(String path, String include, String exclude) {
+        List filelist = new ArrayList();
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -128,8 +128,8 @@ public class RBS_File {
         return (filelist);
     }
 
-    public static ArrayList getFolderList(String path) {
-        ArrayList filelist = new ArrayList();
+    public static List getFolderList(String path) {
+        List filelist = new ArrayList();
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -184,7 +184,7 @@ public class RBS_File {
     }
 
     public static void cleanFiles(String path) {
-        ArrayList<File> animationFileList;
+        List<File> animationFileList;
         animationFileList = getFileList(path, ".h", ".hkx");
         for (File animationFile : animationFileList) {
             animationFile.delete();

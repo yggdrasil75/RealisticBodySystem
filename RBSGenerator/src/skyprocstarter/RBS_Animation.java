@@ -14,13 +14,14 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import static java.nio.file.StandardCopyOption.*;
+import java.util.List;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Animation {
 
     public static int amountOfAnimationFolders;
-    private static ArrayList<File> animationFolderList;
-    private static ArrayList<File> animationFileList;
+    private static List<File> animationFolderList;
+    private static List<File> animationFileList;
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
     private static final Multimap<Integer, String> a_animations = ArrayListMultimap.create();

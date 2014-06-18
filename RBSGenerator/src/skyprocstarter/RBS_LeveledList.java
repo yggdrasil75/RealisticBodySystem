@@ -4,7 +4,9 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
@@ -16,12 +18,12 @@ import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_LeveledList {
 
-    public static Map<String, FormID> vanillaLVLIMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> vanillaLVLIMapKeyForm = new HashMap<>();
-    public static Map<String, FormID> patchLVLIMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> patchLVLIMapKeyForm = new HashMap<>();
-    public static ArrayList<LeveledEntry> inventoryList = new ArrayList<>();
-    public static ArrayList<LVLI> leveledItemsWithArmorEntries = new ArrayList<>();
+    public static Map<String, FormID> vanillaLVLIMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaLVLIMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<String, FormID> patchLVLIMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchLVLIMapKeyForm = new ConcurrentHashMap<>();
+    public static List<LeveledEntry> inventoryList = new ArrayList<>();
+    public static List<LVLI> leveledItemsWithArmorEntries = new ArrayList<>();
     private static int m_counter;
     private static LVLI m_targetlvl;
 
@@ -38,7 +40,7 @@ public class RBS_LeveledList {
         boolean patched;
         String ID;
         int list;
-        ArrayList<ARMO> RBS_ArmorsID = new ArrayList<>();
+        List<ARMO> RBS_ArmorsID = new ArrayList<>();
         SPProgressBarPlug.setStatus("Filling leveledItemsWithArmorEntries");
         for (LVLI leveledItem : SkyProcStarter.merger.getLeveledItems()) {
             for (LeveledEntry test : leveledItem.getEntries()) {
@@ -104,7 +106,7 @@ public class RBS_LeveledList {
                         patched = true;
                     }
                     targetlvl.clearEntries();
-                    ArrayList<FormID> inventoryList = o.getInventoryList();
+                    List<FormID> inventoryList = o.getInventoryList();
                     for (int list = 0; list < inventoryList.size(); list++) {
                         targetlvl.addEntry(inventoryList.get(list), 1, 1);
                     }
@@ -157,7 +159,7 @@ public class RBS_LeveledList {
         for (int bodies = 1; bodies < RBS_Main.amountBodyTypes; bodies++) {
             String s = formatter.format(bodies);
             LVLI targetllist = (LVLI) SkyProcStarter.patch.makeCopy(LItemClothesAll, LItemClothesAll.getEDID() + "RBS_F" + s);
-            ArrayList<LeveledEntry> listEntries = targetllist.getFlattenedEntries();
+            List<LeveledEntry> listEntries = targetllist.getFlattenedEntries();
             targetllist.clearEntries();
             for (ARMO patchedArmor : SkyProcStarter.patch.getArmors()) {
                 if (patchedArmor.getEDID().contains("Clothes") && patchedArmor.getEDID().contains(s)) {
@@ -184,7 +186,7 @@ public class RBS_LeveledList {
         for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
             ID = RBS_Randomize.createID(i);
             for (LVLI leveledItem : SkyProcStarter.patch.getLeveledItems()) {
-                ArrayList <LeveledEntry> asdf = leveledItem.getEntries();
+                List <LeveledEntry> asdf = leveledItem.getEntries();
                  for (int list = 0; list < asdf.size(); list++) {
                     if (asdf.get(list).getForm() != null) {
                         MajorRecord MJ = SkyProcStarter.merger.getLeveledItems().get(asdf.get(list).getForm());
@@ -204,7 +206,7 @@ public class RBS_LeveledList {
 
     public void RemoveVanillaEntriesInLeveledLists() throws Exception {
         SPProgressBarPlug.setStatus("RemoveVanillaEntriesInLeveledLists");
-        ArrayList<LeveledEntry> inventoryList;
+        List<LeveledEntry> inventoryList;
         for (LVLI l : SkyProcStarter.patch.getLeveledItems()) {
             int count = 0;
             inventoryList = l.getEntries();
@@ -217,7 +219,7 @@ public class RBS_LeveledList {
             }
 
             if (count > 0) {
-                ArrayList<LeveledEntry> tmp = new ArrayList<>(inventoryList);
+                List<LeveledEntry> tmp = new ArrayList<>(inventoryList);
                 for (LeveledEntry le : tmp) {
 
                     if (SkyProcStarter.merger.getArmors().get(le.getForm()) != null) {

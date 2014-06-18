@@ -6,7 +6,9 @@ package skyprocstarter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 
@@ -21,17 +23,17 @@ import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_NPC {
 
-    public static ArrayList<NPC_> ListNPC = new ArrayList<>();
-    public static ArrayList<String> ListNPCName = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCFemale = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCFemaleUnique = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCFemaleNotUnique = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCMale = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCMaleUnique = new ArrayList<>();
-    public static ArrayList<NPC_> ListNPCMaleNotUnique = new ArrayList<>();
-    public static ArrayList<NPC_> changedNPCs = new ArrayList();
-    public static Map<FormID, String> VoiceTypeMap = new HashMap<>();
-    public static ArrayList<FormID> ListNPCFemalePatched = new ArrayList<>();
+    public static List<NPC_> ListNPC = new ArrayList<>();
+    public static List<String> ListNPCName = new ArrayList<>();
+    public static List<NPC_> ListNPCFemale = new ArrayList<>();
+    public static List<NPC_> ListNPCFemaleUnique = new ArrayList<>();
+    public static List<NPC_> ListNPCFemaleNotUnique = new ArrayList<>();
+    public static List<NPC_> ListNPCMale = new ArrayList<>();
+    public static List<NPC_> ListNPCMaleUnique = new ArrayList<>();
+    public static List<NPC_> ListNPCMaleNotUnique = new ArrayList<>();
+    public static List<NPC_> changedNPCs = new ArrayList();
+    public static Map<FormID, String> VoiceTypeMap = new ConcurrentHashMap<>();
+    public static List<FormID> ListNPCFemalePatched = new ArrayList<>();
     public static int mn2 = 1;
     public static int mc2 = 1;
     public static int ms2 = 1;
@@ -106,7 +108,7 @@ public class RBS_NPC {
         for (OTFT mergerOutfit : SkyProcStarter.merger.getOutfits()) {
             if (RBS_NPC.m_sourceOutfit != null) {
                 if (RBS_NPC.m_sourceOutfit.getForm().equals(mergerOutfit.getForm())) {
-                    ArrayList<FormID> listInventory = mergerOutfit.getInventoryList();
+                    List<FormID> listInventory = mergerOutfit.getInventoryList();
                     for (FormID listInventory1 : listInventory) {
                         FormID item = new FormID(listInventory1);
                         RBS_NPC.m_npc.addItem(item, 1);
@@ -232,7 +234,7 @@ public class RBS_NPC {
             if (patchOutfits) {
                 setDefaultOutfit();
             }
-            //changeSkin();
+           // changeSkin();
             //  }
             //}
 
@@ -312,10 +314,10 @@ public class RBS_NPC {
         int normalmap = 1;
         int colormap = 1;
         int specularmap = 1;
-        ArrayList<FormID> rlist = new ArrayList<>();
-        ArrayList<ARMO> listAA = new ArrayList<>();
-        ArrayList<FormID> listAAFormID = new ArrayList<>();
-        ArrayList<String> listAAEDID = new ArrayList<>();
+        List<FormID> rlist = new ArrayList<>();
+        List<ARMO> listAA = new ArrayList<>();
+        List<FormID> listAAFormID = new ArrayList<>();
+        List<String> listAAEDID = new ArrayList<>();
         for (RACE rHuman : SkyProcStarter.patch.getRaces()) {
             if (rHuman.getEDID().toLowerCase().contains("nord") || rHuman.getEDID().toLowerCase().contains("redguard") || rHuman.getEDID().toLowerCase().contains("imperial") || rHuman.getEDID().toLowerCase().contains("breton") || rHuman.getEDID().toLowerCase().contains("elf")) {
                 rlist.add(rHuman.getForm());
@@ -359,10 +361,10 @@ public class RBS_NPC {
         int normalmap = 1;
         int colormap = 1;
         int specularmap = 1;
-        ArrayList<RACE> rlist = new ArrayList<>();
-        ArrayList<ARMO> listAA = new ArrayList<>();
-        ArrayList<FormID> listAAFormID = new ArrayList<>();
-        ArrayList<String> listAAEDID = new ArrayList<>();
+        List<RACE> rlist = new ArrayList<>();
+        List<ARMO> listAA = new ArrayList<>();
+        List<FormID> listAAFormID = new ArrayList<>();
+        List<String> listAAEDID = new ArrayList<>();
         for (RACE rHuman : SkyProcStarter.patch.getRaces()) {
             if (rHuman.getEDID().toLowerCase().contains("nord") || rHuman.getEDID().toLowerCase().contains("redguard") || rHuman.getEDID().toLowerCase().contains("imperial") || rHuman.getEDID().toLowerCase().contains("breton") || rHuman.getEDID().toLowerCase().contains("elf")) {
                 rlist.add(rHuman);
@@ -402,8 +404,8 @@ public class RBS_NPC {
     public void AttachSkinNakedDiversifiedTexturestoNPCsFemale(String folder) throws Exception {
         SPProgressBarPlug.setStatus("Attach new SkinNaked to females (gathering");
 
-        ArrayList<FormID> ListSkinNakedRBS_FFormID = new ArrayList<>();
-        ArrayList<String> ListSkinNakedRBS_FEDID = new ArrayList<>();
+        List<FormID> ListSkinNakedRBS_FFormID = new ArrayList<>();
+        List<String> ListSkinNakedRBS_FEDID = new ArrayList<>();
         for (ARMO armor : SkyProcStarter.patch.getArmors()) {
             if (armor.getEDID().contains("SkinNakedRBS_F" + folder) || armor.getEDID().contains("SkinNakedBeastRBS_F" + folder)) {
                 ListSkinNakedRBS_FFormID.add(armor.getForm());

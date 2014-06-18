@@ -9,7 +9,9 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMA;
 import skyproc.ARMO;
 import skyproc.FormID;
@@ -22,11 +24,11 @@ import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Texture {
 
-    public static ArrayList<TXST> ListRBSTXSTMerger = new ArrayList<>();
-    public static Map<String, FormID> patchTXSTMapKeyEDID = new HashMap<>();
-    public static Map<String, FormID> vanillaTXSTMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> vanillaTXSTMapKeyForm = new HashMap<>();
-    public static Map<FormID, String> patchTXSTMapKeyForm = new HashMap<>();
+    public static List<TXST> ListRBSTXSTMerger = new ArrayList<>();
+    public static Map<String, FormID> patchTXSTMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<String, FormID> vanillaTXSTMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaTXSTMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchTXSTMapKeyForm = new ConcurrentHashMap<>();
     public static int n2 = 0;
     public static int c2 = 0;
     public static int d2 = 0;
@@ -225,17 +227,17 @@ public class RBS_Texture {
 
     public void CreateSkinNakedAlternativeTexturesFemale() throws Exception {
         SPProgressBarPlug.setStatus("Create SkinNaked alternative textures for females");
-        Map<FormID, String> RBS_F_TEXTAAMapKeyForm = new HashMap<>();
-        Map<String, FormID> RBS_F_TEXTAAMapKeyEDID = new HashMap<>();
-        Map<FormID, String> ListSkinNakedAAForm = new HashMap<>();
-        Map<String, FormID> ListSkinNakedAAEDID = new HashMap<>();
-        ArrayList<ARMO> ListSkinNakedRBS_F = new ArrayList<>();
+        Map<FormID, String> RBS_F_TEXTAAMapKeyForm = new ConcurrentHashMap<>();
+        Map<String, FormID> RBS_F_TEXTAAMapKeyEDID = new ConcurrentHashMap<>();
+        Map<FormID, String> ListSkinNakedAAForm = new ConcurrentHashMap<>();
+        Map<String, FormID> ListSkinNakedAAEDID = new ConcurrentHashMap<>();
+        List<ARMO> ListSkinNakedRBS_F = new ArrayList<>();
         for (ARMO armor : SkyProcStarter.patch.getArmors()) {
             if (armor.getEDID().contains("SkinNakedRBS_F")) {
                 ListSkinNakedRBS_F.add(armor);
             }
         }
-        ArrayList<ARMA> ListNakedTorsoRBS_F_TEXT = new ArrayList<>();
+        List<ARMA> ListNakedTorsoRBS_F_TEXT = new ArrayList<>();
         for (ARMA aa : SkyProcStarter.patch.getArmatures()) {
             if (aa.getEDID().contains("RBS_F_TEXT")) {
                 ListNakedTorsoRBS_F_TEXT.add(aa);
@@ -303,7 +305,7 @@ public class RBS_Texture {
     public void CreateAANakedTorsoAlternativeTexturesFemales() throws Exception {
         SPProgressBarPlug.setStatus("Create AA naked torso alternative textures for females");
         NumberFormat formatter = new DecimalFormat("000");
-        ArrayList<ARMA> ListRBSAANakedTorso = new ArrayList<>();
+        List<ARMA> ListRBSAANakedTorso = new ArrayList<>();
         for (ARMA sourceAA : SkyProcStarter.patch.getArmatures()) {
             if (sourceAA.getEDID().contains("NakedTorsoRBS_F")) {
                 ListRBSAANakedTorso.add(sourceAA);

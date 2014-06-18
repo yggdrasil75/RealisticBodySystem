@@ -2,7 +2,9 @@ package skyprocstarter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
@@ -12,12 +14,12 @@ import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Outfit {
 
-    public static ArrayList<OTFT> clothes = new ArrayList<>();
-    public static ArrayList<OTFT> armors = new ArrayList<>();
-    public static Map<String, FormID> patchOutfitsMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> patchOutfitsMapKeyForm = new HashMap<>();
-    public static Map<String, FormID> vanillaOutfitsMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> vanillaOutfitsMapKeyForm = new HashMap<>();
+    public static List<OTFT> clothes = new ArrayList<>();
+    public static List<OTFT> armors = new ArrayList<>();
+    public static Map<String, FormID> patchOutfitsMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchOutfitsMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<String, FormID> vanillaOutfitsMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaOutfitsMapKeyForm = new ConcurrentHashMap<>();
     private static OTFT m_patchOutfit;
 
     public void CreateNewOutfits(String folder) throws Exception {
@@ -29,7 +31,7 @@ public class RBS_Outfit {
             String bodyID = RBS_Randomize.createID(i);
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 boolean patched = false;
-                ArrayList<FormID> outfitList = outfit.getInventoryList();
+                List<FormID> outfitList = outfit.getInventoryList();
                 for (int list = 0; list < outfitList.size(); list++) {
                     MJOld = SkyProcStarter.merger.getArmors().get(outfitList.get(list));
                     if (MJOld != null) {
@@ -75,7 +77,7 @@ public class RBS_Outfit {
 
     public void exchangeLeveledLists() throws Exception {
         for (OTFT outfit : SkyProcStarter.patch.getOutfits()) {
-            ArrayList<FormID> outfitList = outfit.getInventoryList();
+            List<FormID> outfitList = outfit.getInventoryList();
             for (int list = 0; list < outfitList.size(); list++) {
                 MajorRecord MJOld = SkyProcStarter.merger.getLeveledItems().get(outfitList.get(list));
                 if (MJOld != null) {

@@ -5,7 +5,9 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMA;
 import skyproc.FormID;
 import skyproc.RACE;
@@ -16,13 +18,13 @@ import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Race {
 
-    public static Map<String, FormID> patchRacesMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> patchRacesMapKeyForm = new HashMap<>();
-    public static ArrayList<RACE> ListRBSRacesMerger = new ArrayList<>();
-    public static Map<String, FormID> vanillaRacesMapKeyEDID = new HashMap<>();
-    public static Map<FormID, String> vanillaRacesMapKeyForm = new HashMap<>();
-    public static ArrayList<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
-    public static ArrayList<RACE> ListRBSRacesPatch = new ArrayList<>();
+    public static Map<String, FormID> patchRacesMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchRacesMapKeyForm = new ConcurrentHashMap<>();
+    public static List<RACE> ListRBSRacesMerger = new ArrayList<>();
+    public static Map<String, FormID> vanillaRacesMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaRacesMapKeyForm = new ConcurrentHashMap<>();
+    public static List<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
+    public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
 
     RBS_Race() {
         for (RACE r : SkyProcStarter.merger.getRaces()) {
@@ -68,9 +70,9 @@ public class RBS_Race {
 
     public void CreateNewMaleRaces2() throws Exception {
         SPProgressBarPlug.setStatus("creating new male races 2");
-        ArrayList<ARMA> ListAABeast = new ArrayList<>();
-        ArrayList<String> ListMaleRacesEDID = new ArrayList<>();
-        ArrayList<FormID> ListMaleRacesFormID = new ArrayList<>();
+        List<ARMA> ListAABeast = new ArrayList<>();
+        List<String> ListMaleRacesEDID = new ArrayList<>();
+        List<FormID> ListMaleRacesFormID = new ArrayList<>();
         RBS_ARMA.ListVanillaAA.stream().forEach((sourceAA) -> {
             ListAABeast.add(sourceAA);
         });
@@ -122,7 +124,7 @@ public class RBS_Race {
     }
 
     public void AddToRacesHandsAndFeet(String folder) throws Exception {
-        ArrayList<ARMA> ListRBSHandsAndFeet = new ArrayList<>();
+        List<ARMA> ListRBSHandsAndFeet = new ArrayList<>();
         SPProgressBarPlug.setStatus("Adding entries for rRaces to hand and feet");
         RBS_ARMA.ListVanillaAA.stream().filter((a) -> (a.getEDID().contains("NakedHand") || a.getEDID().contains("NakedFeet") || a.getEDID().contains("NakedTail"))).filter((a) -> (a.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets") || a.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets"))).filter((a) -> (!a.getEDID().toLowerCase().contains("child"))).forEach((a) -> {
             ListRBSHandsAndFeet.add(a);

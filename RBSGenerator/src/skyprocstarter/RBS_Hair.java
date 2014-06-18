@@ -2,22 +2,23 @@ package skyprocstarter;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import skyproc.HDPT;
 import skyproc.NPC_;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Hair {
 
-    private static final ArrayList<HDPT> m_hairList = new ArrayList<>();
-    private static final ArrayList<HDPT> m_hairListOrcs = new ArrayList<>();
-    private static final ArrayList<String> m_HairsNormalWhiteList = new ArrayList<>();
-    private static final ArrayList<String> m_HairsWildWhiteList = new ArrayList<>();
-    private static final ArrayList<String> m_HairsUpperWhiteList = new ArrayList<>();
-    private static final ArrayList<String> m_HairsLowerWhiteList = new ArrayList<>();
-    private static final ArrayList<HDPT> m_HairsNormalList = new ArrayList<>();
-    private static final ArrayList<HDPT> m_HairsWildList = new ArrayList<>();
-    private static final ArrayList<HDPT> m_HairsUpperList = new ArrayList<>();
-    private static final ArrayList<HDPT> m_HairsLowerList = new ArrayList<>();
+    private static final List<HDPT> m_hairList = new ArrayList<>();
+    private static final List<HDPT> m_hairListOrcs = new ArrayList<>();
+    private static final List<String> m_HairsNormalWhiteList = new ArrayList<>();
+    private static final List<String> m_HairsWildWhiteList = new ArrayList<>();
+    private static final List<String> m_HairsUpperWhiteList = new ArrayList<>();
+    private static final List<String> m_HairsLowerWhiteList = new ArrayList<>();
+    private static final List<HDPT> m_HairsNormalList = new ArrayList<>();
+    private static final List<HDPT> m_HairsWildList = new ArrayList<>();
+    private static final List<HDPT> m_HairsUpperList = new ArrayList<>();
+    private static final List<HDPT> m_HairsLowerList = new ArrayList<>();
     private static String m_raceName;
     private static NPC_ m_npc;
 

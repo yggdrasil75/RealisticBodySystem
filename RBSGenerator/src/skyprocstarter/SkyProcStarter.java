@@ -18,6 +18,7 @@ import skyproc.gui.SUMGUI;
 import skyprocstarter.YourSaveFile.Settings;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import lev.Ln;
 import skyproc.ARMA;
 import skyproc.MajorRecord;
