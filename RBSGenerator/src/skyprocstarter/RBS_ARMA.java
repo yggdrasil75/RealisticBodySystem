@@ -53,7 +53,7 @@ public class RBS_ARMA {
 
     public void CreateNewAA(String folder, String body) throws Exception {
         //for (ARMA sourceAA : ListVanillaAA) {
-        Instant start = Instant.now();
+
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         NumberFormat formatter = new DecimalFormat("000");
         ListVanillaAA.stream().forEach(sourceAA -> {
@@ -68,8 +68,7 @@ public class RBS_ARMA {
                 }
             }
         });
-        Instant end = Instant.now();
-        JOptionPane.showMessageDialog(null, Duration.between(start, end), "Test Titel", JOptionPane.OK_CANCEL_OPTION);
+
     }
 }
 

@@ -2,12 +2,20 @@ package skyprocstarter;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import javax.swing.JOptionPane;
+import skyproc.ARMA;
 import skyproc.ARMO;
 import skyproc.FormID;
+import skyproc.genenums.Gender;
+import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_ARMO {
@@ -34,20 +42,34 @@ public class RBS_ARMO {
 
     public void CreateNewArmor(String folder) throws Exception {
         SPProgressBarPlug.setStatus("creating  " + folder + " clothes and armors");
+        Instant start = Instant.now();
         NumberFormat formatter = new DecimalFormat("000");
-        ListVanillaArmors.stream().forEach((vanillaArmor) -> {
-            for (FormID listSourceAA : vanillaArmor.getArmatures()) {
-                String s = formatter.format(1);
-                FormID id = RBS_ARMA.patchAAMapKeyEDID.get(RBS_ARMA.vanillaAAMapKeyForm.get(listSourceAA) + "RBS_F" + folder + s);
-                if ( id != null) {
+
+        List<FormID> newAA = new ArrayList<>();
+        List<FormID> oldAA = new ArrayList<>();
+        for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
+            String s = formatter.format(i);
+            for (ARMO vanillaArmor : ListVanillaArmors) {
+                vanillaArmor.getArmatures().stream().forEach((vanillaARMA) -> {
+                    String asdf = RBS_ARMA.vanillaAAMapKeyForm.get(vanillaARMA) + "RBS_F" + folder + s;
+                    if (RBS_ARMA.patchAAMapKeyEDID.get(asdf) != null) {
+                        newAA.add(RBS_ARMA.patchAAMapKeyEDID.get(asdf));
+                        oldAA.add(vanillaARMA);
+                    }
+                });
+
+                if (newAA.size() > 0) {
                     ARMO targetArmor = (ARMO) SkyProcStarter.patch.makeCopy(vanillaArmor, vanillaArmor.getEDID() + "RBS_F" + folder + s);
                     RBS_ARMO.patchArmorsMapKeyForm.put(targetArmor.getForm(), targetArmor.getEDID());
                     RBS_ARMO.patchArmorsMapKeyEDID.put(targetArmor.getEDID(), targetArmor.getForm());
-                    targetArmor.getArmatures().remove(listSourceAA);
-                    targetArmor.getArmatures().add(id);
-                    //patch.addRecord(targetArmor);
+                    targetArmor.getArmatures().removeAll(oldAA);
+                    targetArmor.getArmatures().addAll(newAA);
+                    newAA.clear();
+                    oldAA.clear();
                 }
             }
-        });
+        }
+        Instant end = Instant.now();
+        JOptionPane.showMessageDialog(null, Duration.between(start, end), "Test Titel", JOptionPane.OK_CANCEL_OPTION);
     }
 }
