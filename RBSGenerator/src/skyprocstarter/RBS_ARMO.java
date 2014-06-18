@@ -8,14 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
-import skyproc.ARMA;
 import skyproc.ARMO;
 import skyproc.FormID;
-import skyproc.genenums.Gender;
-import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_ARMO {

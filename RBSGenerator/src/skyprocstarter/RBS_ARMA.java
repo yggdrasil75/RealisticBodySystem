@@ -3,8 +3,6 @@ package skyprocstarter;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.time.Duration;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +10,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import javax.swing.JOptionPane;
 import skyproc.ARMA;
 import skyproc.FormID;
 import skyproc.genenums.Gender;
@@ -52,8 +49,6 @@ public class RBS_ARMA {
     }
 
     public void CreateNewAA(String folder, String body) throws Exception {
-        //for (ARMA sourceAA : ListVanillaAA) {
-
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         NumberFormat formatter = new DecimalFormat("000");
         ListVanillaAA.stream().forEach(sourceAA -> {
