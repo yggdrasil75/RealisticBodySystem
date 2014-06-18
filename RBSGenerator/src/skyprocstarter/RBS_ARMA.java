@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 import skyproc.ARMA;
 import skyproc.FormID;
-import skyproc.TXST;
 import skyproc.genenums.Gender;
 import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
@@ -56,38 +55,26 @@ public class RBS_ARMA {
         //for (ARMA sourceAA : ListVanillaAA) {
         Instant start = Instant.now();
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
-        String nakedBodyType = "";
-        if (body.equals("0")) {
-            nakedBodyType = "body";
-        }
-        if (body.equals("1")) {
-            nakedBodyType = "bodybbp";
-        }
-        if (body.equals("2")) {
-            nakedBodyType = "bodytbbp";
-        }
-        if (body.equals("3")) {
-            nakedBodyType = "bodyundies";
-        }
-        if (body.equals("4")) {
-            nakedBodyType = "bodylayerbikini";
-        }
-
-        String fileName;
-        String fileNamePatch;
         NumberFormat formatter = new DecimalFormat("000");
-
-        for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
-            for (ARMA sourceAA : ListVanillaAA) {
-                String s = formatter.format(i);
-                String sourcePath = sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase();
-                if (!hasRBSModel(sourcePath, folder, "RBS" + s).isEmpty()) {
-                    fileName = SkyProcStarter.canonicalPath + "meshes" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
-                    fileNamePatch = "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourcePath + "".toLowerCase();
+        ListVanillaAA.stream().forEach(sourceAA -> {
+            if (!hasRBSModel(sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase(), folder, "RBS" + formatter.format(1)).isEmpty()) {
+                for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
+                    String s = formatter.format(i);
                     ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + s);
                     patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                     patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
-                    for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
+                    targetAA.setModelPath("female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON) + "".toLowerCase(), Gender.FEMALE, Perspective.THIRD_PERSON);
+                    SkyProcStarter.patch.addRecord(targetAA);
+                }
+            }
+        });
+        Instant end = Instant.now();
+        JOptionPane.showMessageDialog(null, Duration.between(start, end), "Test Titel", JOptionPane.OK_CANCEL_OPTION);
+    }
+}
+
+/*
+            for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
                         if (targetAA.getSkinTexture(Gender.FEMALE).equals(t.getForm())) {
                             String newTextureName = t.getEDID() + "RBS_F";
                             targetAA.setSkinTexture(RBS_Texture.patchTXSTMapKeyEDID.get(newTextureName), Gender.FEMALE);
@@ -106,13 +93,4 @@ public class RBS_ARMA {
                             }
                         }
                     }
-                    targetAA.setModelPath(fileNamePatch, Gender.FEMALE, Perspective.THIRD_PERSON);
-                    SkyProcStarter.patch.addRecord(targetAA);
-                }
-            }
-        }
-        Instant end = Instant.now();
-        JOptionPane.showMessageDialog(null, Duration.between(start, end), "Test Titel", JOptionPane.OK_CANCEL_OPTION);
-    }
-
-}
+*/
