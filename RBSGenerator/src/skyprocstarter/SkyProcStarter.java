@@ -76,7 +76,7 @@ public class SkyProcStarter implements SUM {
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmatures = new ArrayList<>();
     public static int megsOfMem = 1024;
-
+    public static ArrayList<String> meshesGroup = new ArrayList<>();
     public static void main(String[] args) {
         try {
 
@@ -259,7 +259,8 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-
+        
+        
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -288,6 +289,7 @@ public class SkyProcStarter implements SUM {
             rbs_race.createForNewAnimations();
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
+            SkyProcStarter.meshesGroup.add("standard");
             RBS_File.GetArrayFromListOfGeneratedMeshes();
             rbs_texture.textures();
             if (save.getBool(Settings.TEXTURE_DEPLOYMENT_ON)) {
@@ -298,7 +300,9 @@ public class SkyProcStarter implements SUM {
                 rbs_arma.CreateNewAA("killerkeo", "body");
             }
 
-            if (save.getBool(Settings.MAK_CLOTHES_ON)) {
+            if (save.getBool(Settings.MAK_CLOTHES_ON)) 
+            {
+                SkyProcStarter.meshesGroup.add("ct77");
                 rbs_arma.CreateNewAA("ct77", "body");
             }
 
@@ -317,7 +321,7 @@ public class SkyProcStarter implements SUM {
                 rbs_armo.CreateNewArmor("ct77");
             }
 
-            rbs_leveledList.CheckItemsOfLeveledListsForPatching();
+            rbs_leveledList.checkItemsOfLeveledListsForPatching();
 
             if (save.getBool(Settings.POOL_OF_CLOTHES_ON)) {
                 rbs_leveledList.LItemBootsAll("standard");

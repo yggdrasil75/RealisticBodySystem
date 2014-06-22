@@ -74,23 +74,4 @@ public class RBS_Outfit {
             }
         }
     }
-
-    public void exchangeLeveledLists() throws Exception {
-        for (OTFT outfit : SkyProcStarter.patch.getOutfits()) {
-            List<FormID> outfitList = outfit.getInventoryList();
-            for (int list = 0; list < outfitList.size(); list++) {
-                MajorRecord MJOld = SkyProcStarter.merger.getLeveledItems().get(outfitList.get(list));
-                if (MJOld != null) {
-                    String[] ID = outfit.getEDID().split("RBS_Fstandard");
-                    String patchedEDID = MJOld.getEDID() + "RBS" + ID[1];
-                    MajorRecord MJNew = SkyProcStarter.patch.getLeveledItems().get(patchedEDID);
-                    if (MJNew != null) {
-                        outfit.addInventoryItem(MJNew.getForm());
-                        outfit.removeInventoryItem(MJOld.getForm());
-                        SkyProcStarter.patch.addRecord(outfit);
-                    }
-                }
-            }
-        }
-    }
 }

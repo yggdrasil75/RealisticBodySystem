@@ -4,8 +4,6 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
@@ -16,18 +14,8 @@ import skyproc.OTFT;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_LeveledList {
-
-    public static Map<String, FormID> vanillaLVLIMapKeyEDID = new ConcurrentHashMap<>();
-    public static Map<FormID, String> vanillaLVLIMapKeyForm = new ConcurrentHashMap<>();
-    public static Map<String, FormID> patchLVLIMapKeyEDID = new ConcurrentHashMap<>();
-    public static Map<FormID, String> patchLVLIMapKeyForm = new ConcurrentHashMap<>();
-    public static List<LeveledEntry> inventoryList = new ArrayList<>();
-    public static List<LVLI> leveledItemsWithArmorEntries = new ArrayList<>();
     private static int m_counter;
     private static LVLI m_targetlvl;
-
-    RBS_LeveledList() {
-    }
 
     public static void progressBar() {
         int max = SkyProcStarter.patch.getOutfits().numRecords();
@@ -35,52 +23,58 @@ public class RBS_LeveledList {
         RBS_LeveledList.m_counter++;
     }
 
-    public void CheckItemsOfLeveledListsForPatching() {
-        boolean patched;
-        String ID;
-        int list;
-        List<ARMO> RBS_ArmorsID = new ArrayList<>();
-        SPProgressBarPlug.setStatus("Filling leveledItemsWithArmorEntries");
+    private static List<LVLI> getAllLeveledItemsWithArmorEntries() {
+        List<LVLI> leveledItemsWithArmorEntries = new ArrayList<>();
         for (LVLI leveledItem : SkyProcStarter.merger.getLeveledItems()) {
-            for (LeveledEntry test : leveledItem.getEntries()) {
-                MajorRecord MJ = SkyProcStarter.merger.getArmors().get(test.getForm());
+            for (LeveledEntry entry : leveledItem.getEntries()) {
+                MajorRecord MJ = SkyProcStarter.merger.getArmors().get(entry.getForm());
                 if (MJ != null) {
-                    RBS_LeveledList.leveledItemsWithArmorEntries.add(leveledItem);
+                    leveledItemsWithArmorEntries.add(leveledItem);
                     break;
                 }
             }
         }
+        return (leveledItemsWithArmorEntries);
+    }
+
+    public void checkItemsOfLeveledListsForPatching() {
+        
+        // Creating new RBS LeveledList containing exchanged Armor Entries with corresponding new RBS Armors of all bodytypes
+        String ID;
+        MajorRecord MJNew;
+        SPProgressBarPlug.setStatus("getting leveledItemsWithArmorEntries");
+        List<LVLI> leveledItemsWithArmorEntries = getAllLeveledItemsWithArmorEntries();
+        List<MajorRecord> RBSArmorsToBeAdded = new ArrayList<>();
+        List<MajorRecord> vanillaArmorsToBeDeleted = new ArrayList<>();
         SPProgressBarPlug.setStatus("attaching new leveled lists to new outfits");
         for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
             ID = RBS_Randomize.createID(i);
-            RBS_ArmorsID.clear();
-            for (ARMO armor : SkyProcStarter.patch.getArmors()) {
-                if (armor.getEDID().contains(ID)) {
-                    RBS_ArmorsID.add(armor);
-                }
-            }
-            for (LVLI leveledItem : RBS_LeveledList.leveledItemsWithArmorEntries) {
-                for (LeveledEntry entry : leveledItem.getEntries()) {
-                    patched = false;
-                    ID = RBS_Randomize.createID(i);
-                    MajorRecord MJ = SkyProcStarter.merger.getArmors().get(entry.getForm());
-                    if (MJ != null) {
-                        String itemName = MJ.getEDID();
-                        for (ARMO patchedArmor : RBS_ArmorsID) {
-                            if ((patchedArmor.getEDID().contains(itemName) && patchedArmor.getEDID().contains(ID)) && !patchedArmor.getEDID().contains("DUPLICATE")) {
-                                if (!patched) {
-                                    RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
-                                    RBS_LeveledList.patchLVLIMapKeyEDID.put(RBS_LeveledList.m_targetlvl.getEDID(), RBS_LeveledList.m_targetlvl.getForm());
-                                    RBS_LeveledList.patchLVLIMapKeyForm.put(RBS_LeveledList.m_targetlvl.getForm(), RBS_LeveledList.m_targetlvl.getEDID());
-                                    patched = true;
+            for (LVLI leveledItem : leveledItemsWithArmorEntries) { //iterate through all LeveledLists containing ARMO entries
+                for (LeveledEntry entry : leveledItem.getEntries()) { //then iterate though entries of those LeveledLists containing Armor Entries
+                    if ("ARMO".equals(entry.getType())) { //check if specific entry is an armor.
+                        MajorRecord MJ = SkyProcStarter.merger.getArmors().get(entry.getForm());
+                        if (MJ != null) { //not sure if this is necessary. Vanilla Entries should not point to not existing armors.
+                            for (String meshesGroup : SkyProcStarter.meshesGroup) { //iterate through meshesGroup (different Folders)
+                                MJNew = SkyProcStarter.patch.getArmors().get(MJ.getEDID() + "RBS_F" + meshesGroup + ID); //checking if RBS_Armor exists in patch
+                                if (MJNew != null) { // if exists add Armor to List and old vanilla Armor to another list
+                                    RBSArmorsToBeAdded.add(MJNew);
+                                    vanillaArmorsToBeDeleted.add(MJ);
                                 }
-                                RBS_LeveledList.m_targetlvl.addEntry(patchedArmor.getForm(), entry.getLevel(), entry.getCount());
-                                RBS_LeveledList.m_targetlvl.removeAllEntries(entry.getForm());
                             }
                         }
                     }
+                    if (RBSArmorsToBeAdded.size() > 0) {
+                        RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
+                        vanillaArmorsToBeDeleted.stream().forEach((Armor) -> {
+                            RBS_LeveledList.m_targetlvl.removeAllEntries(Armor.getForm());
+                        });
+                        vanillaArmorsToBeDeleted.clear();
+                        RBSArmorsToBeAdded.stream().forEach((Armor) -> {
+                            RBS_LeveledList.m_targetlvl.addEntry(Armor.getForm(),1,1);
+                        });
+                        RBSArmorsToBeAdded.clear();
+                    }
                 }
-                list = 0;
             }
         }
     }
@@ -179,14 +173,14 @@ public class RBS_LeveledList {
     }
 
     public void exchangeLeveledLists() {
-    
+
         String ID;
         SPProgressBarPlug.setStatus("Exchange LeveledItems in LeveledList");
         for (int i = 1; i < RBS_Main.amountBodyTypes; i++) {
             ID = RBS_Randomize.createID(i);
             for (LVLI leveledItem : SkyProcStarter.patch.getLeveledItems()) {
-                List <LeveledEntry> asdf = leveledItem.getEntries();
-                 for (int list = 0; list < asdf.size(); list++) {
+                List<LeveledEntry> asdf = leveledItem.getEntries();
+                for (int list = 0; list < asdf.size(); list++) {
                     if (asdf.get(list).getForm() != null) {
                         MajorRecord MJ = SkyProcStarter.merger.getLeveledItems().get(asdf.get(list).getForm());
                         if (MJ != null) {
