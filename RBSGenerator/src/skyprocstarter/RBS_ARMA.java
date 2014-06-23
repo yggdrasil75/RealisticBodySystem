@@ -46,20 +46,17 @@ public class RBS_ARMA {
     }
 
     public void CreateNewAA(String folder, String body) throws Exception {
-        String[] data={"001","002","003","004","005","006","007","008","009","000","010","011","012","013","014","015","016","017","018","019","020","021","022","023","024","025","026","027","028","029","030"};
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         ListVanillaAA.stream().forEach((sourceAA) -> {
             if (hasRBSModel(sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase(), folder, "rbs001")) {
-                for (String s : data) {
-                    ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + s);
+                SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+                    ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + id);
                     patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                     patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
-                    targetAA.setModelPath("female" + File.separator + "rbs" + s + File.separator + folder + File.separator + sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON) + "".toLowerCase(), Gender.FEMALE, Perspective.THIRD_PERSON);
-                }
+                    targetAA.setModelPath("female" + File.separator + "rbs" + id + File.separator + folder + File.separator + sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON) + "".toLowerCase(), Gender.FEMALE, Perspective.THIRD_PERSON);
+                });
             }
         });
-   //     Instant end = Instant.now();
-        //     JOptionPane.showMessageDialog(null, Duration.between(start, end), "Test Titel", JOptionPane.OK_CANCEL_OPTION);
     }
 }
 

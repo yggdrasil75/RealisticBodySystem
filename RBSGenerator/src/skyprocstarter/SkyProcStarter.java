@@ -67,6 +67,7 @@ public class SkyProcStarter implements SUM {
 
     public static String pathToCharactersFemale;
     public static String pathToCharacter;
+    public static List<String> amountBodyTypes = new ArrayList<>();
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -242,7 +243,9 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
-
+        for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
+            SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
+        }
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
