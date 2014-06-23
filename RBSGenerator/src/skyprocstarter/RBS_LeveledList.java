@@ -3,7 +3,6 @@ package skyprocstarter;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import skyproc.ARMO;
 import skyproc.FormID;
@@ -17,7 +16,7 @@ import skyproc.gui.SPProgressBarPlug;
 public class RBS_LeveledList {
 
     private static int m_counter;
-    private static LVLI m_targetlvl;
+//    private static LVLI m_targetlvl;
 
     public static void progressBar() {
         int max = SkyProcStarter.patch.getOutfits().numRecords();
@@ -63,13 +62,13 @@ public class RBS_LeveledList {
                 }
 
                 if (RBSArmorsToBeAdded.size() > 0) {
-                    RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
+                    LVLI targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
                     vanillaArmorsToBeDeleted.stream().forEach((Armor) -> {
-                        RBS_LeveledList.m_targetlvl.removeAllEntries(Armor.getForm());
+                        targetlvl.removeAllEntries(Armor.getForm());
                     });
                     vanillaArmorsToBeDeleted.clear();
                     RBSArmorsToBeAdded.stream().forEach((Armor) -> {
-                        RBS_LeveledList.m_targetlvl.addEntry(Armor.getForm(), 1, 1);
+                        targetlvl.addEntry(Armor.getForm(), 1, 1);
                     });
                     RBSArmorsToBeAdded.clear();
                 }
@@ -78,13 +77,13 @@ public class RBS_LeveledList {
         for (LVLI asdf : SkyProcStarter.patch.getLeveledItems()) {
             for (int i = 2; i <= RBS_Main.amountBodyTypes; i++) {
                 ID = RBS_Randomize.createID(i);
-                RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(asdf, asdf.getEDID().replace("001", ID));
+                LVLI targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(asdf, asdf.getEDID().replace("001", ID));
                 for (LeveledEntry entry : asdf.getEntries()) {
                     String tusi = RBS_ARMO.patchArmorsMapKeyForm.get(entry.getForm());
                     if (tusi != null) {
                         FormID tutu = RBS_ARMO.patchArmorsMapKeyEDID.get(tusi.replace("001", ID));
-                        RBS_LeveledList.m_targetlvl.removeAllEntries(entry.getForm());
-                        RBS_LeveledList.m_targetlvl.addEntry(tutu, 1, 1);
+                        targetlvl.removeAllEntries(entry.getForm());
+                        targetlvl.addEntry(tutu, 1, 1);
                     }
                 }
             }

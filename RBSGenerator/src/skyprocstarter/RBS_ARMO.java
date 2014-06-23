@@ -2,13 +2,11 @@ package skyprocstarter;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.time.Duration;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import javax.swing.JOptionPane;
+
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.gui.SPProgressBarPlug;
@@ -37,9 +35,7 @@ public class RBS_ARMO {
 
     public void CreateNewArmor(String folder) throws Exception {
         SPProgressBarPlug.setStatus("creating  " + folder + " clothes and armors");
-
         NumberFormat formatter = new DecimalFormat("000");
-
         List<FormID> newAA = new ArrayList<>();
         List<FormID> oldAA = new ArrayList<>();
         for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {

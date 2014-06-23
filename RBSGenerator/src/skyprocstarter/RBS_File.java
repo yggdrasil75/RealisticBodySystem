@@ -32,7 +32,7 @@ import skyproc.SPGlobal;
 
 public class RBS_File {
 
-    public static List filelist = new ArrayList();
+    public static List <String> filelist ;
     private static Charset charset;
 
     public static boolean fileExists(String path) {
@@ -46,10 +46,7 @@ public class RBS_File {
 
     public static void GetArrayFromListOfGeneratedMeshes() throws IOException {
         Path filePath = Paths.get(SkyProcStarter.pathSources +"ListGeneratedMeshes.txt");
-        List<String> stringList = Files.readAllLines(filePath, Charset.defaultCharset());
-        stringList.stream().forEach((line) -> {
-            filelist.add(line.toLowerCase());
-        });
+        filelist = Files.readAllLines(filePath, Charset.defaultCharset());
     }
 
     public static String readFromFile(String strFile) {

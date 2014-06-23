@@ -45,10 +45,6 @@ public class SkyProcStarter implements SUM {
         GRUP_TYPE.ARMO,
         GRUP_TYPE.OTFT,
         GRUP_TYPE.TXST,
-        GRUP_TYPE.HDPT,
-        GRUP_TYPE.FLST,
-        GRUP_TYPE.VTYP,
-        GRUP_TYPE.STAT,
         GRUP_TYPE.LVLI
     };
     public static String myPatchName = "RBS.esp";
@@ -76,7 +72,7 @@ public class SkyProcStarter implements SUM {
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmatures = new ArrayList<>();
     public static int megsOfMem = 1024;
-    public static ArrayList<String> meshesGroup = new ArrayList<>();
+    public static ArrayList<String> meshesGroup = new ArrayList<>(3);
     public static void main(String[] args) {
         try {
 
@@ -250,8 +246,8 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        SkyProcStarter.path = SPGlobal.pathToData;
-        //SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
+        //SkyProcStarter.path = SPGlobal.pathToData;
+        SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
         //SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
         
@@ -280,6 +276,8 @@ public class SkyProcStarter implements SUM {
         long start;
 
         SkyProcStarter.merger.getSpells().clear();
+        SkyProcStarter.merger.getAlchemy().clear();
+        SkyProcStarter.merger.getAlchemy().clear();
         SPProgressBarPlug.reset();
 
         start = System.currentTimeMillis();

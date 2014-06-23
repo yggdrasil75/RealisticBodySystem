@@ -172,7 +172,7 @@ EndFunc
 Func CreateListGeneratedMeshes()
    $array = _FileListToArrayRec ($MeshesPath,"*.nif",1,1,0,2)
    For $i = 0 To UBound($array) - 1
-	  $array[$i] = StringReplace($array[$i], "D:\Mod Organizer\mods\RealisticBodySystem\", "")
+	  $array[$i] = StringLower (StringReplace($array[$i], "D:\Mod Organizer\mods\RealisticBodySystem\", ""))
    Next
    FileDelete(@ScriptDir & "\ListGeneratedMeshes.txt")
    _FileWriteFromArray ($SourcesPath & "\ListGeneratedMeshes.txt", $array)

@@ -16,6 +16,8 @@ global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.7
 global $bodyMultiHigh = 0.8
 global $windowName = "Caliente's BodySlide"
+CreateListGeneratedMeshes()
+exit
 SetGameDataPath()
 cleanBodySlideDirectory()
 createList();
@@ -32,4 +34,3 @@ createBodies("body","CalienteBodyAdvanced TBBP")
 createBodies("standard","TBBP")
 createBodies("ct77","CT77")
 WinClose ("Caliente's BodySlide")
-CreateListGeneratedMeshes();
