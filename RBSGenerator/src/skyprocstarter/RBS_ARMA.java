@@ -9,6 +9,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import skyproc.ARMA;
 import skyproc.FormID;
+import skyproc.MajorRecord;
 import skyproc.genenums.Gender;
 import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
@@ -39,7 +40,8 @@ public class RBS_ARMA {
     }
 
     private boolean hasRBSModel(String sourcePath, String folder, String id) {
-        if (RBS_File.filelist.contains(("meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + id + File.separator + folder + File.separator + sourcePath).toLowerCase())) {
+        String RBS_path = ("meshes\\rbs\\female\\"+id+ File.separator + folder + File.separator + sourcePath).toLowerCase();
+        if (RBS_File.filelist.contains(RBS_path)) {
             return (true);
         }
         return (false);
@@ -53,9 +55,23 @@ public class RBS_ARMA {
                     ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + id);
                     patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                     patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
-                    targetAA.setModelPath("female" + File.separator + "rbs" + id + File.separator + folder + File.separator + sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON) + "".toLowerCase(), Gender.FEMALE, Perspective.THIRD_PERSON);
+                    targetAA.setModelPath("rbs\\female\\rbs" + id + File.separator + folder + File.separator + sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON) + "".toLowerCase(), Gender.FEMALE, Perspective.THIRD_PERSON);
                 });
             }
+        });
+    }
+
+    public void changeNakedTorso() {
+        FormID ID = new FormID("000D67Skyrim.esm");
+        MajorRecord MJ = SkyProcStarter.merger.getArmatures().get(ID);
+        String oldBodyMesh = MJ.getEDID();
+        vanillaAAMapKeyEDID.put(oldBodyMesh, ID);
+        vanillaAAMapKeyForm.put(ID, oldBodyMesh);
+        SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+            ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(MJ, oldBodyMesh + "RBS_F" + id);
+            patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
+            patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
+            targetAA.setModelPath("actors\\character\\character assets\\rbs\\female\\rbs"+id+"\\femalebody_1.nif", Gender.FEMALE, Perspective.THIRD_PERSON);
         });
     }
 }

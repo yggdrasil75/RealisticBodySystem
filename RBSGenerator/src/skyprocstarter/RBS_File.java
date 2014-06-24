@@ -32,8 +32,13 @@ import skyproc.SPGlobal;
 
 public class RBS_File {
 
-    public static List <String> filelist ;
+    public static List<String> filelist;
     private static Charset charset;
+
+    RBS_File() throws IOException {
+        Path filePath = Paths.get(SkyProcStarter.pathSources + "ListGeneratedMeshes.txt");
+        filelist = Files.readAllLines(filePath, Charset.defaultCharset());
+    }
 
     public static boolean fileExists(String path) {
         File file = new File(path);
@@ -42,11 +47,6 @@ public class RBS_File {
         } else {
             return (false);
         }
-    }
-
-    public static void GetArrayFromListOfGeneratedMeshes() throws IOException {
-        Path filePath = Paths.get(SkyProcStarter.pathSources +"ListGeneratedMeshes.txt");
-        filelist = Files.readAllLines(filePath, Charset.defaultCharset());
     }
 
     public static String readFromFile(String strFile) {
@@ -68,7 +68,7 @@ public class RBS_File {
                 bw.write(msg);
 
                 bw.close();
-                
+
             }
         } catch (IOException e) {
         }
@@ -187,10 +187,9 @@ public class RBS_File {
             animationFile.delete();
         }
     }
-    
-        public static String convertXMLFileToString(String fileName)
-        {
-          try{
+
+    public static String convertXMLFileToString(String fileName) {
+        try {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             InputStream inputStream = new FileInputStream(new File(fileName));
             org.w3c.dom.Document doc = documentBuilderFactory.newDocumentBuilder().parse(inputStream);
@@ -198,10 +197,9 @@ public class RBS_File {
             Transformer serializer = TransformerFactory.newInstance().newTransformer();
             serializer.transform(new DOMSource(doc), new StreamResult(stw));
             return stw.toString();
-          }
-          catch (IOException | ParserConfigurationException | TransformerException | SAXException e) {
-          }
-            return null;
+        } catch (IOException | ParserConfigurationException | TransformerException | SAXException e) {
         }
-    
+        return null;
+    }
+
 }

@@ -59,12 +59,12 @@ Func CreateBodies($folder, $filter, $counter=1)
 			send ("{down}")
 	  endif
 	  sleep(1000)
-	  ControlClick("Caliente", "", "[CLASS:Button; INSTANCE:11]", "left",1)
+	  ControlClick("Caliente", "", "[CLASS:Button; INSTANCE:3]", "left",1)
 	  WinWait("Batch")
 	  ControlClick("Batch", "", "[CLASS:Button; INSTANCE:1]", "left",1)
 	  $bodyName = "RBS" & StringFormat ("%03d", $AmountBodies)
 	  if ($folder = "body") Then
-		 $targetPathActor = $MeshesPath & "\RBS\female\"& $bodyName &"\" & $folder & "\actors\character\character assets";
+		 $targetPathActor = $MeshesPath & "\actors\character\character assets\RBS\female\" & $bodyName;
 		 DirRemove($targetPathActor,1)
 		 DirCreate($targetPathActor)
 	  else

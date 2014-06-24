@@ -24,45 +24,45 @@ public class RBS_Outfit {
 
     public void CreateNewOutfits2(String folder) throws Exception {
         /*
-         for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
-         for (FormID outfitList : outfit.getInventoryList()) {
-         MajorRecord MJ = SkyProcStarter.merger.getArmors().get(outfitList);
-         if (MJ != null) {
-         // ist Armor
-         } else {
-         MajorRecord MJ2 = SkyProcStarter.merger.getLeveledItems().get(outfitList);
-         if (MJ != null) {
-         // ist leveledItem
-         }
-         }
-         }
+        for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
+            for (FormID outfitList : outfit.getInventoryList()) {
+                MajorRecord MJ = SkyProcStarter.merger.getArmors().get(outfitList);
+                if (MJ != null) {
+                    
+                } else {
+                    MajorRecord MJ2 = SkyProcStarter.merger.getLeveledItems().get(outfitList);
+                    if (MJ != null) {
+                        // ist leveledItem
+                    }
+                }
+            }
 
-         if (MJ != null) { //it has to be checked because not every Entry is Type ARMO
-         for (String meshesGroup : SkyProcStarter.meshesGroup) { //iterate through meshesGroup (different Folders)
-         MJNew = SkyProcStarter.patch.getArmors().get(MJ.getEDID() + "RBS_F" + meshesGroup + ID); //checking if RBS_Armor exists in patch
-         if (MJNew != null) { // if exists add Armor to List and old vanilla Armor to another list
-         RBSArmorsToBeAdded.add(MJNew);
-         vanillaArmorsToBeDeleted.add(MJ);
-         }
-         }
-         }
+            if (MJ != null) { //it has to be checked because not every Entry is Type ARMO
+                for (String meshesGroup : SkyProcStarter.meshesGroup) { //iterate through meshesGroup (different Folders)
+                    MJNew = SkyProcStarter.patch.getArmors().get(MJ.getEDID() + "RBS_F" + meshesGroup + ID); //checking if RBS_Armor exists in patch
+                    if (MJNew != null) { // if exists add Armor to List and old vanilla Armor to another list
+                        RBSArmorsToBeAdded.add(MJNew);
+                        vanillaArmorsToBeDeleted.add(MJ);
+                    }
+                }
+            }
 
-         if (RBSArmorsToBeAdded.size() > 0) {
-         RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
-         vanillaArmorsToBeDeleted.stream().forEach((Armor) -> {
-         RBS_LeveledList.m_targetlvl.removeAllEntries(Armor.getForm());
-         });
-         vanillaArmorsToBeDeleted.clear();
-         RBSArmorsToBeAdded.stream().forEach((Armor) -> {
-         RBS_LeveledList.m_targetlvl.addEntry(Armor.getForm(), 1, 1);
-         });
-         RBSArmorsToBeAdded.clear();
-         }
-         }
-         }
-         }
-         */
+            if (RBSArmorsToBeAdded.size() > 0) {
+                RBS_LeveledList.m_targetlvl = (LVLI) SkyProcStarter.patch.makeCopy(leveledItem, leveledItem.getEDID() + "RBS" + ID);
+                vanillaArmorsToBeDeleted.stream().forEach((Armor) -> {
+                    RBS_LeveledList.m_targetlvl.removeAllEntries(Armor.getForm());
+                });
+                vanillaArmorsToBeDeleted.clear();
+                RBSArmorsToBeAdded.stream().forEach((Armor) -> {
+                    RBS_LeveledList.m_targetlvl.addEntry(Armor.getForm(), 1, 1);
+                });
+                RBSArmorsToBeAdded.clear();
+            }
+        }
     }
+}
+*/
+}
     public void CreateNewOutfits(String folder) throws Exception {
         MajorRecord MJOld;
         MajorRecord MJNew;

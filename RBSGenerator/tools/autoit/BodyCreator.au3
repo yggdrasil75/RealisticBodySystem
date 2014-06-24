@@ -14,13 +14,17 @@ global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.7
-global $bodyMultiHigh = 0.8
+global $bodyMultiHigh = 0.85
 global $windowName = "Caliente's BodySlide"
-CreateListGeneratedMeshes()
-exit
+
+
 SetGameDataPath()
 cleanBodySlideDirectory()
+
+
 createList();
+
+
 Switch MsgBox(3, "BodyCreator", "Do want to generate new bodyshapes? (previous will be overwritten)")
     Case 6
 	  createPresetFiles()
@@ -34,3 +38,4 @@ createBodies("body","CalienteBodyAdvanced TBBP")
 createBodies("standard","TBBP")
 createBodies("ct77","CT77")
 WinClose ("Caliente's BodySlide")
+CreateListGeneratedMeshes()

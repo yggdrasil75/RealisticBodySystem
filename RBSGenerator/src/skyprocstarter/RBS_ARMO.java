@@ -6,15 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import skyproc.ARMA;
 
 import skyproc.ARMO;
 import skyproc.FormID;
+import skyproc.MajorRecord;
+import skyproc.genenums.Gender;
+import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_ARMO {
 
-    public static Map<String, FormID> vanillaArmorsMapKeyEDID = new ConcurrentHashMap<>();
-    public static Map<FormID, String> vanillaArmorsMapKeyForm = new ConcurrentHashMap<>();
+ //   public static Map<String, FormID> vanillaArmorsMapKeyEDID = new ConcurrentHashMap<>();
+    //   public static Map<FormID, String> vanillaArmorsMapKeyForm = new ConcurrentHashMap<>();
     public static Map<String, FormID> patchArmorsMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> patchArmorsMapKeyForm = new ConcurrentHashMap<>();
     public static List<ARMO> ListVanillaArmors = new ArrayList<>();
@@ -25,8 +29,8 @@ public class RBS_ARMO {
                 for (FormID listaa1 : a.getArmatures()) {
                     if (RBS_ARMA.vanillaAAMapKeyEDID.containsValue(listaa1)) {
                         ListVanillaArmors.add(a);
-                        vanillaArmorsMapKeyEDID.put(a.getEDID(), a.getForm());
-                        vanillaArmorsMapKeyForm.put(a.getForm(), a.getEDID());
+   //                     vanillaArmorsMapKeyEDID.put(a.getEDID(), a.getForm());
+                        //                     vanillaArmorsMapKeyForm.put(a.getForm(), a.getEDID());
                     }
                 }
             }
@@ -60,6 +64,21 @@ public class RBS_ARMO {
                 }
             }
         }
-       
     }
+
+    public void changeSkinNaked() {
+        FormID skinNaked = new FormID("000D64Skyrim.esm");
+        FormID nakedTorso = new FormID("000D67Skyrim.esm");
+        String EDID = RBS_ARMA.vanillaAAMapKeyForm.get(nakedTorso);
+
+        ARMO asdf = (ARMO) SkyProcStarter.merger.getArmors().get(skinNaked);
+        SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+            String newBodyMesh = asdf.getEDID() + "RBS_F" + id;
+            ARMO targetArmor = (ARMO) SkyProcStarter.patch.makeCopy(asdf, newBodyMesh);
+            FormID gfd = RBS_ARMA.patchAAMapKeyEDID.get(EDID + "RBS_F" + id);
+            targetArmor.getArmatures().remove(nakedTorso);
+            targetArmor.getArmatures().add(gfd);
+        });
+    }
+
 }
