@@ -4,12 +4,13 @@ import java.io.File;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMA;
 import skyproc.FormID;
+import skyproc.NPC_;
 import skyproc.RACE;
 import skyproc.SPGlobal;
 import skyproc.genenums.Gender;
@@ -25,6 +26,7 @@ public class RBS_Race {
     public static Map<FormID, String> vanillaRacesMapKeyForm = new ConcurrentHashMap<>();
     public static List<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
     public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
+    public static int amountFilesHKX;
 
     RBS_Race() {
         for (RACE r : SkyProcStarter.merger.getRaces()) {
@@ -49,7 +51,7 @@ public class RBS_Race {
         SPProgressBarPlug.setStatus("creating new male races 1");
         // no skeletonbeast for now
         NumberFormat formatter = new DecimalFormat("000");
-        for (int i = 1; i < RBS_Main.amountBodyTypesMale; i++) {
+        for (int i = 1; i <= RBS_Main.amountBodyTypesMale; i++) {
             for (RACE r : ListRBSRacesMerger) {
                 String s = formatter.format(i);
                 RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_M" + s);
@@ -59,6 +61,7 @@ public class RBS_Race {
 
                 FormID RaceID = new FormID(r.getForm());
                 String RaceEDID = copiedRace.getEDID();
+
 
                 copiedRace.set(RACE.RACEFlags.Playable, false);
                 copiedRace.setModel(Gender.MALE, "RBS\\Skeletons\\skeletonRBS_M" + s + ".nif");
@@ -70,12 +73,14 @@ public class RBS_Race {
 
     public void CreateNewMaleRaces2() throws Exception {
         SPProgressBarPlug.setStatus("creating new male races 2");
-        List<ARMA> ListAABeast = new ArrayList<>();
-        List<String> ListMaleRacesEDID = new ArrayList<>();
-        List<FormID> ListMaleRacesFormID = new ArrayList<>();
-        RBS_ARMA.ListVanillaAA.stream().forEach((sourceAA) -> {
+        ArrayList<ARMA> ListAABeast = new ArrayList<>();
+        ArrayList<String> ListMaleRacesEDID = new ArrayList<>();
+        ArrayList<FormID> ListMaleRacesFormID = new ArrayList<>();
+        for (ARMA sourceAA : RBS_ARMA.ListVanillaAA) {
+            //if (sourceAA.getEDID().contains("Argonian") || sourceAA.getEDID().contains("Khajiit")) {
             ListAABeast.add(sourceAA);
-        });
+            // }
+        }
 
         for (RACE r : SkyProcStarter.patch.getRaces()) {
             if (r.getEDID().contains("RBS_M")) {
@@ -93,26 +98,48 @@ public class RBS_Race {
     }
 
     public void createForNewAnimations() throws Exception {
-
+        
         SPProgressBarPlug.setStatus("Creating races");
         NumberFormat formatter = new DecimalFormat("00");
         NumberFormat formatter2 = new DecimalFormat("000");
+        String path1 = SPGlobal.pathToData
+                + "meshes"
+                + File.separator
+                + "Actors"
+                + File.separator
+                + "Character"
+                + File.separator
+                + "characters female"
+                + File.separator;
 
-        ListRBSRacesMerger.stream().filter((r) -> (r.getPhysicsModel(Gender.FEMALE).toString().toLowerCase().contains("defaultfemale.hkx"))).forEach((r) -> {
-            for (int i = 1; i <= RBS_Animation.amountOfAnimationFolders; i++) {
-                String s = formatter.format(i);
-                String t = formatter2.format(i);
-                RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_F" + t);
-                copiedRace.setPhysicsModels(Gender.FEMALE, "Actors" + File.separator + "Character" + File.separator + "DefaultFemale" + ".h" + s);
-                copiedRace.setMorphRace(r.getForm());
-                copiedRace.setArmorRace(r.getForm());
+        String path2 = SPGlobal.pathToData
+                + "meshes"
+                + File.separator
+                + "Actors"
+                + File.separator
+                + "Character"
+                + File.separator;
+
+        
+       
+        for (RACE r : ListRBSRacesMerger) {
+               if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
+                for (int i = 1; i <= RBS_Animation.amountOfAnimationFolders; i++) {
+                    String s = formatter.format(i);
+                    String t = formatter2.format(i);
+                    RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_F" + t);
+                    copiedRace.setPhysicsModels(Gender.FEMALE, "Actors" + File.separator + "Character" + File.separator + "DefaultFemale" + ".h" + s);
+                    copiedRace.setMorphRace(r.getForm());
+                    copiedRace.setArmorRace(r.getForm());
+                }
             }
-        });
+        }
     }
 
     public void AttachNPCsToRaces() throws Exception {
         SPProgressBarPlug.setStatus("Attaching all Female NPCs to new animation races");
-        RBS_NPC.ListNPCFemale.stream().filter((n) -> (n.getWeight() < 60)).forEach((n) -> {
+        for (NPC_ n : RBS_NPC.ListNPCFemale) {
+            if (n.getWeight()<60) {
             String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, RBS_Animation.amountOfAnimationFolders);
             String sourceName = SkyProcStarter.merger.getRaces().get(new FormID(n.getRace())).getEDID() + "RBS_F" + bodyID;
             for (RACE r : SkyProcStarter.patch.getRaces()) {
@@ -120,28 +147,33 @@ public class RBS_Race {
                     n.setRace(r.getForm());
                 }
             }
-        });
+            }
+        }
     }
 
     public void AddToRacesHandsAndFeet(String folder) throws Exception {
-        List<ARMA> ListRBSHandsAndFeet = new ArrayList<>();
+        ArrayList<ARMA> ListRBSHandsAndFeet = new ArrayList<>();
         SPProgressBarPlug.setStatus("Adding entries for rRaces to hand and feet");
-        RBS_ARMA.ListVanillaAA.stream().filter((a) -> (a.getEDID().contains("NakedHand") || a.getEDID().contains("NakedFeet") || a.getEDID().contains("NakedTail"))).filter((a) -> (a.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets") || a.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets"))).filter((a) -> (!a.getEDID().toLowerCase().contains("child"))).forEach((a) -> {
-            ListRBSHandsAndFeet.add(a);
-        });
-        ListRBSHandsAndFeet.stream().map((a) -> {
+        for (ARMA a : RBS_ARMA.ListVanillaAA) {
+            if (a.getEDID().contains("NakedHand") || a.getEDID().contains("NakedFeet") || a.getEDID().contains("NakedTail")) {
+                if (a.getModelPath(Gender.MALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets") || a.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("character\\character assets")) {
+                    if (!a.getEDID().toLowerCase().contains("child")) {
+                        ListRBSHandsAndFeet.add(a);
+                    }
+                }
+            }
+        }
+        for (ARMA a : ListRBSHandsAndFeet) {
             for (RACE r : SkyProcStarter.patch.getRaces()) {
                 a.addAdditionalRace(r.getForm());
             }
-            return a;
-        }).forEach((a) -> {
             SkyProcStarter.patch.addRecord(a);
-        });
+        }
     }
 
     public void raceChangeFemaleSkeletons() throws Exception {
 
-        ListRBSRacesMerger.stream().forEach((r) -> {
+        for (RACE r : ListRBSRacesMerger) {
             try {
                 if (r.getModel(Gender.FEMALE).contains("skeleton_female")) {
                     String ID = RBS_Randomize.toString(r.getFormStr(), 1, 6);
@@ -151,6 +183,7 @@ public class RBS_Race {
             } catch (Exception ex) {
                 SPGlobal.logException(ex);
             }
-        });
+        }
     }
 }
+

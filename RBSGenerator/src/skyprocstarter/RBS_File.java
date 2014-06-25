@@ -32,8 +32,14 @@ import skyproc.SPGlobal;
 
 public class RBS_File {
 
-    public static List filelist = new ArrayList();
+
+    public static List<String> filelist;
     private static Charset charset;
+
+    RBS_File() throws IOException {
+        Path filePath = Paths.get(SkyProcStarter.pathSources + "ListGeneratedMeshes.txt");
+        filelist = Files.readAllLines(filePath, Charset.defaultCharset());
+    }
 
     public static boolean fileExists(String path) {
         File file = new File(path);
@@ -42,14 +48,6 @@ public class RBS_File {
         } else {
             return (false);
         }
-    }
-
-    public static void GetArrayFromListOfGeneratedMeshes() throws IOException {
-        Path filePath = Paths.get(SkyProcStarter.pathSources +"ListGeneratedMeshes.txt");
-        List<String> stringList = Files.readAllLines(filePath, Charset.defaultCharset());
-            for (String line : stringList) {
-             filelist.add(line);
-            }
     }
 
     public static String readFromFile(String strFile) {
@@ -71,7 +69,7 @@ public class RBS_File {
                 bw.write(msg);
 
                 bw.close();
-                
+
             }
         } catch (IOException e) {
         }
@@ -174,7 +172,7 @@ public class RBS_File {
 
     public void copyBodyFiles(String body, String folder) throws Exception {
         NumberFormat formatter = new DecimalFormat("000");
-        for (int bodies = 1; bodies < RBS_Main.amountBodyTypes; bodies++) {
+        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypes; bodies++) {
             String s = formatter.format(bodies);
             fileCopy(SPGlobal.pathToData + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + body + File.separator + "actors" + File.separator + "character" + File.separator + "character assets" + File.separator + "femalebody_1.nif",
                     SPGlobal.pathToData + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + "actors" + File.separator + "character" + File.separator + "character assets" + File.separator + "femalebody_1.nif");
@@ -190,10 +188,9 @@ public class RBS_File {
             animationFile.delete();
         }
     }
-    
-        public static String convertXMLFileToString(String fileName)
-        {
-          try{
+
+    public static String convertXMLFileToString(String fileName) {
+        try {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             InputStream inputStream = new FileInputStream(new File(fileName));
             org.w3c.dom.Document doc = documentBuilderFactory.newDocumentBuilder().parse(inputStream);
@@ -201,10 +198,9 @@ public class RBS_File {
             Transformer serializer = TransformerFactory.newInstance().newTransformer();
             serializer.transform(new DOMSource(doc), new StreamResult(stw));
             return stw.toString();
-          }
-          catch (IOException | ParserConfigurationException | TransformerException | SAXException e) {
-          }
-            return null;
+        } catch (IOException | ParserConfigurationException | TransformerException | SAXException e) {
         }
-    
+        return null;
+    }
+
 }

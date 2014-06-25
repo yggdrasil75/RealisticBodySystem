@@ -14,7 +14,7 @@ global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.7
-global $bodyMultiHigh = 0.6
+global $bodyMultiHigh = 0.85
 global $windowName = "Caliente's BodySlide"
 SetGameDataPath()
 cleanBodySlideDirectory()
@@ -32,4 +32,5 @@ createBodies("body","CalienteBodyAdvanced TBBP")
 createBodies("standard","TBBP")
 createBodies("ct77","CT77")
 WinClose ("Caliente's BodySlide")
-CreateListGeneratedMeshes();
+CreateListGeneratedMeshes()
+

@@ -4,7 +4,6 @@ import java.util.Random;
 import skyprocstarter.YourSaveFile.Settings;
 import java.text.*;
 
-
 public class RBS_Randomize {
 
     public static String createID(int Number) {
@@ -12,10 +11,11 @@ public class RBS_Randomize {
         return (formatter.format(Number));
     }
 
-    public static String createID(int Number ,int digits) {
+    public static String createID(int Number, int digits) {
         NumberFormat formatter = new DecimalFormat("00");
         return (formatter.format(Number));
     }
+
     public static String createRandomID(String seed) {
         NumberFormat formatter = new DecimalFormat("000");
         return (formatter.format(toInt(seed, 1, (RBS_Main.amountBodyTypes) - 1)));
@@ -26,7 +26,7 @@ public class RBS_Randomize {
         String test = formatter.format(toInt(seed, min, max));
         return (test);
     }
-    
+
     public static String createRandomID(int seed) {
         String string = String.valueOf(seed);
         NumberFormat formatter = new DecimalFormat("000");
@@ -83,6 +83,7 @@ public class RBS_Randomize {
         int x = ran.nextInt(max - min) + min;
         return (x);
     }
+
     
 
 }

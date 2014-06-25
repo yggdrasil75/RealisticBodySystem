@@ -72,6 +72,51 @@ public class RBS_NPC {
         }
     }
 
+    public void changeFemale(String folder) throws Exception {
+        int counter = 0;
+        boolean patchOutfits;
+        int max = ListNPCFemale.size();
+        RBS_NPC.m_folder = folder;
+        for (NPC_ n : ListNPCFemale) {
+            
+            RBS_NPC.m_npc = n;
+            if ("No FormID".equals(n.getDefaultOutfit().getFormStr())) {
+                patchOutfits = false;
+            } else {
+                FormID id = RBS_NPC.m_npc.getDefaultOutfit();
+                RBS_NPC.m_sourceOutfit = SPDatabase.getMajor(id);
+                RBS_NPC.m_outfitName = RBS_NPC.m_sourceOutfit.getEDID();
+                patchOutfits = true;
+            }
+            RBS_NPC.m_raceName = (SkyProcStarter.merger.getRaces().get(n.getRace())).getEDID();
+            SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
+            counter++;
+            // if (!RBS_NPC.m_npc.getRace().getFormStr().equals("000019Skyrim.esm")) {
+            RBS_NPC.m_RBSNumber = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
+            changeWeightByJob();
+            changeHeight();
+            if (patchOutfits) {
+                setDefaultOutfit();
+            }
+            RBS_NPC.m_npc.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + RBS_NPC.m_RBSNumber).getForm());
+            //changeSkin();
+            //  }
+            //}
+
+            if (RBS_NPC.m_npc.getRace().getFormStr().equals("013740Skyrim.esm")) {
+                RBS_NPC.m_npc.setWeight(RBS_Randomize.toInt(RBS_NPC.m_npc.getFormStr(), 0, 5));
+            }
+
+            this.setSpeedMult();
+            n = RBS_NPC.m_npc;
+            SkyProcStarter.patch.addRecord(n);
+            ListNPCFemalePatched.add(n.getForm());
+            RBS_NPC.m_npc = null;
+            RBS_NPC.m_raceName = null;
+        }
+        RBS_NPC.m_folder = null;
+    }
+
     public void femalize() {
         for (NPC_ n : ListNPCMaleNotUnique) {
             n.set(NPC_.NPCFlag.Female, true);
@@ -197,60 +242,6 @@ public class RBS_NPC {
         }
     }
 
-    private void changeSkin() {
-        FormID ID;
-        if (RBS_NPC.m_raceName.toLowerCase().contains("argon") || RBS_NPC.m_raceName.toLowerCase().contains("khajiit")) {
-            ID = SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_Fstandard" + RBS_NPC.m_RBSNumber).getForm();
-        } else {
-            ID = SkyProcStarter.patch.getArmors().get("SkinNakedRBS_Fstandard" + RBS_NPC.m_RBSNumber).getForm();
-        }
-        if (ID != null) {
-            RBS_NPC.m_npc.setSkin(ID);
-        }
-    }
-
-    public void changeFemale(String folder) throws Exception {
-        int counter = 0;
-        boolean patchOutfits;
-        int max = ListNPCFemale.size();
-        RBS_NPC.m_folder = folder;
-        for (NPC_ n : ListNPCFemale) {
-            RBS_NPC.m_npc = n;
-            if ("No FormID".equals(n.getDefaultOutfit().getFormStr())) {
-                patchOutfits = false;
-            } else {
-                FormID id = RBS_NPC.m_npc.getDefaultOutfit();
-                RBS_NPC.m_sourceOutfit = SPDatabase.getMajor(id);
-                RBS_NPC.m_outfitName = RBS_NPC.m_sourceOutfit.getEDID();
-                patchOutfits = true;
-            }
-            RBS_NPC.m_raceName = (SkyProcStarter.merger.getRaces().get(n.getRace())).getEDID();
-            SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
-            counter++;
-            // if (!RBS_NPC.m_npc.getRace().getFormStr().equals("000019Skyrim.esm")) {
-            RBS_NPC.m_RBSNumber = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
-            changeWeightByJob();
-            changeHeight();
-            if (patchOutfits) {
-                setDefaultOutfit();
-            }
-           // changeSkin();
-            //  }
-            //}
-
-            if (RBS_NPC.m_npc.getRace().getFormStr().equals("013740Skyrim.esm")) {
-                RBS_NPC.m_npc.setWeight(RBS_Randomize.toInt(RBS_NPC.m_npc.getFormStr(), 0, 5));
-            }
-
-            this.setSpeedMult();
-            n = RBS_NPC.m_npc;
-            SkyProcStarter.patch.addRecord(n);
-            ListNPCFemalePatched.add(n.getForm());
-            RBS_NPC.m_npc = null;
-            RBS_NPC.m_raceName = null;
-        }
-        RBS_NPC.m_folder = null;
-    }
     //ScriptRef RBStest = new ScriptRef("RBStest");
     // QUST questtest = NiftyFunc.makeScriptQuest(SPGlobal.getGlobalPatch(), RBStest);
 

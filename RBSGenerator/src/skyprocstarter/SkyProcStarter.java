@@ -45,10 +45,6 @@ public class SkyProcStarter implements SUM {
         GRUP_TYPE.ARMO,
         GRUP_TYPE.OTFT,
         GRUP_TYPE.TXST,
-        GRUP_TYPE.HDPT,
-        GRUP_TYPE.FLST,
-        GRUP_TYPE.VTYP,
-        GRUP_TYPE.STAT,
         GRUP_TYPE.LVLI
     };
     public static String myPatchName = "RBS.esp";
@@ -71,12 +67,14 @@ public class SkyProcStarter implements SUM {
 
     public static String pathToCharactersFemale;
     public static String pathToCharacter;
+    public static List<String> amountBodyTypes = new ArrayList<>();
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmatures = new ArrayList<>();
     public static int megsOfMem = 1024;
-    public static ArrayList<String> meshesGroup = new ArrayList<>();
+    public static ArrayList<String> meshesGroup = new ArrayList<>(3);
+
     public static void main(String[] args) {
         try {
 
@@ -103,6 +101,11 @@ public class SkyProcStarter implements SUM {
 
     static boolean handleArgs(ArrayList<String> arguments) throws IOException, InterruptedException {
         Ln.toUpper(arguments);
+        if (arguments.contains("-NETBEANS:1")) {
+            SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
+        } else {
+            SkyProcStarter.path = SPGlobal.pathToData;
+        }
         String nonew = "-NONEW";
 
         if (!arguments.contains(nonew)) {
@@ -246,21 +249,22 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
-
+        for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
+            SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
+        }
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        SkyProcStarter.path = SPGlobal.pathToData;
-        SkyProcStarter.canonicalPath = new File(SPGlobal.pathToData).getCanonicalPath() + File.separator;
-        // SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
-        //SkyProcStarter.path = new File("").getCanonicalPath() + File.separator;
+
+        SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
+        //SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
+
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-        
-        
+
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();
@@ -279,6 +283,8 @@ public class SkyProcStarter implements SUM {
         long start;
 
         SkyProcStarter.merger.getSpells().clear();
+        SkyProcStarter.merger.getAlchemy().clear();
+        SkyProcStarter.merger.getAlchemy().clear();
         SPProgressBarPlug.reset();
 
         start = System.currentTimeMillis();
@@ -290,35 +296,34 @@ public class SkyProcStarter implements SUM {
         }
         if (save.getBool(Settings.CHANGE_BODIES_ON)) {
             SkyProcStarter.meshesGroup.add("standard");
-            RBS_File.GetArrayFromListOfGeneratedMeshes();
-            rbs_texture.textures();
+
+            if (save.getBool(Settings.KILLERKEO_CLOTHES_ON)) {
+                SkyProcStarter.meshesGroup.add("killerkeo");
+            }
+
+            if (save.getBool(Settings.MAK_CLOTHES_ON)) {
+                SkyProcStarter.meshesGroup.add("ct77");
+            }
+
+            for (String meshesfolder : meshesGroup) {
+                rbs_arma.CreateNewAA(meshesfolder, save.getStr(Settings.BODY));
+            }
+            rbs_arma.changeNakedTorso();
+            rbs_armo.changeSkinNaked();
+            
             if (save.getBool(Settings.TEXTURE_DEPLOYMENT_ON)) {
                 rbs_texture.CreateTextureSetsSkinBodyFemale_1RBS();
             }
-            rbs_arma.CreateNewAA("standard", save.getStr(Settings.BODY)); // use mesh files for body choosen by option in user interface.
-            if (save.getBool(Settings.KILLERKEO_CLOTHES_ON)) {
-                rbs_arma.CreateNewAA("killerkeo", "body");
-            }
 
-            if (save.getBool(Settings.MAK_CLOTHES_ON)) 
-            {
-                SkyProcStarter.meshesGroup.add("ct77");
-                rbs_arma.CreateNewAA("ct77", "body");
-            }
+            rbs_texture.textures();
 
             for (ARMA AA : patch.getArmatures()) {
                 RBS_ARMA.patchAAMapKeyEDID.put(AA.getEDID(), AA.getForm());
                 RBS_ARMA.patchAAMapKeyForm.put(AA.getForm(), AA.getEDID());
             }
 
-            rbs_armo.CreateNewArmor("standard");
-
-            if (save.getBool(Settings.KILLERKEO_CLOTHES_ON)) {
-                rbs_armo.CreateNewArmor("killerkeo");
-            }
-
-            if (save.getBool(Settings.MAK_CLOTHES_ON)) {
-                rbs_armo.CreateNewArmor("ct77");
+            for (String meshesfolder : meshesGroup) {
+                rbs_armo.CreateNewArmor(meshesfolder);
             }
 
             rbs_leveledList.checkItemsOfLeveledListsForPatching();
@@ -329,13 +334,8 @@ public class SkyProcStarter implements SUM {
                 rbs_leveledList.LItemClothesAll("standard");
             }
 
-            rbs_outfit.CreateNewOutfits("standard");
-
-            if (save.getBool(Settings.KILLERKEO_CLOTHES_ON)) {
-                rbs_outfit.CreateNewOutfits("killerkeo");
-            }
-            if (save.getBool(Settings.MAK_CLOTHES_ON)) {
-                rbs_outfit.CreateNewOutfits("ct77");
+            for (String meshesfolder : meshesGroup) {
+                rbs_outfit.CreateNewOutfits(meshesfolder);
             }
             //rbs_npc.femalize();
             rbs_npc.changeFemale("standard");
@@ -378,10 +378,10 @@ public class SkyProcStarter implements SUM {
             //   AddNeckFixSpellToRaces();
             rbs_quest.addQuest();
         }
-        rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
+        //  rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
 
         rbs_leveledList.exchangeLeveledLists();
-        rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
-        rbs_cleanUnusedData.cleanUnusedData();
+        //  rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
+        //   rbs_cleanUnusedData.cleanUnusedData();
     }
 }

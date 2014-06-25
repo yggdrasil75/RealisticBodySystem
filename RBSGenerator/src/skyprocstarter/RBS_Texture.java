@@ -254,7 +254,7 @@ public class RBS_Texture {
         }
 
         NumberFormat formatter = new DecimalFormat("000");
-        for (int bodies = 1; bodies < RBS_Main.amountBodyTypes; bodies++) {
+        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypes; bodies++) {
             String s_bodies = formatter.format(bodies);
             for (ARMO sourceArmor : ListSkinNakedRBS_F) {
                 if (sourceArmor.getEDID().equals("SkinNakedRBS_F" + "standard" + s_bodies)) {
@@ -311,7 +311,7 @@ public class RBS_Texture {
                 ListRBSAANakedTorso.add(sourceAA);
             }
         }
-        for (int bodies = 1; bodies < RBS_Main.amountBodyTypes; bodies++) {
+        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypes; bodies++) {
             String s_bodies = formatter.format(bodies);
             for (int list = 0; list < ListRBSAANakedTorso.size(); list++) {
                 if (ListRBSAANakedTorso.get(list).getEDID().equals("NakedTorsoRBS_F" + "standard" + s_bodies)) {
@@ -331,7 +331,7 @@ public class RBS_Texture {
 
     public void CreateAANakedTorsoAlternativeTexturesFemalesOld() throws Exception {
         NumberFormat formatter = new DecimalFormat("000");
-        for (int bodies = 1; bodies < RBS_Main.amountBodyTypes; bodies++) {
+        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypes; bodies++) {
             String s_bodies = formatter.format(bodies);
             for (ARMA sourceAA : SkyProcStarter.patch.getArmatures()) {
                 if (sourceAA.getEDID().equals("NakedTorsoRBS_F" + "standard" + s_bodies)) {
@@ -353,7 +353,7 @@ public class RBS_Texture {
         SPProgressBarPlug.setStatus("Create AA naked torso alternative textures males");
         NumberFormat formatter = new DecimalFormat("000");
         ARMA NakedTorso = (ARMA) SkyProcStarter.merger.getArmatures().get(new FormID("000D67Skyrim.esm"));
-        for (int bodies = 1; bodies < RBS_Main.amountBodyTypesMale; bodies++) {
+        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypesMale; bodies++) {
             String s_bodies = formatter.format(bodies);
             for (TXST t : SkyProcStarter.patch.getTextureSets()) {
                 if (t.getEDID().contains("RBS_M_TEXT")) {
