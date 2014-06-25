@@ -339,7 +339,7 @@ public class SkyProcStarter implements SUM {
                 rbs_outfit.CreateNewOutfits(meshesfolder);
             }
             //rbs_npc.femalize();
-            rbs_npc.changeFemale("standard");
+            rbs_npc.changeFemale();
         }
 
         if (SkyProcStarter.save.getBool(YourSaveFile.Settings.HAIR_DEPLOYMENT_ON)) {
