@@ -47,6 +47,7 @@ public class SkyProcStarter implements SUM {
         GRUP_TYPE.TXST,
         GRUP_TYPE.LVLI
     };
+    
     public static String myPatchName = "RBS.esp";
     public static Mod merger;
     public static Mod patch;
@@ -255,7 +256,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-
+        
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
         //SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
 

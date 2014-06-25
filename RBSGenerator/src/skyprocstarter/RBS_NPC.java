@@ -70,15 +70,47 @@ public class RBS_NPC {
                 ListNPC.add(n);
             }
         }
+        SkyProcStarter.merger.getNPCs().getRecords().clear();
+        SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
+        SkyProcStarter.merger.getNPCs().getRecords().trimToSize();
+    }
+
+    public void changeFemaleNew() throws Exception {
+        int counter = 1;
+        int max = SkyProcStarter.merger.getNPCs().getRecords().size();
+        for (NPC_ NPCIterator : SkyProcStarter.merger.getNPCs().getRecords()) {
+            SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
+            if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
+                SPDatabase.getMajor(NPCIterator.getDefaultOutfit()).getEDID();
+                setDefaultOutfit();
+                NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + RBS_NPC.m_RBSNumber).getForm());
+                // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
+                NPCIterator = setSpeedMult(NPCIterator);
+                NPCIterator = changeHeight(NPCIterator);
+            }
+
+            // if (!RBS_NPC.m_npc.getRace().getFormStr().equals("000019Skyrim.esm")) {
+            RBS_NPC.m_RBSNumber = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
+            changeWeightByJob();
+            
+            if (RBS_NPC.m_npc.getRace().getFormStr().equals("013740Skyrim.esm")) {
+                RBS_NPC.m_npc.setWeight(RBS_Randomize.toInt(RBS_NPC.m_npc.getFormStr(), 0, 5));
+            }
+
+            SkyProcStarter.patch.addRecord(NPCIterator);
+            ListNPCFemalePatched.add(NPCIterator.getForm());
+            RBS_NPC.m_npc = null;
+            RBS_NPC.m_raceName = null;
+        }
+        RBS_NPC.m_folder = null;
     }
 
     public void changeFemale(String folder) throws Exception {
         int counter = 0;
         boolean patchOutfits;
-        int max = ListNPCFemale.size();
+        int max = SkyProcStarter.merger.getNPCs().getRecords().size();
         RBS_NPC.m_folder = folder;
-        for (NPC_ n : ListNPCFemale) {
-            
+        for (NPC_ n : SkyProcStarter.merger.getNPCs().getRecords()) {
             RBS_NPC.m_npc = n;
             if ("No FormID".equals(n.getDefaultOutfit().getFormStr())) {
                 patchOutfits = false;
@@ -94,7 +126,7 @@ public class RBS_NPC {
             // if (!RBS_NPC.m_npc.getRace().getFormStr().equals("000019Skyrim.esm")) {
             RBS_NPC.m_RBSNumber = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
             changeWeightByJob();
-            changeHeight();
+         //   changeHeight();
             if (patchOutfits) {
                 setDefaultOutfit();
             }
@@ -107,7 +139,7 @@ public class RBS_NPC {
                 RBS_NPC.m_npc.setWeight(RBS_Randomize.toInt(RBS_NPC.m_npc.getFormStr(), 0, 5));
             }
 
-            this.setSpeedMult();
+            this.setSpeedMult(n);
             n = RBS_NPC.m_npc;
             SkyProcStarter.patch.addRecord(n);
             ListNPCFemalePatched.add(n.getForm());
@@ -124,24 +156,33 @@ public class RBS_NPC {
         }
     }
 
-    private void setSpeedMult() {
-        if (SkyProcStarter.merger.getRaces().get(RBS_NPC.m_npc.getRace()).getEDID().toLowerCase().contains("eldar")) {
-            RBS_NPC.m_npc.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(RBS_NPC.m_npc.getEDID() + RBS_NPC.m_npc.getFormStr(), 40, 70));
+    private NPC_ setSpeedMult(NPC_ NPCIterator) {
+        int min;
+        int max;
+        if (SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID().toLowerCase().contains("eldar")) {
+            min = 40;
+            max = 70;
         } else {
-            RBS_NPC.m_npc.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(RBS_NPC.m_npc.getEDID() + RBS_NPC.m_npc.getFormStr(), 70, 100));
+            min = 70;
+            max = 100;
         }
-        if (RBS_NPC.m_npc.getWeight() > 80) {
-            RBS_NPC.m_npc.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(RBS_NPC.m_npc.getEDID() + RBS_NPC.m_npc.getFormStr(), 60, 80));
+        if (NPCIterator.getWeight() > 80) {
+            min = 60;
+            max = 80;
         }
-        if (RBS_NPC.m_npc.getWeight() > 90) {
-            RBS_NPC.m_npc.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(RBS_NPC.m_npc.getEDID() + RBS_NPC.m_npc.getFormStr(), 50, 70));
+        if (NPCIterator.getWeight() > 90) {
+            min = 50;
+            max = 70;
         }
+        NPCIterator.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(NPCIterator.getEDID() + NPCIterator.getFormStr(), min, max));
+        return (NPCIterator);
     }
 
-    private void changeHeight() {
-        float tmp = RBS_Randomize.toFloat(RBS_NPC.m_npc.getName() + RBS_NPC.m_npc.getFormStr(), 1, 1500) + 8500;
+    private NPC_ changeHeight(NPC_ NPCIterator) {
+        float tmp = RBS_Randomize.toFloat(NPCIterator.getName() + NPCIterator.getFormStr(), 1, 1500) + 8500;
         float randomheight = tmp / 10000;
-        RBS_NPC.m_npc.setHeight(randomheight);
+        NPCIterator.setHeight(randomheight);
+        return (NPCIterator);
     }
 
     private void changeWeightByJob() {
@@ -244,7 +285,6 @@ public class RBS_NPC {
 
     //ScriptRef RBStest = new ScriptRef("RBStest");
     // QUST questtest = NiftyFunc.makeScriptQuest(SPGlobal.getGlobalPatch(), RBStest);
-
     public void changeMale(String folder) throws Exception {
         for (NPC_ n : ListNPCMale) {
             boolean changed = false;
