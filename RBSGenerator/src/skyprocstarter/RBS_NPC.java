@@ -38,7 +38,6 @@ public class RBS_NPC {
     public static int mc2 = 1;
     public static int ms2 = 1;
 
-
     RBS_NPC() {
         FormID playerID = new FormID("000007Skyrim.esm");
         for (VTYP VoiceTypes : SkyProcStarter.merger.getVoiceTypes()) {
@@ -72,13 +71,15 @@ public class RBS_NPC {
 
     public void changeFemale() throws Exception {
         int counter = 1;
+
         int max = SkyProcStarter.merger.getNPCs().getRecords().size();
         for (NPC_ NPCIterator : SkyProcStarter.merger.getNPCs().getRecords()) {
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
+            String test = NPCIterator.getDefaultOutfit().getFormStr();
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
                 MajorRecord vanillaOutfit = SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
-                setDefaultOutfit(NPCIterator,vanillaOutfit.getEDID(), ID);
+                setDefaultOutfit(NPCIterator, vanillaOutfit.getEDID(), ID);
                 addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
                 NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
                 // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
@@ -90,6 +91,7 @@ public class RBS_NPC {
             }
             SkyProcStarter.patch.addRecord(NPCIterator);
             ListNPCFemalePatched.add(NPCIterator.getForm());
+            counter++;
         }
     }
 
@@ -248,22 +250,26 @@ public class RBS_NPC {
                 }
             }
         }
-   
-            //if (RBS_NPC.m_npc.getEDID().equals("Delphine") || RBS_NPC.m_npc.getEDID().equals("dunPOIWitchAnise") || RBS_NPC.m_raceName.toLowerCase().contains("elder")) {
+
+        //if (RBS_NPC.m_npc.getEDID().equals("Delphine") || RBS_NPC.m_npc.getEDID().equals("dunPOIWitchAnise") || RBS_NPC.m_raceName.toLowerCase().contains("elder")) {
         //} else {
         if (MJ != null) {
             NPCIterator.setDefaultOutfit(MJ.getForm());
         } else {
             if (outfitName.contains("Clothes")) {
                 OTFT Outfit = RBS_Outfit.clothes.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.clothes.size()));
-                NPCIterator.setDefaultOutfit(Outfit.getForm());
+                if (Outfit != null) {
+                    NPCIterator.setDefaultOutfit(Outfit.getForm());
+                }
             }
             if (outfitName.contains("Armor")) {
                 OTFT Outfit = RBS_Outfit.armors.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.armors.size()));
-               NPCIterator.setDefaultOutfit(Outfit.getForm());
+                if (MJ != null) {
+                    NPCIterator.setDefaultOutfit(Outfit.getForm());
+                }
             }
         }
-          //  }
+        //  }
         //}
 
     }
@@ -272,31 +278,31 @@ public class RBS_NPC {
     // QUST questtest = NiftyFunc.makeScriptQuest(SPGlobal.getGlobalPatch(), RBStest);
     public void changeMale(String folder) throws Exception {
         /*
-        for (NPC_ n : ListNPCMale) {
-            boolean changed = false;
-            FormID id = new FormID("000019Skyrim.esm");
-            if (!RBS_NPC.m_npc.get(NPC_.NPCFlag.Female) && !RBS_NPC.m_npc.getRace().equals(id)) {
-                FormID playerID = new FormID("000007Skyrim.esm");
-                if (!RBS_NPC.m_npc.getForm().equals(playerID)) {
-                    for (RACE r : RBS_Race.ListRBSRacesMerger) {
-                        if (RBS_NPC.m_npc.getRace().equals(r.getForm())) {
-                            if (r.getEDID().toLowerCase().contains("argon") || r.getEDID().toLowerCase().contains("khaj")) {
-                                //
-                            } else {
-                                String ID = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
-                                for (RACE r2 : SkyProcStarter.patch.getRaces()) {
-                                    if (r2.getEDID().equals(r.getEDID() + "RBS_M" + ID)) {
-                                        RBS_NPC.m_npc.setRace(r2.getForm());
-                                        SkyProcStarter.patch.addRecord(RBS_NPC.m_npc);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-                */
+         for (NPC_ n : ListNPCMale) {
+         boolean changed = false;
+         FormID id = new FormID("000019Skyrim.esm");
+         if (!RBS_NPC.m_npc.get(NPC_.NPCFlag.Female) && !RBS_NPC.m_npc.getRace().equals(id)) {
+         FormID playerID = new FormID("000007Skyrim.esm");
+         if (!RBS_NPC.m_npc.getForm().equals(playerID)) {
+         for (RACE r : RBS_Race.ListRBSRacesMerger) {
+         if (RBS_NPC.m_npc.getRace().equals(r.getForm())) {
+         if (r.getEDID().toLowerCase().contains("argon") || r.getEDID().toLowerCase().contains("khaj")) {
+         //
+         } else {
+         String ID = RBS_Randomize.createRandomID(RBS_NPC.m_npc.getName());
+         for (RACE r2 : SkyProcStarter.patch.getRaces()) {
+         if (r2.getEDID().equals(r.getEDID() + "RBS_M" + ID)) {
+         RBS_NPC.m_npc.setRace(r2.getForm());
+         SkyProcStarter.patch.addRecord(RBS_NPC.m_npc);
+         }
+         }
+         }
+         }
+         }
+         }
+         }
+         }
+         */
     }
 
     public void ClothesAllToNPCs(String folder) throws Exception {
