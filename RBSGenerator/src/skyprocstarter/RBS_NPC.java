@@ -76,7 +76,6 @@ public class RBS_NPC {
         for (NPC_ NPCIterator : SkyProcStarter.merger.getNPCs().getRecords()) {
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
-            String test = NPCIterator.getDefaultOutfit().getFormStr();
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
                 MajorRecord vanillaOutfit = SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
                 setDefaultOutfit(NPCIterator, vanillaOutfit.getEDID(), ID);
@@ -239,7 +238,7 @@ public class RBS_NPC {
     }
 
     private void setDefaultOutfit(NPC_ NPCIterator, String outfitName, String ID) {
-
+        OTFT outfit;
         MajorRecord MJ;
         MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
         if (MJ == null) {
@@ -256,26 +255,27 @@ public class RBS_NPC {
         if (MJ != null) {
             NPCIterator.setDefaultOutfit(MJ.getForm());
         } else {
-            if (outfitName.contains("Clothes")) {
-                OTFT Outfit = RBS_Outfit.clothes.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.clothes.size()));
-                if (Outfit != null) {
-                    NPCIterator.setDefaultOutfit(Outfit.getForm());
+            outfit = (OTFT) SkyProcStarter.merger.getMajor(outfitName);
+            for (FormID entry : outfit.getInventoryList()) {
+                MajorRecord test = SkyProcStarter.merger.getMajor(entry);
+                if (test.getEDID().contains("Clothes")) {
+                    outfit = RBS_Outfit.clothes.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.clothes.size()));
+                    if (outfit != null) {
+                        NPCIterator.setDefaultOutfit(outfit.getForm());
+                    }
                 }
-            }
-            if (outfitName.contains("Armor")) {
-                OTFT Outfit = RBS_Outfit.armors.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.armors.size()));
-                if (MJ != null) {
-                    NPCIterator.setDefaultOutfit(Outfit.getForm());
+                if (test.getEDID().contains("Armor")) {
+                    outfit = RBS_Outfit.armors.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.armors.size()));
+                    if (MJ != null) {
+                        NPCIterator.setDefaultOutfit(outfit.getForm());
+                    }
                 }
             }
         }
-        //  }
-        //}
-
     }
-
-    //ScriptRef RBStest = new ScriptRef("RBStest");
+        //ScriptRef RBStest = new ScriptRef("RBStest");
     // QUST questtest = NiftyFunc.makeScriptQuest(SPGlobal.getGlobalPatch(), RBStest);
+
     public void changeMale(String folder) throws Exception {
         /*
          for (NPC_ n : ListNPCMale) {

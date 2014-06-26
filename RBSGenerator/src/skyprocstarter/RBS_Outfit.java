@@ -23,16 +23,21 @@ public class RBS_Outfit {
     public static Map<FormID, String> vanillaOutfitsMapKeyForm = new ConcurrentHashMap<>();
     private static OTFT m_patchOutfit;
 
-    public void CreateNewOutfits_notworking(String folder) throws Exception {
+    public void CreateNewOutfits(String folder) throws Exception {
         SPProgressBarPlug.setStatus("creating new outfits " + folder);
         List<MajorRecord> entriesToBeAdded = new ArrayList<>();
         List<FormID> entriesToBeDeleted = new ArrayList<>();
+        MajorRecord MJ;
         for (String ID : SkyProcStarter.amountBodyTypes) {
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 for (FormID outfitEntry : outfit.getInventoryList()) {
-                    MajorRecord MJ = SkyProcStarter.merger.getArmors().get(outfitEntry);
+                    
+                    MJ = SkyProcStarter.merger.getArmors().get(outfitEntry);
+                    if (MJ == null) { // Vanilla armor not found ? 
+                        MJ = SkyProcStarter.merger.getLeveledItems().get(outfitEntry); //try leveledItem
+                    }
                     if (MJ != null) {
-                        MajorRecord RBSEntry = SkyProcStarter.patch.getArmors().get(MJ.getEDID() + "RBS_F" + folder + ID);
+                        MajorRecord RBSEntry = SkyProcStarter.patch.getMajor(MJ.getEDID() + "RBS_F" + folder + ID);
                         if (RBSEntry != null) {
                             entriesToBeAdded.add(RBSEntry);
                             entriesToBeDeleted.add(outfitEntry);
@@ -43,27 +48,18 @@ public class RBS_Outfit {
                                 RBS_Outfit.armors.add(RBS_Outfit.m_patchOutfit);
                             }
                         }
-                        /*} else {
-                         MajorRecord RBSEntry = SkyProcStarter.merger.getLeveledItems().get(outfitEntry);
-                         if (RBSEntry != null) {
-                         entriesToBeAdded.add(SkyProcStarter.patch.getLeveledItems().get(RBSEntry.getEDID() + "RBS_F"  + folder + ID));
-                         entriesToBeDeleted.add(outfitEntry);
-                         }
-                         }
-                         */
                     }
-
-                    if (entriesToBeAdded.size() > 0) {
-                        OTFT newOutfit = (OTFT) SkyProcStarter.patch.makeCopy(outfit, outfit.getEDID() + "RBS_F" + folder + ID);
-                        entriesToBeDeleted.stream().forEach((Form) -> {
-                            newOutfit.removeInventoryItem(Form);
-                        });
-                        entriesToBeDeleted.clear();
-                        entriesToBeAdded.stream().forEach((Form) -> {
-                            newOutfit.addInventoryItem(Form.getForm());
-                        });
-                        entriesToBeAdded.clear();
-                    }
+                }
+                if (entriesToBeAdded.size() > 0) {
+                    OTFT newOutfit = (OTFT) SkyProcStarter.patch.makeCopy(outfit, outfit.getEDID() + "RBS_F" + folder + ID);
+                    entriesToBeDeleted.stream().forEach((Form) -> {
+                        newOutfit.removeInventoryItem(Form);
+                    });
+                    entriesToBeDeleted.clear();
+                    entriesToBeAdded.stream().forEach((Form) -> {
+                        newOutfit.addInventoryItem(Form.getForm());
+                    });
+                    entriesToBeAdded.clear();
                 }
             }
         }
@@ -86,7 +82,7 @@ public class RBS_Outfit {
      }
      */
 
-    public void CreateNewOutfits(String folder) throws Exception {
+    public void CreateNewOutfits_old(String folder) throws Exception {
         MajorRecord MJOld;
         MajorRecord MJNew;
 
