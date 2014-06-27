@@ -23,6 +23,7 @@ import lev.Ln;
 import skyproc.ARMA;
 import skyproc.MajorRecord;
 import skyproc.NiftyFunc;
+
 import skyproc.gui.SPProgressBarPlug;
 
 public class SkyProcStarter implements SUM {
@@ -45,6 +46,8 @@ public class SkyProcStarter implements SUM {
         GRUP_TYPE.ARMO,
         GRUP_TYPE.OTFT,
         GRUP_TYPE.TXST,
+        GRUP_TYPE.VTYP,
+        GRUP_TYPE.HDPT,
         GRUP_TYPE.LVLI
     };
     

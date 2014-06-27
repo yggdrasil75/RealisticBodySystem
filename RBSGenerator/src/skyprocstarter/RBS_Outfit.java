@@ -2,8 +2,10 @@ package skyprocstarter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
@@ -12,58 +14,89 @@ import skyproc.LeveledEntry;
 import skyproc.MajorRecord;
 import skyproc.OTFT;
 import skyproc.gui.SPProgressBarPlug;
+import static skyprocstarter.RBS_LeveledList.vanillaLLMapKeyEDID;
 
 public class RBS_Outfit {
 
-    public static List<OTFT> clothes = new ArrayList<>();
-    public static List<OTFT> armors = new ArrayList<>();
-    public static Map<String, FormID> patchOutfitsMapKeyEDID = new ConcurrentHashMap<>();
-    public static Map<FormID, String> patchOutfitsMapKeyForm = new ConcurrentHashMap<>();
+    public static Set<OTFT> clothes = new HashSet<>();
+    public static Set<OTFT> armors = new HashSet<>();
+    public static Map<String, FormID> patchOutfitsArmorMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchOutfitsArmorMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<String, FormID> patchOutfitsClothesMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> patchOutfitsClothesMapKeyForm = new ConcurrentHashMap<>();
     public static Map<String, FormID> vanillaOutfitsMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> vanillaOutfitsMapKeyForm = new ConcurrentHashMap<>();
     private static OTFT m_patchOutfit;
 
     public void CreateNewOutfits(String folder) throws Exception {
         SPProgressBarPlug.setStatus("creating new outfits " + folder);
-        List<MajorRecord> entriesToBeAdded = new ArrayList<>();
+        List<FormID> entriesToBeAdded = new ArrayList<>();
         List<FormID> entriesToBeDeleted = new ArrayList<>();
-        MajorRecord MJ;
+        String ArmorType = "";
         for (String ID : SkyProcStarter.amountBodyTypes) {
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 for (FormID outfitEntry : outfit.getInventoryList()) {
-                    
-                    MJ = SkyProcStarter.merger.getArmors().get(outfitEntry);
-                    if (MJ == null) { // Vanilla armor not found ? 
-                        MJ = SkyProcStarter.merger.getLeveledItems().get(outfitEntry); //try leveledItem
-                    }
-                    if (MJ != null) {
-                        MajorRecord RBSEntry = SkyProcStarter.patch.getMajor(MJ.getEDID() + "RBS_F" + folder + ID);
-                        if (RBSEntry != null) {
-                            entriesToBeAdded.add(RBSEntry);
+                    String vanillaArmorName = RBS_ARMO.vanillaArmorsMapKeyForm.get(outfitEntry);
+                    if (vanillaArmorName != null) {
+                        FormID FormPatched = RBS_ARMO.patchArmorsMapKeyEDID.get(vanillaArmorName + "RBS_F" + folder + ID);
+                        if (FormPatched != null) {
+                            entriesToBeAdded.add(FormPatched);
                             entriesToBeDeleted.add(outfitEntry);
-                            if (RBSEntry.getEDID().contains("Clothes")) {
-                                RBS_Outfit.clothes.add(RBS_Outfit.m_patchOutfit);
+                            if (vanillaArmorName.contains("Clothes")) {
+                                
+                                ArmorType = "clothes";
                             }
-                            if (RBSEntry.getEDID().contains("Armor")) {
-                                RBS_Outfit.armors.add(RBS_Outfit.m_patchOutfit);
+                            if (vanillaArmorName.contains("Armor")) {
+                                
+                                ArmorType = "armor";
                             }
                         }
                     }
+                    String vanillaLLName = RBS_LeveledList.vanillaLLMapKeyForm.get(outfitEntry);
+                    if (vanillaLLName != null) {
+                        FormID FormPatched = RBS_LeveledList.vanillaLLMapKeyEDID.get(vanillaLLName + "RBS_F" + folder + ID);
+                        if (FormPatched != null) {
+                            entriesToBeAdded.add(FormPatched);
+                            entriesToBeDeleted.add(outfitEntry);
+                        }
+                        if (vanillaLLName.contains("Clothes")) {
+
+                            ArmorType = "clothes";
+                        }
+                        if (vanillaLLName.contains("Armors")) {
+
+                            ArmorType = "armor";
+                        }
+                    }
                 }
+
                 if (entriesToBeAdded.size() > 0) {
                     OTFT newOutfit = (OTFT) SkyProcStarter.patch.makeCopy(outfit, outfit.getEDID() + "RBS_F" + folder + ID);
+                    if (ArmorType.equals("clothes")) {
+                        RBS_Outfit.clothes.add(newOutfit);
+                        patchOutfitsClothesMapKeyEDID.put(newOutfit.getEDID(), newOutfit.getForm());
+                        patchOutfitsClothesMapKeyForm.put(newOutfit.getForm(), newOutfit.getEDID());
+                    }
+
+                    if (ArmorType.equals("armor")) {
+                        RBS_Outfit.armors.add(newOutfit);
+                        patchOutfitsArmorMapKeyEDID.put(newOutfit.getEDID(), newOutfit.getForm());
+                        patchOutfitsArmorMapKeyForm.put(newOutfit.getForm(), newOutfit.getEDID());
+                    }
+
                     entriesToBeDeleted.stream().forEach((Form) -> {
                         newOutfit.removeInventoryItem(Form);
                     });
                     entriesToBeDeleted.clear();
                     entriesToBeAdded.stream().forEach((Form) -> {
-                        newOutfit.addInventoryItem(Form.getForm());
+                        newOutfit.addInventoryItem(Form);
                     });
                     entriesToBeAdded.clear();
                 }
             }
         }
     }
+
     /*
      for (OTFT asdf : SkyProcStarter.patch.getOutfits()) {
   
@@ -81,7 +114,6 @@ public class RBS_Outfit {
 
      }
      */
-
     public void CreateNewOutfits_old(String folder) throws Exception {
         MajorRecord MJOld;
         MajorRecord MJNew;

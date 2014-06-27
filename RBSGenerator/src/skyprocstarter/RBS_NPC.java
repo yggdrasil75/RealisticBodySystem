@@ -9,8 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 import skyproc.ARMO;
 import skyproc.FormID;
+import skyproc.HDPT;
 
 import skyproc.MajorRecord;
 import skyproc.NPC_;
@@ -32,7 +34,10 @@ public class RBS_NPC {
     public static List<NPC_> ListNPCMaleUnique = new ArrayList<>();
     public static List<NPC_> ListNPCMaleNotUnique = new ArrayList<>();
     public static List<NPC_> changedNPCs = new ArrayList();
-    public static Map<FormID, String> VoiceTypeMap = new ConcurrentHashMap<>();
+    public static Map<FormID, String> voiceTypeMaleMap = new ConcurrentHashMap<>();
+    public static Map<FormID, String> voiceTypeFemaleMap = new ConcurrentHashMap<>();
+    public static Map<FormID, String> headPartMaleMap = new ConcurrentHashMap<>();
+    public static Map<FormID, String> headPartFemaleMap = new ConcurrentHashMap<>();
     public static List<FormID> ListNPCFemalePatched = new ArrayList<>();
     public static int mn2 = 1;
     public static int mc2 = 1;
@@ -40,30 +45,43 @@ public class RBS_NPC {
 
     RBS_NPC() {
         FormID playerID = new FormID("000007Skyrim.esm");
+        SkyProcStarter.merger.getNPCs().removeRecord(playerID);
+        boolean hasFemaleHeadPart;
         for (VTYP VoiceTypes : SkyProcStarter.merger.getVoiceTypes()) {
-            VoiceTypeMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
-        }
-        for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
-            for (RACE ListRBSRacesMerger : RBS_Race.ListRBSRacesMerger) {
-                if (!n.getForm().equals(playerID) && n.getRace().equals(ListRBSRacesMerger.getForm())) {
-                    //if (VoiceTypeMap.get(n.getVoiceType()).toLowerCase().contains("Female") || n.getForm() == playerID) {
-                    if (!n.getForm().equals(playerID) || n.get(NPC_.NPCFlag.Female)) {
-                        ListNPCFemale.add(n);
-                    }
+            if (VoiceTypes.getEDID().toLowerCase().contains("female")) {
+                if (VoiceTypes.getEDID().toLowerCase().contains("child")) {
 
-                    if (!n.get(NPC_.NPCFlag.Female)) {
-                        //if (VoiceTypeMap.get(n.getVoiceType()).toLowerCase().contains("Male")) {
-                        ListNPCMale.add(n);
-                    }
-                    if (n.get(NPC_.NPCFlag.Unique)) {
-                        ListNPCMaleUnique.add(n);
-                    } else {
-                        ListNPCMaleNotUnique.add(n);
-                    }
+                } else {
+                    voiceTypeFemaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
                 }
+            } else if (VoiceTypes.getEDID().toLowerCase().contains("male") && (!VoiceTypes.getEDID().toLowerCase().contains("child"))) {
+                voiceTypeMaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
+            }
+        }
+
+        for (HDPT headpart : SkyProcStarter.merger.getHeadParts()) {
+            if (headpart.getEDID().toLowerCase().contains("female")) {
+                headPartFemaleMap.put(headpart.getForm(), headpart.getEDID());
+            }
+        }
+
+        for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
+            if (voiceTypeMaleMap.containsKey(n.getVoiceType())) {
+                ListNPCMale.add(n);
+            }
+            ListNPC.add(n);
+            hasFemaleHeadPart = false;
+            for (FormID headpartsOfNPC : n.getHeadParts()) {
+                if (headPartFemaleMap.containsKey(headpartsOfNPC)) {
+                    hasFemaleHeadPart = true;
+                }
+            }
+            if (hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female)) {
+                ListNPCFemale.add(n);
                 ListNPC.add(n);
             }
         }
+
         SkyProcStarter.merger.getNPCs().getRecords().clear();
         SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
         SkyProcStarter.merger.getNPCs().getRecords().trimToSize();
@@ -71,14 +89,14 @@ public class RBS_NPC {
 
     public void changeFemale() throws Exception {
         int counter = 1;
-
-        int max = SkyProcStarter.merger.getNPCs().getRecords().size();
-        for (NPC_ NPCIterator : SkyProcStarter.merger.getNPCs().getRecords()) {
+        int max = ListNPCFemale.size();
+        for (NPC_ NPCIterator : ListNPCFemale) {
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
-                MajorRecord vanillaOutfit = SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
-                setDefaultOutfit(NPCIterator, vanillaOutfit.getEDID(), ID);
+                OTFT vanillaOutfit = (OTFT) SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
+                //MajorRecord vanillaOutfit = SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
+                setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
                 addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
                 NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
                 // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
@@ -237,9 +255,14 @@ public class RBS_NPC {
         return NPCIterator;
     }
 
-    private void setDefaultOutfit(NPC_ NPCIterator, String outfitName, String ID) {
-        OTFT outfit;
+    private void setDefaultOutfit(NPC_ NPCIterator, OTFT outfit, String ID) {
+        String outfitName = outfit.getEDID();
+        List<OTFT> ListOfAllArmorsWithID = new ArrayList<>();
         MajorRecord MJ;
+        String test;
+        if (NPCIterator.getEDID().equals("Breya")) {
+            String tast = "";
+        }
         MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
         if (MJ == null) {
             MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "ct77" + ID);
@@ -255,25 +278,41 @@ public class RBS_NPC {
         if (MJ != null) {
             NPCIterator.setDefaultOutfit(MJ.getForm());
         } else {
-            outfit = (OTFT) SkyProcStarter.merger.getMajor(outfitName);
             for (FormID entry : outfit.getInventoryList()) {
-                MajorRecord test = SkyProcStarter.merger.getMajor(entry);
-                if (test.getEDID().contains("Clothes")) {
-                    outfit = RBS_Outfit.clothes.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.clothes.size()));
-                    if (outfit != null) {
-                        NPCIterator.setDefaultOutfit(outfit.getForm());
-                    }
+                test = RBS_ARMO.vanillaArmorsMapKeyForm.get(entry);
+                if (test == null) {
+                    test = RBS_LeveledList.vanillaLLMapKeyForm.get(entry);
                 }
-                if (test.getEDID().contains("Armor")) {
-                    outfit = RBS_Outfit.armors.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, RBS_Outfit.armors.size()));
-                    if (MJ != null) {
-                        NPCIterator.setDefaultOutfit(outfit.getForm());
+                if (test != null) {
+                    if (test.contains("Clothes")) {
+                        for (OTFT armor : RBS_Outfit.clothes) {
+                            if (armor.getEDID().contains(ID)) {
+                                ListOfAllArmorsWithID.add(armor);
+                            }
+                        }
+                        outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
+                        if (outfit != null) {
+                            NPCIterator.setDefaultOutfit(outfit.getForm());
+                        }
                     }
+                    if (test.contains("Armor")) {
+                        for (OTFT armor : RBS_Outfit.armors) {
+                            String asdfs = armor.getEDID();
+                            if (armor.getEDID().contains(ID)) {
+                                ListOfAllArmorsWithID.add(armor);
+                            }
+                        }
+                        outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
+                        if (outfit != null) {
+                            NPCIterator.setDefaultOutfit(outfit.getForm());
+                        }
+                    }
+                    ListOfAllArmorsWithID.clear();
                 }
             }
         }
     }
-        //ScriptRef RBStest = new ScriptRef("RBStest");
+    //ScriptRef RBStest = new ScriptRef("RBStest");
     // QUST questtest = NiftyFunc.makeScriptQuest(SPGlobal.getGlobalPatch(), RBStest);
 
     public void changeMale(String folder) throws Exception {

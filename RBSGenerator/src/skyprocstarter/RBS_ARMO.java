@@ -21,6 +21,8 @@ public class RBS_ARMO {
     //   public static Map<FormID, String> vanillaArmorsMapKeyForm = new ConcurrentHashMap<>();
     public static Map<String, FormID> patchArmorsMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> patchArmorsMapKeyForm = new ConcurrentHashMap<>();
+    public static Map<String, FormID> vanillaArmorsMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaArmorsMapKeyForm = new ConcurrentHashMap<>();
     public static List<ARMO> ListVanillaArmors = new ArrayList<>();
 
     RBS_ARMO() {
@@ -29,8 +31,8 @@ public class RBS_ARMO {
                 for (FormID listaa1 : a.getArmatures()) {
                     if (RBS_ARMA.vanillaAAMapKeyEDID.containsValue(listaa1)) {
                         ListVanillaArmors.add(a);
-   //                     vanillaArmorsMapKeyEDID.put(a.getEDID(), a.getForm());
-                        //                     vanillaArmorsMapKeyForm.put(a.getForm(), a.getEDID());
+                        vanillaArmorsMapKeyEDID.put(a.getEDID(), a.getForm());
+                        vanillaArmorsMapKeyForm.put(a.getForm(), a.getEDID());
                     }
                 }
             }

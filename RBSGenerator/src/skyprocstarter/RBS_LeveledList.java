@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
@@ -15,9 +17,13 @@ import skyproc.LeveledRecord;
 import skyproc.MajorRecord;
 import skyproc.OTFT;
 import skyproc.gui.SPProgressBarPlug;
+import static skyprocstarter.RBS_ARMO.vanillaArmorsMapKeyEDID;
+import static skyprocstarter.RBS_ARMO.vanillaArmorsMapKeyForm;
 
 public class RBS_LeveledList {
 
+    public static Map<String, FormID> vanillaLLMapKeyEDID = new ConcurrentHashMap<>();
+    public static Map<FormID, String> vanillaLLMapKeyForm = new ConcurrentHashMap<>();
     private static int m_counter;
 //    private static LVLI m_targetlvl;
 
@@ -34,6 +40,8 @@ public class RBS_LeveledList {
                 MajorRecord MJ = SkyProcStarter.merger.getArmors().get(entry.getForm());
                 if (MJ != null) {
                     leveledItemsWithArmorEntries.add(leveledItem);
+                    vanillaLLMapKeyEDID.put(leveledItem.getEDID(), leveledItem.getForm());
+                    vanillaLLMapKeyForm.put(leveledItem.getForm(), leveledItem.getEDID());
                     break;
                 }
             }
