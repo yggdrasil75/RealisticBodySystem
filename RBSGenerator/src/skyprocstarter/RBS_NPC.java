@@ -48,19 +48,15 @@ public class RBS_NPC {
         SkyProcStarter.merger.getNPCs().removeRecord(playerID);
         boolean hasFemaleHeadPart;
         for (VTYP VoiceTypes : SkyProcStarter.merger.getVoiceTypes()) {
-            if (VoiceTypes.getEDID().toLowerCase().contains("female")) {
-                if (VoiceTypes.getEDID().toLowerCase().contains("child")) {
-
-                } else {
-                    voiceTypeFemaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
-                }
-            } else if (VoiceTypes.getEDID().toLowerCase().contains("male") && (!VoiceTypes.getEDID().toLowerCase().contains("child"))) {
+            if (VoiceTypes.getEDID().toLowerCase().contains("female") && !VoiceTypes.getEDID().toLowerCase().contains("child")) {
+                voiceTypeFemaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
+            } else if (VoiceTypes.getEDID().toLowerCase().contains("male") && !VoiceTypes.getEDID().toLowerCase().contains("child")) {
                 voiceTypeMaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
             }
         }
 
         for (HDPT headpart : SkyProcStarter.merger.getHeadParts()) {
-            if (headpart.getEDID().toLowerCase().contains("female")) {
+            if (headpart.getEDID().toLowerCase().contains("female") && !headpart.getEDID().toLowerCase().contains("child")) {
                 headPartFemaleMap.put(headpart.getForm(), headpart.getEDID());
             }
         }
@@ -82,9 +78,12 @@ public class RBS_NPC {
             }
         }
 
-        SkyProcStarter.merger.getNPCs().getRecords().clear();
-        SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
-        SkyProcStarter.merger.getNPCs().getRecords().trimToSize();
+        SkyProcStarter.merger.getNPCs()
+                .getRecords().clear();
+        SkyProcStarter.merger.getNPCs()
+                .getRecords().addAll(ListNPCFemale);
+        SkyProcStarter.merger.getNPCs()
+                .getRecords().trimToSize();
     }
 
     public void changeFemale() throws Exception {
