@@ -47,6 +47,7 @@ public class RBS_NPC {
         FormID playerID = new FormID("000007Skyrim.esm");
         SkyProcStarter.merger.getNPCs().removeRecord(playerID);
         boolean hasFemaleHeadPart;
+        boolean childrace;
         for (VTYP VoiceTypes : SkyProcStarter.merger.getVoiceTypes()) {
             if (VoiceTypes.getEDID().toLowerCase().contains("female") && !VoiceTypes.getEDID().toLowerCase().contains("child")) {
                 voiceTypeFemaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
@@ -58,32 +59,35 @@ public class RBS_NPC {
         for (HDPT headpart : SkyProcStarter.merger.getHeadParts()) {
             if (headpart.getEDID().toLowerCase().contains("female") && !headpart.getEDID().toLowerCase().contains("child")) {
                 headPartFemaleMap.put(headpart.getForm(), headpart.getEDID());
+
             }
         }
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
+            childrace = false;
+            if (RBS_Race.children.contains(n.getRace())){
+                    childrace=true;
+            }
+            
             if (voiceTypeMaleMap.containsKey(n.getVoiceType())) {
                 ListNPCMale.add(n);
             }
-            ListNPC.add(n);
             hasFemaleHeadPart = false;
             for (FormID headpartsOfNPC : n.getHeadParts()) {
                 if (headPartFemaleMap.containsKey(headpartsOfNPC)) {
                     hasFemaleHeadPart = true;
                 }
             }
-            if (hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female)) {
-                ListNPCFemale.add(n);
-                ListNPC.add(n);
+            if ((hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female))) {
+                if (!childrace) {
+                    ListNPCFemale.add(n);
+                    ListNPC.add(n);
+                }
             }
         }
-
-        SkyProcStarter.merger.getNPCs()
-                .getRecords().clear();
-        SkyProcStarter.merger.getNPCs()
-                .getRecords().addAll(ListNPCFemale);
-        SkyProcStarter.merger.getNPCs()
-                .getRecords().trimToSize();
+        SkyProcStarter.merger.getNPCs().getRecords().clear();
+        SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
+        SkyProcStarter.merger.getNPCs().getRecords().trimToSize();
     }
 
     public void changeFemale() throws Exception {

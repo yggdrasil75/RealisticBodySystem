@@ -26,10 +26,14 @@ public class RBS_Race {
     public static Map<FormID, String> vanillaRacesMapKeyForm = new ConcurrentHashMap<>();
     public static List<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
     public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
+    public static List<FormID> children = new ArrayList<>();
     public static int amountFilesHKX;
 
     RBS_Race() {
         for (RACE r : SkyProcStarter.merger.getRaces()) {
+            if (r.getEDID().toLowerCase().contains("child")) {
+                children.add(r.getForm());
+            }
             if (r.getModel(Gender.MALE).toLowerCase().contains("actors\\character\\character assets")
                     || r.getModel(Gender.FEMALE).toLowerCase().contains("actors\\character\\character assets female")) {
                 if (!r.getEDID().toLowerCase().contains("child")) {
