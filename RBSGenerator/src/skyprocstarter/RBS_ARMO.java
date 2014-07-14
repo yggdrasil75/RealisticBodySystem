@@ -69,10 +69,10 @@ public class RBS_ARMO {
     }
 
     public void changeSkinNaked() {
-        FormID skinNaked = new FormID("000D64Skyrim.esm");
+        FormID skinNaked = new FormID("000D64Skyrim.esm"); //skinNaked
+        FormID skinNakedBeast = new FormID("069CE4Skyrim.esm"); //skinNakedBeast
         FormID nakedTorso = new FormID("000D67Skyrim.esm");
         String EDID = RBS_ARMA.vanillaAAMapKeyForm.get(nakedTorso);
-
         ARMO asdf = (ARMO) SkyProcStarter.merger.getArmors().get(skinNaked);
         SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
             String newBodyMesh = asdf.getEDID() + "RBS_F" + id;

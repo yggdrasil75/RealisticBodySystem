@@ -34,7 +34,7 @@ Func createPresetFiles()
    addSetSlider("BigTorso", $bigTorsoLow, $bigTorsoHeigh, $file)
    addSetSlider("Hips", Randomize(0*$bodyMultiLow,30*$bodyMultiHigh), Randomize(10*$bodyMultiLow , 50*$bodyMultiHigh * $multi),$file)
    addSetSlider("ShoulderWidth", Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-30*$bodyMultiLow, 40*$bodyMultiHigh* $multi),$file)
-   addSetSlider("ChubbyLegs", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(10 *$bodyMultiLow * $multi ,80 *$bodyMultiHigh * $multi),$file)
+
    addSetSlider("BreastsSSH", $breastSSHLow, Randomize($breastSSHLow, ($breastSSHLow+10) * $multi),$file)
 
    addSetSlider("Breasts", $breastLow, Randomize($breastLow+40*$bodyMultiLow,150*$bodyMultiHigh),$file)
@@ -43,17 +43,13 @@ Func createPresetFiles()
 
    addSetSlider("BreastsFantasy", $breastsFantasyLow , Randomize($breastsFantasyLow,30*$bodyMultiHigh),$file)
    addSetSlider("DoubleMelon", $doubleMelonLow, Randomize($doubleMelonLow,$doubleMelonLow+1),$file)
+   addSetSlider("BreastCleavage", Randomize(-20*$bodyMultiLow,120*$bodyMultiHigh), Randomize(-20*$bodyMultiLow,140*$bodyMultiHigh),$file)
    addSetSlider("BreastFlatness", $breastFlatnessLow , Randomize(0,$breastFlatnessLow -20*$bodyMultiHigh),$file)
 
    addSetSlider("BreastGravity", $breastGravityLow , Randomize($breastGravityLow ,45*$bodyMultiHigh),$file)
-
-   addSetSlider("Arms", Randomize(-20*$bodyMultiLow,0*$bodyMultiHigh), Randomize(00*$bodyMultiLow,70*$bodyMultiHigh),$file)
-   addSetSlider("ChubbyArms", Randomize(-20*$bodyMultiLow,0*$bodyMultiHigh), Randomize(00*$bodyMultiLow,50*$bodyMultiHigh),$file)
-   addSetSlider("ShoulderSmooth", Randomize(-100*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-150*$bodyMultiLow,150*$bodyMultiHigh),$file)
+   addSetSlider("PushUp", Randomize(-10*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-10*$bodyMultiLow,50*$bodyMultiHigh),$file)
 
 
-
-   addSetSlider("BreastCleavage", Randomize(-20*$bodyMultiLow,20*$bodyMultiHigh), Randomize(-20*$bodyMultiLow,60*$bodyMultiHigh),$file)
 
 
    addSetSlider("BreastPerkiness", Randomize(-50*$bodyMultiLow,35*$bodyMultiHigh), Randomize(-20*$bodyMultiLow,100*$bodyMultiHigh),$file)
@@ -65,12 +61,16 @@ Func createPresetFiles()
    addSetSlider("NippleUp", Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh),$file)
    addSetSlider("NippleDown", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh),$file)
    addSetSlider("NippleTip", Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh),$file)
+   addSetSlider("Arms", Randomize(-20*$bodyMultiLow,0*$bodyMultiHigh), Randomize(00*$bodyMultiLow,70*$bodyMultiHigh),$file)
+   addSetSlider("ChubbyArms", Randomize(-20*$bodyMultiLow,0*$bodyMultiHigh), Randomize(00*$bodyMultiLow,50*$bodyMultiHigh),$file)
+   addSetSlider("ShoulderSmooth", Randomize(-100*$bodyMultiLow,50*$bodyMultiHigh), Randomize(-150*$bodyMultiLow,150*$bodyMultiHigh),$file)
+
    addSetSlider("Waist", Randomize(-120*$bodyMultiLow,20*$bodyMultiHigh), Randomize(-50*$bodyMultiLow,200*$bodyMultiHigh),$file)
    addSetSlider("WideWaistLine", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(0*$bodyMultiLow,0*$bodyMultiHigh),$file)
    addSetSlider("ChubbyWaist", Randomize(-10*$bodyMultiLow,10*$bodyMultiHigh), Randomize(-10*$bodyMultiLow,100*$bodyMultiHigh),$file)
-   addSetSlider("Belly", Randomize(0*$bodyMultiLow,20*$bodyMultiHigh), Randomize(0*$bodyMultiLow,100*$bodyMultiHigh),$file)
-   addSetSlider("BigBelly", Randomize(-40*$bodyMultiLow,0*$bodyMultiHigh), Randomize(-40*$bodyMultiLow,100*$bodyMultiHigh),$file)
-   addSetSlider("TummyTuck", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(0*$bodyMultiLow,0*$bodyMultiHigh),$file)
+   addSetSlider("Belly", Randomize(0*$bodyMultiLow,50*$bodyMultiHigh), Randomize(0*$bodyMultiLow,100*$bodyMultiHigh),$file)
+   addSetSlider("BigBelly", Randomize(-20*$bodyMultiLow,50*$bodyMultiHigh), Randomize(0*$bodyMultiLow,100*$bodyMultiHigh),$file)
+   addSetSlider("TummyTuck", Randomize(0*$bodyMultiLow,100*$bodyMultiHigh), Randomize(-100*$bodyMultiLow,0*$bodyMultiHigh),$file)
    addSetSlider("Back", Randomize(-50*$bodyMultiLow,0*$bodyMultiHigh), Randomize(-80*$bodyMultiLow,150*$bodyMultiHigh),$file)
    addSetSlider("Hipbone", Randomize(-50*$bodyMultiLow,50*$bodyMultiHigh), Randomize(20*$bodyMultiLow,100*$bodyMultiHigh),$file)
 
@@ -83,6 +83,7 @@ Func createPresetFiles()
    addSetSlider("AppleCheeks", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(0*$bodyMultiLow,0*$bodyMultiHigh),$file)
    addSetSlider("RoundAss" ,Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(0*$bodyMultiLow,0*$bodyMultiHigh),$file)
    addSetSlider("Groin", Randomize(0*$bodyMultiLow,20*$bodyMultiHigh), Randomize(0*$bodyMultiLow,100*$bodyMultiHigh),$file)
+   addSetSlider("ChubbyLegs", Randomize(0*$bodyMultiLow,0*$bodyMultiHigh), Randomize(10 *$bodyMultiLow * $multi ,80 *$bodyMultiHigh * $multi),$file)
    addSetSlider("SlimThighs", Randomize(-30 * $bodyMultiLow, 0 * $bodyMultiHigh), Randomize(-30 *$bodyMultiLow ,0 *$bodyMultiHigh) ,$file)
    addSetSlider("Thighs", Randomize(-30*$bodyMultiLow,0*$bodyMultiHigh), Randomize(0*$bodyMultiLow,40*$bodyMultiHigh),$file)
 

@@ -35,12 +35,13 @@ public class RBS_ARMA {
     }
 
     public static void FilterAndFillListVanillaAA(ARMA aa) {
+
         vanillaAAMapKeyEDID.put(aa.getEDID(), aa.getForm());
         vanillaAAMapKeyForm.put(aa.getForm(), aa.getEDID());
     }
 
     private boolean hasRBSModel(String sourcePath, String folder, String id) {
-        String RBS_path = ("meshes\\rbs\\female\\"+id+ File.separator + folder + File.separator + sourcePath).toLowerCase();
+        String RBS_path = ("meshes\\rbs\\female\\" + id + File.separator + folder + File.separator + sourcePath).toLowerCase();
         if (RBS_File.filelist.contains(RBS_path)) {
             return (true);
         }
@@ -62,16 +63,24 @@ public class RBS_ARMA {
     }
 
     public void changeNakedTorso() {
-        FormID ID = new FormID("000D67Skyrim.esm");
-        MajorRecord MJ = SkyProcStarter.merger.getArmatures().get(ID);
-        String oldBodyMesh = MJ.getEDID();
-        vanillaAAMapKeyEDID.put(oldBodyMesh, ID);
-        vanillaAAMapKeyForm.put(ID, oldBodyMesh);
-        SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
-            ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(MJ, oldBodyMesh + "RBS_F" + id);
-            patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
-            patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
-            targetAA.setModelPath("actors\\character\\character assets\\rbs\\female\\rbs"+id+"\\femalebody_1.nif", Gender.FEMALE, Perspective.THIRD_PERSON);
+        ArrayList<FormID> torsos = new ArrayList(5);
+        torsos.add(new FormID("000D67Skyrim.esm"));
+        torsos.add(new FormID("000D67Skyrim.esm")); //nakedTorso
+        torsos.add(new FormID("081BA5Skyrim.esm")); //nakedTorsoKhajiit
+        torsos.add(new FormID("038A6BSkyrim.esm")); //nakedTorsoHighElf
+        torsos.add(new FormID("019386Skyrim.esm")); //nakedTorsoDarkElf
+        torsos.add(new FormID("06C5FCSkyrim.esm")); //nakedTorsoArgonian
+        torsos.stream().forEach((ID) -> {
+            MajorRecord MJ = SkyProcStarter.merger.getArmatures().get(ID);
+            String oldBodyMesh = MJ.getEDID();
+            vanillaAAMapKeyEDID.put(oldBodyMesh, ID);
+            vanillaAAMapKeyForm.put(ID, oldBodyMesh);
+            SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+                ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(MJ, oldBodyMesh + "RBS_F" + id);
+                patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
+                patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
+                targetAA.setModelPath("actors\\character\\character assets\\rbs\\female\\rbs" + id + "\\femalebody_1.nif", Gender.FEMALE, Perspective.THIRD_PERSON);
+            });
         });
     }
 }
@@ -97,4 +106,3 @@ public class RBS_ARMA {
  }
  }
  */
-

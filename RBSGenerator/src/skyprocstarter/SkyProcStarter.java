@@ -92,6 +92,7 @@ public class SkyProcStarter implements SUM {
 
         save.init();
         try {
+            
             SPGlobal.createGlobalLog();
             SUMGUI.open(new SkyProcStarter(), args);
         } catch (Exception e) {

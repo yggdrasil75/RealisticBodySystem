@@ -65,10 +65,10 @@ public class RBS_NPC {
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
             childrace = false;
-            if (RBS_Race.children.contains(n.getRace())){
-                    childrace=true;
+            if (RBS_Race.children.contains(n.getRace())) {
+                childrace = true;
             }
-            
+
             if (voiceTypeMaleMap.containsKey(n.getVoiceType())) {
                 ListNPCMale.add(n);
             }
@@ -98,19 +98,20 @@ public class RBS_NPC {
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
                 OTFT vanillaOutfit = (OTFT) SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
-                //MajorRecord vanillaOutfit = SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
-                setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
-                addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
-                NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
-                // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
-                NPCIterator = setSpeedMult(NPCIterator);
-                NPCIterator = changeHeight(NPCIterator);
-                if (SkyProcStarter.save.getBool(YourSaveFile.Settings.CHANGE_WEIGHT_BY_JOB_ON)) {
-                    NPCIterator = changeWeight(NPCIterator, vanillaOutfit.getEDID());
+                if (vanillaOutfit != null) {
+                    setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
+                    addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
+                    NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                    // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
+                    NPCIterator = setSpeedMult(NPCIterator);
+                    NPCIterator = changeHeight(NPCIterator);
+                    if (SkyProcStarter.save.getBool(YourSaveFile.Settings.CHANGE_WEIGHT_BY_JOB_ON)) {
+                        NPCIterator = changeWeight(NPCIterator, vanillaOutfit.getEDID());
+                    }
+                    SkyProcStarter.patch.addRecord(NPCIterator);
+                    ListNPCFemalePatched.add(NPCIterator.getForm());
                 }
             }
-            SkyProcStarter.patch.addRecord(NPCIterator);
-            ListNPCFemalePatched.add(NPCIterator.getForm());
             counter++;
         }
     }

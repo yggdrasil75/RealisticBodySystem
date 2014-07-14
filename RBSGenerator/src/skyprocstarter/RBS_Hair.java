@@ -3,9 +3,12 @@ package skyprocstarter;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import skyproc.FormID;
 import skyproc.HDPT;
+import skyproc.MajorRecord;
 import skyproc.NPC_;
 import skyproc.gui.SPProgressBarPlug;
+import static skyprocstarter.RBS_NPC.ListNPCFemale;
 
 public class RBS_Hair {
 
@@ -19,8 +22,6 @@ public class RBS_Hair {
     private static final List<HDPT> m_HairsWildList = new ArrayList<>();
     private static final List<HDPT> m_HairsUpperList = new ArrayList<>();
     private static final List<HDPT> m_HairsLowerList = new ArrayList<>();
-    private static String m_raceName;
-    private static NPC_ m_npc;
 
     public void createApachiiWhileList() {
 
@@ -32,7 +33,7 @@ public class RBS_Hair {
         m_HairsNormalWhiteList.add("ApachiiHairF08");
         m_HairsNormalWhiteList.add("ApachiiHairF09");
         m_HairsNormalWhiteList.add("ApachiiHairF10");
-        m_HairsNormalWhiteList.add("ApachiiHairF14");
+        // m_HairsNormalWhiteList.add("ApachiiHairF14"); ugly as hell
         m_HairsNormalWhiteList.add("ApachiiHairF15");
         m_HairsNormalWhiteList.add("ApachiiHairF16");
         m_HairsNormalWhiteList.add("ApachiiHairF17");
@@ -299,53 +300,54 @@ public class RBS_Hair {
         }
     }
 
-    public void changeHair() {
+    public static FormID getOldHair(NPC_ n) {
+        for (FormID hp : n.getHeadParts()) {
+            MajorRecord foundhp = SkyProcStarter.merger.getHeadParts().get(hp);
+            if (foundhp != null) {
+                if (foundhp.getEDID().toLowerCase().contains("hair")) {
+                    return hp;
+                }
+            }
+        }
+        return null;
+    }
+
+    public NPC_ changeHair(NPC_ n) {
         HDPT hair = null;
-        int list;
-        boolean hasHair = false;
-        boolean hairAdded = false;
-        String pathMeshes = SkyProcStarter.path + "meshes" + File.separator;
-
-        if (m_npc.getClass().getName().contains("Beggar")
-                || m_npc.getClass().getName().contains("Miner")
-                || m_npc.getClass().getName().contains("Prisoner")
-                || m_npc.getClass().getName().contains("Farmer")) {
-            if (m_HairsLowerList.size() > 0) {
-                hair = m_HairsLowerList.get(RBS_Randomize.toInt(m_npc.getEDID(), 0, m_HairsLowerList.size()));
-            }
-        } else if (m_npc.getClass().getName().contains("Bandit")
-                || m_npc.getClass().getName().contains("Barbarian")
-                || m_npc.getClass().getName().contains("Forsworn")) {
-            if (m_HairsWildList.size() > 0) {
-                hair = m_HairsWildList.get(RBS_Randomize.toInt(m_npc.getEDID(), 0, m_HairsWildList.size()));
-            }
-        } else if (m_npc.getClass().getName().contains("Bard")
-                || m_npc.getClass().getName().contains("Citizen")
-                || m_npc.getClass().getName().contains("Forsworn")) {
-            if (m_HairsUpperList.size() > 0) {
-                hair = m_HairsUpperList.get(RBS_Randomize.toInt(m_npc.getEDID(), 0, m_HairsUpperList.size()));
-            }
-        } else {
-            if (m_HairsNormalList.size() > 0) {
-                hair = m_HairsNormalList.get(RBS_Randomize.toInt(m_npc.getEDID(), 0, m_HairsNormalList.size()));
+        if (n.getClass() != null) {
+            if (n.getClass().getName().contains("Beggar")
+                    || n.getClass().getName().contains("Miner")
+                    || n.getClass().getName().contains("Prisoner")
+                    || n.getClass().getName().contains("Farmer")) {
+                if (m_HairsLowerList.size() > 0) {
+                    hair = m_HairsLowerList.get(RBS_Randomize.toInt(n.getEDID(), 0, m_HairsLowerList.size()));
+                }
+            } else if (n.getClass().getName().contains("Bandit")
+                    || n.getClass().getName().contains("Barbarian")
+                    || n.getClass().getName().contains("Forsworn")) {
+                if (m_HairsWildList.size() > 0) {
+                    hair = m_HairsWildList.get(RBS_Randomize.toInt(n.getEDID(), 0, m_HairsWildList.size()));
+                }
+            } else if (n.getClass().getName().contains("Bard")
+                    || n.getClass().getName().contains("Citizen")
+                    || n.getClass().getName().contains("Forsworn")) {
+                if (m_HairsUpperList.size() > 0) {
+                    hair = m_HairsUpperList.get(RBS_Randomize.toInt(n.getEDID(), 0, m_HairsUpperList.size()));
+                }
+            } else {
+                if (m_HairsNormalList.size() > 0) {
+                    hair = m_HairsNormalList.get(RBS_Randomize.toInt(n.getEDID(), 0, m_HairsNormalList.size()));
+                }
             }
         }
 
-        for (list = 0; list < m_npc.getHeadParts().size(); list++) {
-            if (SkyProcStarter.merger.getHeadParts().get(m_npc.getHeadParts().get(list)).getEDID().contains("Hair")) {
-                hasHair = true;
-                break;
+        if (hair != null) {
+            if (getOldHair(n) !=null) {
+                n.removeHeadPart(getOldHair(n));
+                n.addHeadPart(hair.getForm());
             }
         }
 
-        if (!hasHair && hair != null) {
-            m_npc.getHeadParts().add(hair.getForm());
-            hairAdded = true;
-        }
-
-        if (!hairAdded && hair != null) {
-            m_npc.getHeadParts().set(list, hair.getForm());
-        }
         /*
          if (!hair.getBaseTexture().equals("")) {
          String pathHairMesh = pathMeshes + hair.getModelData().getFileName().toString();
@@ -361,31 +363,18 @@ public class RBS_Hair {
          }
          }
          * */
+        return (n);
     }
 
     public void changeHairAllFemales() {
         createHairListsOutOfWhiteLists();
         int counter = 0;
-        int max = SkyProcStarter.merger.getNPCs().getRecords().size();
-        for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
+        int max = ListNPCFemale.size();
+        for (NPC_ n : ListNPCFemale) {
             counter++;
             SPProgressBarPlug.setStatusNumbered(counter, max, "deploying new hairstyles");
-            if (n.get(NPC_.NPCFlag.Female)) {
-                m_raceName = (SkyProcStarter.merger.getRaces().get(n.getRace())).getEDID();
-                if (m_raceName.toLowerCase().contains("imperial")
-                        || m_raceName.toLowerCase().contains("breton")
-                        || m_raceName.toLowerCase().contains("nord")
-                        || m_raceName.toLowerCase().contains("redguard")) {
-                    if (!m_raceName.toLowerCase().contains("child")) {
-                        m_npc = n;
-                        changeHair();
-                        n = m_npc;
-                        SkyProcStarter.patch.addRecord(n);
-                        m_npc = null;
-                        m_raceName = null;
-                    }
-                }
-            }
+            n = changeHair(n);
+            SkyProcStarter.patch.addRecord(n);
         }
     }
 }
