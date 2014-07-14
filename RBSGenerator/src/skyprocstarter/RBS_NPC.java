@@ -64,6 +64,7 @@ public class RBS_NPC {
         }
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
+            
             childrace = false;
             if (RBS_Race.children.contains(n.getRace())) {
                 childrace = true;
@@ -80,10 +81,12 @@ public class RBS_NPC {
             }
             if ((hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female))) {
                 if (!childrace) {
+                    
                     ListNPCFemale.add(n);
                     ListNPC.add(n);
                 }
             }
+            
         }
         SkyProcStarter.merger.getNPCs().getRecords().clear();
         SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
@@ -101,7 +104,20 @@ public class RBS_NPC {
                 if (vanillaOutfit != null) {
                     setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
                     addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
-                    NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                       String skin = NPCIterator.getSkin().getFormStr();
+                    if (skin.equals("No FormID")) {
+                        if (RBS_Race.ListBeastRaces.contains(NPCIterator.getRace())) {
+                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
+                        } else {
+                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                        }
+                    } else {
+                        if (NPCIterator.getSkin().getFormStr().equals("000D64Skyrim.esm")) {
+                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                        } else {
+                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
+                        }
+                    }
                     // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
                     NPCIterator = setSpeedMult(NPCIterator);
                     NPCIterator = changeHeight(NPCIterator);

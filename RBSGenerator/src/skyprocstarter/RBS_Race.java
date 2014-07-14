@@ -26,10 +26,12 @@ public class RBS_Race {
     public static Map<FormID, String> vanillaRacesMapKeyForm = new ConcurrentHashMap<>();
     public static List<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
     public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
+    public static List<FormID> ListBeastRaces = new ArrayList<>();
     public static List<FormID> children = new ArrayList<>();
     public static int amountFilesHKX;
 
     RBS_Race() {
+        
         for (RACE r : SkyProcStarter.merger.getRaces()) {
             if (r.getEDID().toLowerCase().contains("child")) {
                 children.add(r.getForm());
@@ -47,6 +49,10 @@ public class RBS_Race {
                         vanillaRacesMapKeyForm.put(r.getForm(), r.getEDID());
                     }
                 }
+            }
+            String test = r.getWornArmor().getFormStr();
+            if (r.getWornArmor().getFormStr().equals("069CE3Skyrim.esm")) {
+                ListBeastRaces.add(r.getForm());
             }
         }
     }

@@ -373,7 +373,9 @@ public class RBS_Hair {
         for (NPC_ n : ListNPCFemale) {
             counter++;
             SPProgressBarPlug.setStatusNumbered(counter, max, "deploying new hairstyles");
-            n = changeHair(n);
+            if (!RBS_Race.ListBeastRaces.contains(n.getRace())) {
+                n = changeHair(n);
+            }
             SkyProcStarter.patch.addRecord(n);
         }
     }

@@ -69,6 +69,7 @@ public class RBS_ARMA {
     }
 
     public void changeNakedTorso() {
+        SPProgressBarPlug.setStatus("creating Torsos");
         RBS_ARMA.nakedTorsos.stream().forEach((nakedTorso) -> {
             vanillaAAMapKeyEDID.put(nakedTorso.getEDID(), nakedTorso.getForm());
             vanillaAAMapKeyForm.put(nakedTorso.getForm(), nakedTorso.getEDID());

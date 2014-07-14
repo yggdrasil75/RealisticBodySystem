@@ -11,7 +11,6 @@ import skyproc.FormID;
 import skyproc.MajorRecord;
 import skyproc.gui.SPProgressBarPlug;
 
-
 public class RBS_ARMO {
 
     //   public static Map<String, FormID> vanillaArmorsMapKeyEDID = new ConcurrentHashMap<>();
@@ -36,7 +35,7 @@ public class RBS_ARMO {
             }
         }
         skinNaked.add(SkyProcStarter.merger.getArmors().get(new FormID("000D64Skyrim.esm"))); //skinNaked
-        skinNaked.add(SkyProcStarter.merger.getArmors().get(new FormID("069CE4Skyrim.esm"))); //skinNakedBeast
+        skinNaked.add(SkyProcStarter.merger.getArmors().get(new FormID("069CE3Skyrim.esm"))); //skinNakedBeast
     }
 
     public void CreateNewArmor(String folder) throws Exception {
@@ -69,14 +68,15 @@ public class RBS_ARMO {
     }
 
     public void changeSkinNaked() {
-        RBS_ARMO.skinNaked.stream().forEach((torso) -> {
-            RBS_ARMA.nakedTorsos.stream().forEach((entryAA) -> {
-                SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
-                    ARMO targetArmor = (ARMO) SkyProcStarter.patch.makeCopy(torso, torso.getEDID() + "RBS_F" + id);
+        SPProgressBarPlug.setStatus("change SkinNaked");
+        for (MajorRecord torso : RBS_ARMO.skinNaked) {
+            SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+                ARMO targetArmor = (ARMO) SkyProcStarter.patch.makeCopy(torso, torso.getEDID() + "RBS_F" + id);
+                for (MajorRecord entryAA : RBS_ARMA.nakedTorsos) {
                     targetArmor.getArmatures().remove(entryAA.getForm());
                     targetArmor.getArmatures().add(RBS_ARMA.patchAAMapKeyEDID.get(entryAA.getEDID() + "RBS_F" + id));
-                });
+                }
             });
-        });
+        }
     }
 }
