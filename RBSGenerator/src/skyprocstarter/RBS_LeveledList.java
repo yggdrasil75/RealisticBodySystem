@@ -143,7 +143,7 @@ public class RBS_LeveledList {
             String s = formatter.format(bodies);
             LVLI targetllist = (LVLI) SkyProcStarter.patch.makeCopy(LItemClothesAll, "LItemBootsAllRBS" + s);
             targetllist.clearEntries();
-            for (ARMO Armor : RBS_ARMO.ListVanillaArmors) {
+            for (ARMO Armor : RBS_ARMO.listVanillaArmors) {
                 if (Armor.getEDID().toLowerCase().contains("shoes") || Armor.getEDID().toLowerCase().contains("boots")) {
                     targetllist.addEntry(Armor.getForm(), 1, 1);
                     targetllist.set(LeveledRecord.LVLFlag.UseAll, false);

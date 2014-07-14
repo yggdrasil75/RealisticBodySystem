@@ -21,8 +21,15 @@ public class RBS_ARMA {
     public static Map<FormID, String> vanillaAAMapKeyForm = new ConcurrentHashMap<>();
     public static Map<String, FormID> patchAAMapKeyEDID = new HashMap<>();
     public static Map<FormID, String> patchAAMapKeyForm = new HashMap<>();
+    public static ArrayList<MajorRecord> nakedTorsos = new ArrayList<>(5);
 
     RBS_ARMA() {
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("000D67Skyrim.esm"))); // nakedTorso
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("081BA5Skyrim.esm"))); // nakedTorsoKhajiit
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("038A6BSkyrim.esm"))); // nakedTorsoHighElf
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("019386Skyrim.esm"))); // nakedTorsoDarkElf
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("06C5FCSkyrim.esm"))); // nakedTorsoArgonian
+
         // filters out needed ARMA Addons and put them into ListVanillaAA  and vanillaAAMapKeyMAps
         Predicate<ARMA> clothes_f = (n) -> n.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("clothes\\");
         Predicate<ARMA> armor_f = (n) -> n.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("armor\\");
@@ -35,7 +42,6 @@ public class RBS_ARMA {
     }
 
     public static void FilterAndFillListVanillaAA(ARMA aa) {
-
         vanillaAAMapKeyEDID.put(aa.getEDID(), aa.getForm());
         vanillaAAMapKeyForm.put(aa.getForm(), aa.getEDID());
     }
@@ -63,20 +69,11 @@ public class RBS_ARMA {
     }
 
     public void changeNakedTorso() {
-        ArrayList<FormID> torsos = new ArrayList(5);
-        torsos.add(new FormID("000D67Skyrim.esm"));
-        torsos.add(new FormID("000D67Skyrim.esm")); //nakedTorso
-        torsos.add(new FormID("081BA5Skyrim.esm")); //nakedTorsoKhajiit
-        torsos.add(new FormID("038A6BSkyrim.esm")); //nakedTorsoHighElf
-        torsos.add(new FormID("019386Skyrim.esm")); //nakedTorsoDarkElf
-        torsos.add(new FormID("06C5FCSkyrim.esm")); //nakedTorsoArgonian
-        torsos.stream().forEach((ID) -> {
-            MajorRecord MJ = SkyProcStarter.merger.getArmatures().get(ID);
-            String oldBodyMesh = MJ.getEDID();
-            vanillaAAMapKeyEDID.put(oldBodyMesh, ID);
-            vanillaAAMapKeyForm.put(ID, oldBodyMesh);
+        RBS_ARMA.nakedTorsos.stream().forEach((nakedTorso) -> {
+            vanillaAAMapKeyEDID.put(nakedTorso.getEDID(), nakedTorso.getForm());
+            vanillaAAMapKeyForm.put(nakedTorso.getForm(), nakedTorso.getEDID());
             SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
-                ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(MJ, oldBodyMesh + "RBS_F" + id);
+                ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(nakedTorso, nakedTorso.getEDID() + "RBS_F" + id);
                 patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                 patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
                 targetAA.setModelPath("actors\\character\\character assets\\rbs\\female\\rbs" + id + "\\femalebody_1.nif", Gender.FEMALE, Perspective.THIRD_PERSON);
