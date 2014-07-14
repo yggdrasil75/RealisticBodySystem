@@ -21,6 +21,7 @@ public class YourSaveFile extends SkyProcSave {
         Add(Settings.KILLERKEO_CLOTHES_ON, true, true);
         Add(Settings.MAK_CLOTHES_ON, true, true);
         Add(Settings.DIVERSIFIED_ANIMATIONS_ON, false, true);
+        Add(Settings.CHECK_FOR_NEW_ANIMATIONS_ON, false, true);
         Add(Settings.POOL_OF_CLOTHES_ON, false, true);
         Add(Settings.CORRECT_NPC_SPELL_ON, false, true);
         Add(Settings.HAIR_DEPLOYMENT_ON, true, true);
@@ -66,6 +67,8 @@ public class YourSaveFile extends SkyProcSave {
                 "All Clothes are put into a pool. NPCs will take one out of it by random and wear it");
         helpInfo.put(Settings.DIVERSIFIED_ANIMATIONS_ON,
                 "All Females that are touched by RBS using different sit, idle and walk animations now");
+        helpInfo.put(Settings.CHECK_FOR_NEW_ANIMATIONS_ON,
+                "Only check for running RBS the first time or you have added new animations");
         helpInfo.put(Settings.CORRECT_NPC_SPELL_ON,
                 "If checked a spell is performed ingame trying to correct neck seams.");
         helpInfo.put(Settings.HAIR_DEPLOYMENT_ON,
@@ -90,6 +93,7 @@ public class YourSaveFile extends SkyProcSave {
         MAK_CLOTHES_ON,
         POOL_OF_CLOTHES_ON,
         DIVERSIFIED_ANIMATIONS_ON,
+        CHECK_FOR_NEW_ANIMATIONS_ON,
         CORRECT_NPC_SPELL_ON,
         HAIR_DEPLOYMENT_ON,
         CHANGE_WEIGHT_BY_JOB_ON,

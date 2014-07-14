@@ -16,6 +16,7 @@ import java.util.Collection;
 import static java.nio.file.StandardCopyOption.*;
 import java.util.List;
 import skyproc.gui.SPProgressBarPlug;
+import static skyprocstarter.SkyProcStarter.save;
 
 public class RBS_Animation {
 
@@ -25,21 +26,22 @@ public class RBS_Animation {
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
     private static final Multimap<Integer, String> a_animations = ArrayListMultimap.create();
-   
 
     RBS_Animation() throws Exception {
         readIntoAnimations();
-        copyDefaultFemaleHKXFromRBSFolderIfNotExists();
-        HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
-        readXMLintoDefaultFemaleXMLContent();
-        exchangeEntriesInDefaultFemaleXMLContent();
-        readDUMMYIntoDefaultFemaleXMLContent();
-        createNewDefaultFemaleXMLs();
+        if (save.getBool(YourSaveFile.Settings.CHECK_FOR_NEW_ANIMATIONS_ON)) {
+            copyDefaultFemaleHKXFromRBSFolderIfNotExists();
+            HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
+            readXMLintoDefaultFemaleXMLContent();
+            exchangeEntriesInDefaultFemaleXMLContent();
+            readDUMMYIntoDefaultFemaleXMLContent();
+            createNewDefaultFemaleXMLs();
+        }
     }
 
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
         Process process;
-        SPProgressBarPlug.setStatus("p " +destination);
+        SPProgressBarPlug.setStatus("p " + destination);
         String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
         process = Runtime.getRuntime().exec("cmd /c " + command);
         SPProgressBarPlug.setStatus("w " + destination);
@@ -66,7 +68,7 @@ public class RBS_Animation {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
             for (File animationFile : animationFileList) {
                 a_animations.put(folder, animationFile.getPath().toLowerCase());
-                SPProgressBarPlug.setStatus("Animation files in F" + folder + "A"+ animations);
+                SPProgressBarPlug.setStatus("Animation files in F" + folder + "A" + animations);
                 animations++;
             }
             folder++;
@@ -81,7 +83,7 @@ public class RBS_Animation {
         String ChangedDefaultFemaleXMLTmp = defaultFemaleXMLContent;
         int size = a_animations.asMap().size();
         for (int z = 1; z <= size; z++) {
-            SPProgressBarPlug.setStatus("Entries in "+z+"/" +size + " HKX Files");
+            SPProgressBarPlug.setStatus("Entries in " + z + "/" + size + " HKX Files");
             Collection<String> collection = a_animations.get(z);
             for (String animation : collection) {
                 Path path = Paths.get(animation);

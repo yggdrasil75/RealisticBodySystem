@@ -25,6 +25,7 @@ public class OtherSettingsPanel extends SPSettingPanel {
     LCheckBox killerKeoClothes;
     LCheckBox makClothes;
     LCheckBox diversifiedAnimations;
+    LCheckBox checkForNewAnimations;
     LCheckBox correctNPCSpell;
     LCheckBox hairDeployment;
     LCheckBox poolOfClothes;
@@ -101,9 +102,16 @@ public class OtherSettingsPanel extends SPSettingPanel {
         diversifiedAnimations.addShadow();
         diversifiedAnimations.setVisible(false);
         setPlacement(diversifiedAnimations);
-
         AddSetting(diversifiedAnimations);
 
+        checkForNewAnimations = new LCheckBox("Check for new animations", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
+        checkForNewAnimations.tie(YourSaveFile.Settings.CHECK_FOR_NEW_ANIMATIONS_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
+        checkForNewAnimations.setOffset(2);
+        checkForNewAnimations.addShadow();
+        checkForNewAnimations.setVisible(false);
+        setPlacement(checkForNewAnimations);
+        AddSetting(checkForNewAnimations);
+        
         poolOfClothes = new LCheckBox("Use clothes pool for NPCs", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         poolOfClothes.tie(YourSaveFile.Settings.POOL_OF_CLOTHES_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
         poolOfClothes.setOffset(2);
