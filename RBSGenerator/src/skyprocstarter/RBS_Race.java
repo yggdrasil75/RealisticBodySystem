@@ -28,10 +28,32 @@ public class RBS_Race {
     public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
     public static List<FormID> ListBeastRaces = new ArrayList<>();
     public static List<FormID> ListHumanRaces = new ArrayList<>();
+    public static List<FormID> ListAllowedVanillaRaces = new ArrayList<>();
     public static List<FormID> children = new ArrayList<>();
     public static int amountFilesHKX;
 
     RBS_Race() {
+    
+        ListAllowedVanillaRaces.add(new FormID("013740Skyrim.esm")); //ArgonianRace
+        ListAllowedVanillaRaces.add(new FormID("08883ASkyrim.esm")); //ArgonianRaceVampire
+        ListAllowedVanillaRaces.add(new FormID("013741Skyrim.esm")); //BretronRace
+        ListAllowedVanillaRaces.add(new FormID("08884CSkyrim.esm")); //BretronRaceVampire
+        ListAllowedVanillaRaces.add(new FormID("013742Skyrim.esm")); //DarkElf
+        ListAllowedVanillaRaces.add(new FormID("08883DSkyrim.esm")); //DarkElfVampire
+        ListAllowedVanillaRaces.add(new FormID("067CD8Skyrim.esm")); //ElderRace
+        ListAllowedVanillaRaces.add(new FormID("0A82BASkyrim.esm")); //ElderRaceVampire
+        ListAllowedVanillaRaces.add(new FormID("013743Skyrim.esm")); //HighElfRace
+        ListAllowedVanillaRaces.add(new FormID("088840Skyrim.esm")); //HighElfVampire
+        ListAllowedVanillaRaces.add(new FormID("013744Skyrim.esm")); //ImperialRace
+        ListAllowedVanillaRaces.add(new FormID("088844Skyrim.esm")); //ImperialVampire
+        ListAllowedVanillaRaces.add(new FormID("013746Skyrim.esm")); //NordRace
+        ListAllowedVanillaRaces.add(new FormID("088794Skyrim.esm")); //NordVampire
+        ListAllowedVanillaRaces.add(new FormID("013747Skyrim.esm")); //OrcRace
+        ListAllowedVanillaRaces.add(new FormID("0A82B9Skyrim.esm")); //OrcRaceVampire
+        ListAllowedVanillaRaces.add(new FormID("013748Skyrim.esm")); //RedguardRace
+        ListAllowedVanillaRaces.add(new FormID("088846Skyrim.esm")); //RedguardVampire
+        ListAllowedVanillaRaces.add(new FormID("013749Skyrim.esm")); //WoodelfRace
+        ListAllowedVanillaRaces.add(new FormID("088884Skyrim.esm")); //WoodelfVampire
         
         for (RACE r : SkyProcStarter.merger.getRaces()) {
             if (r.getEDID().toLowerCase().contains("child")) {

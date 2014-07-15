@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
+import javax.swing.JOptionPane;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.HDPT;
@@ -65,11 +66,6 @@ public class RBS_NPC {
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
 
-            childrace = false;
-            if (RBS_Race.children.contains(n.getRace())) {
-                childrace = true;
-            }
-
             if (voiceTypeMaleMap.containsKey(n.getVoiceType())) {
                 ListNPCMale.add(n);
             }
@@ -80,13 +76,11 @@ public class RBS_NPC {
                 }
             }
             if ((hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female))) {
-                if (!childrace) {
-
+                if (RBS_Race.ListAllowedVanillaRaces.contains(n.getRace())) {
                     ListNPCFemale.add(n);
                     ListNPC.add(n);
                 }
             }
-
         }
         SkyProcStarter.merger.getNPCs().getRecords().clear();
         SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
@@ -102,6 +96,9 @@ public class RBS_NPC {
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
                 OTFT vanillaOutfit = (OTFT) SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
                 if (vanillaOutfit != null) {
+                    NPCIterator = setSpeedMult(NPCIterator);
+                    NPCIterator = changeHeight(NPCIterator);
+         
                     setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
                     addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
                     String skin = NPCIterator.getSkin().getFormStr();
@@ -118,8 +115,7 @@ public class RBS_NPC {
                             NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
                         }
                     }
-                    NPCIterator = setSpeedMult(NPCIterator);
-                    NPCIterator = changeHeight(NPCIterator);
+
                     if (SkyProcStarter.save.getBool(YourSaveFile.Settings.CHANGE_WEIGHT_BY_JOB_ON)) {
                         NPCIterator = changeWeight(NPCIterator, vanillaOutfit.getEDID());
                     }
@@ -216,9 +212,15 @@ public class RBS_NPC {
             max = 80;
         }
         if (NPCIterator.getDefaultOutfit() != null) {
-            if (RBS_Outfit.armors.contains((OTFT)SkyProcStarter.merger.getOutfits().get(NPCIterator.getDefaultOutfit()))) { // npc with equipped Armor will be slower.
-                min = min - 20;
-                max = max - 20;
+            MajorRecord outfit = SkyProcStarter.merger.getOutfits().get(NPCIterator.getDefaultOutfit());
+            if (outfit != null) {
+                if (RBS_Outfit.VanillaArmors.contains(outfit.getForm())) { // npc with equipped Armor will be slower.
+                    min = min - 20;
+                    max = max - 20;
+                }
+                if (RBS_Outfit.VanillaClothes.contains(outfit.getForm())) { // npc with equipped Armor will be slower.
+
+                }
             }
         }
         NPCIterator.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(NPCIterator.getEDID() + NPCIterator.getFormStr(), min, max));

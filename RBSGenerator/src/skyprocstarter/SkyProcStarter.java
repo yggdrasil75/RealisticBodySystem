@@ -314,7 +314,9 @@ public class SkyProcStarter implements SUM {
                 rbs_arma.CreateNewAA(meshesfolder, save.getStr(Settings.BODY));
             }
             rbs_arma.changeNakedTorso();
+            //rbs_arma.addModRacesToAA(); //not working as it should
             rbs_armo.changeSkinNaked();
+            
             
             if (save.getBool(Settings.TEXTURE_DEPLOYMENT_ON)) {
                 rbs_texture.CreateTextureSetsSkinBodyFemale_1RBS();

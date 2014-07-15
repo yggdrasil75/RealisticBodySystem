@@ -348,6 +348,7 @@ public class RBS_Hair {
             int index = getOldHair(n);
             if (index > 0) {
                 n.getHeadParts().set(index, hair.getForm());
+                n.getTinting().clear(); // makeup was common in the middleage?
             }
         }
 

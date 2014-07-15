@@ -20,6 +20,8 @@ public class RBS_Outfit {
 
     public static Set<OTFT> clothes = new HashSet<>();
     public static Set<OTFT> armors = new HashSet<>();
+    public static Set<FormID> VanillaClothes = new HashSet<>();
+    public static Set<FormID> VanillaArmors = new HashSet<>();
     public static Map<String, FormID> patchOutfitsArmorMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> patchOutfitsArmorMapKeyForm = new ConcurrentHashMap<>();
     public static Map<String, FormID> patchOutfitsClothesMapKeyEDID = new ConcurrentHashMap<>();
@@ -27,6 +29,22 @@ public class RBS_Outfit {
     public static Map<String, FormID> vanillaOutfitsMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> vanillaOutfitsMapKeyForm = new ConcurrentHashMap<>();
     private static OTFT m_patchOutfit;
+
+    RBS_Outfit() {
+        for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
+            for (FormID outfitEntry : outfit.getInventoryList()) {
+                String vanillaArmorName = RBS_ARMO.vanillaArmorsMapKeyForm.get(outfitEntry);
+                if (vanillaArmorName != null) {
+                    if (vanillaArmorName.contains("Clothes")) {
+                        RBS_Outfit.VanillaClothes.add(outfit.getForm());
+                    }
+                    if (vanillaArmorName.contains("Armor")) {
+                        RBS_Outfit.VanillaArmors.add(outfit.getForm());
+                    }
+                }
+            }
+        }
+    }
 
     public void CreateNewOutfits(String folder) throws Exception {
         SPProgressBarPlug.setStatus("creating new outfits " + folder);
@@ -43,11 +61,11 @@ public class RBS_Outfit {
                             entriesToBeAdded.add(FormPatched);
                             entriesToBeDeleted.add(outfitEntry);
                             if (vanillaArmorName.contains("Clothes")) {
-                                
+
                                 ArmorType = "clothes";
                             }
                             if (vanillaArmorName.contains("Armor")) {
-                                
+
                                 ArmorType = "armor";
                             }
                         }

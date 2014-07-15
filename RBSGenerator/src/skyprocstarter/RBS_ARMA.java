@@ -81,26 +81,40 @@ public class RBS_ARMA {
             });
         });
     }
+
+    public void addModRacesToAA() {
+        for (ARMA AA : SkyProcStarter.patch.getArmatures().getRecords()) {
+            for (FormID race : RBS_Race.ListHumanRaces) {
+                if (!AA.getAdditionalRaces().contains(race)) {
+                    AA.addAdditionalRace(race);
+                }
+            }
+            for (FormID race : RBS_Race.ListBeastRaces) {
+                if (!AA.getAdditionalRaces().contains(race)) {
+                    AA.addAdditionalRace(race);
+                }
+            }
+        }
+    }
 }
+        /*
+         for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
+         if (targetAA.getSkinTexture(Gender.FEMALE).equals(t.getForm())) {
+         String newTextureName = t.getEDID() + "RBS_F";
+         targetAA.setSkinTexture(RBS_Texture.patchTXSTMapKeyEDID.get(newTextureName), Gender.FEMALE);
+         }
+         }
+         for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
+         if (targetAA.getSkinTexture(Gender.FEMALE).equals(t.getForm())) {
+         String rand = RBS_Randomize.toString(targetAA.getEDID() + "RBS_F" + s, 1, 10);
+         String srand = formatter.format(rand);
+         String newTextureName = t.getEDID() + "RBS_F" + srand;
+         for (TXST tt : SkyProcStarter.patch.getTextureSets()) {
+         if (tt.getEDID().equals(newTextureName)) {
+         targetAA.setSkinTexture(tt.getForm(), Gender.FEMALE);
 
-/*
- for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
- if (targetAA.getSkinTexture(Gender.FEMALE).equals(t.getForm())) {
- String newTextureName = t.getEDID() + "RBS_F";
- targetAA.setSkinTexture(RBS_Texture.patchTXSTMapKeyEDID.get(newTextureName), Gender.FEMALE);
- }
- }
- for (TXST t : RBS_Texture.ListRBSTXSTMerger) {
- if (targetAA.getSkinTexture(Gender.FEMALE).equals(t.getForm())) {
- String rand = RBS_Randomize.toString(targetAA.getEDID() + "RBS_F" + s, 1, 10);
- String srand = formatter.format(rand);
- String newTextureName = t.getEDID() + "RBS_F" + srand;
- for (TXST tt : SkyProcStarter.patch.getTextureSets()) {
- if (tt.getEDID().equals(newTextureName)) {
- targetAA.setSkinTexture(tt.getForm(), Gender.FEMALE);
-
- }
- }
- }
- }
- */
+         }
+         }
+         }
+         }
+         */
