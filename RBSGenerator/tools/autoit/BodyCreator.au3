@@ -29,10 +29,10 @@ Switch MsgBox(3, "BodyCreator", "Do want to generate new bodyshapes? (previous w
         Exit
 EndSwitch
 global $pos = OpenBodySlide()
-;createBodies("killerkeo","keo")
-;createBodies("body","CalienteBodyAdvanced TBBP")
-;createBodies("standard","CalArmor")
-;createBodies("standard","CalClothes")
+createBodies("killerkeo","keo")
+createBodies("body","CalienteBodyAdvanced TBBP")
+createBodies("standard","CalArmor")
+createBodies("standard","CalClothes")
 createBodies("ct77","CT77")
 createBodies("standard","wav-TBBP")
 WinClose ("Caliente's BodySlide")
