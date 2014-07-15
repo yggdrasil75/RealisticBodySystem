@@ -1,6 +1,7 @@
 Func OpenBodySlide()
    Run($BodySlidePath &"\bodyslide.exe",$BodySlidePath)
-
+   sleep(3000)
+   WinSetState ( "Caliente", "", @SW_MAXIMIZE )
    sleep (1000)
    WinActivate ($windowName)
  ;  sleep (200)
@@ -59,7 +60,7 @@ Func CreateBodies($folder, $filter, $counter=1)
 			send ("{down}")
 	  endif
 	  sleep(1000)
-	  ControlClick("Caliente", "", "[CLASS:Button; INSTANCE:5]", "left",1)
+	  ControlClick("Caliente", "", "[CLASS:Button; TEXT:Batch Build...;]", "left",1)
 	  WinWait("Batch")
 	  ControlClick("Batch", "", "[CLASS:Button; INSTANCE:1]", "left",1)
 	  $bodyName = "RBS" & StringFormat ("%03d", $AmountBodies)
@@ -73,16 +74,16 @@ Func CreateBodies($folder, $filter, $counter=1)
 		 $targetPathDLC01 = $MeshesPath & "\RBS\female\"& $bodyName &"\" & $folder & "\dlc01";
 		 $targetPathDLC02 = $MeshesPath & "\RBS\female\"& $bodyName &"\" & $folder & "\dlc02";
 
-		 DirRemove($targetPathClothes,1)
-		 DirRemove($targetPathArmor,1)
-		 DirRemove($targetPathDLC01,1)
-		 DirRemove($targetPathDLC02,1)
+;		 DirRemove($targetPathClothes,1)
+;		 DirRemove($targetPathArmor,1)
+;		 DirRemove($targetPathDLC01,1)
+;		 DirRemove($targetPathDLC02,1)
 
-		 DirCreate($targetPathClothes)
-		 DirCreate($targetPathArmor)
-		 DirCreate($targetPathDLC01)
-		 DirCreate($targetPathDLC02)
-	  endif
+;		 DirCreate($targetPathClothes)
+;		 DirCreate($targetPathArmor)
+;		 DirCreate($targetPathDLC01)
+;		 DirCreate($targetPathDLC02)
+		 endif
 
 	  Do
 		 $var1 = 0
@@ -124,7 +125,6 @@ func createList()
 	  Exit
    EndIf
    Local $file = FileOpen($BodySlidePath & "\SliderGroups\RBS_Group.xml", 2)
-
    FileWriteLine($file, "<?xml version=""1.0"" encoding=""utf-8""?>")
    FileWriteLine($file, "<SliderGroups>")
    FileWriteLine($file, "<Group name=""RBS"">")
@@ -158,7 +158,9 @@ Func cleanBodySlideDirectory()
    RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (wav-TBBP*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CT77*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CB++*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
+   RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (cal*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\CalienteBody"" """ & $bodySlidePath &"\ShapeData\CalienteBody""  /E /I /Y")
+   RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\killerkeo"" """ & $bodySlidePath &"\ShapeData\killerkeo""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\Caliente Undies"" """ & $bodySlidePath &"\ShapeData\Caliente Undies""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\CalienteNeverNude"" """ & $bodySlidePath &"\ShapeData\CalienteNeverNude""  /E /I /Y")
    ;RunWait(@ComSpec & " /c"&' '&"xcopy """& $bodyslidePath & "sources\SliderGroups\OCR-All_TBBP.xml"" " & $bodyslidePath &"""SliderGroups\"" /e /s /v /c /Y")

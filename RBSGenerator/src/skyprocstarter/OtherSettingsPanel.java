@@ -52,10 +52,10 @@ public class OtherSettingsPanel extends SPSettingPanel {
          }
          */
         nakedBodyOptions.addItem("Naked");
-        nakedBodyOptions.addItem("Naked BBP");
-        nakedBodyOptions.addItem("Naked TBBP");
-        nakedBodyOptions.addItem("Undies");
-        nakedBodyOptions.addItem("Layer Bikini");
+      //  nakedBodyOptions.addItem("Naked BBP");
+      //  nakedBodyOptions.addItem("Naked TBBP");
+      //  nakedBodyOptions.addItem("Undies");
+      //  nakedBodyOptions.addItem("Layer Bikini");
 
         nakedBodyOptions.tie(YourSaveFile.Settings.BODY, SkyProcStarter.save, SUMGUI.helpPanel, true);
         setPlacement(nakedBodyOptions);
@@ -117,14 +117,14 @@ public class OtherSettingsPanel extends SPSettingPanel {
         poolOfClothes.setOffset(2);
         poolOfClothes.addShadow();
         setPlacement(poolOfClothes);
-        AddSetting(poolOfClothes);
+  //      AddSetting(poolOfClothes);
 
         correctNPCSpell = new LCheckBox("Correct NPCs neck seams", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         correctNPCSpell.tie(YourSaveFile.Settings.CORRECT_NPC_SPELL_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
         correctNPCSpell.setOffset(2);
         correctNPCSpell.addShadow();
         setPlacement(correctNPCSpell);
-        AddSetting(correctNPCSpell);
+  //      AddSetting(correctNPCSpell);
 
         hairDeployment = new LCheckBox("Use hair variation", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         hairDeployment.tie(YourSaveFile.Settings.HAIR_DEPLOYMENT_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
@@ -145,14 +145,14 @@ public class OtherSettingsPanel extends SPSettingPanel {
         textureDeployment.setOffset(2);
         textureDeployment.addShadow();
         setPlacement(textureDeployment);
-        AddSetting(textureDeployment);
+    //    AddSetting(textureDeployment);
 
         changeMale = new LCheckBox("Change males also", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         changeMale.tie(YourSaveFile.Settings.CHANGE_MALE_ON, SkyProcStarter.save, SUMGUI.helpPanel, true);
         changeMale.setOffset(2);
         changeMale.addShadow();
         setPlacement(changeMale);
-        AddSetting(changeMale);
+   //     AddSetting(changeMale);
 
         importOnStartup = new LCheckBox("Import mods on startup", SkyProcStarter.settingsFont, SkyProcStarter.settingsColor);
         importOnStartup.tie(YourSaveFile.Settings.IMPORT_AT_START, SkyProcStarter.save, SUMGUI.helpPanel, true);

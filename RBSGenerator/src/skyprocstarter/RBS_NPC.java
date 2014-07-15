@@ -280,10 +280,7 @@ public class RBS_NPC {
         List<OTFT> ListOfAllArmorsWithID = new ArrayList<>();
         MajorRecord MJ;
         String test;
-        if (NPCIterator.getEDID().equals("Breya")) {
-            String tast = "";
-        }
-        MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
+          MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
         if (MJ == null) {
             MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "ct77" + ID);
             if (MJ == null) {

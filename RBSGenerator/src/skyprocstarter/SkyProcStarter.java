@@ -309,7 +309,7 @@ public class SkyProcStarter implements SUM {
             if (save.getBool(Settings.MAK_CLOTHES_ON)) {
                 SkyProcStarter.meshesGroup.add("ct77");
             }
-
+            
             for (String meshesfolder : meshesGroup) {
                 rbs_arma.CreateNewAA(meshesfolder, save.getStr(Settings.BODY));
             }

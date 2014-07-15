@@ -300,16 +300,19 @@ public class RBS_Hair {
         }
     }
 
-    public static FormID getOldHair(NPC_ n) {
+    public static int getOldHair(NPC_ n) {
+        int i = 0;
         for (FormID hp : n.getHeadParts()) {
+         
             MajorRecord foundhp = SkyProcStarter.merger.getHeadParts().get(hp);
             if (foundhp != null) {
                 if (foundhp.getEDID().toLowerCase().contains("hair")) {
-                    return hp;
+                    return i;
                 }
             }
+               i++;
         }
-        return null;
+        return 0;
     }
 
     public NPC_ changeHair(NPC_ n) {
@@ -342,9 +345,9 @@ public class RBS_Hair {
         }
 
         if (hair != null) {
-            if (getOldHair(n) !=null) {
-                n.removeHeadPart(getOldHair(n));
-                n.addHeadPart(hair.getForm());
+            int index = getOldHair(n);
+            if (index > 0) {
+                n.getHeadParts().set(index, hair.getForm());
             }
         }
 

@@ -16,6 +16,7 @@ global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.7
 global $bodyMultiHigh = 0.85
 global $windowName = "Caliente's BodySlide"
+DirCreate($BodySlidePath & "\MeshesTemp")
 SetGameDataPath()
 cleanBodySlideDirectory()
 createList();
@@ -28,9 +29,12 @@ Switch MsgBox(3, "BodyCreator", "Do want to generate new bodyshapes? (previous w
         Exit
 EndSwitch
 global $pos = OpenBodySlide()
-createBodies("body","CalienteBodyAdvanced TBBP")
-createBodies("standard","TBBP")
+;createBodies("killerkeo","keo")
+;createBodies("body","CalienteBodyAdvanced TBBP")
+;createBodies("standard","CalArmor")
+;createBodies("standard","CalClothes")
 createBodies("ct77","CT77")
+createBodies("standard","wav-TBBP")
 WinClose ("Caliente's BodySlide")
 CreateListGeneratedMeshes()
 
