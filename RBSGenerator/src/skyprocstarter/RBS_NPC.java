@@ -64,7 +64,7 @@ public class RBS_NPC {
         }
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
-            
+
             childrace = false;
             if (RBS_Race.children.contains(n.getRace())) {
                 childrace = true;
@@ -81,12 +81,12 @@ public class RBS_NPC {
             }
             if ((hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female))) {
                 if (!childrace) {
-                    
+
                     ListNPCFemale.add(n);
                     ListNPC.add(n);
                 }
             }
-            
+
         }
         SkyProcStarter.merger.getNPCs().getRecords().clear();
         SkyProcStarter.merger.getNPCs().getRecords().addAll(ListNPCFemale);
@@ -104,7 +104,7 @@ public class RBS_NPC {
                 if (vanillaOutfit != null) {
                     setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
                     addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
-                       String skin = NPCIterator.getSkin().getFormStr();
+                    String skin = NPCIterator.getSkin().getFormStr();
                     if (skin.equals("No FormID")) {
                         if (RBS_Race.ListBeastRaces.contains(NPCIterator.getRace())) {
                             NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
@@ -112,13 +112,12 @@ public class RBS_NPC {
                             NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
                         }
                     } else {
-                        if (NPCIterator.getSkin().getFormStr().equals("000D64Skyrim.esm")) {
+                        if (RBS_Race.ListHumanRaces.contains(NPCIterator.getRace())) {
                             NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
                         } else {
                             NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
                         }
                     }
-                    // String NPCRace = SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID();
                     NPCIterator = setSpeedMult(NPCIterator);
                     NPCIterator = changeHeight(NPCIterator);
                     if (SkyProcStarter.save.getBool(YourSaveFile.Settings.CHANGE_WEIGHT_BY_JOB_ON)) {
@@ -202,19 +201,25 @@ public class RBS_NPC {
         int min;
         int max;
         if (SkyProcStarter.merger.getRaces().get(NPCIterator.getRace()).getEDID().toLowerCase().contains("eldar")) {
-            min = 40;
+            min = 50;
             max = 70;
         } else {
             min = 70;
             max = 100;
         }
         if (NPCIterator.getWeight() > 80) {
-            min = 60;
-            max = 80;
+            min = 70;
+            max = 90;
         }
         if (NPCIterator.getWeight() > 90) {
-            min = 50;
-            max = 70;
+            min = 70;
+            max = 80;
+        }
+        if (NPCIterator.getDefaultOutfit() != null) {
+            if (RBS_Outfit.armors.contains((OTFT)SkyProcStarter.merger.getOutfits().get(NPCIterator.getDefaultOutfit()))) { // npc with equipped Armor will be slower.
+                min = min - 20;
+                max = max - 20;
+            }
         }
         NPCIterator.set(NPC_.NPCStat.SPEED_MULT, RBS_Randomize.toInt(NPCIterator.getEDID() + NPCIterator.getFormStr(), min, max));
         return (NPCIterator);
@@ -280,7 +285,7 @@ public class RBS_NPC {
         List<OTFT> ListOfAllArmorsWithID = new ArrayList<>();
         MajorRecord MJ;
         String test;
-          MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
+        MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "standard" + ID);
         if (MJ == null) {
             MJ = SkyProcStarter.patch.getOutfits().get(outfitName + "RBS_F" + "ct77" + ID);
             if (MJ == null) {

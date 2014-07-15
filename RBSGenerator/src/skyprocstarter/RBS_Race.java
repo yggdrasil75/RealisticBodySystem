@@ -27,6 +27,7 @@ public class RBS_Race {
     public static List<FormID> ListRBSRacesPatchFormID = new ArrayList<>();
     public static List<RACE> ListRBSRacesPatch = new ArrayList<>();
     public static List<FormID> ListBeastRaces = new ArrayList<>();
+    public static List<FormID> ListHumanRaces = new ArrayList<>();
     public static List<FormID> children = new ArrayList<>();
     public static int amountFilesHKX;
 
@@ -50,9 +51,11 @@ public class RBS_Race {
                     }
                 }
             }
-            String test = r.getWornArmor().getFormStr();
             if (r.getWornArmor().getFormStr().equals("069CE3Skyrim.esm")) {
                 ListBeastRaces.add(r.getForm());
+            }
+            if (r.getWornArmor().getFormStr().equals("000D64Skyrim.esm")) {
+                ListHumanRaces.add(r.getForm());
             }
         }
     }
