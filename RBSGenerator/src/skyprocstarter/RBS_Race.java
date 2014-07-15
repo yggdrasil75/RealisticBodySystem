@@ -33,7 +33,7 @@ public class RBS_Race {
     public static int amountFilesHKX;
 
     RBS_Race() {
-    
+
         ListAllowedVanillaRaces.add(new FormID("013740Skyrim.esm")); //ArgonianRace
         ListAllowedVanillaRaces.add(new FormID("08883ASkyrim.esm")); //ArgonianRaceVampire
         ListAllowedVanillaRaces.add(new FormID("013741Skyrim.esm")); //BretronRace
@@ -54,30 +54,18 @@ public class RBS_Race {
         ListAllowedVanillaRaces.add(new FormID("088846Skyrim.esm")); //RedguardVampire
         ListAllowedVanillaRaces.add(new FormID("013749Skyrim.esm")); //WoodelfRace
         ListAllowedVanillaRaces.add(new FormID("088884Skyrim.esm")); //WoodelfVampire
-        
+
         for (RACE r : SkyProcStarter.merger.getRaces()) {
-            if (r.getEDID().toLowerCase().contains("child")) {
-                children.add(r.getForm());
-            }
-            if (r.getModel(Gender.MALE).toLowerCase().contains("actors\\character\\character assets")
-                    || r.getModel(Gender.FEMALE).toLowerCase().contains("actors\\character\\character assets female")) {
-                if (!r.getEDID().toLowerCase().contains("child")) {
-                    if (r.getEDID().toLowerCase().contains("vampire") || r.getEDID().toLowerCase().contains("afflicted") || r.getEDID().toLowerCase().contains("astrid") || r.getEDID().toLowerCase().contains("invisible") || r.getEDID().toLowerCase().contains("elder") || r.getEDID().toLowerCase().contains("testrace") || r.getEDID().toLowerCase().contains("manakin")) {
-                    } else {
-                        ListRBSRacesMerger.add(r);
-                        //r.setWornArmor(new FormID("000D64Skyrim.esm"));
-                        //      r.setWornArmor(FormID.NULL);
-                        //         SkyProcStarter.patch.addRecord(r);
-                        vanillaRacesMapKeyEDID.put(r.getEDID(), r.getForm());
-                        vanillaRacesMapKeyForm.put(r.getForm(), r.getEDID());
-                    }
+            if (ListAllowedVanillaRaces.contains(r.getForm())) {
+                ListRBSRacesMerger.add(r);
+                vanillaRacesMapKeyEDID.put(r.getEDID(), r.getForm());
+                vanillaRacesMapKeyForm.put(r.getForm(), r.getEDID());
+                if (r.getWornArmor().getFormStr().equals("069CE3Skyrim.esm")) {
+                    ListBeastRaces.add(r.getForm());
                 }
-            }
-            if (r.getWornArmor().getFormStr().equals("069CE3Skyrim.esm")) {
-                ListBeastRaces.add(r.getForm());
-            }
-            if (r.getWornArmor().getFormStr().equals("000D64Skyrim.esm")) {
-                ListHumanRaces.add(r.getForm());
+                if (r.getWornArmor().getFormStr().equals("000D64Skyrim.esm")) {
+                    ListHumanRaces.add(r.getForm());
+                }
             }
         }
     }
@@ -96,7 +84,6 @@ public class RBS_Race {
 
                 FormID RaceID = new FormID(r.getForm());
                 String RaceEDID = copiedRace.getEDID();
-
 
                 copiedRace.set(RACE.RACEFlags.Playable, false);
                 copiedRace.setModel(Gender.MALE, "RBS\\Skeletons\\skeletonRBS_M" + s + ".nif");
@@ -133,7 +120,7 @@ public class RBS_Race {
     }
 
     public void createForNewAnimations() throws Exception {
-        
+
         SPProgressBarPlug.setStatus("Creating races");
         NumberFormat formatter = new DecimalFormat("00");
         NumberFormat formatter2 = new DecimalFormat("000");
@@ -155,10 +142,8 @@ public class RBS_Race {
                 + "Character"
                 + File.separator;
 
-        
-       
         for (RACE r : ListRBSRacesMerger) {
-               if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
+            if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
                 for (int i = 1; i <= RBS_Animation.amountOfAnimationFolders; i++) {
                     String s = formatter.format(i);
                     String t = formatter2.format(i);
@@ -174,14 +159,12 @@ public class RBS_Race {
     public void AttachNPCsToRaces() throws Exception {
         SPProgressBarPlug.setStatus("Attaching all Female NPCs to new animation races");
         for (NPC_ n : RBS_NPC.ListNPCFemale) {
-            if (n.getWeight()<60) {
             String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, RBS_Animation.amountOfAnimationFolders);
             String sourceName = SkyProcStarter.merger.getRaces().get(new FormID(n.getRace())).getEDID() + "RBS_F" + bodyID;
             for (RACE r : SkyProcStarter.patch.getRaces()) {
                 if (r.getEDID().equals(sourceName)) {
                     n.setRace(r.getForm());
                 }
-            }
             }
         }
     }
@@ -221,4 +204,3 @@ public class RBS_Race {
         }
     }
 }
-

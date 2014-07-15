@@ -254,6 +254,7 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
+        
         for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
             SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
         }

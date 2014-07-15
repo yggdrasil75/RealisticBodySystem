@@ -48,24 +48,22 @@ public class RBS_NPC {
         FormID playerID = new FormID("000007Skyrim.esm");
         SkyProcStarter.merger.getNPCs().removeRecord(playerID);
         boolean hasFemaleHeadPart;
-        boolean childrace;
+
         for (VTYP VoiceTypes : SkyProcStarter.merger.getVoiceTypes()) {
-            if (VoiceTypes.getEDID().toLowerCase().contains("female") && !VoiceTypes.getEDID().toLowerCase().contains("child")) {
+            if (VoiceTypes.getEDID().toLowerCase().contains("female")) {
                 voiceTypeFemaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
-            } else if (VoiceTypes.getEDID().toLowerCase().contains("male") && !VoiceTypes.getEDID().toLowerCase().contains("child")) {
+            } else if (VoiceTypes.getEDID().toLowerCase().contains("male")) {
                 voiceTypeMaleMap.put(VoiceTypes.getForm(), VoiceTypes.getEDID());
             }
         }
 
         for (HDPT headpart : SkyProcStarter.merger.getHeadParts()) {
-            if (headpart.getEDID().toLowerCase().contains("female") && !headpart.getEDID().toLowerCase().contains("child")) {
+            if (headpart.getEDID().toLowerCase().contains("female")) {
                 headPartFemaleMap.put(headpart.getForm(), headpart.getEDID());
-
             }
         }
 
         for (NPC_ n : SkyProcStarter.merger.getNPCs()) {
-
             if (voiceTypeMaleMap.containsKey(n.getVoiceType())) {
                 ListNPCMale.add(n);
             }

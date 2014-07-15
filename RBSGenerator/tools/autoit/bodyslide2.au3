@@ -79,10 +79,10 @@ Func CreateBodies($folder, $filter, $counter=1)
 ;		 DirRemove($targetPathDLC01,1)
 ;		 DirRemove($targetPathDLC02,1)
 
-;		 DirCreate($targetPathClothes)
-;		 DirCreate($targetPathArmor)
-;		 DirCreate($targetPathDLC01)
-;		 DirCreate($targetPathDLC02)
+		 DirCreate($targetPathClothes)
+		 DirCreate($targetPathArmor)
+		 DirCreate($targetPathDLC01)
+		 DirCreate($targetPathDLC02)
 		 endif
 
 	  Do

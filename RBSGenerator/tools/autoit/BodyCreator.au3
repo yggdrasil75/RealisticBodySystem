@@ -13,8 +13,8 @@ global $BodySlideSourcesPath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\sou
 global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
-global $bodyMultiLow = 0.7
-global $bodyMultiHigh = 0.85
+global $bodyMultiLow = 0.65
+global $bodyMultiHigh = 0.92
 global $windowName = "Caliente's BodySlide"
 DirCreate($BodySlidePath & "\MeshesTemp")
 SetGameDataPath()
@@ -27,7 +27,7 @@ Switch MsgBox(3, "BodyCreator", "Do want to generate new bodyshapes? (previous w
         $var = "NO"
     Case 2
         Exit
-EndSwitch
+	 EndSwitch
 global $pos = OpenBodySlide()
 createBodies("killerkeo","keo")
 createBodies("body","CalienteBodyAdvanced TBBP")

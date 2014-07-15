@@ -84,12 +84,7 @@ public class RBS_ARMA {
 
     public void addModRacesToAA() {
         for (ARMA AA : SkyProcStarter.patch.getArmatures().getRecords()) {
-            for (FormID race : RBS_Race.ListHumanRaces) {
-                if (!AA.getAdditionalRaces().contains(race)) {
-                    AA.addAdditionalRace(race);
-                }
-            }
-            for (FormID race : RBS_Race.ListBeastRaces) {
+            for (FormID race : RBS_Race.ListAllowedVanillaRaces) {
                 if (!AA.getAdditionalRaces().contains(race)) {
                     AA.addAdditionalRace(race);
                 }
