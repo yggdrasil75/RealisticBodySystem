@@ -28,7 +28,7 @@ public class RBS_ARMA {
         nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("081BA5Skyrim.esm"))); // nakedTorsoKhajiit
         nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("038A6BSkyrim.esm"))); // nakedTorsoHighElf
         nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("019386Skyrim.esm"))); // nakedTorsoDarkElf
-        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("06C5FCSkyrim.esm"))); // nakedTorsoArgonian
+        nakedTorsos.add(SkyProcStarter.merger.getArmatures().get(new FormID("04E76ESkyrim.esm"))); // nakedTorsoArgonian
 
         // filters out needed ARMA Addons and put them into ListVanillaAA  and vanillaAAMapKeyMAps
         Predicate<ARMA> clothes_f = (n) -> n.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase().contains("clothes\\");
