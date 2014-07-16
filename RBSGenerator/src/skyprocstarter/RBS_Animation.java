@@ -42,8 +42,8 @@ public class RBS_Animation {
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
         Process process;
         SPProgressBarPlug.setStatus("p " + destination);
-        String command = SkyProcStarter.pathToHKXcmd + " convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
-        process = Runtime.getRuntime().exec("cmd /c " + command);
+        String command = "\"" + SkyProcStarter.pathToHKXcmd + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
+        process = Runtime.getRuntime().exec(command);
         SPProgressBarPlug.setStatus("w " + destination);
         process.waitFor();
         SPProgressBarPlug.setStatus("HKX converted");

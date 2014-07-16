@@ -67,6 +67,7 @@ public class SkyProcStarter implements SUM {
 
     public static String pathNewAnimationsSource;
     public static String pathHKX;
+    public static String pathSkyrim;
     public static String pathToHKXcmd;
 
     public static String pathToCharactersFemale;
@@ -261,14 +262,13 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        
+        SkyProcStarter.pathSkyrim = new File("..\\..\\..\\").getCanonicalPath() + File.separator;
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
-        //SkyProcStarter.path = new File("..\\").getCanonicalPath() + File.separator;
-
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
 
         RBS_Race rbs_race = new RBS_Race();
