@@ -25,7 +25,7 @@ public class RBS_Animation {
     private static List<File> animationFileList;
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
-    private static final Multimap<Integer, String> a_animations = ArrayListMultimap.create();
+    private static final String animationsPath[][] = new String[15][50];
 
     RBS_Animation() throws Exception {
         readIntoAnimations();
@@ -67,7 +67,7 @@ public class RBS_Animation {
         for (File animationFolder : animationFolderList) {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
             for (File animationFile : animationFileList) {
-                a_animations.put(folder, animationFile.getPath().toLowerCase());
+                animationsPath[folder][animations] = animationFolder.getPath() + animationFile.getPath();
                 SPProgressBarPlug.setStatus("Animation files in F" + folder + "A" + animations);
                 animations++;
             }
@@ -77,24 +77,17 @@ public class RBS_Animation {
     }
 
     public static void exchangeEntriesInDefaultFemaleXMLContent() throws Exception {
-        String oldString;
-        String newString;
-        int i = 1;
         String ChangedDefaultFemaleXMLTmp = defaultFemaleXMLContent;
-        int size = a_animations.asMap().size();
-        for (int z = 1; z <= size; z++) {
-            SPProgressBarPlug.setStatus("Entries in " + z + "/" + size + " HKX Files");
-            Collection<String> collection = a_animations.get(z);
-            for (String animation : collection) {
-                Path path = Paths.get(animation);
-                String animationName = path.getName(path.getNameCount() - 1).toString().toLowerCase();
-                String folderName = path.getName(path.getNameCount() - 2).toString().toLowerCase();
-                oldString = "animations\\\\female\\\\" + animationName;
-                newString = "RBS\\\\animations\\\\" + folderName + "\\\\" + animationName;
+        for (int i = 0; i < animationsPath.length; i++) {
+            for (String item : animationsPath[i]) {
+                Path animationPath = Paths.get(item);
+                String animationName = animationPath.getName(animationPath.getNameCount() - 1).toString().toLowerCase();
+                String folderName = animationPath.getName(animationPath.getNameCount() - 2).toString().toLowerCase();
+                String oldString = "animations\\\\female\\\\" + animationName;
+                String newString = "RBS\\\\animations\\\\" + folderName + "\\\\" + animationName;
                 ChangedDefaultFemaleXMLTmp = ChangedDefaultFemaleXMLTmp.replaceAll("(?i)" + oldString.toLowerCase(), newString.toLowerCase());
             }
             saveChangedDefaultFemaleAsHKX(ChangedDefaultFemaleXMLTmp, i);
-            i++;
         }
     }
 
