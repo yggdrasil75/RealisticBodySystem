@@ -144,7 +144,7 @@ public class RBS_Race {
 
         for (RACE r : ListRBSRacesMerger) {
             if (r.getPhysicsModels(Gender.FEMALE).toLowerCase().contains("defaultfemale.hkx")) {
-                for (int i = 1; i <= RBS_Animation.amountOfAnimationFolders; i++) {
+                for (int i = 1; i <= SkyProcStarter.amountOfAnimations; i++) {
                     String s = formatter.format(i);
                     String t = formatter2.format(i);
                     RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_F" + t);
@@ -159,7 +159,7 @@ public class RBS_Race {
     public void AttachNPCsToRaces() throws Exception {
         SPProgressBarPlug.setStatus("Attaching all Female NPCs to new animation races");
         for (NPC_ n : RBS_NPC.ListNPCFemale) {
-            String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, RBS_Animation.amountOfAnimationFolders);
+            String bodyID = RBS_Randomize.createRandomID(n.getEDID(), 1, (RBS_Animation.amountOfAnimationFolders)+1);
             String sourceName = SkyProcStarter.merger.getRaces().get(new FormID(n.getRace())).getEDID() + "RBS_F" + bodyID;
             for (RACE r : SkyProcStarter.patch.getRaces()) {
                 if (r.getEDID().equals(sourceName)) {

@@ -21,21 +21,26 @@ import static skyprocstarter.SkyProcStarter.save;
 public class RBS_Animation {
 
     public static int amountOfAnimationFolders;
-    private static List<File> animationFolderList;
-    private static List<File> animationFileList;
+
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
-    private static final String animationsPath[][] = new String[15][50];
+    private static List<List<String>> animationsPathWalking = new ArrayList<>();
+    private static List<List<String>> animationsPathSitting = new ArrayList<>();
+    private static List<List<String>> animationsPathStanding = new ArrayList<>();
+    //private static final String animationsPath[][] = new String[15][50];
 
     RBS_Animation() throws Exception {
-        readIntoAnimations();
+        animationsPathWalking = readIntoAnimations("walking");
+        animationsPathSitting = readIntoAnimations("sitting");
+        animationsPathStanding = readIntoAnimations("standing");
+
         if (save.getBool(YourSaveFile.Settings.CHECK_FOR_NEW_ANIMATIONS_ON)) {
             copyDefaultFemaleHKXFromRBSFolderIfNotExists();
             HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
             readXMLintoDefaultFemaleXMLContent();
-            exchangeEntriesInDefaultFemaleXMLContent();
+            exchangeEntriesInDefaultFemaleXMLContent(SkyProcStarter.amountOfAnimations);
             readDUMMYIntoDefaultFemaleXMLContent();
-            createNewDefaultFemaleXMLs();
+            createNewDefaultFemaleXMLs(SkyProcStarter.amountOfAnimations);
         }
     }
 
@@ -60,35 +65,61 @@ public class RBS_Animation {
         }
     }
 
-    public static void readIntoAnimations() throws Exception {
-        int folder = 1;
-        int animations = 1;
-        animationFolderList = RBS_File.getFolderList(SkyProcStarter.pathNewAnimationsSource);
+    public static List<List<String>> readIntoAnimations(String animationPart) throws Exception {
+        int folder = 0;
+        int animations = 0;
+        List<File> animationFolderList;
+        List<File> animationFileList;
+        List<List<String>> animationsPath = new ArrayList<>();
+        animationFolderList = RBS_File.getFolderList(SkyProcStarter.pathNewAnimationsSource + animationPart + File.separator);
         for (File animationFolder : animationFolderList) {
             animationFileList = RBS_File.getFileList(animationFolder.toString(), ".hkx");
+            List<String> col = new ArrayList<>();
             for (File animationFile : animationFileList) {
-                animationsPath[folder][animations] = animationFolder.getPath() + animationFile.getPath();
+                col.add(animationFile.getPath());
                 SPProgressBarPlug.setStatus("Animation files in F" + folder + "A" + animations);
                 animations++;
             }
+            animationsPath.add(col);
             folder++;
         }
         amountOfAnimationFolders = folder;
+        return (animationsPath);
     }
 
-    public static void exchangeEntriesInDefaultFemaleXMLContent() throws Exception {
-        String ChangedDefaultFemaleXMLTmp = defaultFemaleXMLContent;
-        for (int i = 0; i < animationsPath.length; i++) {
-            for (String item : animationsPath[i]) {
+    public static void exchangeEntriesInDefaultFemaleXMLContent(int amount) throws Exception {
+        for (int i = 1; i <= amount; i++) {
+            String ChangedDefaultFemaleXMLTmp = defaultFemaleXMLContent;
+            for (String item : animationsPathWalking.get(RBS_Randomize.toInt("asdf" + i, 1, animationsPathWalking.size()))) {
                 Path animationPath = Paths.get(item);
                 String animationName = animationPath.getName(animationPath.getNameCount() - 1).toString().toLowerCase();
                 String folderName = animationPath.getName(animationPath.getNameCount() - 2).toString().toLowerCase();
+                String part = animationPath.getName(animationPath.getNameCount() - 3).toString().toLowerCase();
                 String oldString = "animations\\\\female\\\\" + animationName;
-                String newString = "RBS\\\\animations\\\\" + folderName + "\\\\" + animationName;
+                String newString = "RBS\\\\animations\\\\" + part +"\\\\" + folderName + "\\\\" + animationName;
+                ChangedDefaultFemaleXMLTmp = ChangedDefaultFemaleXMLTmp.replaceAll("(?i)" + oldString.toLowerCase(), newString.toLowerCase());
+            }
+            for (String item : animationsPathSitting.get(RBS_Randomize.toInt("asdf3" + i, 1, animationsPathSitting.size()))) {
+                Path animationPath = Paths.get(item);
+                String animationName = animationPath.getName(animationPath.getNameCount() - 1).toString().toLowerCase();
+                String folderName = animationPath.getName(animationPath.getNameCount() - 2).toString().toLowerCase();
+                String part = animationPath.getName(animationPath.getNameCount() - 3).toString().toLowerCase();
+                String oldString = "animations\\\\female\\\\" + animationName;
+                String newString = "RBS\\\\animations\\\\" + part +"\\\\" + folderName + "\\\\" + animationName;
+                ChangedDefaultFemaleXMLTmp = ChangedDefaultFemaleXMLTmp.replaceAll("(?i)" + oldString.toLowerCase(), newString.toLowerCase());
+            }
+            for (String item : animationsPathStanding.get(RBS_Randomize.toInt("asddf" + i, 1, animationsPathStanding.size()))) {
+                Path animationPath = Paths.get(item);
+                String animationName = animationPath.getName(animationPath.getNameCount() - 1).toString().toLowerCase();
+                String folderName = animationPath.getName(animationPath.getNameCount() - 2).toString().toLowerCase();
+                String part = animationPath.getName(animationPath.getNameCount() - 3).toString().toLowerCase();
+                String oldString = "animations\\\\female\\\\" + animationName;
+                String newString = "RBS\\\\animations\\\\" + part +"\\\\" + folderName + "\\\\" + animationName;
                 ChangedDefaultFemaleXMLTmp = ChangedDefaultFemaleXMLTmp.replaceAll("(?i)" + oldString.toLowerCase(), newString.toLowerCase());
             }
             saveChangedDefaultFemaleAsHKX(ChangedDefaultFemaleXMLTmp, i);
         }
+
     }
 
     public static void readXMLintoDefaultFemaleXMLContent() throws Exception {
@@ -110,8 +141,8 @@ public class RBS_Animation {
         Files.move(oldFile, newFile, REPLACE_EXISTING);
     }
 
-    public static void createNewDefaultFemaleXMLs() throws Exception {
-        for (int i = 1; i < amountOfAnimationFolders; i++) {
+    public static void createNewDefaultFemaleXMLs(int amount) throws Exception {
+        for (int i = 1; i <= amount; i++) {
             SPProgressBarPlug.setStatus("Creating " + SkyProcStarter.pathToCharacter + "defaultfemale.h" + RBS_Randomize.createID(i, 2));
             String newContent = dummyDefaultFemaleXMLContent;
             newContent = newContent.replace("RBS_DUMMY", "Characters Female\\defaultfemale.h" + RBS_Randomize.createID(i, 2));

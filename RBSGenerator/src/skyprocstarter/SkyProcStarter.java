@@ -79,7 +79,7 @@ public class SkyProcStarter implements SUM {
     public static ArrayList<MajorRecord> usedArmatures = new ArrayList<>();
     public static int megsOfMem = 1024;
     public static ArrayList<String> meshesGroup = new ArrayList<>(3);
-
+    public static int amountOfAnimations;
     public static void main(String[] args) {
         try {
 
@@ -270,7 +270,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-
+        SkyProcStarter.amountOfAnimations = 30;
         RBS_Race rbs_race = new RBS_Race();
         RBS_ARMA rbs_arma = new RBS_ARMA();
         RBS_ARMO rbs_armo = new RBS_ARMO();

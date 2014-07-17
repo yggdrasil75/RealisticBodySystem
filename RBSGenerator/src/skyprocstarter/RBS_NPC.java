@@ -75,6 +75,7 @@ public class RBS_NPC {
             }
             if ((hasFemaleHeadPart || voiceTypeFemaleMap.containsKey(n.getVoiceType()) || n.get(NPC_.NPCFlag.Female))) {
                 if (RBS_Race.ListAllowedVanillaRaces.contains(n.getRace())) {
+
                     ListNPCFemale.add(n);
                     ListNPC.add(n);
                 }
@@ -92,11 +93,12 @@ public class RBS_NPC {
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
+          
                 OTFT vanillaOutfit = (OTFT) SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
                 if (vanillaOutfit != null) {
                     NPCIterator = setSpeedMult(NPCIterator);
                     NPCIterator = changeHeight(NPCIterator);
-         
+
                     setDefaultOutfit(NPCIterator, vanillaOutfit, ID);
                     addVanillaOutfitToInventory(NPCIterator, vanillaOutfit);
                     String skin = NPCIterator.getSkin().getFormStr();
@@ -326,6 +328,7 @@ public class RBS_NPC {
                         }
                         outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
                         if (outfit != null) {
+
                             NPCIterator.setDefaultOutfit(outfit.getForm());
                         }
                     }
