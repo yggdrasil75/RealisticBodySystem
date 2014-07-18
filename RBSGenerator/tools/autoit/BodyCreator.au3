@@ -10,7 +10,8 @@ global $BodySlidePath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide")
 global $BodySlideSourcesPath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\sources")
 global $modPath = _PathFull (@ScriptDir&"\..\..\..\")
 global $sourcesPath = _PathFull (@ScriptDir&"\..\..\..\RBSGenerator\sources")
-
+global $hkxcmdPath = _PathFull (@ScriptDir&"\..\..\..\RBSGenerator\tools\")
+global $SkyrimPath = _PathFull (@ScriptDir&"\..\..\..\")
 global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
@@ -19,6 +20,7 @@ global $bodyMultiHigh = 0.92
 global $windowName = "Caliente's BodySlide"
 
 DirCreate($BodySlidePath & "\MeshesTemp")
+FileCopy ($hkxcmdPath & "\hkxcmd.exe", $SkyrimPath ,1 )
 SetGameDataPath()
 cleanBodySlideDirectory()
 createList();
