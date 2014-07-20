@@ -40,8 +40,8 @@ Func _2WinWait ($FirstTitle,$SecondTitle,$FirstText = "" ,$SecondText = "" )
     EndIf
 EndFunc
 
-Func CreateBodies($folder, $filter, $counter=1)
-
+Func CreateBodies($folder, $filter, $text, $step, $counter=1)
+   _GUIChangeText("Starting BodySlide Functions")
    $failed = false
    ControlClick("Caliente", "", "[CLASS:wxWindowNR; INSTANCE:8]", "left",2)
    ControlClick("Caliente", "", "[CLASS:Edit; INSTANCE:2]", "left",2)
@@ -50,6 +50,7 @@ Func CreateBodies($folder, $filter, $counter=1)
    send ("{home}")
    sleep(2000)
    For $AmountBodies = $counter to $amountBodyTypes Step 1
+	  _GUIChangeText("Step " & $step & "/6 " & " - Creating " & $text &  $AmountBodies & "/" & $amountBodyTypes )
 	  DirRemove($BodySlidePath & "\meshes",1)
 	  sleep(400)
 	  ControlClick("Caliente", "", "[CLASS:ComboBox; INSTANCE:2]", "left",2)
@@ -83,7 +84,7 @@ Func CreateBodies($folder, $filter, $counter=1)
 		 DirCreate($targetPathArmor)
 		 DirCreate($targetPathDLC01)
 		 DirCreate($targetPathDLC02)
-		 endif
+	  endif
 
 	  Do
 		 $var1 = 0
@@ -92,6 +93,7 @@ Func CreateBodies($folder, $filter, $counter=1)
 			$failed = false
 			sleep(1000)
 			ControlClick("Complete", "", "[CLASS:Button; INSTANCE:1]", "left",1)
+
 		 ElseIf  WinGetState("Failed","")   Then
 			$var1 = 1
 			$failed = true
