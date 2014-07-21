@@ -268,7 +268,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
+        //SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
         SkyProcStarter.amountOfAnimations = 30;
         RBS_Race rbs_race = new RBS_Race();
