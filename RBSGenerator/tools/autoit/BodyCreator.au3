@@ -33,7 +33,7 @@ global $SkyrimPath = _PathFull ($scriptDir&"\..\..\..\..\")
 ;global $hkxcmdPath = _PathFull ($RBSGeneratorPath & "\tools\")
 ;global $SkyrimPath = _PathFull (@ScriptDir)
 
-global $amountBodyTypes = 30
+global $amountBodyTypes = 3
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.65
@@ -49,7 +49,7 @@ DirCreate($BodySlidePath & "\MeshesTemp")
 _GUIChangeText("change Path to Skyrim in Bodyslide Config")
 SetGameDataPath()
 _GUIChangeText("Cleaning Folders and copying sources")
-cleanBodySlideDirectory()
+;cleanBodySlideDirectory()
 _GUIChangeText("Creating RBS_Group.xml for BodySlide")
 createList();
 _GUIChangeText("Waiting for user")

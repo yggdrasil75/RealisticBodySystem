@@ -40,12 +40,26 @@ Func _2WinWait ($FirstTitle,$SecondTitle,$FirstText = "" ,$SecondText = "" )
     EndIf
 EndFunc
 
+func EnterFilterText($filter)
+
+   while (ClipGet() <> $filter)
+	  ControlClick("Caliente", "", "[CLASS:Edit; INSTANCE:2]", "left",2)
+	  sleep(500)
+	  Send($filter)
+	  sleep(500)
+	  send("^a")
+	  sleep(500)
+	  send("^c")
+	  sleep(500)
+   WEnd
+endFunc
+
 Func CreateBodies($folder, $filter, $text, $step, $counter=1)
    _GUIChangeText("Starting BodySlide Functions")
    $failed = false
    ControlClick("Caliente", "", "[CLASS:wxWindowNR; INSTANCE:8]", "left",2)
-   ControlClick("Caliente", "", "[CLASS:Edit; INSTANCE:2]", "left",2)
-   Send($filter)
+   EnterFilterText($filter)
+
    ControlClick("Caliente", "", "[CLASS:ComboBox; INSTANCE:2]", "left",2)
    send ("{home}")
    sleep(2000)
