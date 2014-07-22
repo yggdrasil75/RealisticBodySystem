@@ -2,7 +2,9 @@ package skyprocstarter;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -99,7 +101,7 @@ public class SkyProcStarter implements SUM {
                 break;
             }
         }
-          //  if (handleArgs(arguments)) {
+        //  if (handleArgs(arguments)) {
         //      SPGlobal.closeDebug();
         //      return;
         //  }
@@ -111,18 +113,19 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToBodyCreator = SkyProcStarter.pathNonVirtualized + "RBSGenerator" + File.separator + "tools" + File.separator + "autoit" + File.separator;
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-/*
-        int result = JOptionPane.showConfirmDialog(null, "Do you want to run BodyCreator?", "RBS ", JOptionPane.YES_NO_CANCEL_OPTION);
-        if (result == 0) {
 
-            String command = SkyProcStarter.pathToBodyCreator + "BodyCreator.exe";
-            String argument = SkyProcStarter.pathToBodyCreator;
-            String[] commands = {"cmd", "/c", "start", "\"DummyTitle\"", command, argument};
-            Runtime.getRuntime().exec(commands);
-            RBS_UsefullFunctions.msgbox(command);
+        /*
+         int result = JOptionPane.showConfirmDialog(null, "Do you want to run BodyCreator?", "RBS ", JOptionPane.YES_NO_CANCEL_OPTION);
+         if (result == 0) {
 
-        }
-*/
+         String command = SkyProcStarter.pathToBodyCreator + "BodyCreator.exe";
+         String argument = SkyProcStarter.pathToBodyCreator;
+         String[] commands = {"cmd", "/c", "start", "\"DummyTitle\"", command, argument};
+         Runtime.getRuntime().exec(commands);
+         RBS_UsefullFunctions.msgbox(command);
+
+         }
+         */
         save.init();
         try {
             SPGlobal.createGlobalLog();
@@ -290,10 +293,13 @@ public class SkyProcStarter implements SUM {
     public void runChangesToPatch() throws Exception {
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
-            SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
+        FileReader fr = new FileReader(SkyProcStarter.pathSources + "AmountBodyTypes.txt");
+        try (BufferedReader br = new BufferedReader(fr)) {
+            int amountBodyTypesFromFile = Integer.parseInt(br.readLine());
+            for (int i = 1; i <= amountBodyTypesFromFile; i++) {
+                SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
+            }
         }
-
         SkyProcStarter.amountOfAnimations = 30;
         /*
          Thread t1;

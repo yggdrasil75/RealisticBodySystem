@@ -33,7 +33,7 @@ global $SkyrimPath = _PathFull ($scriptDir&"\..\..\..\..\")
 ;global $hkxcmdPath = _PathFull ($RBSGeneratorPath & "\tools\")
 ;global $SkyrimPath = _PathFull (@ScriptDir)
 
-global $amountBodyTypes = 3
+
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
 global $bodyMultiLow = 0.65
@@ -42,6 +42,8 @@ global $windowName = "Caliente's BodySlide"
 
 _GUICreate()
 _CreateLabel()
+_GUIChangeText("Waiting for user to enter amount of Bodytypes")
+AskAboutAmountBodyTypes()
 _GUIChangeText("Creating MeshesTemp folder")
 
 DirCreate($BodySlidePath & "\MeshesTemp")

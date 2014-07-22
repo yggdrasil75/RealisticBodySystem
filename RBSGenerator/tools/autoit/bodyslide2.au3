@@ -197,3 +197,10 @@ Func CreateListGeneratedMeshes()
    ;FileDelete(@ScriptDir & "\ListGeneratedMeshes.txt")
    _FileWriteFromArray ($SourcesPath & "\ListGeneratedMeshes.txt", $array)
 EndFunc
+
+Func AskAboutAmountBodyTypes()
+   global $AmountBodyTypes = InputBox("Question", "How many Bodytyped do you want to be created (default:30)", "30", "", - 1, -1, 0, 0)
+   $file = FileOpen($SourcesPath & "\amountBodyTypes.txt", 2)
+   FileWrite($file, $AmountBodyTypes)
+   FileClose($file)
+EndFunc
