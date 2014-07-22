@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SliderSetInfo>
+    <SliderSet name="wav-BBP-Finery-Yarl02">
+        <SetFolder>wav-BBP-Finery-Yarl02</SetFolder>
+        <SourceFile>wav-BBP-Finery-Yarl02.nif</SourceFile>
+        <OutputPath>meshes\clothes\yarlclothes02</OutputPath>
+        <OutputFile>outfitf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="Cloak">Cloak</BaseShapeName>
+        <BaseShapeName target="Clothes">Clothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="CloakBreasts" target="Cloak" local="true">CloakBreasts.bsd</datafile>
+            <datafile name="ClothesBreasts" target="Clothes" local="true">ClothesBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="CloakBreastsSmall" target="Cloak" local="true">CloakBreastsSmall.bsd</datafile>
+            <datafile name="ClothesBreastsSmall" target="Clothes" local="true">ClothesBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="CloakBreastsSH" target="Cloak" local="true">CloakBreastsSH.bsd</datafile>
+            <datafile name="ClothesBreastsSH" target="Clothes" local="true">ClothesBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="CloakBreastsSSH" target="Cloak" local="true">CloakBreastsSSH.bsd</datafile>
+            <datafile name="ClothesBreastsSSH" target="Clothes" local="true">ClothesBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+            <datafile name="CloakBreastsFantasy" target="Cloak" local="true">CloakBreastsFantasy.bsd</datafile>
+            <datafile name="ClothesBreastsFantasy" target="Clothes" local="true">ClothesBreastsFantasy.bsd</datafile>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+            <datafile name="CloakDoubleMelon" target="Cloak" local="true">CloakDoubleMelon.bsd</datafile>
+            <datafile name="ClothesDoubleMelon" target="Clothes" local="true">ClothesDoubleMelon.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="CloakBreastCleavage" target="Cloak" local="true">CloakBreastCleavage.bsd</datafile>
+            <datafile name="ClothesBreastCleavage" target="Clothes" local="true">ClothesBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+            <datafile name="CloakBreastFlatness" target="Cloak" local="true">CloakBreastFlatness.bsd</datafile>
+            <datafile name="ClothesBreastFlatness" target="Clothes" local="true">ClothesBreastFlatness.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="CloakBreastGravity" target="Cloak" local="true">CloakBreastGravity.bsd</datafile>
+            <datafile name="ClothesBreastGravity" target="Clothes" local="true">ClothesBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+            <datafile name="CloakPushUp" target="Cloak" local="true">CloakPushUp.bsd</datafile>
+            <datafile name="ClothesPushUp" target="Clothes" local="true">ClothesPushUp.bsd</datafile>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+            <datafile name="CloakBreastHeight" target="Cloak" local="true">CloakBreastHeight.bsd</datafile>
+            <datafile name="ClothesBreastHeight" target="Clothes" local="true">ClothesBreastHeight.bsd</datafile>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+            <datafile name="CloakBreastPerkiness" target="Cloak" local="true">CloakBreastPerkiness.bsd</datafile>
+            <datafile name="ClothesBreastPerkiness" target="Clothes" local="true">ClothesBreastPerkiness.bsd</datafile>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+            <datafile name="CloakBreastWidth" target="Cloak" local="true">CloakBreastWidth.bsd</datafile>
+            <datafile name="ClothesBreastWidth" target="Clothes" local="true">ClothesBreastWidth.bsd</datafile>
+        </Slider>
+        <Slider name="NippleDistance" invert="true" small="100" big="100">
+            <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+            <datafile name="CloakNippleDistance" target="Cloak" local="true">CloakNippleDistance.bsd</datafile>
+            <datafile name="ClothesNippleDistance" target="Clothes" local="true">ClothesNippleDistance.bsd</datafile>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+            <datafile name="CloakNipplePerkiness" target="Cloak" local="true">CloakNipplePerkiness.bsd</datafile>
+            <datafile name="ClothesNipplePerkiness" target="Clothes" local="true">ClothesNipplePerkiness.bsd</datafile>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+            <datafile name="CloakNippleLength" target="Cloak" local="true">CloakNippleLength.bsd</datafile>
+            <datafile name="ClothesNippleLength" target="Clothes" local="true">ClothesNippleLength.bsd</datafile>
+        </Slider>
+        <Slider name="NippleSize" invert="true" small="100" big="100">
+            <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+            <datafile name="CloakNippleSize" target="Cloak" local="true">CloakNippleSize.bsd</datafile>
+            <datafile name="ClothesNippleSize" target="Clothes" local="true">ClothesNippleSize.bsd</datafile>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+            <datafile name="CloakNippleUp" target="Cloak" local="true">CloakNippleUp.bsd</datafile>
+            <datafile name="ClothesNippleUp" target="Clothes" local="true">ClothesNippleUp.bsd</datafile>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+            <datafile name="CloakNippleDown" target="Cloak" local="true">CloakNippleDown.bsd</datafile>
+            <datafile name="ClothesNippleDown" target="Clothes" local="true">ClothesNippleDown.bsd</datafile>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+            <datafile name="CloakNippleTip" target="Cloak" local="true">CloakNippleTip.bsd</datafile>
+            <datafile name="ClothesNippleTip" target="Clothes" local="true">ClothesNippleTip.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+            <datafile name="CloakArms" target="Cloak" local="true">CloakArms.bsd</datafile>
+            <datafile name="ClothesArms" target="Clothes" local="true">ClothesArms.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+            <datafile name="CloakChubbyArms" target="Cloak" local="true">CloakChubbyArms.bsd</datafile>
+            <datafile name="ClothesChubbyArms" target="Clothes" local="true">ClothesChubbyArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+            <datafile name="CloakShoulderSmooth" target="Cloak" local="true">CloakShoulderSmooth.bsd</datafile>
+            <datafile name="ClothesShoulderSmooth" target="Clothes" local="true">ClothesShoulderSmooth.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="CloakShoulderWidth" target="Cloak" local="true">CloakShoulderWidth.bsd</datafile>
+            <datafile name="ClothesShoulderWidth" target="Clothes" local="true">ClothesShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+            <datafile name="CloakBigTorso" target="Cloak" local="true">CloakBigTorso.bsd</datafile>
+            <datafile name="ClothesBigTorso" target="Clothes" local="true">ClothesBigTorso.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="CloakWaist" target="Cloak" local="true">CloakWaist.bsd</datafile>
+            <datafile name="ClothesWaist" target="Clothes" local="true">ClothesWaist.bsd</datafile>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+            <datafile name="CloakWideWaistLine" target="Cloak" local="true">CloakWideWaistLine.bsd</datafile>
+            <datafile name="ClothesWideWaistLine" target="Clothes" local="true">ClothesWideWaistLine.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+            <datafile name="CloakChubbyWaist" target="Cloak" local="true">CloakChubbyWaist.bsd</datafile>
+            <datafile name="ClothesChubbyWaist" target="Clothes" local="true">ClothesChubbyWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="CloakBelly" target="Cloak" local="true">CloakBelly.bsd</datafile>
+            <datafile name="ClothesBelly" target="Clothes" local="true">ClothesBelly.bsd</datafile>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+            <datafile name="CloakBigBelly" target="Cloak" local="true">CloakBigBelly.bsd</datafile>
+            <datafile name="ClothesBigBelly" target="Clothes" local="true">ClothesBigBelly.bsd</datafile>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+            <datafile name="CloakPregnancyBelly" target="Cloak" local="true">CloakPregnancyBelly.bsd</datafile>
+            <datafile name="ClothesPregnancyBelly" target="Clothes" local="true">ClothesPregnancyBelly.bsd</datafile>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+            <datafile name="CloakTummyTuck" target="Cloak" local="true">CloakTummyTuck.bsd</datafile>
+            <datafile name="ClothesTummyTuck" target="Clothes" local="true">ClothesTummyTuck.bsd</datafile>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+            <datafile name="CloakBack" target="Cloak" local="true">CloakBack.bsd</datafile>
+            <datafile name="ClothesBack" target="Clothes" local="true">ClothesBack.bsd</datafile>
+        </Slider>
+        <Slider name="Hipbone" invert="false" small="0" big="0">
+            <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+            <datafile name="CloakHipbone" target="Cloak" local="true">CloakHipbone.bsd</datafile>
+            <datafile name="ClothesHipbone" target="Clothes" local="true">ClothesHipbone.bsd</datafile>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+            <datafile name="CloakHips" target="Cloak" local="true">CloakHips.bsd</datafile>
+            <datafile name="ClothesHips" target="Clothes" local="true">ClothesHips.bsd</datafile>
+        </Slider>
+        <Slider name="ButtCrack" invert="true" small="100" big="100">
+            <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+            <datafile name="CloakButtCrack" target="Cloak" local="true">CloakButtCrack.bsd</datafile>
+            <datafile name="ClothesButtCrack" target="Clothes" local="true">ClothesButtCrack.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="CloakButt" target="Cloak" local="true">CloakButt.bsd</datafile>
+            <datafile name="ClothesButt" target="Clothes" local="true">ClothesButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="CloakButtSmall" target="Cloak" local="true">CloakButtSmall.bsd</datafile>
+            <datafile name="ClothesButtSmall" target="Clothes" local="true">ClothesButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="CloakButtShape2" target="Cloak" local="true">CloakButtShape2.bsd</datafile>
+            <datafile name="ClothesButtShape2" target="Clothes" local="true">ClothesButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+            <datafile name="CloakBigButt" target="Cloak" local="true">CloakBigButt.bsd</datafile>
+            <datafile name="ClothesBigButt" target="Clothes" local="true">ClothesBigButt.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+            <datafile name="CloakChubbyButt" target="Cloak" local="true">CloakChubbyButt.bsd</datafile>
+            <datafile name="ClothesChubbyButt" target="Clothes" local="true">ClothesChubbyButt.bsd</datafile>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+            <datafile name="CloakAppleCheeks" target="Cloak" local="true">CloakAppleCheeks.bsd</datafile>
+            <datafile name="ClothesAppleCheeks" target="Clothes" local="true">ClothesAppleCheeks.bsd</datafile>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+            <datafile name="CloakRoundAss" target="Cloak" local="true">CloakRoundAss.bsd</datafile>
+            <datafile name="ClothesRoundAss" target="Clothes" local="true">ClothesRoundAss.bsd</datafile>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+            <datafile name="ClothesGroin" target="Clothes" local="true">ClothesGroin.bsd</datafile>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+            <datafile name="CloakSlimThighs" target="Cloak" local="true">CloakSlimThighs.bsd</datafile>
+            <datafile name="ClothesSlimThighs" target="Clothes" local="true">ClothesSlimThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="CloakThighs" target="Cloak" local="true">CloakThighs.bsd</datafile>
+            <datafile name="ClothesThighs" target="Clothes" local="true">ClothesThighs.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+            <datafile name="CloakChubbyLegs" target="Cloak" local="true">CloakChubbyLegs.bsd</datafile>
+            <datafile name="ClothesChubbyLegs" target="Clothes" local="true">ClothesChubbyLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="CloakLegs" target="Cloak" local="true">CloakLegs.bsd</datafile>
+            <datafile name="ClothesLegs" target="Clothes" local="true">ClothesLegs.bsd</datafile>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+            <datafile name="CloakKneeHeight" target="Cloak" local="true">CloakKneeHeight.bsd</datafile>
+            <datafile name="ClothesKneeHeight" target="Clothes" local="true">ClothesKneeHeight.bsd</datafile>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+            <datafile name="ClothesCalfSize" target="Clothes" local="true">ClothesCalfSize.bsd</datafile>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+            <datafile name="ClothesCalfSmooth" target="Clothes" local="true">ClothesCalfSmooth.bsd</datafile>
+        </Slider>
+        <Slider name="Ankles" invert="true" small="100" big="100">
+            <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+            <datafile name="ClothesAnkles" target="Clothes" local="true">ClothesAnkles.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" small="100" big="0" hidden="true">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+            <datafile name="CloakSmallSeam" target="Cloak" local="true">CloakSmallSeam.bsd</datafile>
+            <datafile name="ClothesSmallSeam" target="Clothes" local="true">ClothesSmallSeam.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="100" big="100" hidden="true">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+            <datafile name="CloakShoulderTweak" target="Cloak" local="true">CloakShoulderTweak.bsd</datafile>
+            <datafile name="ClothesShoulderTweak" target="Clothes" local="true">ClothesShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NH_LockSeamHi" invert="false" small="0" big="100" hidden="true" clamp="true">
+            <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi2.bsd</datafile>
+        </Slider>
+        <Slider name="NH_LockSeamLo" invert="false" small="100" big="0" hidden="true" clamp="true">
+            <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo2.bsd</datafile>
+        </Slider>
+        <Slider name="BodyZAP2" invert="false" small="100" big="100" hidden="true" zap="true">
+            <datafile name="BaseShapeBodyZAP2" target="BaseShape" local="true">BaseShapeBodyZAP2.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

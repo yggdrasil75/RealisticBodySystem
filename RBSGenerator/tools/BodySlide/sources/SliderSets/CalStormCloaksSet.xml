@@ -1,0 +1,202 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Storm Cloaks">
+        <SetFolder>CalStormCloaks</SetFolder>
+        <SourceFile>CalStormCloaksSleeves.nif</SourceFile>
+        <OutputPath>meshes\armor\stormcloaks</OutputPath>
+        <OutputFile>cuirassfsleeves</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StormCloakCuirass">StormCloakCuirass</BaseShapeName>
+        <BaseShapeName target="StormCloakSkirt">StormCloakSkirt</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="StormCloakSkirtBreasts" target="StormCloakSkirt">StormCloakSkirtBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="StormCloakCuirassBreasts" target="StormCloakCuirass">StormCloakCuirassBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="StormCloakCuirassBreastsSmall" target="StormCloakCuirass">StormCloakCuirassBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastsSH" target="StormCloakSkirt">StormCloakSkirtBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastsSH" target="StormCloakCuirass">StormCloakCuirassBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastsSSH" target="StormCloakSkirt">StormCloakSkirtBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastsSSH" target="StormCloakCuirass">StormCloakCuirassBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StormCloakCuirassBreastCleavage" target="StormCloakCuirass">StormCloakCuirassBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastGravity" target="StormCloakSkirt">StormCloakSkirtBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastGravity" target="StormCloakCuirass">StormCloakCuirassBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtButt" target="StormCloakSkirt">StormCloakSkirtButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="StormCloakCuirassButt" target="StormCloakCuirass">StormCloakCuirassButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="StormCloakSkirtButtSmall" target="StormCloakSkirt">StormCloakSkirtButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="StormCloakCuirassButtSmall" target="StormCloakCuirass">StormCloakCuirassButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtButtShape2" target="StormCloakSkirt">StormCloakSkirtButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="StormCloakCuirassButtShape2" target="StormCloakCuirass">StormCloakCuirassButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="StormCloakSkirtWaist" target="StormCloakSkirt">StormCloakSkirtWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="StormCloakCuirassWaist" target="StormCloakCuirass">StormCloakCuirassWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBelly" target="StormCloakSkirt">StormCloakSkirtBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="StormCloakCuirassBelly" target="StormCloakCuirass">StormCloakCuirassBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtLegs" target="StormCloakSkirt">StormCloakSkirtLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="StormCloakCuirassLegs" target="StormCloakCuirass">StormCloakCuirassLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtThighs" target="StormCloakSkirt">StormCloakSkirtThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="StormCloakCuirassThighs" target="StormCloakCuirass">StormCloakCuirassThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtArms" target="StormCloakSkirt">StormCloakSkirtArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+            <datafile name="StormCloakCuirassArms" target="StormCloakCuirass">StormCloakCuirassArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="StormCloakSkirtShoulderWidth" target="StormCloakSkirt">StormCloakSkirtShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="StormCloakCuirassShoulderWidth" target="StormCloakCuirass">StormCloakCuirassShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="StormCloaksSleeveZap" invert="false" zap="true" small="0" big="0" hidden="true">
+            <datafile name="StormCloakCuirassStormCloaksSleeveZap" target="StormCloakCuirass">StormCloakCuirassStormCloaksSleeveZap.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Stormcloak Guards">
+        <SetFolder>CalStormCloaks</SetFolder>
+        <SourceFile>CalStormCloaks.nif</SourceFile>
+        <OutputPath>meshes\armor\stormcloaks</OutputPath>
+        <OutputFile>cuirassf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StormCloakCuirass">StormCloakCuirass</BaseShapeName>
+        <BaseShapeName target="StormCloakSkirt">StormCloakSkirt</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="StormCloakSkirtBreasts" target="StormCloakSkirt">StormCloakSkirtBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="StormCloakCuirassBreasts" target="StormCloakCuirass">StormCloakCuirassBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="StormCloakCuirassBreastsSmall" target="StormCloakCuirass">StormCloakCuirassBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastsSH" target="StormCloakSkirt">StormCloakSkirtBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastsSH" target="StormCloakCuirass">StormCloakCuirassBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastsSSH" target="StormCloakSkirt">StormCloakSkirtBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastsSSH" target="StormCloakCuirass">StormCloakCuirassBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StormCloakCuirassBreastCleavage" target="StormCloakCuirass">StormCloakCuirassBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBreastGravity" target="StormCloakSkirt">StormCloakSkirtBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="StormCloakCuirassBreastGravity" target="StormCloakCuirass">StormCloakCuirassBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtButt" target="StormCloakSkirt">StormCloakSkirtButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="StormCloakCuirassButt" target="StormCloakCuirass">StormCloakCuirassButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="StormCloakSkirtButtSmall" target="StormCloakSkirt">StormCloakSkirtButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="StormCloakCuirassButtSmall" target="StormCloakCuirass">StormCloakCuirassButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtButtShape2" target="StormCloakSkirt">StormCloakSkirtButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="StormCloakCuirassButtShape2" target="StormCloakCuirass">StormCloakCuirassButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="StormCloakSkirtWaist" target="StormCloakSkirt">StormCloakSkirtWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="StormCloakCuirassWaist" target="StormCloakCuirass">StormCloakCuirassWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtBelly" target="StormCloakSkirt">StormCloakSkirtBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="StormCloakCuirassBelly" target="StormCloakCuirass">StormCloakCuirassBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtLegs" target="StormCloakSkirt">StormCloakSkirtLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="StormCloakCuirassLegs" target="StormCloakCuirass">StormCloakCuirassLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="StormCloakSkirtThighs" target="StormCloakSkirt">StormCloakSkirtThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="StormCloakCuirassThighs" target="StormCloakCuirass">StormCloakCuirassThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="StormCloakSkirtArms" target="StormCloakSkirt">StormCloakSkirtArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+            <datafile name="StormCloakCuirassArms" target="StormCloakCuirass">StormCloakCuirassArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="StormCloakSkirtShoulderWidth" target="StormCloakSkirt">StormCloakSkirtShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="StormCloakCuirassShoulderWidth" target="StormCloakCuirass">StormCloakCuirassShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="StormCloaksSleeveZap" invert="false" zap="true" small="0" big="0" hidden="true">
+            <datafile name="StormCloakCuirassStormCloaksSleeveZap" target="StormCloakCuirass">StormCloakCuirassStormCloaksSleeveZap.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

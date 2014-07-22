@@ -1,0 +1,2238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo>
+  <SliderSet name="CB++ KeosDawnguard - Ancient Falmer">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>FalmerIvory.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\ivory\f</OutputPath>
+    <OutputFile>cuirassivory</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Undies">Undies</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="FalmerIvory_Zap_Body" target="Body" local="true">FalmerIvory_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="FalmerIvory_Arms" target="Armor">FalmerIvory_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="FalmerIvory_ChubbyArms" target="Armor">FalmerIvory_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="FalmerIvory_ShoulderSmooth" target="Armor">FalmerIvory_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="FalmerIvory_ShoulderWidth" target="Armor">FalmerIvory_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="FalmerIvory_BigTorso" target="Armor">FalmerIvory_BigTorso.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_BigTorso" target="Undies">FalmerIvoryUndies_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="FalmerIvory_Breasts1" target="Armor">FalmerIvory_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="FalmerIvory_BreastsSm" target="Armor">FalmerIvory_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="FalmerIvory_BreastsSH" target="Armor">FalmerIvory_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="FalmerIvory_BreastsSSH" target="Armor">FalmerIvory_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="FalmerIvory_BreastsFantasy" target="Armor">FalmerIvory_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="FalmerIvory_DoubleMelon" target="Armor">FalmerIvory_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="FalmerIvory_BreastCleavage" target="Armor">FalmerIvory_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="FalmerIvory_BreastFlatness" target="Armor">FalmerIvory_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="FalmerIvory_BreastGravity" target="Armor">FalmerIvory_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="FalmerIvory_PushUp" target="Armor">FalmerIvory_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="FalmerIvory_BreastHt" target="Armor">FalmerIvory_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="FalmerIvory_BreastHt" target="Armor">FalmerIvory_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="FalmerIvory_BreastPerkiness" target="Armor">FalmerIvory_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="FalmerIvory_BreastWidth" target="Armor">FalmerIvory_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="FalmerIvory_Waist" target="Armor">FalmerIvory_Waist_inv.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Waist_inv" target="Undies">FalmerIvoryUndies_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="FalmerIvory_WideWaistLine" target="Armor">FalmerIvory_WideWaistLine.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_WideWaistLine" target="Undies">FalmerIvoryUndies_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="FalmerIvory_ChubbyWaist" target="Armor">FalmerIvory_ChubbyWaist.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_ChubbyWaist" target="Undies">FalmerIvoryUndies_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="FalmerIvory_CalBelly" target="Armor">FalmerIvory_CalBelly.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_CalBelly" target="Undies">FalmerIvoryUndies_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="FalmerIvory_BigBelly" target="Armor">FalmerIvory_BigBelly.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_BigBelly" target="Undies">FalmerIvoryUndies_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="FalmerIvory_PregnancyBelly" target="Armor">FalmerIvory_PregnancyBelly.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_PregnancyBelly" target="Undies">FalmerIvoryUndies_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="FalmerIvory_TummyTuck" target="Armor">FalmerIvory_TummyTuck.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_TummyTuck" target="Undies">FalmerIvoryUndies_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="FalmerIvory_Back" target="Armor">FalmerIvory_Back.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Back" target="Undies">FalmerIvoryUndies_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="FalmerIvory_Hipbone" target="Armor">FalmerIvory_Hipbone.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Hipbone" target="Undies">FalmerIvoryUndies_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="FalmerIvory_Hips" target="Armor">FalmerIvory_Hips.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Hips" target="Undies">FalmerIvoryUndies_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="FalmerIvory_ButtCrack" target="Armor">FalmerIvory_ButtCrack.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_ButtCrack" target="Undies">FalmerIvoryUndies_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="FalmerIvory_Butt1" target="Armor">FalmerIvory_Butt1.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Butt1" target="Undies">FalmerIvoryUndies_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="FalmerIvory_ButtSm" target="Armor">FalmerIvory_ButtSm.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_ButtSm" target="Undies">FalmerIvoryUndies_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="FalmerIvory_MakButt" target="Armor">FalmerIvory_MakButt.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_MakButt" target="Undies">FalmerIvoryUndies_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="FalmerIvory_BigButt" target="Armor">FalmerIvory_BigButt.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_BigButt" target="Undies">FalmerIvoryUndies_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="FalmerIvory_ChubbyButt" target="Armor">FalmerIvory_ChubbyButt.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_ChubbyButt" target="Undies">FalmerIvoryUndies_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="FalmerIvory_AppleCheeks" target="Armor">FalmerIvory_AppleCheeks.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_AppleCheeks" target="Undies">FalmerIvoryUndies_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="FalmerIvory_RoundAss" target="Armor">FalmerIvory_RoundAss.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_RoundAss" target="Undies">FalmerIvoryUndies_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="FalmerIvory_Groin" target="Armor">FalmerIvory_Groin.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_Groin" target="Undies">FalmerIvoryUndies_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="FalmerIvory_SlimThighs" target="Armor">FalmerIvory_SlimThighs.bsd</datafile>
+      <datafile name="FalmerIvoryUndies_SlimThighs" target="Undies">FalmerIvoryUndies_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="FalmerIvory_CalThighs" target="Armor">FalmerIvory_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="FalmerIvory_ChubbyLegs" target="Armor">FalmerIvory_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="FalmerIvory_Legs" target="Armor">FalmerIvory_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Hardened Falmer">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>FalmerHeavy.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\falmerheavy</OutputPath>
+    <OutputFile>falmerheavycuirassf</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="FalmerHeavy_Zap_Body" target="Body" local="true">FalmerHeavy_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="FalmerHeavy_Arms" target="Armor">FalmerHeavy_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="FalmerHeavy_ChubbyArms" target="Armor">FalmerHeavy_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="FalmerHeavy_ShoulderSmooth" target="Armor">FalmerHeavy_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="FalmerHeavy_ShoulderWidth" target="Armor">FalmerHeavy_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="FalmerHeavy_BigTorso" target="Armor">FalmerHeavy_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="FalmerHeavy_Breasts1" target="Armor">FalmerHeavy_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastsSm" target="Armor">FalmerHeavy_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastsSH" target="Armor">FalmerHeavy_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastsSSH" target="Armor">FalmerHeavy_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastsFantasy" target="Armor">FalmerHeavy_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="FalmerHeavy_DoubleMelon" target="Armor">FalmerHeavy_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastCleavage" target="Armor">FalmerHeavy_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastFlatness" target="Armor">FalmerHeavy_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastGravity" target="Armor">FalmerHeavy_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="FalmerHeavy_PushUp" target="Armor">FalmerHeavy_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastHt" target="Armor">FalmerHeavy_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastPerkiness" target="Armor">FalmerHeavy_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="FalmerHeavy_BreastWidth" target="Armor">FalmerHeavy_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="FalmerHeavy_Waist" target="Armor">FalmerHeavy_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="FalmerHeavy_WideWaistLine" target="Armor">FalmerHeavy_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="FalmerHeavy_ChubbyWaist" target="Armor">FalmerHeavy_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="FalmerHeavy_CalBelly" target="Armor">FalmerHeavy_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="FalmerHeavy_BigBelly" target="Armor">FalmerHeavy_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="FalmerHeavy_PregnancyBelly" target="Armor">FalmerHeavy_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="FalmerHeavy_TummyTuck" target="Armor">FalmerHeavy_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="FalmerHeavy_Back" target="Armor">FalmerHeavy_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="FalmerHeavy_Hipbone" target="Armor">FalmerHeavy_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="FalmerHeavy_Hips" target="Armor">FalmerHeavy_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="FalmerHeavy_ButtCrack" target="Armor">FalmerHeavy_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="FalmerHeavy_Butt1" target="Armor">FalmerHeavy_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="FalmerHeavy_ButtSm" target="Armor">FalmerHeavy_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="FalmerHeavy_MakButt" target="Armor">FalmerHeavy_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="FalmerHeavy_BigButt" target="Armor">FalmerHeavy_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="FalmerHeavy_ChubbyButt" target="Armor">FalmerHeavy_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="FalmerHeavy_AppleCheeks" target="Armor">FalmerHeavy_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="FalmerHeavy_RoundAss" target="Armor">FalmerHeavy_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="FalmerHeavy_Groin" target="Armor">FalmerHeavy_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="FalmerHeavy_SlimThighs" target="Armor">FalmerHeavy_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="FalmerHeavy_CalThighs" target="Armor">FalmerHeavy_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="FalmerHeavy_ChubbyLegs" target="Armor">FalmerHeavy_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="FalmerHeavy_Legs" target="Armor">FalmerHeavy_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Dawnguard1">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Dawnguard1.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\dawnguard</OutputPath>
+    <OutputFile>dawnguardbody1f</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Dawnguard_Zap_Body" target="Body" local="true">Dawnguard_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Dawnguard1_Arms" target="Armor">Dawnguard1_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Dawnguard1_ChubbyArms" target="Armor">Dawnguard1_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Dawnguard1_ShoulderSmooth" target="Armor">Dawnguard1_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Dawnguard1_ShoulderWidth" target="Armor">Dawnguard1_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Dawnguard1_BigTorso" target="Armor">Dawnguard1_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Dawnguard1_Breasts1" target="Armor">Dawnguard1_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Dawnguard1_BreastsSm" target="Armor">Dawnguard1_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Dawnguard1_BreastsSH" target="Armor">Dawnguard1_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Dawnguard1_BreastsSSH" target="Armor">Dawnguard1_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Dawnguard1_BreastsFantasy" target="Armor">Dawnguard1_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Dawnguard1_DoubleMelon" target="Armor">Dawnguard1_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Dawnguard1_BreastCleavage" target="Armor">Dawnguard1_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Dawnguard1_BreastFlatness" target="Armor">Dawnguard1_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Dawnguard1_BreastGravity" target="Armor">Dawnguard1_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Dawnguard1_PushUp" target="Armor">Dawnguard1_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Dawnguard1_BreastHt" target="Armor">Dawnguard1_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Dawnguard1_BreastPerkiness" target="Armor">Dawnguard1_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Dawnguard1_BreastWidth" target="Armor">Dawnguard1_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Dawnguard1_Waist" target="Armor">Dawnguard1_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Dawnguard1_WideWaistLine" target="Armor">Dawnguard1_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Dawnguard1_ChubbyWaist" target="Armor">Dawnguard1_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Dawnguard1_CalBelly" target="Armor">Dawnguard1_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Dawnguard1_BigBelly" target="Armor">Dawnguard1_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Dawnguard1_PregnancyBelly" target="Armor">Dawnguard1_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Dawnguard1_TummyTuck" target="Armor">Dawnguard1_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Dawnguard1_Back" target="Armor">Dawnguard1_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Dawnguard1_Hipbone" target="Armor">Dawnguard1_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Dawnguard1_Hips" target="Armor">Dawnguard1_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Dawnguard1_ButtCrack" target="Armor">Dawnguard1_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Dawnguard1_Butt1" target="Armor">Dawnguard1_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Dawnguard1_ButtSm" target="Armor">Dawnguard1_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Dawnguard1_MakButt" target="Armor">Dawnguard1_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Dawnguard1_BigButt" target="Armor">Dawnguard1_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Dawnguard1_ChubbyButt" target="Armor">Dawnguard1_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Dawnguard1_AppleCheeks" target="Armor">Dawnguard1_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Dawnguard1_RoundAss" target="Armor">Dawnguard1_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Dawnguard1_Groin" target="Armor">Dawnguard1_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Dawnguard1_SlimThighs" target="Armor">Dawnguard1_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Dawnguard1_CalThighs" target="Armor">Dawnguard1_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Dawnguard1_ChubbyLegs" target="Armor">Dawnguard1_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Dawnguard1_Legs" target="Armor">Dawnguard1_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+      <datafile name="Dawnguard1_KneeHeight" target="Armor">Dawnguard1_KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+      <datafile name="Dawnguard1_CalfSize" target="Armor">Dawnguard1_CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+      <datafile name="Dawnguard1_CalfSmooth" target="Armor">Dawnguard1_CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+      <datafile name="Dawnguard1_Ankles" target="Armor">Dawnguard1_Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Dawnguard2">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Dawnguard2.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\dawnguard</OutputPath>
+    <OutputFile>dawnguardbody2f</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Dawnguard_Zap_Body" target="Body" local="true">Dawnguard_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Dawnguard2_Arms" target="Armor">Dawnguard2_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Dawnguard2_ChubbyArms" target="Armor">Dawnguard2_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Dawnguard2_ShoulderSmooth" target="Armor">Dawnguard2_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Dawnguard2_ShoulderWidth" target="Armor">Dawnguard2_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Dawnguard2_BigTorso" target="Armor">Dawnguard2_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Dawnguard2_Breasts1" target="Armor">Dawnguard2_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Dawnguard2_BreastsSm" target="Armor">Dawnguard2_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Dawnguard2_BreastsSH" target="Armor">Dawnguard2_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Dawnguard2_BreastsSSH" target="Armor">Dawnguard2_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Dawnguard2_BreastsFantasy" target="Armor">Dawnguard2_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Dawnguard2_DoubleMelon" target="Armor">Dawnguard2_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Dawnguard2_BreastCleavage" target="Armor">Dawnguard2_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Dawnguard2_BreastFlatness" target="Armor">Dawnguard2_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Dawnguard2_BreastGravity" target="Armor">Dawnguard2_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Dawnguard2_PushUp" target="Armor">Dawnguard2_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Dawnguard2_BreastHt" target="Armor">Dawnguard2_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Dawnguard2_BreastPerkiness" target="Armor">Dawnguard2_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Dawnguard2_BreastWidth" target="Armor">Dawnguard2_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Dawnguard2_Waist" target="Armor">Dawnguard2_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Dawnguard2_WideWaistLine" target="Armor">Dawnguard2_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Dawnguard2_ChubbyWaist" target="Armor">Dawnguard2_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Dawnguard2_CalBelly" target="Armor">Dawnguard2_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Dawnguard2_BigBelly" target="Armor">Dawnguard2_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Dawnguard2_PregnancyBelly" target="Armor">Dawnguard2_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Dawnguard2_TummyTuck" target="Armor">Dawnguard2_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Dawnguard2_Back" target="Armor">Dawnguard2_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Dawnguard2_Hipbone" target="Armor">Dawnguard2_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Dawnguard2_Hips" target="Armor">Dawnguard2_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Dawnguard2_ButtCrack" target="Armor">Dawnguard2_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Dawnguard2_Butt1" target="Armor">Dawnguard2_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Dawnguard2_ButtSm" target="Armor">Dawnguard2_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Dawnguard2_MakButt" target="Armor">Dawnguard2_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Dawnguard2_BigButt" target="Armor">Dawnguard2_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Dawnguard2_ChubbyButt" target="Armor">Dawnguard2_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Dawnguard2_AppleCheeks" target="Armor">Dawnguard2_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Dawnguard2_RoundAss" target="Armor">Dawnguard2_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Dawnguard2_Groin" target="Armor">Dawnguard2_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Dawnguard2_SlimThighs" target="Armor">Dawnguard2_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Dawnguard2_CalThighs" target="Armor">Dawnguard2_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Dawnguard2_ChubbyLegs" target="Armor">Dawnguard2_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Dawnguard2_Legs" target="Armor">Dawnguard2_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+      <datafile name="Dawnguard2_KneeHeight" target="Armor">Dawnguard2_KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+      <datafile name="Dawnguard2_CalfSize" target="Armor">Dawnguard2_CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+      <datafile name="Dawnguard2_CalfSmooth" target="Armor">Dawnguard2_CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+      <datafile name="Dawnguard2_Ankles" target="Armor">Dawnguard2_Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Dawnguard3">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Dawnguard3.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\dawnguard</OutputPath>
+    <OutputFile>dawnguardbody3f</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Dawnguard_Zap_Body" target="Body" local="true">Dawnguard_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Dawnguard3_Arms" target="Armor">Dawnguard3_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Dawnguard3_ChubbyArms" target="Armor">Dawnguard3_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Dawnguard3_ShoulderSmooth" target="Armor">Dawnguard3_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Dawnguard3_ShoulderWidth" target="Armor">Dawnguard3_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Dawnguard3_BigTorso" target="Armor">Dawnguard3_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Dawnguard3_Breasts1" target="Armor">Dawnguard3_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Dawnguard3_BreastsSm" target="Armor">Dawnguard3_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Dawnguard3_BreastsSH" target="Armor">Dawnguard3_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Dawnguard3_BreastsSSH" target="Armor">Dawnguard3_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Dawnguard3_BreastsFantasy" target="Armor">Dawnguard3_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Dawnguard3_DoubleMelon" target="Armor">Dawnguard3_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Dawnguard3_BreastCleavage" target="Armor">Dawnguard3_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Dawnguard3_BreastFlatness" target="Armor">Dawnguard3_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Dawnguard3_BreastGravity" target="Armor">Dawnguard3_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Dawnguard3_PushUp" target="Armor">Dawnguard3_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Dawnguard3_BreastHt" target="Armor">Dawnguard3_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Dawnguard3_BreastPerkiness" target="Armor">Dawnguard3_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Dawnguard3_BreastWidth" target="Armor">Dawnguard3_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Dawnguard3_Waist" target="Armor">Dawnguard3_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Dawnguard3_WideWaistLine" target="Armor">Dawnguard3_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Dawnguard3_ChubbyWaist" target="Armor">Dawnguard3_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Dawnguard3_CalBelly" target="Armor">Dawnguard3_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Dawnguard3_BigBelly" target="Armor">Dawnguard3_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Dawnguard3_PregnancyBelly" target="Armor">Dawnguard3_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Dawnguard3_TummyTuck" target="Armor">Dawnguard3_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Dawnguard3_Back" target="Armor">Dawnguard3_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Dawnguard3_Hipbone" target="Armor">Dawnguard3_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Dawnguard3_Hips" target="Armor">Dawnguard3_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Dawnguard3_ButtCrack" target="Armor">Dawnguard3_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Dawnguard3_Butt1" target="Armor">Dawnguard3_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Dawnguard3_ButtSm" target="Armor">Dawnguard3_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Dawnguard3_MakButt" target="Armor">Dawnguard3_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Dawnguard3_BigButt" target="Armor">Dawnguard3_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Dawnguard3_ChubbyButt" target="Armor">Dawnguard3_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Dawnguard3_AppleCheeks" target="Armor">Dawnguard3_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Dawnguard3_RoundAss" target="Armor">Dawnguard3_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Dawnguard3_Groin" target="Armor">Dawnguard3_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Dawnguard3_SlimThighs" target="Armor">Dawnguard3_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Dawnguard3_CalThighs" target="Armor">Dawnguard3_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Dawnguard3_ChubbyLegs" target="Armor">Dawnguard3_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Dawnguard3_Legs" target="Armor">Dawnguard3_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+      <datafile name="Dawnguard3_KneeHeight" target="Armor">Dawnguard3_KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+      <datafile name="Dawnguard3_CalfSize" target="Armor">Dawnguard3_CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+      <datafile name="Dawnguard3_CalfSmooth" target="Armor">Dawnguard3_CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+      <datafile name="Dawnguard3_Ankles" target="Armor">Dawnguard3_Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Dawnguard4">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Dawnguard4.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\dawnguard</OutputPath>
+    <OutputFile>dawnguardbody4f</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Dawnguard_Zap_Body" target="Body" local="true">Dawnguard_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Dawnguard4_Arms" target="Armor">Dawnguard4_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Dawnguard4_ChubbyArms" target="Armor">Dawnguard4_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Dawnguard4_ShoulderSmooth" target="Armor">Dawnguard4_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Dawnguard4_ShoulderWidth" target="Armor">Dawnguard4_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Dawnguard4_BigTorso" target="Armor">Dawnguard4_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Dawnguard4_Breasts1" target="Armor">Dawnguard4_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Dawnguard4_BreastsSm" target="Armor">Dawnguard4_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Dawnguard4_BreastsSH" target="Armor">Dawnguard4_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Dawnguard4_BreastsSSH" target="Armor">Dawnguard4_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Dawnguard4_BreastsFantasy" target="Armor">Dawnguard4_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Dawnguard4_DoubleMelon" target="Armor">Dawnguard4_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Dawnguard4_BreastCleavage" target="Armor">Dawnguard4_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Dawnguard4_BreastFlatness" target="Armor">Dawnguard4_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Dawnguard4_BreastGravity" target="Armor">Dawnguard4_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Dawnguard4_PushUp" target="Armor">Dawnguard4_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Dawnguard4_BreastHt" target="Armor">Dawnguard4_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Dawnguard4_BreastPerkiness" target="Armor">Dawnguard4_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Dawnguard4_BreastWidth" target="Armor">Dawnguard4_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Dawnguard4_Waist" target="Armor">Dawnguard4_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Dawnguard4_WideWaistLine" target="Armor">Dawnguard4_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Dawnguard4_ChubbyWaist" target="Armor">Dawnguard4_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Dawnguard4_CalBelly" target="Armor">Dawnguard4_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Dawnguard4_BigBelly" target="Armor">Dawnguard4_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Dawnguard4_PregnancyBelly" target="Armor">Dawnguard4_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Dawnguard4_TummyTuck" target="Armor">Dawnguard4_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Dawnguard4_Back" target="Armor">Dawnguard4_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Dawnguard4_Hipbone" target="Armor">Dawnguard4_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Dawnguard4_Hips" target="Armor">Dawnguard4_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Dawnguard4_ButtCrack" target="Armor">Dawnguard4_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Dawnguard4_Butt1" target="Armor">Dawnguard4_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Dawnguard4_ButtSm" target="Armor">Dawnguard4_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Dawnguard4_MakButt" target="Armor">Dawnguard4_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Dawnguard4_BigButt" target="Armor">Dawnguard4_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Dawnguard4_ChubbyButt" target="Armor">Dawnguard4_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Dawnguard4_AppleCheeks" target="Armor">Dawnguard4_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Dawnguard4_RoundAss" target="Armor">Dawnguard4_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Dawnguard4_Groin" target="Armor">Dawnguard4_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Dawnguard4_SlimThighs" target="Armor">Dawnguard4_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Dawnguard4_CalThighs" target="Armor">Dawnguard4_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Dawnguard4_ChubbyLegs" target="Armor">Dawnguard4_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Dawnguard4_Legs" target="Armor">Dawnguard4_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+      <datafile name="Dawnguard4_KneeHeight" target="Armor">Dawnguard4_KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+      <datafile name="Dawnguard4_CalfSize" target="Armor">Dawnguard4_CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+      <datafile name="Dawnguard4_CalfSmooth" target="Armor">Dawnguard4_CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+      <datafile name="Dawnguard4_Ankles" target="Armor">Dawnguard4_Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Dawnguard5">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Dawnguard5.nif</SourceFile>
+    <OutputPath>meshes\dlc01\armor\dawnguard</OutputPath>
+    <OutputFile>dawnguardbody5f</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Dawnguard_Zap_Body" target="Body" local="true">Dawnguard_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Dawnguard5_Arms" target="Armor">Dawnguard5_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Dawnguard5_ChubbyArms" target="Armor">Dawnguard5_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Dawnguard5_ShoulderSmooth" target="Armor">Dawnguard5_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Dawnguard5_ShoulderWidth" target="Armor">Dawnguard5_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Dawnguard5_BigTorso" target="Armor">Dawnguard5_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Dawnguard5_Breasts1" target="Armor">Dawnguard5_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Dawnguard5_BreastsSm" target="Armor">Dawnguard5_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Dawnguard5_BreastsSH" target="Armor">Dawnguard5_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Dawnguard5_BreastsSSH" target="Armor">Dawnguard5_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Dawnguard5_BreastsFantasy" target="Armor">Dawnguard5_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Dawnguard5_DoubleMelon" target="Armor">Dawnguard5_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Dawnguard5_BreastCleavage" target="Armor">Dawnguard5_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Dawnguard5_BreastFlatness" target="Armor">Dawnguard5_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Dawnguard5_BreastGravity" target="Armor">Dawnguard5_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Dawnguard5_PushUp" target="Armor">Dawnguard5_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Dawnguard5_BreastHt" target="Armor">Dawnguard5_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Dawnguard5_BreastPerkiness" target="Armor">Dawnguard5_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Dawnguard5_BreastWidth" target="Armor">Dawnguard5_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Dawnguard5_Waist" target="Armor">Dawnguard5_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Dawnguard5_WideWaistLine" target="Armor">Dawnguard5_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Dawnguard5_ChubbyWaist" target="Armor">Dawnguard5_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Dawnguard5_CalBelly" target="Armor">Dawnguard5_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Dawnguard5_BigBelly" target="Armor">Dawnguard5_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Dawnguard5_PregnancyBelly" target="Armor">Dawnguard5_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Dawnguard5_TummyTuck" target="Armor">Dawnguard5_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Dawnguard5_Back" target="Armor">Dawnguard5_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Dawnguard5_Hipbone" target="Armor">Dawnguard5_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Dawnguard5_Hips" target="Armor">Dawnguard5_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Dawnguard5_ButtCrack" target="Armor">Dawnguard5_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Dawnguard5_Butt1" target="Armor">Dawnguard5_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Dawnguard5_ButtSm" target="Armor">Dawnguard5_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Dawnguard5_MakButt" target="Armor">Dawnguard5_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Dawnguard5_BigButt" target="Armor">Dawnguard5_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Dawnguard5_ChubbyButt" target="Armor">Dawnguard5_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Dawnguard5_AppleCheeks" target="Armor">Dawnguard5_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Dawnguard5_RoundAss" target="Armor">Dawnguard5_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Dawnguard5_Groin" target="Armor">Dawnguard5_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Dawnguard5_SlimThighs" target="Armor">Dawnguard5_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Dawnguard5_CalThighs" target="Armor">Dawnguard5_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Dawnguard5_ChubbyLegs" target="Armor">Dawnguard5_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Dawnguard5_Legs" target="Armor">Dawnguard5_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+      <datafile name="Dawnguard5_KneeHeight" target="Armor">Dawnguard5_KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+      <datafile name="Dawnguard5_CalfSize" target="Armor">Dawnguard5_CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+      <datafile name="Dawnguard5_CalfSmooth" target="Armor">Dawnguard5_CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+      <datafile name="Dawnguard5_Ankles" target="Armor">Dawnguard5_Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Vampire Royal">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>Vampire.nif</SourceFile>
+    <OutputPath>meshes\dlc01\clothes\vampire</OutputPath>
+    <OutputFile>vampirerobesf</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Vampire_Zap_Body" target="Body" local="true">Vampire_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Vampire_Arms" target="Armor">Vampire_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Vampire_ChubbyArms" target="Armor">Vampire_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Vampire_ShoulderSmooth" target="Armor">Vampire_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Vampire_ShoulderWidth" target="Armor">Vampire_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Vampire_BigTorso" target="Armor">Vampire_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Vampire_Breasts1" target="Armor">Vampire_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Vampire_BreastsSm" target="Armor">Vampire_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Vampire_BreastsSH" target="Armor">Vampire_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Vampire_BreastsSSH" target="Armor">Vampire_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Vampire_BreastsFantasy" target="Armor">Vampire_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Vampire_DoubleMelon" target="Armor">Vampire_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Vampire_BreastCleavage" target="Armor">Vampire_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Vampire_BreastFlatness" target="Armor">Vampire_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Vampire_BreastGravity" target="Armor">Vampire_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Vampire_PushUp" target="Armor">Vampire_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Vampire_BreastHt" target="Armor">Vampire_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Vampire_BreastPerkiness" target="Armor">Vampire_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Vampire_BreastWidth" target="Armor">Vampire_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Vampire_Waist" target="Armor">Vampire_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Vampire_WideWaistLine" target="Armor">Vampire_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Vampire_ChubbyWaist" target="Armor">Vampire_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Vampire_CalBelly" target="Armor">Vampire_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Vampire_BigBelly" target="Armor">Vampire_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Vampire_PregnancyBelly" target="Armor">Vampire_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Vampire_TummyTuck" target="Armor">Vampire_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Vampire_Back" target="Armor">Vampire_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Vampire_Hipbone" target="Armor">Vampire_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Vampire_Hips" target="Armor">Vampire_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Vampire_ButtCrack" target="Armor">Vampire_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Vampire_Butt1" target="Armor">Vampire_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Vampire_ButtSm" target="Armor">Vampire_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Vampire_MakButt" target="Armor">Vampire_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Vampire_BigButt" target="Armor">Vampire_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Vampire_ChubbyButt" target="Armor">Vampire_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Vampire_AppleCheeks" target="Armor">Vampire_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Vampire_RoundAss" target="Armor">Vampire_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Vampire_Groin" target="Armor">Vampire_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Vampire_SlimThighs" target="Armor">Vampire_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Vampire_CalThighs" target="Armor">Vampire_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Vampire_ChubbyLegs" target="Armor">Vampire_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Vampire_Legs" target="Armor">Vampire_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Vampire">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>VampireAlt.nif</SourceFile>
+    <OutputPath>meshes\dlc01\clothes\vampire</OutputPath>
+    <OutputFile>vampirerobesf_alt</OutputFile>
+    <BaseShapeName target="Armor">Armor</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="VampireAlt_Zap_Body" target="Body" local="true">VampireAlt_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="VampireAlt_Arms" target="Armor">VampireAlt_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="VampireAlt_ChubbyArms" target="Armor">VampireAlt_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="VampireAlt_ShoulderSmooth" target="Armor">VampireAlt_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="VampireAlt_ShoulderWidth" target="Armor">VampireAlt_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="VampireAlt_BigTorso" target="Armor">VampireAlt_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="VampireAlt_Breasts1" target="Armor">VampireAlt_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="VampireAlt_BreastsSm" target="Armor">VampireAlt_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="VampireAlt_BreastsSH" target="Armor">VampireAlt_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="VampireAlt_BreastsSSH" target="Armor">VampireAlt_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="VampireAlt_BreastsFantasy" target="Armor">VampireAlt_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="VampireAlt_DoubleMelon" target="Armor">VampireAlt_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="VampireAlt_BreastCleavage" target="Armor">VampireAlt_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="VampireAlt_BreastFlatness" target="Armor">VampireAlt_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="VampireAlt_BreastGravity" target="Armor">VampireAlt_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="VampireAlt_PushUp" target="Armor">VampireAlt_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="VampireAlt_BreastHt" target="Armor">VampireAlt_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="VampireAlt_BreastPerkiness" target="Armor">VampireAlt_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="VampireAlt_BreastWidth" target="Armor">VampireAlt_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="VampireAlt_Waist" target="Armor">VampireAlt_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="VampireAlt_WideWaistLine" target="Armor">VampireAlt_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="VampireAlt_ChubbyWaist" target="Armor">VampireAlt_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="VampireAlt_CalBelly" target="Armor">VampireAlt_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="VampireAlt_BigBelly" target="Armor">VampireAlt_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="VampireAlt_PregnancyBelly" target="Armor">VampireAlt_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="VampireAlt_TummyTuck" target="Armor">VampireAlt_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="VampireAlt_Back" target="Armor">VampireAlt_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="VampireAlt_Hipbone" target="Armor">VampireAlt_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="VampireAlt_Hips" target="Armor">VampireAlt_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="VampireAlt_ButtCrack" target="Armor">VampireAlt_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="VampireAlt_Butt1" target="Armor">VampireAlt_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="VampireAlt_ButtSm" target="Armor">VampireAlt_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="VampireAlt_MakButt" target="Armor">VampireAlt_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="VampireAlt_BigButt" target="Armor">VampireAlt_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="VampireAlt_ChubbyButt" target="Armor">VampireAlt_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="VampireAlt_AppleCheeks" target="Armor">VampireAlt_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="VampireAlt_RoundAss" target="Armor">VampireAlt_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="VampireAlt_Groin" target="Armor">VampireAlt_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="VampireAlt_SlimThighs" target="Armor">VampireAlt_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="VampireAlt_CalThighs" target="Armor">VampireAlt_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="VampireAlt_ChubbyLegs" target="Armor">VampireAlt_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="VampireAlt_Legs" target="Armor">VampireAlt_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Vampire Robes">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>VampireRobe.nif</SourceFile>
+    <OutputPath>meshes\dlc01\clothes\vampclothes</OutputPath>
+    <OutputFile>vampclothesf</OutputFile>
+    <BaseShapeName target="Clothes">Clothes</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="VampireRobe_Zap_Body" target="Body" local="true">VampireRobe_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="VampireRobe_Arms" target="Clothes">VampireRobe_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="VampireRobe_ChubbyArms" target="Clothes">VampireRobe_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="VampireRobe_ShoulderSmooth" target="Clothes">VampireRobe_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="VampireRobe_ShoulderWidth" target="Clothes">VampireRobe_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="VampireRobe_BigTorso" target="Clothes">VampireRobe_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="VampireRobe_Breasts1" target="Clothes">VampireRobe_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="VampireRobe_BreastsSm" target="Clothes">VampireRobe_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="VampireRobe_BreastsSH" target="Clothes">VampireRobe_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="VampireRobe_BreastsSSH" target="Clothes">VampireRobe_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="VampireRobe_BreastsFantasy" target="Clothes">VampireRobe_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="VampireRobe_DoubleMelon" target="Clothes">VampireRobe_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="VampireRobe_BreastCleavage" target="Clothes">VampireRobe_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="VampireRobe_BreastFlatness" target="Clothes">VampireRobe_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="VampireRobe_BreastGravity" target="Clothes">VampireRobe_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="VampireRobe_PushUp" target="Clothes">VampireRobe_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="VampireRobe_BreastHt" target="Clothes">VampireRobe_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="VampireRobe_BreastPerkiness" target="Clothes">VampireRobe_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="VampireRobe_BreastWidth" target="Clothes">VampireRobe_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="VampireRobe_Waist" target="Clothes">VampireRobe_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="VampireRobe_WideWaistLine" target="Clothes">VampireRobe_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="VampireRobe_ChubbyWaist" target="Clothes">VampireRobe_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="VampireRobe_CalBelly" target="Clothes">VampireRobe_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="VampireRobe_BigBelly" target="Clothes">VampireRobe_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="VampireRobe_PregnancyBelly" target="Clothes">VampireRobe_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="VampireRobe_TummyTuck" target="Clothes">VampireRobe_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="VampireRobe_Back" target="Clothes">VampireRobe_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="VampireRobe_Hipbone" target="Clothes">VampireRobe_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="VampireRobe_Hips" target="Clothes">VampireRobe_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="VampireRobe_ButtCrack" target="Clothes">VampireRobe_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="VampireRobe_Butt1" target="Clothes">VampireRobe_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="VampireRobe_ButtSm" target="Clothes">VampireRobe_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="VampireRobe_MakButt" target="Clothes">VampireRobe_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="VampireRobe_BigButt" target="Clothes">VampireRobe_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="VampireRobe_ChubbyButt" target="Clothes">VampireRobe_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="VampireRobe_AppleCheeks" target="Clothes">VampireRobe_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="VampireRobe_RoundAss" target="Clothes">VampireRobe_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="VampireRobe_Groin" target="Clothes">VampireRobe_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="VampireRobe_SlimThighs" target="Clothes">VampireRobe_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="VampireRobe_CalThighs" target="Clothes">VampireRobe_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="VampireRobe_ChubbyLegs" target="Clothes">VampireRobe_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="VampireRobe_Legs" target="Clothes">VampireRobe_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ KeosDawnguard - Moth Priest Robes">
+    <SetFolder>KillerKeo\Dawnguard</SetFolder>
+    <SourceFile>MothPriest.nif</SourceFile>
+    <OutputPath>meshes\dlc01\clothes\blindmothpriest</OutputPath>
+    <OutputFile>blindmothpriestrobesf</OutputFile>
+    <BaseShapeName target="Clothes" DataFolder="KillerKeo\Clothes">Clothes</BaseShapeName>
+    <BaseShapeName target="Body" DataFolder="CalienteBody">Body</BaseShapeName>
+    <Slider name="(zap)Body" invert="false" hidden="true" zap="true" small="100" big="100">
+      <datafile name="Necromancer_Zap_Body" target="Body" local="true">Necromancer_Zap_Body.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="Body">Arms.bsd</datafile>
+      <datafile name="Necromancer_Arms" target="Clothes">Necromancer_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="Body">ChubbyArms.bsd</datafile>
+      <datafile name="Necromancer_ChubbyArms" target="Clothes">Necromancer_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="Body">ShoulderSmooth.bsd</datafile>
+      <datafile name="Necromancer_ShoulderSmooth" target="Clothes">Necromancer_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="Body">ShoulderWidth.bsd</datafile>
+      <datafile name="Necromancer_ShoulderWidth" target="Clothes">Necromancer_ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="Body">BigTorso.bsd</datafile>
+      <datafile name="Necromancer_BigTorso" target="Clothes">Necromancer_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="Body">Breasts1.bsd</datafile>
+      <datafile name="Necromancer_Breasts1" target="Clothes">Necromancer_Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="Body">BreastsSm.bsd</datafile>
+      <datafile name="Necromancer_BreastsSm" target="Clothes">Necromancer_BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="Body">BreastsSH.bsd</datafile>
+      <datafile name="Necromancer_BreastsSH" target="Clothes">Necromancer_BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" small="0" big="0">
+      <datafile name="BreastsSSH" target="Body">BreastsSSH.bsd</datafile>
+      <datafile name="Necromancer_BreastsSSH" target="Clothes">Necromancer_BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="Body">BreastsFantasy.bsd</datafile>
+      <datafile name="Necromancer_BreastsFantasy" target="Clothes">Necromancer_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0">
+      <datafile name="DoubleMelon" target="Body">DoubleMelon.bsd</datafile>
+      <datafile name="Necromancer_DoubleMelon" target="Clothes">Necromancer_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" small="0" big="0">
+      <datafile name="BreastCleavage" target="Body">BreastCleavage.bsd</datafile>
+      <datafile name="Necromancer_BreastCleavage" target="Clothes">Necromancer_BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="Body">BreastFlatness.bsd</datafile>
+      <datafile name="Necromancer_BreastFlatness" target="Clothes">Necromancer_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="Body">BreastGravity.bsd</datafile>
+      <datafile name="Necromancer_BreastGravity" target="Clothes">Necromancer_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="Body">PushUp.bsd</datafile>
+      <datafile name="Necromancer_PushUp" target="Clothes">Necromancer_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="Body">BreastHt.bsd</datafile>
+      <datafile name="Necromancer_BreastHt" target="Clothes">Necromancer_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="Body">BreastPerkiness.bsd</datafile>
+      <datafile name="Necromancer_BreastPerkiness" target="Clothes">Necromancer_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="Body">BreastWidth.bsd</datafile>
+      <datafile name="Necromancer_BreastWidth" target="Clothes">Necromancer_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="true" small="0" big="100">
+      <datafile name="Waist" target="Body">Waist_inv.bsd</datafile>
+      <datafile name="Necromancer_Waist" target="Clothes">Necromancer_Waist_inv.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0">
+      <datafile name="WideWaistLine" target="Body">WideWaistLine.bsd</datafile>
+      <datafile name="Necromancer_WideWaistLine" target="Clothes">Necromancer_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="Body">ChubbyWaist.bsd</datafile>
+      <datafile name="Necromancer_ChubbyWaist" target="Clothes">Necromancer_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="Body">CalBelly.bsd</datafile>
+      <datafile name="Necromancer_CalBelly" target="Clothes">Necromancer_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="Body">BigBelly.bsd</datafile>
+      <datafile name="Necromancer_BigBelly" target="Clothes">Necromancer_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="Body">PregnancyBelly.bsd</datafile>
+      <datafile name="Necromancer_PregnancyBelly" target="Clothes">Necromancer_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0">
+      <datafile name="TummyTuck" target="Body">TummyTuck.bsd</datafile>
+      <datafile name="Necromancer_TummyTuck" target="Clothes">Necromancer_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="Body">Back.bsd</datafile>
+      <datafile name="Necromancer_Back" target="Clothes">Necromancer_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="Body">Hipbone.bsd</datafile>
+      <datafile name="Necromancer_Hipbone" target="Clothes">Necromancer_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="Body">Hips.bsd</datafile>
+      <datafile name="Necromancer_Hips" target="Clothes">Necromancer_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="Body">ButtCrack.bsd</datafile>
+      <datafile name="Necromancer_ButtCrack" target="Clothes">Necromancer_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="Body">Butt1.bsd</datafile>
+      <datafile name="Necromancer_Butt1" target="Clothes">Necromancer_Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="Body">ButtSm.bsd</datafile>
+      <datafile name="Necromancer_ButtSm" target="Clothes">Necromancer_ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" small="0" big="0">
+      <datafile name="MakButt" target="Body">MakButt.bsd</datafile>
+      <datafile name="Necromancer_MakButt" target="Clothes">Necromancer_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="Body">BigButt.bsd</datafile>
+      <datafile name="Necromancer_BigButt" target="Clothes">Necromancer_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="Body">ChubbyButt.bsd</datafile>
+      <datafile name="Necromancer_ChubbyButt" target="Clothes">Necromancer_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0">
+      <datafile name="AppleCheeks" target="Body">AppleCheeks.bsd</datafile>
+      <datafile name="Necromancer_AppleCheeks" target="Clothes">Necromancer_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0">
+      <datafile name="RoundAss" target="Body">RoundAss.bsd</datafile>
+      <datafile name="Necromancer_RoundAss" target="Clothes">Necromancer_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="Body">Groin.bsd</datafile>
+      <datafile name="Necromancer_Groin" target="Clothes">Necromancer_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="Body">SlimThighs.bsd</datafile>
+      <datafile name="Necromancer_SlimThighs" target="Clothes">Necromancer_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="Body">CalThighs.bsd</datafile>
+      <datafile name="Necromancer_CalThighs" target="Clothes">Necromancer_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="Body">ChubbyLegs.bsd</datafile>
+      <datafile name="Necromancer_ChubbyLegs" target="Clothes">Necromancer_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="Body">Legs.bsd</datafile>
+      <datafile name="Necromancer_Legs" target="Clothes">Necromancer_Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="Body">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="Body">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="Body">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="Body">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="Body">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="Body">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+      <datafile name="NH_LockSeamHi" target="Body">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+      <datafile name="NH_LockSeamLo" target="Body">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,204 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Iron Heavy">
+        <SetFolder>CalIron</SetFolder>
+        <SourceFile>CalienteIron.nif</SourceFile>
+        <OutputPath>meshes\armor\iron\f</OutputPath>
+        <OutputFile>cuirassheavy</OutputFile>
+        <BaseShapeName target="IronArmor">IronArmor</BaseShapeName>
+        <BaseShapeName target="IronSkirt">IronSkirt</BaseShapeName>
+        <BaseShapeName target="IronSatchel">IronSatchel</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="IronPauldron">IronPauldron</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="IronPauldronBreasts" target="IronPauldron">IronPauldronBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="IronArmorBreasts" target="IronArmor">IronArmorBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="IronPauldronBreastsSmall" target="IronPauldron">IronPauldronBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="IronArmorBreastsSmall" target="IronArmor">IronArmorBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBreastsSH" target="IronPauldron">IronPauldronBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="IronArmorBreastsSH" target="IronArmor">IronArmorBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBreastsSSH" target="IronPauldron">IronPauldronBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="IronArmorBreastsSSH" target="IronArmor">IronArmorBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBreastCleavage" target="IronPauldron">IronPauldronBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="IronArmorBreastCleavage" target="IronArmor">IronArmorBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBreastGravity" target="IronPauldron">IronPauldronBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="IronArmorBreastGravity" target="IronArmor">IronArmorBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="IronSkirtButt" target="IronSkirt">IronSkirtButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="IronArmorButt" target="IronArmor">IronArmorButt.bsd</datafile>
+            <datafile name="IronSatchelButt" target="IronSatchel">IronSatchelButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="IronSkirtButtSmall" target="IronSkirt">IronSkirtButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="IronArmorButtSmall" target="IronArmor">IronArmorButtSmall.bsd</datafile>
+            <datafile name="IronSatchelButtSmall" target="IronSatchel">IronSatchelButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="IronPauldronButtShape2" target="IronPauldron">IronPauldronButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="IronSkirtButtShape2" target="IronSkirt">IronSkirtButtShape2.bsd</datafile>
+            <datafile name="IronArmorButtShape2" target="IronArmor">IronArmorButtShape2.bsd</datafile>
+            <datafile name="IronSatchelButtShape2" target="IronSatchel">IronSatchelButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="IronPauldronWaist" target="IronPauldron">IronPauldronWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="IronArmorWaist" target="IronArmor">IronArmorWaist.bsd</datafile>
+            <datafile name="IronSatchelWaist" target="IronSatchel">IronSatchelWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBelly" target="IronPauldron">IronPauldronBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="IronArmorBelly" target="IronArmor">IronArmorBelly.bsd</datafile>
+            <datafile name="IronSatchelBelly" target="IronSatchel">IronSatchelBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="IronArmorLegs" target="IronArmor">IronArmorLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="IronSatchelLegs" target="IronSatchel">IronSatchelLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="IronSkirtThighs" target="IronSkirt">IronSkirtThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="IronArmorThighs" target="IronArmor">IronArmorThighs.bsd</datafile>
+            <datafile name="IronSatchelThighs" target="IronSatchel">IronSatchelThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="IronPauldronArms" target="IronPauldron">IronPauldronArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="IronPauldronShoulderWidth" target="IronPauldron">IronPauldronShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="IronArmorShoulderWidth" target="IronArmor">IronArmorShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Iron Light">
+        <SetFolder>CalIron</SetFolder>
+        <SourceFile>CalienteIronLight.nif</SourceFile>
+        <OutputPath>meshes\armor\iron\f</OutputPath>
+        <OutputFile>cuirasslight</OutputFile>
+        <BaseShapeName target="IronArmor">IronArmor</BaseShapeName>
+        <BaseShapeName target="IronSkirt">IronSkirt</BaseShapeName>
+        <BaseShapeName target="IronSatchel">IronSatchel</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="IronArmorBreasts" target="IronArmor">IronArmorBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="IronArmorBreastsSmall" target="IronArmor">IronArmorBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="IronArmorBreastsSH" target="IronArmor">IronArmorBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="IronArmorBreastsSSH" target="IronArmor">IronArmorBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="IronArmorBreastCleavage" target="IronArmor">IronArmorBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="IronArmorBreastGravity" target="IronArmor">IronArmorBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="IronSkirtButt" target="IronSkirt">IronSkirtButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="IronArmorButt" target="IronArmor">IronArmorButt.bsd</datafile>
+            <datafile name="IronSatchelButt" target="IronSatchel">IronSatchelButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="IronSkirtButtSmall" target="IronSkirt">IronSkirtButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="IronArmorButtSmall" target="IronArmor">IronArmorButtSmall.bsd</datafile>
+            <datafile name="IronSatchelButtSmall" target="IronSatchel">IronSatchelButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="IronSkirtButtShape2" target="IronSkirt">IronSkirtButtShape2.bsd</datafile>
+            <datafile name="IronArmorButtShape2" target="IronArmor">IronArmorButtShape2.bsd</datafile>
+            <datafile name="IronSatchelButtShape2" target="IronSatchel">IronSatchelButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="IronArmorWaist" target="IronArmor">IronArmorWaist.bsd</datafile>
+            <datafile name="IronSatchelWaist" target="IronSatchel">IronSatchelWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="IronArmorBelly" target="IronArmor">IronArmorBelly.bsd</datafile>
+            <datafile name="IronSatchelBelly" target="IronSatchel">IronSatchelBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="IronArmorLegs" target="IronArmor">IronArmorLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="IronSatchelLegs" target="IronSatchel">IronSatchelLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="IronSkirtThighs" target="IronSkirt">IronSkirtThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="IronArmorThighs" target="IronArmor">IronArmorThighs.bsd</datafile>
+            <datafile name="IronSatchelThighs" target="IronSatchel">IronSatchelThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="IronArmorShoulderWidth" target="IronArmor">IronArmorShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

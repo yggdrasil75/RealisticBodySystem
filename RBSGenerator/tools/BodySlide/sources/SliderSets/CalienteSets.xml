@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SliderSetInfo>
+	<SliderSet name="CalienteBodyAdvanced">
+		<SetFolder>CalienteBody</SetFolder>
+		<SourceFile>CalienteBody.nif</SourceFile>
+		<OutputPath>meshes\actors\character\character assets</OutputPath>
+		<OutputFile>femalebody</OutputFile>
+		<BaseShapeName target="BaseShape">BaseShape</BaseShapeName>
+		<Slider name="Breasts" invert="true" small="20" big="100">
+		  <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSmall" invert="true" small="100" big="100">
+		  <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSH" invert="false" small="0" big="0">
+		  <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSSH" small="0" big="0">
+		  <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsFantasy" small="0" big="0">
+		  <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+		</Slider>
+		<Slider name="DoubleMelon" small="0" big="0" >
+		  <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+		</Slider>
+		<Slider name="BreastCleavage" small="0" big="0">
+		  <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+		</Slider>
+		<Slider name="BreastFlatness" small="0" big="0">
+		  <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastGravity" small="0" big="0">
+		  <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+		</Slider>
+		<Slider name="PushUp" small="0" big="0">
+		  <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+		</Slider>
+		<Slider name="BreastHeight" small="0" big="0">
+		  <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+		</Slider>
+		<Slider name="BreastPerkiness" small="0" big="0">
+		  <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastWidth" small="0" big="0">
+		  <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDistance" invert="true" small="100" big="100">
+		  <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+		</Slider>
+		<Slider name="NipplePerkiness" small="0" big="0">
+		  <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="NippleLength" small="0" big="0">
+		  <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+		</Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+		  <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+		</Slider>
+		<Slider name="NippleUp" small="0" big="0">
+		  <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDown" small="0" big="0">
+		  <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+		</Slider>
+		<Slider name="NippleTip" small="0" big="0">
+		  <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+		</Slider>
+		<Slider name="Arms" invert="true" small="0" big="100">
+		  <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyArms" small="0" big="0">
+		  <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderSmooth" small="0" big="0">
+		  <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderWidth" invert="true" small="100" big="100">
+		  <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+		</Slider>
+		<Slider name="BigTorso" small="0" big="0">
+		  <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+		</Slider>
+		<Slider name="Waist" small="0" big="100">
+		  <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+		</Slider>
+		<Slider name="WideWaistLine" small="0" big="0" >
+		  <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyWaist" small="0" big="0">
+		  <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+		</Slider>
+		<Slider name="Belly" small="0" big="0">
+		  <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+		</Slider>
+		<Slider name="BigBelly" small="0" big="0">
+		  <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+		</Slider>
+		<Slider name="PregnancyBelly" small="0" big="0">
+		  <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+		</Slider>
+		<Slider name="TummyTuck" small="0" big="0" >
+		  <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+		</Slider>
+		<Slider name="Back" small="0" big="0">
+		  <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+		</Slider>
+		<Slider name="Hipbone" small="0" big="0">
+		  <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+		</Slider>
+		<Slider name="Hips" small="0" big="0">
+		  <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+		</Slider>
+		<Slider name="ButtCrack" invert="true" small="100" big="100">
+		  <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+		</Slider>
+		<Slider name="Butt" invert="true" small="0" big="100">
+		  <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+		</Slider>
+		<Slider name="ButtSmall" invert="true" small="100" big="100">
+		  <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+		</Slider>
+		<Slider name="ButtShape2" invert="false" small="0" big="0">
+		  <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+		</Slider>
+		<Slider name="BigButt" small="0" big="0">
+		  <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyButt" small="0" big="0">
+		  <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+		</Slider>
+		<Slider name="AppleCheeks" small="0" big="0" >
+		  <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+		</Slider>
+		<Slider name="RoundAss" small="0" big="0" >
+		  <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+		</Slider>
+		<Slider name="Groin" small="0" big="0">
+		  <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+		</Slider>
+		<Slider name="SlimThighs" small="0" big="0">
+		  <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+		</Slider>
+		<Slider name="Thighs" small="0" big="0">
+		  <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyLegs" small="0" big="0">
+		  <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+		</Slider>
+		<Slider name="Legs" invert="true" small="0" big="100">
+		  <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+		</Slider>
+		<Slider name="KneeHeight" small="0" big="0">
+		  <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSize" small="0" big="0">
+		  <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSmooth" small="0" big="0">
+		  <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="Ankles" small="100" big="100" invert="true">
+		  <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+		</Slider>
+		<Slider name="SmallSeam" small="100" big="0" hidden="true">
+		  <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderTweak" small="100" big="100" hidden="true">
+		  <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamHi" invert="false" hidden="true" small="0" big="100" clamp="true" >
+		  <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi2.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamLo" invert="false" hidden="true" small="100" big="0" clamp="true" >
+		  <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo2.bsd</datafile>
+		</Slider>
+	</SliderSet> 
+	<SliderSet name="CalienteVanilla">
+		<SetFolder>CalienteBody</SetFolder>
+		<SourceFile>CalienteBody.nif</SourceFile>
+		<OutputPath>meshes\actors\character\character assets</OutputPath>
+		<OutputFile>femalebody</OutputFile>  <!-- _0 and _1 .nif automatically appended. -->
+		<BaseShapeName target="body">BaseShape</BaseShapeName>		
+		<Slider name="SmallSeam" small="100" big="0" hidden="true">
+			<datafile target="body">SeamSm.bsd</datafile>
+		</Slider>		
+		<Slider name="Vanilla0" small="100" big="0" hidden="true">
+			<datafile target="body">VanillaLo.bsd</datafile>
+		</Slider>	
+		<Slider name="Vanilla1" small="0" big="100" hidden="true">
+			<datafile target="body">VanillaHi.bsd</datafile>
+		</Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+			<datafile target="body">NippleSize.bsd</datafile>
+		</Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" small="0" big="100" clamp="true" >
+            <datafile name="LockSeamHi2" target="body">LockSeamHi2.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" small="100" big="0" clamp="true" >
+            <datafile name="LockSeamLo2" target="body">LockSeamLo2.bsd</datafile>
+        </Slider>
+	</SliderSet>	
+	<SliderSet name="CalienteBody BBP">
+		<SetFolder>CalienteBody</SetFolder>
+		<SourceFile>CalienteBreastWt.nif</SourceFile>
+		<OutputPath>meshes\actors\character\character assets</OutputPath>
+		<OutputFile>femalebody</OutputFile>  <!-- _0 and _1 .nif automatically appended. -->
+		<BaseShapeName target="body">BaseShape</BaseShapeName>
+		<Slider name="Breasts" invert="true" small="20" big="100">
+			<datafile target="body">Breasts1.bsd</datafile>
+		</Slider>		
+		<Slider name="BreastsSmall" invert="true" small="100" big="100">
+			<!-- <require slidername="Breasts" value="0"/> -->
+			<datafile target="body">BreastsSm.bsd</datafile>
+		</Slider>	
+		<Slider name="BreastsSH" invert="false" small="0" big="0">
+			<!-- <require slidername="Breasts" value="100"/> -->
+			<datafile target="body">BreastsSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSSH" small="0" big="0">
+			<!-- <require slidername="Breasts" value="100"/> -->
+			<datafile target="body">BreastsSSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastGravity" small="0" big="0">
+			<datafile target="body">BreastGravity.bsd</datafile>
+		</Slider>        
+		<Slider name="BreastHeight" invert="false" small="0" big="0">
+            <datafile name="BreastHt" target="body">BreastHt.bsd</datafile>
+        </Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+			<datafile target="body">NippleSize.bsd</datafile>
+		</Slider>
+		<Slider name="Butt" invert="true" small="0" big="100">
+			<datafile target="body">Butt1.bsd</datafile>
+		</Slider>
+		<Slider name="ButtSmall" invert="true" small="100" big="100">
+			<datafile target="body">ButtSm.bsd</datafile>
+		</Slider>
+		<Slider name="ButtShape2" invert="false" small="0" big="0">
+			<datafile target="body">MakButt.bsd</datafile>
+		</Slider>
+		<Slider name="Waist" small="0" big="100">
+			<datafile target="body">Waist.bsd</datafile>
+		</Slider>
+		<Slider name="Belly" small="0" big="0">
+			<datafile target="body">CalBelly.bsd</datafile>
+		</Slider>
+		<Slider name="Legs" invert="true" small="0" big="100">
+			<datafile target="body">Legs.bsd</datafile>
+		</Slider>
+		<Slider name="Thighs" invert="false" small="0" big="0">
+			<datafile target="body">CalThighs.bsd</datafile>
+		</Slider>
+		<Slider name="Arms" invert="true" small="0" big="100">
+			<datafile target="body">Arms.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderWidth" invert="true" small="100" big="100">
+			<datafile target="body">ShoulderWidth.bsd</datafile>
+		</Slider>		
+		<Slider name="SmallSeam" small="100" big="0" hidden="true">
+			<datafile target="body">SeamSm.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderTweak" small="100" big="100" hidden="true">
+			<datafile target="body">ShoulderTweak.bsd</datafile>
+		</Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" small="0" big="100" clamp="true" >
+            <datafile name="LockSeamHi" target="body">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" small="100" big="0" clamp="true" >
+            <datafile name="LockSeamLo" target="body">LockSeamLo.bsd</datafile>
+        </Slider>
+	</SliderSet>
+    <SliderSet name="CalienteNeverNude">
+        <SetFolder>CalienteNeverNude</SetFolder>
+        <SourceFile>CalienteNeverNude.nif</SourceFile>
+        <OutputPath>meshes\actors\character\character assets</OutputPath>
+        <OutputFile>femalebody</OutputFile>
+        <BaseShapeName target="Undies">Undies</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="UndiesBreasts" target="Undies">UndiesBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="UndiesBreastsSmall" target="Undies">UndiesBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="UndiesBreastsSH" target="Undies">UndiesBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="UndiesBreastsSSH" target="Undies">UndiesBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="Pushup" invert="false" small="0" big="0">
+            <datafile name="UndiesNNBreastPushup" target="Undies">UndiesNNBreastPushup.bsd</datafile>
+            <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="UndiesBreastCleavage" target="Undies">UndiesBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="UndiesButt" target="Undies">UndiesButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="UndiesButtSmall" target="Undies">UndiesButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="UndiesButtShape2" target="Undies">UndiesButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="UndiesWaist" target="Undies">UndiesWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="UndiesBelly" target="Undies">UndiesBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="UndiesThighs" target="Undies">UndiesThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="Topless" invert="false" zap="true" small="0" big="0">
+            <datafile name="UndiesNNTopless" target="Undies">UndiesNNTopless.bsd</datafile>
+        </Slider>
+        <Slider name="HideNipples" invert="false" hidden="false" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+			<datafile target="BaseShape">NippleSize.bsd</datafile>
+		</Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalienteVanillaNeverNude">
+        <SetFolder>CalienteNeverNude</SetFolder>
+        <SourceFile>CalienteNeverNude.nif</SourceFile>
+        <OutputPath>meshes\actors\character\character assets</OutputPath>
+        <OutputFile>femalebody</OutputFile>
+        <BaseShapeName target="Undies">Undies</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true"  small="100" big="0">
+            <datafile name="UndiesVanilla0" target="Undies">UndiesVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true"  small="0" big="100">
+            <datafile name="UndiesVanilla1" target="Undies">UndiesVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="Pushup" invert="false" small="0" big="0">
+            <datafile name="UndiesNNBreastPushup" target="Undies">UndiesNNBreastPushup.bsd</datafile>
+            <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="UndiesBreastCleavage" target="Undies">UndiesBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Topless" invert="false" zap="true" small="0" big="0">
+            <datafile name="UndiesNNTopless" target="Undies">UndiesNNTopless.bsd</datafile>
+        </Slider>
+        <Slider name="HideNipples" invert="false" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+			<datafile target="BaseShape">NippleSize.bsd</datafile>
+		</Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+	<SliderSet name="CalienteBodyAdvanced BBP">
+		<SetFolder>CalienteBody</SetFolder>
+		<SourceFile>CalienteBreastWt.nif</SourceFile>
+		<OutputPath>meshes\actors\character\character assets</OutputPath>
+		<OutputFile>femalebody</OutputFile>
+		<BaseShapeName target="BaseShape">BaseShape</BaseShapeName>
+		<Slider name="Breasts" invert="true" small="20" big="100">
+		  <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSmall" invert="true" small="100" big="100">
+		  <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSH" invert="false" small="0" big="0">
+		  <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSSH" small="0" big="0">
+		  <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsFantasy" small="0" big="0">
+		  <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+		</Slider>
+		<Slider name="DoubleMelon" small="0" big="0" >
+		  <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+		</Slider>
+		<Slider name="BreastCleavage" small="0" big="0">
+		  <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+		</Slider>
+		<Slider name="BreastFlatness" small="0" big="0">
+		  <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastGravity" small="0" big="0">
+		  <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+		</Slider>
+		<Slider name="PushUp" small="0" big="0">
+		  <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+		</Slider>
+		<Slider name="BreastHeight" small="0" big="0">
+		  <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+		</Slider>
+		<Slider name="BreastPerkiness" small="0" big="0">
+		  <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastWidth" small="0" big="0">
+		  <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDistance" invert="true" small="100" big="100">
+		  <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+		</Slider>
+		<Slider name="NipplePerkiness" small="0" big="0">
+		  <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="NippleLength" small="0" big="0">
+		  <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+		</Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+		  <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+		</Slider>
+		<Slider name="NippleUp" small="0" big="0">
+		  <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDown" small="0" big="0">
+		  <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+		</Slider>
+		<Slider name="NippleTip" small="0" big="0">
+		  <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+		</Slider>
+		<Slider name="Arms" invert="true" small="0" big="100">
+		  <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyArms" small="0" big="0">
+		  <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderSmooth" small="0" big="0">
+		  <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderWidth" invert="true" small="100" big="100">
+		  <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+		</Slider>
+		<Slider name="BigTorso" small="0" big="0">
+		  <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+		</Slider>
+		<Slider name="Waist" small="0" big="100">
+		  <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+		</Slider>
+		<Slider name="WideWaistLine" small="0" big="0" >
+		  <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyWaist" small="0" big="0">
+		  <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+		</Slider>
+		<Slider name="Belly" small="0" big="0">
+		  <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+		</Slider>
+		<Slider name="BigBelly" small="0" big="0">
+		  <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+		</Slider>
+		<Slider name="PregnancyBelly" small="0" big="0">
+		  <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+		</Slider>
+		<Slider name="RaiseBelly" small="0" big="0">
+		  <datafile name="RaiseBelly" target="BaseShape">RaiseBelly.bsd</datafile>
+		</Slider>
+		<Slider name="TummyTuck" small="0" big="0" >
+		  <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+		</Slider>
+		<Slider name="Back" small="0" big="0">
+		  <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+		</Slider>
+		<Slider name="Hipbone" small="0" big="0">
+		  <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+		</Slider>
+		<Slider name="Hips" small="0" big="0">
+		  <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+		</Slider>
+		<Slider name="ButtCrack" invert="true" small="100" big="100">
+		  <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+		</Slider>
+		<Slider name="Butt" invert="true" small="0" big="100">
+		  <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+		</Slider>
+		<Slider name="ButtSmall" invert="true" small="100" big="100">
+		  <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+		</Slider>
+		<Slider name="ButtShape2" invert="false" small="0" big="0">
+		  <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+		</Slider>
+		<Slider name="BigButt" small="0" big="0">
+		  <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyButt" small="0" big="0">
+		  <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+		</Slider>
+		<Slider name="AppleCheeks" small="0" big="0" >
+		  <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+		</Slider>
+		<Slider name="RoundAss" small="0" big="0" >
+		  <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+		</Slider>
+		<Slider name="Groin" small="0" big="0">
+		  <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+		</Slider>
+		<Slider name="SlimThighs" small="0" big="0">
+		  <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+		</Slider>
+		<Slider name="Thighs" small="0" big="0">
+		  <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyLegs" small="0" big="0">
+		  <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+		</Slider>
+		<Slider name="Legs" invert="true" small="0" big="100">
+		  <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+		</Slider>
+		<Slider name="KneeHeight" small="0" big="0">
+		  <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSize" small="0" big="0">
+		  <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSmooth" small="0" big="0">
+		  <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="Ankles" small="100" big="100" invert="true">
+		  <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+		</Slider>
+		<Slider name="SmallSeam" small="100" big="0" hidden="true">
+		  <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderTweak" small="100" big="100" hidden="true">
+		  <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamHi" invert="false" hidden="true" small="0" big="100" clamp="true" >
+		  <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamLo" invert="false" hidden="true" small="100" big="0" clamp="true" >
+		  <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo.bsd</datafile>
+		</Slider>
+	  </SliderSet>
+	<SliderSet name="CalienteBodyAdvanced TBBP">
+		<SetFolder>CalienteBody</SetFolder>
+		<SourceFile>DragonflyTBBP.nif</SourceFile>
+		<OutputPath>meshes\actors\character\character assets</OutputPath>
+		<OutputFile>femalebody</OutputFile>
+		<BaseShapeName target="BaseShape">BaseShape</BaseShapeName>
+		<Slider name="Breasts" invert="true" small="20" big="100">
+		  <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSmall" invert="true" small="100" big="100">
+		  <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSH" invert="false" small="0" big="0">
+		  <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsSSH" small="0" big="0">
+		  <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+		</Slider>
+		<Slider name="BreastsFantasy" small="0" big="0">
+		  <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+		</Slider>
+		<Slider name="DoubleMelon" small="0" big="0" >
+		  <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+		</Slider>
+		<Slider name="BreastCleavage" small="0" big="0">
+		  <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+		</Slider>
+		<Slider name="BreastFlatness" small="0" big="0">
+		  <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastGravity" small="0" big="0">
+		  <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+		</Slider>
+		<Slider name="PushUp" small="0" big="0">
+		  <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+		</Slider>
+		<Slider name="BreastHeight" small="0" big="0">
+		  <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+		</Slider>
+		<Slider name="BreastPerkiness" small="0" big="0">
+		  <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="BreastWidth" small="0" big="0">
+		  <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDistance" invert="true" small="100" big="100">
+		  <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+		</Slider>
+		<Slider name="NipplePerkiness" small="0" big="0">
+		  <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+		</Slider>
+		<Slider name="NippleLength" small="0" big="0">
+		  <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+		</Slider>
+		<Slider name="NippleSize" invert="true" small="100" big="100">
+		  <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+		</Slider>
+		<Slider name="NippleUp" small="0" big="0">
+		  <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+		</Slider>
+		<Slider name="NippleDown" small="0" big="0">
+		  <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+		</Slider>
+		<Slider name="NippleTip" small="0" big="0">
+		  <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+		</Slider>
+		<Slider name="Arms" invert="true" small="0" big="100">
+		  <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyArms" small="0" big="0">
+		  <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderSmooth" small="0" big="0">
+		  <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderWidth" invert="true" small="100" big="100">
+		  <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+		</Slider>
+		<Slider name="BigTorso" small="0" big="0">
+		  <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+		</Slider>
+		<Slider name="Waist" small="0" big="100">
+		  <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+		</Slider>
+		<Slider name="WideWaistLine" small="0" big="0" >
+		  <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyWaist" small="0" big="0">
+		  <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+		</Slider>
+		<Slider name="Belly" small="0" big="0">
+		  <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+		</Slider>
+		<Slider name="BigBelly" small="0" big="0">
+		  <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+		</Slider>
+		<Slider name="PregnancyBelly" small="0" big="0">
+		  <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+		</Slider>
+		<Slider name="RaiseBelly" small="0" big="0">
+		  <datafile name="RaiseBelly" target="BaseShape">RaiseBelly.bsd</datafile>
+		</Slider>
+		<Slider name="TummyTuck" small="0" big="0" >
+		  <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+		</Slider>
+		<Slider name="Back" small="0" big="0">
+		  <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+		</Slider>
+		<Slider name="Hipbone" small="0" big="0">
+		  <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+		</Slider>
+		<Slider name="Hips" small="0" big="0">
+		  <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+		</Slider>
+		<Slider name="ButtCrack" invert="true" small="100" big="100">
+		  <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+		</Slider>
+		<Slider name="Butt" invert="true" small="0" big="100">
+		  <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+		</Slider>
+		<Slider name="ButtSmall" invert="true" small="100" big="100">
+		  <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+		</Slider>
+		<Slider name="ButtShape2" invert="false" small="0" big="0">
+		  <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+		</Slider>
+		<Slider name="BigButt" small="0" big="0">
+		  <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyButt" small="0" big="0">
+		  <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+		</Slider>
+		<Slider name="AppleCheeks" small="0" big="0" >
+		  <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+		</Slider>
+		<Slider name="RoundAss" small="0" big="0" >
+		  <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+		</Slider>
+		<Slider name="Groin" small="0" big="0">
+		  <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+		</Slider>
+		<Slider name="SlimThighs" small="0" big="0">
+		  <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+		</Slider>
+		<Slider name="Thighs" small="0" big="0">
+		  <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+		</Slider>
+		<Slider name="ChubbyLegs" small="0" big="0">
+		  <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+		</Slider>
+		<Slider name="Legs" invert="true" small="0" big="100">
+		  <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+		</Slider>
+		<Slider name="KneeHeight" small="0" big="0">
+		  <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSize" small="0" big="0">
+		  <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+		</Slider>
+		<Slider name="CalfSmooth" small="0" big="0">
+		  <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+		</Slider>
+		<Slider name="Ankles" small="100" big="100" invert="true">
+		  <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+		</Slider>
+		<Slider name="SmallSeam" small="100" big="0" hidden="true">
+		  <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+		</Slider>
+		<Slider name="ShoulderTweak" small="100" big="100" hidden="true">
+		  <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamHi" invert="false" hidden="true" small="0" big="100" clamp="true" >
+		  <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi.bsd</datafile>
+		</Slider>
+		<Slider name="NH_LockSeamLo" invert="false" hidden="true" small="100" big="0" clamp="true" >
+		  <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo.bsd</datafile>
+		</Slider>
+	</SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,34 @@
+<SliderGroups>
+	<Group name="CalienteClothing">
+		<Member name="CalClothes - FarmClothes01" />
+		<Member name="CalClothes - FarmClothes02" />
+		<Member name="CalClothes - FarmClothes03" />
+		<Member name="CalClothes - FarmClothes03Plus" />
+		<Member name="CalClothes - FarmClothes04" />
+		<Member name="CalClothes - Barkeep" />
+		<Member name="CalClothes - Chef" />
+		<Member name="CalClothes - Wench" />
+		<Member name="CalClothes - Merchant" />
+		<Member name="CalClothes - Miner" />
+		<Member name="CalClothes - Blacksmith" />
+		<Member name="CalClothes - Beggar" />
+		<Member name="CalClothes - RoughspunTunic" />
+		<Member name="CalClothes - Prisoner Rags" />
+	</Group>
+	<Group name="CalienteVanillaClothing">
+		<Member name="CalClothes - Vanilla FarmClothes01" />
+		<Member name="CalClothes - Vanilla FarmClothes02" />
+		<Member name="CalClothes - Vanilla FarmClothes03" />
+		<Member name="CalClothes - Vanilla FarmClothes03Plus" />
+		<Member name="CalClothes - Vanilla FarmClothes04" />
+		<Member name="CalClothes - Vanilla Barkeep" />
+		<Member name="CalClothes - Vanilla Chef" />
+		<Member name="CalClothes - Vanilla Wench" />
+		<Member name="CalClothes - Vanilla Merchant" />
+		<Member name="CalClothes - Vanilla Miner" />
+		<Member name="CalClothes - Vanilla Blacksmith" />
+		<Member name="CalClothes - Vanilla Beggar" />
+		<Member name="CalClothes - Vanilla RoughspunTunic" />
+		<Member name="CalClothes - Vanilla Prisoner Rags" />
+	</Group>
+</SliderGroups>

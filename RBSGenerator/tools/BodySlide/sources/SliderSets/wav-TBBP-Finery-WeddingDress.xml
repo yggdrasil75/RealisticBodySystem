@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SliderSetInfo>
+    <SliderSet name="wav-TBBP-Finery-WeddingDress">
+        <SetFolder>wav-TBBP-Finery-WeddingDress</SetFolder>
+        <SourceFile>wav-TBBP-Finery-WeddingDress.nif</SourceFile>
+        <OutputPath>meshes\clothes\weddingdress</OutputPath>
+        <OutputFile>outfitf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="Ribbon">Ribbon</BaseShapeName>
+        <BaseShapeName target="Skirt">Skirt</BaseShapeName>
+        <BaseShapeName target="Stone">Stone</BaseShapeName>
+        <BaseShapeName target="Touka">Touka</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="ToukaBreasts" target="Touka" local="true">ToukaBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="SkirtBreastsSmall" target="Skirt" local="true">SkirtBreastsSmall.bsd</datafile>
+            <datafile name="ToukaBreastsSmall" target="Touka" local="true">ToukaBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="ToukaBreastsSH" target="Touka" local="true">ToukaBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="ToukaBreastsSSH" target="Touka" local="true">ToukaBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+            <datafile name="ToukaBreastsFantasy" target="Touka" local="true">ToukaBreastsFantasy.bsd</datafile>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+            <datafile name="ToukaDoubleMelon" target="Touka" local="true">ToukaDoubleMelon.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="ToukaBreastCleavage" target="Touka" local="true">ToukaBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+            <datafile name="SkirtBreastFlatness" target="Skirt" local="true">SkirtBreastFlatness.bsd</datafile>
+            <datafile name="RibbonBreastFlatness" target="Ribbon" local="true">RibbonBreastFlatness.bsd</datafile>
+            <datafile name="ToukaBreastFlatness" target="Touka" local="true">ToukaBreastFlatness.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="ToukaBreastGravity" target="Touka" local="true">ToukaBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+            <datafile name="ToukaPushUp" target="Touka" local="true">ToukaPushUp.bsd</datafile>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+            <datafile name="SkirtBreastHeight" target="Skirt" local="true">SkirtBreastHeight.bsd</datafile>
+            <datafile name="RibbonBreastHeight" target="Ribbon" local="true">RibbonBreastHeight.bsd</datafile>
+            <datafile name="ToukaBreastHeight" target="Touka" local="true">ToukaBreastHeight.bsd</datafile>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+            <datafile name="ToukaBreastPerkiness" target="Touka" local="true">ToukaBreastPerkiness.bsd</datafile>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+            <datafile name="SkirtBreastWidth" target="Skirt" local="true">SkirtBreastWidth.bsd</datafile>
+            <datafile name="RibbonBreastWidth" target="Ribbon" local="true">RibbonBreastWidth.bsd</datafile>
+            <datafile name="ToukaBreastWidth" target="Touka" local="true">ToukaBreastWidth.bsd</datafile>
+        </Slider>
+        <Slider name="NippleDistance" invert="true" small="100" big="100">
+            <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+            <datafile name="ToukaNippleDistance" target="Touka" local="true">ToukaNippleDistance.bsd</datafile>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+            <datafile name="ToukaNipplePerkiness" target="Touka" local="true">ToukaNipplePerkiness.bsd</datafile>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+            <datafile name="ToukaNippleLength" target="Touka" local="true">ToukaNippleLength.bsd</datafile>
+        </Slider>
+        <Slider name="NippleSize" invert="true" small="100" big="100">
+            <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+            <datafile name="ToukaNippleSize" target="Touka" local="true">ToukaNippleSize.bsd</datafile>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+            <datafile name="ToukaNippleUp" target="Touka" local="true">ToukaNippleUp.bsd</datafile>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+            <datafile name="ToukaNippleDown" target="Touka" local="true">ToukaNippleDown.bsd</datafile>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+            <datafile name="ToukaNippleTip" target="Touka" local="true">ToukaNippleTip.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+            <datafile name="ToukaArms" target="Touka" local="true">ToukaArms.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+            <datafile name="ToukaChubbyArms" target="Touka" local="true">ToukaChubbyArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+            <datafile name="ToukaShoulderSmooth" target="Touka" local="true">ToukaShoulderSmooth.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="ToukaShoulderWidth" target="Touka" local="true">ToukaShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+            <datafile name="StoneBigTorso" target="Stone" local="true">StoneBigTorso.bsd</datafile>
+            <datafile name="SkirtBigTorso" target="Skirt" local="true">SkirtBigTorso.bsd</datafile>
+            <datafile name="RibbonBigTorso" target="Ribbon" local="true">RibbonBigTorso.bsd</datafile>
+            <datafile name="ToukaBigTorso" target="Touka" local="true">ToukaBigTorso.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="StoneWaist" target="Stone" local="true">StoneWaist.bsd</datafile>
+            <datafile name="SkirtWaist" target="Skirt" local="true">SkirtWaist.bsd</datafile>
+            <datafile name="RibbonWaist" target="Ribbon" local="true">RibbonWaist.bsd</datafile>
+            <datafile name="ToukaWaist" target="Touka" local="true">ToukaWaist.bsd</datafile>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+            <datafile name="SkirtWideWaistLine" target="Skirt" local="true">SkirtWideWaistLine.bsd</datafile>
+            <datafile name="RibbonWideWaistLine" target="Ribbon" local="true">RibbonWideWaistLine.bsd</datafile>
+            <datafile name="ToukaWideWaistLine" target="Touka" local="true">ToukaWideWaistLine.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+            <datafile name="StoneChubbyWaist" target="Stone" local="true">StoneChubbyWaist.bsd</datafile>
+            <datafile name="SkirtChubbyWaist" target="Skirt" local="true">SkirtChubbyWaist.bsd</datafile>
+            <datafile name="RibbonChubbyWaist" target="Ribbon" local="true">RibbonChubbyWaist.bsd</datafile>
+            <datafile name="ToukaChubbyWaist" target="Touka" local="true">ToukaChubbyWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="SkirtBelly" target="Skirt" local="true">SkirtBelly.bsd</datafile>
+            <datafile name="ToukaBelly" target="Touka" local="true">ToukaBelly.bsd</datafile>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+            <datafile name="SkirtBigBelly" target="Skirt" local="true">SkirtBigBelly.bsd</datafile>
+            <datafile name="ToukaBigBelly" target="Touka" local="true">ToukaBigBelly.bsd</datafile>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+            <datafile name="SkirtPregnancyBelly" target="Skirt" local="true">SkirtPregnancyBelly.bsd</datafile>
+            <datafile name="RibbonPregnancyBelly" target="Ribbon" local="true">RibbonPregnancyBelly.bsd</datafile>
+            <datafile name="ToukaPregnancyBelly" target="Touka" local="true">ToukaPregnancyBelly.bsd</datafile>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+            <datafile name="SkirtTummyTuck" target="Skirt" local="true">SkirtTummyTuck.bsd</datafile>
+            <datafile name="ToukaTummyTuck" target="Touka" local="true">ToukaTummyTuck.bsd</datafile>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+            <datafile name="StoneBack" target="Stone" local="true">StoneBack.bsd</datafile>
+            <datafile name="SkirtBack" target="Skirt" local="true">SkirtBack.bsd</datafile>
+            <datafile name="RibbonBack" target="Ribbon" local="true">RibbonBack.bsd</datafile>
+            <datafile name="ToukaBack" target="Touka" local="true">ToukaBack.bsd</datafile>
+        </Slider>
+        <Slider name="Hipbone" invert="false" small="0" big="0">
+            <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+            <datafile name="SkirtHipbone" target="Skirt" local="true">SkirtHipbone.bsd</datafile>
+            <datafile name="RibbonHipbone" target="Ribbon" local="true">RibbonHipbone.bsd</datafile>
+            <datafile name="ToukaHipbone" target="Touka" local="true">ToukaHipbone.bsd</datafile>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+            <datafile name="StoneHips" target="Stone" local="true">StoneHips.bsd</datafile>
+            <datafile name="SkirtHips" target="Skirt" local="true">SkirtHips.bsd</datafile>
+            <datafile name="RibbonHips" target="Ribbon" local="true">RibbonHips.bsd</datafile>
+            <datafile name="ToukaHips" target="Touka" local="true">ToukaHips.bsd</datafile>
+        </Slider>
+        <Slider name="ButtCrack" invert="true" small="100" big="100">
+            <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+            <datafile name="SkirtButtCrack" target="Skirt" local="true">SkirtButtCrack.bsd</datafile>
+            <datafile name="RibbonButtCrack" target="Ribbon" local="true">RibbonButtCrack.bsd</datafile>
+            <datafile name="ToukaButtCrack" target="Touka" local="true">ToukaButtCrack.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="StoneButt" target="Stone" local="true">StoneButt.bsd</datafile>
+            <datafile name="SkirtButt" target="Skirt" local="true">SkirtButt.bsd</datafile>
+            <datafile name="RibbonButt" target="Ribbon" local="true">RibbonButt.bsd</datafile>
+            <datafile name="ToukaButt" target="Touka" local="true">ToukaButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="StoneButtSmall" target="Stone" local="true">StoneButtSmall.bsd</datafile>
+            <datafile name="SkirtButtSmall" target="Skirt" local="true">SkirtButtSmall.bsd</datafile>
+            <datafile name="RibbonButtSmall" target="Ribbon" local="true">RibbonButtSmall.bsd</datafile>
+            <datafile name="ToukaButtSmall" target="Touka" local="true">ToukaButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="StoneButtShape2" target="Stone" local="true">StoneButtShape2.bsd</datafile>
+            <datafile name="SkirtButtShape2" target="Skirt" local="true">SkirtButtShape2.bsd</datafile>
+            <datafile name="RibbonButtShape2" target="Ribbon" local="true">RibbonButtShape2.bsd</datafile>
+            <datafile name="ToukaButtShape2" target="Touka" local="true">ToukaButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+            <datafile name="StoneBigButt" target="Stone" local="true">StoneBigButt.bsd</datafile>
+            <datafile name="SkirtBigButt" target="Skirt" local="true">SkirtBigButt.bsd</datafile>
+            <datafile name="RibbonBigButt" target="Ribbon" local="true">RibbonBigButt.bsd</datafile>
+            <datafile name="ToukaBigButt" target="Touka" local="true">ToukaBigButt.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+            <datafile name="StoneChubbyButt" target="Stone" local="true">StoneChubbyButt.bsd</datafile>
+            <datafile name="SkirtChubbyButt" target="Skirt" local="true">SkirtChubbyButt.bsd</datafile>
+            <datafile name="RibbonChubbyButt" target="Ribbon" local="true">RibbonChubbyButt.bsd</datafile>
+            <datafile name="ToukaChubbyButt" target="Touka" local="true">ToukaChubbyButt.bsd</datafile>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+            <datafile name="StoneAppleCheeks" target="Stone" local="true">StoneAppleCheeks.bsd</datafile>
+            <datafile name="SkirtAppleCheeks" target="Skirt" local="true">SkirtAppleCheeks.bsd</datafile>
+            <datafile name="RibbonAppleCheeks" target="Ribbon" local="true">RibbonAppleCheeks.bsd</datafile>
+            <datafile name="ToukaAppleCheeks" target="Touka" local="true">ToukaAppleCheeks.bsd</datafile>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+            <datafile name="StoneRoundAss" target="Stone" local="true">StoneRoundAss.bsd</datafile>
+            <datafile name="SkirtRoundAss" target="Skirt" local="true">SkirtRoundAss.bsd</datafile>
+            <datafile name="RibbonRoundAss" target="Ribbon" local="true">RibbonRoundAss.bsd</datafile>
+            <datafile name="ToukaRoundAss" target="Touka" local="true">ToukaRoundAss.bsd</datafile>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+            <datafile name="SkirtGroin" target="Skirt" local="true">SkirtGroin.bsd</datafile>
+            <datafile name="ToukaGroin" target="Touka" local="true">ToukaGroin.bsd</datafile>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+            <datafile name="StoneSlimThighs" target="Stone" local="true">StoneSlimThighs.bsd</datafile>
+            <datafile name="SkirtSlimThighs" target="Skirt" local="true">SkirtSlimThighs.bsd</datafile>
+            <datafile name="RibbonSlimThighs" target="Ribbon" local="true">RibbonSlimThighs.bsd</datafile>
+            <datafile name="ToukaSlimThighs" target="Touka" local="true">ToukaSlimThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="SkirtThighs" target="Skirt" local="true">SkirtThighs.bsd</datafile>
+            <datafile name="ToukaThighs" target="Touka" local="true">ToukaThighs.bsd</datafile>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+            <datafile name="SkirtChubbyLegs" target="Skirt" local="true">SkirtChubbyLegs.bsd</datafile>
+            <datafile name="RibbonChubbyLegs" target="Ribbon" local="true">RibbonChubbyLegs.bsd</datafile>
+            <datafile name="ToukaChubbyLegs" target="Touka" local="true">ToukaChubbyLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+            <datafile name="SkirtLegs" target="Skirt" local="true">SkirtLegs.bsd</datafile>
+            <datafile name="ToukaLegs" target="Touka" local="true">ToukaLegs.bsd</datafile>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+            <datafile name="SkirtKneeHeight" target="Skirt" local="true">SkirtKneeHeight.bsd</datafile>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+            <datafile name="SkirtCalfSize" target="Skirt" local="true">SkirtCalfSize.bsd</datafile>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+            <datafile name="SkirtCalfSmooth" target="Skirt" local="true">SkirtCalfSmooth.bsd</datafile>
+        </Slider>
+        <Slider name="Ankles" invert="true" small="100" big="100">
+            <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+            <datafile name="SkirtAnkles" target="Skirt" local="true">SkirtAnkles.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" small="100" big="0" hidden="true">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+            <datafile name="SkirtSmallSeam" target="Skirt" local="true">SkirtSmallSeam.bsd</datafile>
+            <datafile name="ToukaSmallSeam" target="Touka" local="true">ToukaSmallSeam.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="100" big="100" hidden="true">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+            <datafile name="ToukaShoulderTweak" target="Touka" local="true">ToukaShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NH_LockSeamHi" invert="false" small="0" big="100" hidden="true" clamp="true">
+            <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi2.bsd</datafile>
+        </Slider>
+        <Slider name="NH_LockSeamLo" invert="false" small="100" big="0" hidden="true" clamp="true">
+            <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo2.bsd</datafile>
+        </Slider>
+        <Slider name="BodyZAPT3" invert="false" small="100" big="100" hidden="true" zap="true">
+            <datafile name="BaseShapeBodyZAPT3" target="BaseShape" local="true">BaseShapeBodyZAPT3.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

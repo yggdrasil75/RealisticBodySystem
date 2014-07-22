@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SliderSetInfo>
+  <SliderSet name="wav-TBBP-Finery-Yarl03">
+    <SetFolder>wav-TBBP-Finery-Yarl03</SetFolder>
+    <SourceFile>wav-TBBP-Finery-Yarl03.nif</SourceFile>
+    <OutputPath>meshes\clothes\yarlclothes03</OutputPath>
+    <OutputFile>outfitf</OutputFile>
+    <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+    <BaseShapeName target="YarlClothesF">YarlClothesF</BaseShapeName>
+    <BaseShapeName target="YarlClothesF.001">YarlClothesF.001</BaseShapeName>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+      <datafile name="YarlClothesFBreasts" target="YarlClothesF" local="true">YarlClothesFBreasts.bsd</datafile>
+      <datafile name="YarlClothesF.001Breasts" target="YarlClothesF.001" local="true">YarlClothesF.001Breasts.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+      <datafile name="YarlClothesFBreastsSmall" target="YarlClothesF" local="true">YarlClothesFBreastsSmall.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastsSmall" target="YarlClothesF.001" local="true">YarlClothesF.001BreastsSmall.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+      <datafile name="YarlClothesFBreastsSH" target="YarlClothesF" local="true">YarlClothesFBreastsSH.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastsSH" target="YarlClothesF.001" local="true">YarlClothesF.001BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+      <datafile name="YarlClothesFBreastsSSH" target="YarlClothesF" local="true">YarlClothesFBreastsSSH.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastsSSH" target="YarlClothesF.001" local="true">YarlClothesF.001BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+      <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+      <datafile name="YarlClothesFBreastsFantasy" target="YarlClothesF" local="true">YarlClothesFBreastsFantasy.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastsFantasy" target="YarlClothesF.001" local="true">YarlClothesF.001BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" invert="false" small="0" big="0">
+      <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+      <datafile name="YarlClothesFDoubleMelon" target="YarlClothesF" local="true">YarlClothesFDoubleMelon.bsd</datafile>
+      <datafile name="YarlClothesF.001DoubleMelon" target="YarlClothesF.001" local="true">YarlClothesF.001DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" invert="false" small="0" big="0">
+      <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+      <datafile name="YarlClothesFBreastCleavage" target="YarlClothesF" local="true">YarlClothesFBreastCleavage.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastCleavage" target="YarlClothesF.001" local="true">YarlClothesF.001BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" invert="false" small="0" big="0">
+      <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+      <datafile name="YarlClothesFBreastFlatness" target="YarlClothesF" local="true">YarlClothesFBreastFlatness.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastFlatness" target="YarlClothesF.001" local="true">YarlClothesF.001BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" invert="false" small="0" big="0">
+      <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+      <datafile name="YarlClothesFBreastGravity" target="YarlClothesF" local="true">YarlClothesFBreastGravity.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastGravity" target="YarlClothesF.001" local="true">YarlClothesF.001BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" invert="false" small="0" big="0">
+      <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+      <datafile name="YarlClothesFPushUp" target="YarlClothesF" local="true">YarlClothesFPushUp.bsd</datafile>
+      <datafile name="YarlClothesF.001PushUp" target="YarlClothesF.001" local="true">YarlClothesF.001PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" invert="false" small="0" big="0">
+      <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+      <datafile name="YarlClothesFBreastHeight" target="YarlClothesF" local="true">YarlClothesFBreastHeight.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastHeight" target="YarlClothesF.001" local="true">YarlClothesF.001BreastHeight.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+      <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+      <datafile name="YarlClothesFBreastPerkiness" target="YarlClothesF" local="true">YarlClothesFBreastPerkiness.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastPerkiness" target="YarlClothesF.001" local="true">YarlClothesF.001BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" invert="false" small="0" big="0">
+      <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+      <datafile name="YarlClothesFBreastWidth" target="YarlClothesF" local="true">YarlClothesFBreastWidth.bsd</datafile>
+      <datafile name="YarlClothesF.001BreastWidth" target="YarlClothesF.001" local="true">YarlClothesF.001BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDistance" invert="true" small="100" big="100">
+      <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+      <datafile name="YarlClothesFNippleDistance" target="YarlClothesF" local="true">YarlClothesFNippleDistance.bsd</datafile>
+      <datafile name="YarlClothesF.001NippleDistance" target="YarlClothesF.001" local="true">YarlClothesF.001NippleDistance.bsd</datafile>
+    </Slider>
+    <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+      <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+      <datafile name="YarlClothesFNipplePerkiness" target="YarlClothesF" local="true">YarlClothesFNipplePerkiness.bsd</datafile>
+      <datafile name="YarlClothesF.001NipplePerkiness" target="YarlClothesF.001" local="true">YarlClothesF.001NipplePerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="NippleLength" invert="false" small="0" big="0">
+      <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+      <datafile name="YarlClothesFNippleLength" target="YarlClothesF" local="true">YarlClothesFNippleLength.bsd</datafile>
+      <datafile name="YarlClothesF.001NippleLength" target="YarlClothesF.001" local="true">YarlClothesF.001NippleLength.bsd</datafile>
+    </Slider>
+    <Slider name="NippleSize" invert="true" small="100" big="100">
+      <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+      <datafile name="YarlClothesFNippleSize" target="YarlClothesF" local="true">YarlClothesFNippleSize.bsd</datafile>
+      <datafile name="YarlClothesF.001NippleSize" target="YarlClothesF.001" local="true">YarlClothesF.001NippleSize.bsd</datafile>
+    </Slider>
+    <Slider name="NippleUp" invert="false" small="0" big="0">
+      <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+      <datafile name="YarlClothesFNippleUp" target="YarlClothesF" local="true">YarlClothesFNippleUp.bsd</datafile>
+      <datafile name="YarlClothesF.001NippleUp" target="YarlClothesF.001" local="true">YarlClothesF.001NippleUp.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDown" invert="false" small="0" big="0">
+      <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+      <datafile name="YarlClothesFNippleDown" target="YarlClothesF" local="true">YarlClothesFNippleDown.bsd</datafile>
+      <datafile name="YarlClothesF.001NippleDown" target="YarlClothesF.001" local="true">YarlClothesF.001NippleDown.bsd</datafile>
+    </Slider>
+    <Slider name="NippleTip" invert="false" small="0" big="0">
+      <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+      <datafile name="YarlClothesFNippleTip" target="YarlClothesF" local="true">YarlClothesFNippleTip.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+      <datafile name="YarlClothesFArms" target="YarlClothesF" local="true">YarlClothesFArms.bsd</datafile>
+      <datafile name="YarlClothesF.001Arms" target="YarlClothesF.001" local="true">YarlClothesF.001Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" invert="false" small="0" big="0">
+      <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+      <datafile name="YarlClothesFChubbyArms" target="YarlClothesF" local="true">YarlClothesFChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+      <datafile name="YarlClothesFShoulderSmooth" target="YarlClothesF" local="true">YarlClothesFShoulderSmooth.bsd</datafile>
+      <datafile name="YarlClothesF.001ShoulderSmooth" target="YarlClothesF.001" local="true">YarlClothesF.001ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+      <datafile name="YarlClothesFShoulderWidth" target="YarlClothesF" local="true">YarlClothesFShoulderWidth.bsd</datafile>
+      <datafile name="YarlClothesF.001ShoulderWidth" target="YarlClothesF.001" local="true">YarlClothesF.001ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" invert="false" small="0" big="0">
+      <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+      <datafile name="YarlClothesFBigTorso" target="YarlClothesF" local="true">YarlClothesFBigTorso.bsd</datafile>
+      <datafile name="YarlClothesF.001BigTorso" target="YarlClothesF.001" local="true">YarlClothesF.001BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="false" small="0" big="100">
+      <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+      <datafile name="YarlClothesFWaist" target="YarlClothesF" local="true">YarlClothesFWaist.bsd</datafile>
+      <datafile name="YarlClothesF.001Waist" target="YarlClothesF.001" local="true">YarlClothesF.001Waist.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" invert="false" small="0" big="0">
+      <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+      <datafile name="YarlClothesFWideWaistLine" target="YarlClothesF" local="true">YarlClothesFWideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+      <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+      <datafile name="YarlClothesFChubbyWaist" target="YarlClothesF" local="true">YarlClothesFChubbyWaist.bsd</datafile>
+      <datafile name="YarlClothesF.001ChubbyWaist" target="YarlClothesF.001" local="true">YarlClothesF.001ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" invert="false" small="0" big="0">
+      <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+      <datafile name="YarlClothesFBelly" target="YarlClothesF" local="true">YarlClothesFBelly.bsd</datafile>
+      <datafile name="YarlClothesF.001Belly" target="YarlClothesF.001" local="true">YarlClothesF.001Belly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" invert="false" small="0" big="0">
+      <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+      <datafile name="YarlClothesFBigBelly" target="YarlClothesF" local="true">YarlClothesFBigBelly.bsd</datafile>
+      <datafile name="YarlClothesF.001BigBelly" target="YarlClothesF.001" local="true">YarlClothesF.001BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+      <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+      <datafile name="YarlClothesFPregnancyBelly" target="YarlClothesF" local="true">YarlClothesFPregnancyBelly.bsd</datafile>
+      <datafile name="YarlClothesF.001PregnancyBelly" target="YarlClothesF.001" local="true">YarlClothesF.001PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" invert="false" small="0" big="0">
+      <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+      <datafile name="YarlClothesFTummyTuck" target="YarlClothesF" local="true">YarlClothesFTummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" invert="false" small="0" big="0">
+      <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+      <datafile name="YarlClothesFBack" target="YarlClothesF" local="true">YarlClothesFBack.bsd</datafile>
+      <datafile name="YarlClothesF.001Back" target="YarlClothesF.001" local="true">YarlClothesF.001Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" invert="false" small="0" big="0">
+      <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+      <datafile name="YarlClothesFHipbone" target="YarlClothesF" local="true">YarlClothesFHipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" invert="false" small="0" big="0">
+      <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+      <datafile name="YarlClothesFHips" target="YarlClothesF" local="true">YarlClothesFHips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+      <datafile name="YarlClothesFButtCrack" target="YarlClothesF" local="true">YarlClothesFButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+      <datafile name="YarlClothesFButt" target="YarlClothesF" local="true">YarlClothesFButt.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+      <datafile name="YarlClothesFButtSmall" target="YarlClothesF" local="true">YarlClothesFButtSmall.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" invert="false" small="0" big="0">
+      <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+      <datafile name="YarlClothesFButtShape2" target="YarlClothesF" local="true">YarlClothesFButtShape2.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" invert="false" small="0" big="0">
+      <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+      <datafile name="YarlClothesFBigButt" target="YarlClothesF" local="true">YarlClothesFBigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" invert="false" small="0" big="0">
+      <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+      <datafile name="YarlClothesFChubbyButt" target="YarlClothesF" local="true">YarlClothesFChubbyButt.bsd</datafile>
+      <datafile name="YarlClothesF.001ChubbyButt" target="YarlClothesF.001" local="true">YarlClothesF.001ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" invert="false" small="0" big="0">
+      <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+      <datafile name="YarlClothesFAppleCheeks" target="YarlClothesF" local="true">YarlClothesFAppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" invert="false" small="0" big="0">
+      <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+      <datafile name="YarlClothesFRoundAss" target="YarlClothesF" local="true">YarlClothesFRoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" invert="false" small="0" big="0">
+      <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+      <datafile name="YarlClothesFGroin" target="YarlClothesF" local="true">YarlClothesFGroin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" invert="false" small="0" big="0">
+      <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+      <datafile name="YarlClothesFSlimThighs" target="YarlClothesF" local="true">YarlClothesFSlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" invert="false" small="0" big="0">
+      <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+      <datafile name="YarlClothesFThighs" target="YarlClothesF" local="true">YarlClothesFThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+      <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+      <datafile name="YarlClothesFChubbyLegs" target="YarlClothesF" local="true">YarlClothesFChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+      <datafile name="YarlClothesFLegs" target="YarlClothesF" local="true">YarlClothesFLegs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" invert="false" small="0" big="0">
+      <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+      <datafile name="YarlClothesFKneeHeight" target="YarlClothesF" local="true">YarlClothesFKneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" invert="false" small="0" big="0">
+      <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+      <datafile name="YarlClothesFCalfSize" target="YarlClothesF" local="true">YarlClothesFCalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" invert="false" small="0" big="0">
+      <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+      <datafile name="YarlClothesFCalfSmooth" target="YarlClothesF" local="true">YarlClothesFCalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" invert="true" small="100" big="100">
+      <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+      <datafile name="YarlClothesFAnkles" target="YarlClothesF" local="true">YarlClothesFAnkles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" invert="false" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+      <datafile name="YarlClothesFSmallSeam" target="YarlClothesF" local="true">YarlClothesFSmallSeam.bsd</datafile>
+      <datafile name="YarlClothesF.001SmallSeam" target="YarlClothesF.001" local="true">YarlClothesF.001SmallSeam.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderTweak" invert="false" small="100" big="100" hidden="true">
+      <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+      <datafile name="YarlClothesFShoulderTweak" target="YarlClothesF" local="true">YarlClothesFShoulderTweak.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" small="0" big="100" hidden="true" clamp="true">
+      <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi2.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" small="100" big="0" hidden="true" clamp="true">
+      <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo2.bsd</datafile>
+    </Slider>
+    <Slider name="BodyZAPT" invert="false" small="100" big="100" hidden="true" zap="true">
+      <datafile name="BaseShapeBodyZAPT" target="BaseShape" local="true">BaseShapeBodyZAPT.bsd</datafile>
+    </Slider>
+  </SliderSet>
+</SliderSetInfo>
