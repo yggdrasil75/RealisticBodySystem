@@ -111,6 +111,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToBodyCreator = SkyProcStarter.pathNonVirtualized + "RBSGenerator" + File.separator + "tools" + File.separator + "autoit" + File.separator;
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
+/*
         int result = JOptionPane.showConfirmDialog(null, "Do you want to run BodyCreator?", "RBS ", JOptionPane.YES_NO_CANCEL_OPTION);
         if (result == 0) {
 
@@ -121,7 +122,7 @@ public class SkyProcStarter implements SUM {
             RBS_UsefullFunctions.msgbox(command);
 
         }
-
+*/
         save.init();
         try {
             SPGlobal.createGlobalLog();

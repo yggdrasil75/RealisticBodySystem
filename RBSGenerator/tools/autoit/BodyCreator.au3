@@ -17,7 +17,6 @@ else
 EndIf
 
 global $MeshesPath = _PathFull ($scriptDir&"\..\..\..\meshes")
-MsgBOX (0,"jajaj", $MeshesPath)
 global $BodySlidePath = _PathFull ($scriptDir&"\..\..\tools\Bodyslide")
 global $BodySlideSourcesPath = _PathFull ($scriptDir&"\..\..\tools\Bodyslide\sources")
 global $modPath = _PathFull ($scriptDir&"\..\..\..\")
