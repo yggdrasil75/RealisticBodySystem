@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SliderSetInfo>
+  <SliderSet name="wav-TBBP-Misc-Redguard">
+    <SetFolder>wav-TBBP-Misc-Redguard</SetFolder>
+    <SourceFile>wav-TBBP-Misc-Redguard.nif</SourceFile>
+    <OutputPath>meshes\clothes\redguard</OutputPath>
+    <OutputFile>redguardoutfitf</OutputFile>
+    <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+    <BaseShapeName target="Redguard Outfit">Redguard Outfit</BaseShapeName>
+    <BaseShapeName target="Redguard Outfit.Cape">Redguard Outfit.Cape</BaseShapeName>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+      <datafile name="Redguard OutfitBreasts" target="Redguard Outfit" local="true">Redguard OutfitBreasts.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+      <datafile name="Redguard OutfitBreastsSmall" target="Redguard Outfit" local="true">Redguard OutfitBreastsSmall.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+      <datafile name="Redguard OutfitBreastsSH" target="Redguard Outfit" local="true">Redguard OutfitBreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" invert="false" small="0" big="0">
+      <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+      <datafile name="Redguard OutfitBreastsSSH" target="Redguard Outfit" local="true">Redguard OutfitBreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+      <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+      <datafile name="Redguard OutfitBreastsFantasy" target="Redguard Outfit" local="true">Redguard OutfitBreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" invert="false" small="0" big="0">
+      <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+      <datafile name="Redguard OutfitDoubleMelon" target="Redguard Outfit" local="true">Redguard OutfitDoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" invert="false" small="0" big="0">
+      <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+      <datafile name="Redguard OutfitBreastCleavage" target="Redguard Outfit" local="true">Redguard OutfitBreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" invert="false" small="0" big="0">
+      <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+      <datafile name="Redguard OutfitBreastFlatness" target="Redguard Outfit" local="true">Redguard OutfitBreastFlatness.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBreastFlatness" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" invert="false" small="0" big="0">
+      <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+      <datafile name="Redguard OutfitBreastGravity" target="Redguard Outfit" local="true">Redguard OutfitBreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" invert="false" small="0" big="0">
+      <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+      <datafile name="Redguard OutfitPushUp" target="Redguard Outfit" local="true">Redguard OutfitPushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" invert="false" small="0" big="0">
+      <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+      <datafile name="Redguard OutfitBreastHeight" target="Redguard Outfit" local="true">Redguard OutfitBreastHeight.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBreastHeight" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBreastHeight.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+      <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+      <datafile name="Redguard OutfitBreastPerkiness" target="Redguard Outfit" local="true">Redguard OutfitBreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" invert="false" small="0" big="0">
+      <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+      <datafile name="Redguard OutfitBreastWidth" target="Redguard Outfit" local="true">Redguard OutfitBreastWidth.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBreastWidth" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDistance" invert="true" small="100" big="100">
+      <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+      <datafile name="Redguard OutfitNippleDistance" target="Redguard Outfit" local="true">Redguard OutfitNippleDistance.bsd</datafile>
+    </Slider>
+    <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+      <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+      <datafile name="Redguard OutfitNipplePerkiness" target="Redguard Outfit" local="true">Redguard OutfitNipplePerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="NippleLength" invert="false" small="0" big="0">
+      <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+      <datafile name="Redguard OutfitNippleLength" target="Redguard Outfit" local="true">Redguard OutfitNippleLength.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeNippleLength" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeNippleLength.bsd</datafile>
+    </Slider>
+    <Slider name="NippleSize" invert="true" small="100" big="100">
+      <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+      <datafile name="Redguard OutfitNippleSize" target="Redguard Outfit" local="true">Redguard OutfitNippleSize.bsd</datafile>
+    </Slider>
+    <Slider name="NippleUp" invert="false" small="0" big="0">
+      <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+      <datafile name="Redguard OutfitNippleUp" target="Redguard Outfit" local="true">Redguard OutfitNippleUp.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDown" invert="false" small="0" big="0">
+      <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+      <datafile name="Redguard OutfitNippleDown" target="Redguard Outfit" local="true">Redguard OutfitNippleDown.bsd</datafile>
+    </Slider>
+    <Slider name="NippleTip" invert="false" small="0" big="0">
+      <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+      <datafile name="Redguard OutfitNippleTip" target="Redguard Outfit" local="true">Redguard OutfitNippleTip.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+      <datafile name="Redguard OutfitArms" target="Redguard Outfit" local="true">Redguard OutfitArms.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeArms" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeArms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" invert="false" small="0" big="0">
+      <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+      <datafile name="Redguard OutfitChubbyArms" target="Redguard Outfit" local="true">Redguard OutfitChubbyArms.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeChubbyArms" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+      <datafile name="Redguard OutfitShoulderSmooth" target="Redguard Outfit" local="true">Redguard OutfitShoulderSmooth.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeShoulderSmooth" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+      <datafile name="Redguard OutfitShoulderWidth" target="Redguard Outfit" local="true">Redguard OutfitShoulderWidth.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeShoulderWidth" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" invert="false" small="0" big="0">
+      <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+      <datafile name="Redguard OutfitBigTorso" target="Redguard Outfit" local="true">Redguard OutfitBigTorso.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBigTorso" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="false" small="0" big="100">
+      <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+      <datafile name="Redguard OutfitWaist" target="Redguard Outfit" local="true">Redguard OutfitWaist.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeWaist" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeWaist.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" invert="false" small="0" big="0">
+      <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+      <datafile name="Redguard OutfitWideWaistLine" target="Redguard Outfit" local="true">Redguard OutfitWideWaistLine.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeWideWaistLine" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeWideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+      <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+      <datafile name="Redguard OutfitChubbyWaist" target="Redguard Outfit" local="true">Redguard OutfitChubbyWaist.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeChubbyWaist" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" invert="false" small="0" big="0">
+      <datafile name="Belly" target="BaseShape">CalBelly.bsd</datafile>
+      <datafile name="Redguard OutfitBelly" target="Redguard Outfit" local="true">Redguard OutfitBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" invert="false" small="0" big="0">
+      <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+      <datafile name="Redguard OutfitBigBelly" target="Redguard Outfit" local="true">Redguard OutfitBigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+      <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+      <datafile name="Redguard OutfitPregnancyBelly" target="Redguard Outfit" local="true">Redguard OutfitPregnancyBelly.bsd</datafile>
+      <datafile name="Redguard Outfit.CapePregnancyBelly" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapePregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" invert="false" small="0" big="0">
+      <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+      <datafile name="Redguard OutfitTummyTuck" target="Redguard Outfit" local="true">Redguard OutfitTummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" invert="false" small="0" big="0">
+      <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+      <datafile name="Redguard OutfitBack" target="Redguard Outfit" local="true">Redguard OutfitBack.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBack" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBack.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" invert="false" small="0" big="0">
+      <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+      <datafile name="Redguard OutfitHipbone" target="Redguard Outfit" local="true">Redguard OutfitHipbone.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeHipbone" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeHipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" invert="false" small="0" big="0">
+      <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+      <datafile name="Redguard OutfitHips" target="Redguard Outfit" local="true">Redguard OutfitHips.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeHips" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeHips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" invert="true" small="100" big="100">
+      <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+      <datafile name="Redguard OutfitButtCrack" target="Redguard Outfit" local="true">Redguard OutfitButtCrack.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeButtCrack" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+      <datafile name="Redguard OutfitButt" target="Redguard Outfit" local="true">Redguard OutfitButt.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeButt" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeButt.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+      <datafile name="Redguard OutfitButtSmall" target="Redguard Outfit" local="true">Redguard OutfitButtSmall.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeButtSmall" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeButtSmall.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" invert="false" small="0" big="0">
+      <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+      <datafile name="Redguard OutfitButtShape2" target="Redguard Outfit" local="true">Redguard OutfitButtShape2.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeButtShape2" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeButtShape2.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" invert="false" small="0" big="0">
+      <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+      <datafile name="Redguard OutfitBigButt" target="Redguard Outfit" local="true">Redguard OutfitBigButt.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeBigButt" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeBigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" invert="false" small="0" big="0">
+      <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+      <datafile name="Redguard OutfitChubbyButt" target="Redguard Outfit" local="true">Redguard OutfitChubbyButt.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeChubbyButt" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" invert="false" small="0" big="0">
+      <datafile name="AppleCheecks" target="BaseShape">AppleCheeks.bsd</datafile>
+      <datafile name="Redguard OutfitAppleCheeks" target="Redguard Outfit" local="true">Redguard OutfitAppleCheeks.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeAppleCheeks" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeAppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" invert="false" small="0" big="0">
+      <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+      <datafile name="Redguard OutfitRoundAss" target="Redguard Outfit" local="true">Redguard OutfitRoundAss.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeRoundAss" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeRoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" invert="false" small="0" big="0">
+      <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+      <datafile name="Redguard OutfitGroin" target="Redguard Outfit" local="true">Redguard OutfitGroin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" invert="false" small="0" big="0">
+      <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+      <datafile name="Redguard OutfitSlimThighs" target="Redguard Outfit" local="true">Redguard OutfitSlimThighs.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeSlimThighs" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeSlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" invert="false" small="0" big="0">
+      <datafile name="Thighs" target="BaseShape">CalThighs.bsd</datafile>
+      <datafile name="Redguard OutfitThighs" target="Redguard Outfit" local="true">Redguard OutfitThighs.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeThighs" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+      <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+      <datafile name="Redguard OutfitChubbyLegs" target="Redguard Outfit" local="true">Redguard OutfitChubbyLegs.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeChubbyLegs" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+      <datafile name="Redguard OutfitLegs" target="Redguard Outfit" local="true">Redguard OutfitLegs.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeLegs" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeLegs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" invert="false" small="0" big="0">
+      <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+      <datafile name="Redguard OutfitKneeHeight" target="Redguard Outfit" local="true">Redguard OutfitKneeHeight.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeKneeHeight" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeKneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" invert="false" small="0" big="0">
+      <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+      <datafile name="Redguard OutfitCalfSize" target="Redguard Outfit" local="true">Redguard OutfitCalfSize.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeCalfSize" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeCalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" invert="false" small="0" big="0">
+      <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+      <datafile name="Redguard OutfitCalfSmooth" target="Redguard Outfit" local="true">Redguard OutfitCalfSmooth.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeCalfSmooth" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeCalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" invert="true" small="100" big="100">
+      <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+      <datafile name="Redguard OutfitAnkles" target="Redguard Outfit" local="true">Redguard OutfitAnkles.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeAnkles" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeAnkles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" invert="false" small="100" big="0" hidden="true">
+      <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+      <datafile name="Redguard OutfitSmallSeam" target="Redguard Outfit" local="true">Redguard OutfitSmallSeam.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeSmallSeam" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeSmallSeam.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderTweak" invert="false" small="100" big="100" hidden="true">
+      <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+      <datafile name="Redguard OutfitShoulderTweak" target="Redguard Outfit" local="true">Redguard OutfitShoulderTweak.bsd</datafile>
+      <datafile name="Redguard Outfit.CapeShoulderTweak" target="Redguard Outfit.Cape" local="true">Redguard Outfit.CapeShoulderTweak.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" small="0" big="100" hidden="true" clamp="true">
+      <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi2.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" small="100" big="0" hidden="true" clamp="true">
+      <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo2.bsd</datafile>
+    </Slider>
+    <Slider name="BodyZAPT" invert="false" small="100" big="100" hidden="true" zap="true">
+      <datafile name="BaseShapeBodyZAPT" target="BaseShape" local="true">BaseShapeBodyZAPT.bsd</datafile>
+    </Slider>
+  </SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SliderGroups>
+  <Group name="0CR_Omnisway Clothing Replacer (BBP)(NoNude)">
+    <Member name="wav-BBP-CVC-Barkeeper" />
+    <Member name="wav-BBP-CVC-Beggar" />
+    <Member name="wav-BBP-CVC-Blacksmith" />
+    <Member name="wav-BBP-CVC-Chef" />
+    <Member name="wav-BBP-CVC-Farmer1" />
+    <Member name="wav-BBP-CVC-Farmer2" />
+    <Member name="wav-BBP-CVC-Farmer3a" />
+    <Member name="wav-BBP-CVC-Farmer3b" />
+    <Member name="wav-BBP-CVC-Farmer4" />
+    <Member name="wav-BBP-CVC-Merchant" />
+    <Member name="wav-BBP-CVC-Miner" />
+    <Member name="wav-BBP-CVC-Wench" />
+    <Member name="wav-BBP-CVC_Prisoner-NoNude" />
+    <Member name="wav-BBP-Finery-FineClothes1" />
+    <Member name="wav-BBP-Finery-FineClothes2" />
+    <Member name="wav-BBP-Finery-WeddingDress" />
+    <Member name="wav-BBP-Finery-Yarl01" />
+    <Member name="wav-BBP-Finery-Yarl02" />
+    <Member name="wav-BBP-Finery-Yarl03" />
+    <Member name="wav-BBP-Misc-Jester" />
+    <Member name="wav-BBP-Misc-Redguard" />
+  </Group>
+</SliderGroups>

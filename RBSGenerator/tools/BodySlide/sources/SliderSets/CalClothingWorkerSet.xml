@@ -1,0 +1,666 @@
+<SliderSetInfo>
+    <SliderSet name="CalClothes - Merchant">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Merchant.nif</SourceFile>
+        <OutputPath>meshes\clothes\merchantclothes</OutputPath>
+        <OutputFile>torsof</OutputFile>
+        <BaseShapeName target="BaseXtra">BaseXtra</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="MDBreasts" target="BaseClothes">MDBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="MDBreastsSmall" target="BaseClothes">MDBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="MDBreastsSH" target="BaseClothes">MDBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="MDBreastsSSH" target="BaseClothes">MDBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="MDButt" target="BaseClothes">MDButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="MDXButt" target="BaseXtra">MDXButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="MDButtSmall" target="BaseClothes">MDButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="MDXButtSmall" target="BaseXtra">MDXButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="MDWaist" target="BaseClothes">MDWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="MDXWaist" target="BaseXtra">MDXWaist.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="MDBreastCleavage" target="BaseClothes">MDBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="MDArms" target="BaseClothes">MDArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="MDShoulderWidth" target="BaseClothes">MDShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="MDZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="MDZapBody" target="BaseShape" local="true">MDZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Miner">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Miner.nif</SourceFile>
+        <OutputPath>meshes\clothes\minerclothes</OutputPath>
+        <OutputFile>minerclothesf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="MBreasts" target="BaseClothes">MBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="MBreastsSmall" target="BaseClothes">MBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="MBreastsSH" target="BaseClothes">MBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="MBreastsSSH" target="BaseClothes">MBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="MButt" target="BaseClothes">MButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="MButtSmall" target="BaseClothes">MButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="MWaist" target="BaseClothes">MWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="MBreastCleavage" target="BaseClothes">MBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="MArms" target="BaseClothes">MArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="MShoulderWidth" target="BaseClothes">MShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="MLegs" target="BaseClothes">MLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="MSeamSize" target="BaseClothes">MSeamSize.bsd</datafile>
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="MZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="MZapBody" target="BaseShape" local="true">MZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Blacksmith">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalClothes-Blacksmith.nif</SourceFile>
+        <OutputPath>meshes\clothes\blacksmith\f</OutputPath>
+        <OutputFile>torso</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="BSBreasts" target="BaseClothes">BSBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="BSBreastsSmall" target="BaseClothes">BSBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="BSBreastsSH" target="BaseClothes">BSBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="BSBreastsSSH" target="BaseClothes">BSBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BSBreastCleavage" target="BaseClothes">BSBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="BSButt" target="BaseClothes">BSButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="BSButtSmall" target="BaseClothes">BSButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="BSWaist" target="BaseClothes">BSWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="BSArms" target="BaseClothes">BSArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="BSShoulderWidth" target="BaseClothes">BSShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="BSZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="BSZapBody" target="BaseShape" local="true">BSZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - RoughspunTunic">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Prisoner.nif</SourceFile>
+        <OutputPath>meshes\clothes\prisoner</OutputPath>
+        <OutputFile>prisonerclothes_f</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseUndies">BaseUndies</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="PBreasts" target="BaseClothes">PBreasts.bsd</datafile>
+            <datafile name="PUBreasts" target="BaseUndies">PUBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="PBreastsSmall" target="BaseClothes">PBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="PUBreastsSmall" target="BaseUndies">PUBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="PBreastsSH" target="BaseClothes">PBreastsSH.bsd</datafile>
+            <datafile name="PUBreastsSH" target="BaseUndies">PUBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="PBreastsSSH" target="BaseClothes">PBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="PUBreastsSSH" target="BaseUndies">PUBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="PButt" target="BaseClothes">PButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="PButtSmall" target="BaseClothes">PButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="PWaist" target="BaseClothes">PWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="PUWaist" target="BaseUndies">PUWaist.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PBreastCleavage" target="BaseClothes">PBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="PArms" target="BaseClothes">PArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="PSHoulderWidth" target="BaseClothes">PSHoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="PLegs" target="BaseClothes">PLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="PUSeamSize" target="BaseUndies">PUSeamSize.bsd</datafile>
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="PZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="PZapBody" target="BaseShape" local="true">PZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Prisoner Rags">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Prisoner.nif</SourceFile>
+        <OutputPath>meshes\clothes\prisoner</OutputPath>
+        <OutputFile>prisonerrags_f</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseUndies">BaseUndies</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="PBreasts" target="BaseClothes">PBreasts.bsd</datafile>
+            <datafile name="PUBreasts" target="BaseUndies">PUBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="PBreastsSmall" target="BaseClothes">PBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="PUBreastsSmall" target="BaseUndies">PUBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="PBreastsSH" target="BaseClothes">PBreastsSH.bsd</datafile>
+            <datafile name="PUBreastsSH" target="BaseUndies">PUBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="PBreastsSSH" target="BaseClothes">PBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="PUBreastsSSH" target="BaseUndies">PUBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="PButt" target="BaseClothes">PButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="PButtSmall" target="BaseClothes">PButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="PWaist" target="BaseClothes">PWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="PUWaist" target="BaseUndies">PUWaist.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PBreastCleavage" target="BaseClothes">PBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="PArms" target="BaseClothes">PArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="PSHoulderWidth" target="BaseClothes">PSHoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="PLegs" target="BaseClothes">PLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="PUSeamSize" target="BaseUndies">PUSeamSize.bsd</datafile>
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="PZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="PZapBody" target="BaseShape" local="true">PZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Beggar">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalClothes-Beggar.nif</SourceFile>
+        <OutputPath>meshes\clothes\beggarclothes</OutputPath>
+        <OutputFile>torsof</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BasePants">BasePants</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="BGBreasts" target="BaseClothes">BGBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="BGBreastsSmall" target="BaseClothes">BGBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="BGBreastsSH" target="BaseClothes">BGBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="BGBreastsSSH" target="BaseClothes">BGBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BGBreastCleavage" target="BaseClothes">BGBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="BGButt" target="BaseClothes">BGButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="BGPButt" target="BasePants">BGPButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="BGButtSmall" target="BaseClothes">BGButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="BGPButtSmall" target="BasePants">BGPButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="BGWaist" target="BaseClothes">BGWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="BGShoulderWidth" target="BaseClothes">BGShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="BGPLegs" target="BasePants">BGPLegs.bsd</datafile>
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="BGZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="BGZapBody" target="BaseShape" local="true">BGZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla Merchant">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Merchant.nif</SourceFile>
+        <OutputPath>meshes\clothes\merchantclothes</OutputPath>
+        <OutputFile>torsof</OutputFile>
+        <BaseShapeName target="BaseXtra">BaseXtra</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="MDVanillaLo" target="BaseClothes">MDVanillaLo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="MDXVanillaLo" target="BaseXtra">MDXVanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="MDVanillaHi" target="BaseClothes">MDVanillaHi.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="MDXVanillaHi" target="BaseXtra">MDXVanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="MDZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="MDZapBody" target="BaseShape" local="true">MDZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="MDBreastCleavage" target="BaseClothes">MDBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla Miner">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Miner.nif</SourceFile>
+        <OutputPath>meshes\clothes\minerclothes</OutputPath>
+        <OutputFile>minerclothesf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="MVanillaLo" target="BaseClothes">MVanillaLo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="MVanillaHi" target="BaseClothes">MVanillaHi.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="MBreastCleavage" target="BaseClothes">MBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="MZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="MZapBody" target="BaseShape" local="true">MZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla Blacksmith">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalClothes-Blacksmith.nif</SourceFile>
+        <OutputPath>meshes\clothes\blacksmith\f</OutputPath>
+        <OutputFile>torso</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="BSVanilla0" target="BaseClothes">BSVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="BSVanilla1" target="BaseClothes">BSVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BSBreastCleavage" target="BaseClothes">BSBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BSZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="BSZapBody" target="BaseShape" local="true">BSZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla RoughspunTunic">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Prisoner.nif</SourceFile>
+        <OutputPath>meshes\clothes\prisoner</OutputPath>
+        <OutputFile>prisonerclothes_f</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseUndies">BaseUndies</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="PVanillaLo" target="BaseClothes">PVanillaLo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="PUVanillaLo" target="BaseUndies">PUVanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="PVanillaHi" target="BaseClothes">PVanillaHi.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="PUVanillaHi" target="BaseUndies">PUVanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PBreastCleavage" target="BaseClothes">PBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="PZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="PZapBody" target="BaseShape" local="true">PZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla Prisoner Rags">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalArmor-Prisoner.nif</SourceFile>
+        <OutputPath>meshes\clothes\prisoner</OutputPath>
+        <OutputFile>prisonerclothes_f</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BaseUndies">BaseUndies</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="PVanillaLo" target="BaseClothes">PVanillaLo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="PUVanillaLo" target="BaseUndies">PUVanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="PVanillaHi" target="BaseClothes">PVanillaHi.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="PUVanillaHi" target="BaseUndies">PUVanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PBreastCleavage" target="BaseClothes">PBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="PZapBody" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="PZapBody" target="BaseShape" local="true">PZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalClothes - Vanilla Beggar">
+        <SetFolder>CalClothingWorker</SetFolder>
+        <SourceFile>CalClothes-Beggar.nif</SourceFile>
+        <OutputPath>meshes\clothes\beggarclothes</OutputPath>
+        <OutputFile>torsof</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BasePants">BasePants</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="BGVanilla0" target="BaseClothes">BGVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="BGPVanilla0" target="BasePants">BGPVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="BGVanilla1" target="BaseClothes">BGVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="BGPVanilla1" target="BasePants">BGPVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="BGBreastCleavage" target="BaseClothes">BGBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BGZapBody" invert="false" hidden="true" zap="true" small="0" big="100">
+            <datafile name="BGZapBody" target="BaseShape" local="true">BGZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

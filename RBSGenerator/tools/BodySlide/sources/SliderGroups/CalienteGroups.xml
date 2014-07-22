@@ -1,0 +1,24 @@
+<SliderGroups>
+	<Group name="CalienteArmor">
+		<Member name="CalArmor - Hide" />
+		<Member name="CalArmor - Studded" />
+		<Member name="CalArmor - Scale" />
+		<Member name="CalArmor - Horned Scale" />
+		<Member name="CalArmor - Fur A" />
+		<Member name="CalArmor - Fur B" />
+		<Member name="CalArmor - Fur C" />
+		<Member name="CalArmor - Fur D" />
+		<Member name="CalArmor - Forsworn" />
+	</Group>
+	<Group name="CalienteVanillaArmor">
+		<Member name="CalArmor - Vanilla Hide" />
+		<Member name="CalArmor - Vanilla Studded" />
+		<Member name="CalArmor - Vanilla Scale" />
+		<Member name="CalArmor - Vanilla Horned Scale" />
+		<Member name="CalArmor - Vanilla Fur A" />
+		<Member name="CalArmor - Vanilla Fur B" />
+		<Member name="CalArmor - Vanilla Fur C" />
+		<Member name="CalArmor - Vanilla Fur D" />
+		<Member name="CalArmor - Vanilla Forsworn" />
+	</Group>
+</SliderGroups>

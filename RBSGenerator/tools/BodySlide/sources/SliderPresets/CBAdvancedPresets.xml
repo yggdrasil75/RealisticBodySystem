@@ -1,0 +1,1069 @@
+<SliderPresets>
+	<!-- CBAdvanced Orginal Presets -->
+  <Preset name="CBAdvanced Skinny to Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="small" value="60" />
+    <SetSlider name="ChubbyArms" size="big" value="100" />
+    <SetSlider name="BigTorso" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="100" />
+    <SetSlider name="ShoulderWidth" size="small" value="-30" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="BreastsSmall" size="small" value="20" />
+    <SetSlider name="BreastCleavage" size="small" value="40" />
+    <SetSlider name="BreastPerkiness" size="big" value="50" />
+    <SetSlider name="BreastPerkiness" size="small" value="60" />
+    <SetSlider name="BreastSag" size="big" value="40" />
+    <SetSlider name="BreastWidth" size="big" value="40" />
+    <SetSlider name="NippleLength" size="big" value="30" />
+    <SetSlider name="NippleLength" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="70" />
+    <SetSlider name="NippleSize" size="small" value="20" />
+    <SetSlider name="Waist" size="big" value="100" />
+    <SetSlider name="Waist" size="small" value="-80" />
+    <SetSlider name="ChubbyWaist" size="big" value="100" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="BigBelly" size="big" value="40" />
+    <SetSlider name="BigBelly" size="small" value="-30" />
+    <SetSlider name="Back" size="big" value="100" />
+    <SetSlider name="Hipbone" size="big" value="20" />
+    <SetSlider name="Hipbone" size="small" value="20" />
+    <SetSlider name="Hips" size="big" value="40" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="ButtShape2" size="big" value="20" />
+    <SetSlider name="BigButt" size="big" value="100" />
+    <SetSlider name="ChubbyButt" size="big" value="100" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="ChubbyLegs" size="big" value="80" />
+    <SetSlider name="ChubbyLegs" size="small" value="-30" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="CalfSize" size="big" value="60" />
+    <SetSlider name="CalfSize" size="small" value="50" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="80" />
+    <SetSlider name="Ankles" size="small" value="20" />
+  </Preset>
+  <Preset name="CBAdvanced Skinny" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="big" value="80" />
+    <SetSlider name="Arms" size="small" value="60" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="100" />
+    <SetSlider name="ShoulderWidth" size="big" value="0" />
+    <SetSlider name="ShoulderWidth" size="small" value="-30" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="80" />
+    <SetSlider name="BreastsSmall" size="small" value="20" />
+    <SetSlider name="BreastCleavage" size="big" value="20" />
+    <SetSlider name="BreastCleavage" size="small" value="40" />
+    <SetSlider name="BreastPerkiness" size="big" value="60" />
+    <SetSlider name="BreastPerkiness" size="small" value="60" />
+    <SetSlider name="NippleLength" size="big" value="20" />
+    <SetSlider name="NippleLength" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="40" />
+    <SetSlider name="NippleSize" size="small" value="20" />
+    <SetSlider name="Waist" size="big" value="20" />
+    <SetSlider name="Waist" size="small" value="-80" />
+    <SetSlider name="Belly" size="big" value="40" />
+    <SetSlider name="BigBelly" size="small" value="-30" />
+    <SetSlider name="Back" size="big" value="20" />
+    <SetSlider name="Hipbone" size="big" value="40" />
+    <SetSlider name="Hipbone" size="small" value="20" />
+    <SetSlider name="Hips" size="big" value="20" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="Thighs" size="big" value="30" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="ChubbyLegs" size="small" value="-30" />
+    <SetSlider name="Legs" size="big" value="40" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="CalfSize" size="big" value="50" />
+    <SetSlider name="CalfSize" size="small" value="50" />
+    <SetSlider name="CalfSmooth" size="big" value="80" />
+    <SetSlider name="CalfSmooth" size="small" value="80" />
+    <SetSlider name="Ankles" size="big" value="40" />
+    <SetSlider name="Ankles" size="small" value="20" />
+  </Preset>
+  <Preset name="CBAdvanced Nice" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="small" value="40" />
+    <SetSlider name="ShoulderSmooth" size="big" value="80" />
+    <SetSlider name="ShoulderSmooth" size="small" value="80" />
+    <SetSlider name="ShoulderWidth" size="big" value="60" />
+    <SetSlider name="ShoulderWidth" size="small" value="20" />
+    <SetSlider name="Breasts" size="big" value="50" />
+    <SetSlider name="Breasts" size="small" value="30" />
+    <SetSlider name="BreastsSmall" size="small" value="60" />
+    <SetSlider name="BreastPerkiness" size="big" value="80" />
+    <SetSlider name="BreastPerkiness" size="small" value="60" />
+    <SetSlider name="BreastSag" size="big" value="20" />
+    <SetSlider name="NippleLength" size="big" value="20" />
+    <SetSlider name="NippleLength" size="small" value="10" />
+    <SetSlider name="NippleSize" size="big" value="80" />
+    <SetSlider name="NippleSize" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="60" />
+    <SetSlider name="ChubbyWaist" size="big" value="80" />
+    <SetSlider name="ChubbyWaist" size="small" value="40" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="60" />
+    <SetSlider name="Back" size="big" value="60" />
+    <SetSlider name="Back" size="small" value="40" />
+    <SetSlider name="ButtSmall" size="small" value="40" />
+    <SetSlider name="ButtShape2" size="big" value="40" />
+    <SetSlider name="ButtShape2" size="small" value="20" />
+    <SetSlider name="BigButt" size="big" value="20" />
+    <SetSlider name="Groin" size="big" value="60" />
+    <SetSlider name="Groin" size="small" value="40" />
+    <SetSlider name="Thighs" size="big" value="60" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="Legs" size="big" value="60" />
+    <SetSlider name="CalfSize" size="big" value="80" />
+    <SetSlider name="CalfSize" size="small" value="60" />
+    <SetSlider name="CalfSmooth" size="big" value="80" />
+    <SetSlider name="CalfSmooth" size="small" value="80" />
+    <SetSlider name="Ankles" size="big" value="60" />
+    <SetSlider name="Ankles" size="small" value="40" />
+  </Preset>
+  <Preset name="CBAdvanced Medium" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="big" value="80" />
+    <SetSlider name="Arms" size="small" value="40" />
+    <SetSlider name="ChubbyArms" size="big" value="20" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="100" />
+    <SetSlider name="ShoulderWidth" size="big" value="60" />
+    <SetSlider name="ShoulderWidth" size="small" value="20" />
+    <SetSlider name="Breasts" size="big" value="60" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="40" />
+    <SetSlider name="BreastCleavage" size="small" value="20" />
+    <SetSlider name="BreastPerkiness" size="big" value="30" />
+    <SetSlider name="BreastPerkiness" size="small" value="20" />
+    <SetSlider name="BreastSag" size="big" value="60" />
+    <SetSlider name="BreastSag" size="small" value="20" />
+    <SetSlider name="NippleLength" size="big" value="10" />
+    <SetSlider name="NippleLength" size="small" value="10" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="80" />
+    <SetSlider name="Waist" size="small" value="20" />
+    <SetSlider name="ChubbyWaist" size="big" value="60" />
+    <SetSlider name="ChubbyWaist" size="small" value="39" />
+    <SetSlider name="Belly" size="big" value="30" />
+    <SetSlider name="Belly" size="small" value="20" />
+    <SetSlider name="Back" size="big" value="30" />
+    <SetSlider name="Back" size="small" value="20" />
+    <SetSlider name="Hipbone" size="big" value="10" />
+    <SetSlider name="Hipbone" size="small" value="10" />
+    <SetSlider name="Hips" size="big" value="10" />
+    <SetSlider name="Hips" size="small" value="10" />
+    <SetSlider name="Butt" size="small" value="40" />
+    <SetSlider name="BigButt" size="big" value="50" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="ChubbyLegs" size="big" value="50" />
+    <SetSlider name="Legs" size="big" value="60" />
+    <SetSlider name="Legs" size="small" value="50" />
+    <SetSlider name="CalfSize" size="big" value="60" />
+    <SetSlider name="CalfSize" size="small" value="40" />
+    <SetSlider name="CalfSmooth" size="big" value="80" />
+    <SetSlider name="CalfSmooth" size="small" value="80" />
+  </Preset>
+  <Preset name="CBAdvanced Chubby" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="small" value="80" />
+    <SetSlider name="ChubbyArms" size="big" value="40" />
+    <SetSlider name="ChubbyArms" size="small" value="20" />
+    <SetSlider name="BigTorso" size="big" value="80" />
+    <SetSlider name="BigTorso" size="small" value="50" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="100" />
+    <SetSlider name="ShoulderWidth" size="small" value="60" />
+    <SetSlider name="Breasts" size="small" value="30" />
+    <SetSlider name="BreastsSSH" size="big" value="10" />
+    <SetSlider name="BreastPerkiness" size="big" value="30" />
+    <SetSlider name="BreastPerkiness" size="small" value="40" />
+    <SetSlider name="BreastSag" size="big" value="60" />
+    <SetSlider name="BreastSag" size="small" value="40" />
+    <SetSlider name="BreastWidth" size="big" value="20" />
+    <SetSlider name="BreastWidth" size="small" value="20" />
+    <SetSlider name="NippleLength" size="big" value="30" />
+    <SetSlider name="NippleLength" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="70" />
+    <SetSlider name="NippleSize" size="small" value="50" />
+    <SetSlider name="Waist" size="small" value="60" />
+    <SetSlider name="ChubbyWaist" size="big" value="100" />
+    <SetSlider name="ChubbyWaist" size="small" value="60" />
+    <SetSlider name="Belly" size="big" value="60" />
+    <SetSlider name="Belly" size="small" value="50" />
+    <SetSlider name="BigBelly" size="big" value="20" />
+    <SetSlider name="Back" size="big" value="80" />
+    <SetSlider name="Back" size="small" value="40" />
+    <SetSlider name="Hipbone" size="big" value="20" />
+    <SetSlider name="Hipbone" size="small" value="20" />
+    <SetSlider name="Hips" size="big" value="20" />
+    <SetSlider name="Hips" size="small" value="20" />
+    <SetSlider name="Butt" size="small" value="100" />
+    <SetSlider name="ButtShape2" size="big" value="20" />
+    <SetSlider name="ButtShape2" size="small" value="20" />
+    <SetSlider name="BigButt" size="big" value="60" />
+    <SetSlider name="BigButt" size="small" value="40" />
+    <SetSlider name="ChubbyButt" size="big" value="60" />
+    <SetSlider name="ChubbyButt" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Thighs" size="small" value="20" />
+    <SetSlider name="ChubbyLegs" size="big" value="80" />
+    <SetSlider name="ChubbyLegs" size="small" value="60" />
+    <SetSlider name="Legs" size="big" value="80" />
+    <SetSlider name="Legs" size="small" value="60" />
+    <SetSlider name="CalfSize" size="big" value="80" />
+    <SetSlider name="CalfSize" size="small" value="60" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="100" />
+  </Preset>
+  <Preset name="CBAdvanced Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Arms" size="small" value="80" />
+    <SetSlider name="ChubbyArms" size="big" value="100" />
+    <SetSlider name="ChubbyArms" size="small" value="40" />
+    <SetSlider name="BigTorso" size="big" value="100" />
+    <SetSlider name="BigTorso" size="small" value="60" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="100" />
+    <SetSlider name="ShoulderWidth" size="small" value="80" />
+    <SetSlider name="Breasts" size="small" value="60" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="BreastPerkiness" size="big" value="50" />
+    <SetSlider name="BreastPerkiness" size="small" value="70" />
+    <SetSlider name="BreastSag" size="big" value="40" />
+    <SetSlider name="BreastSag" size="small" value="20" />
+    <SetSlider name="BreastWidth" size="big" value="40" />
+    <SetSlider name="BreastWidth" size="small" value="30" />
+    <SetSlider name="NippleLength" size="big" value="30" />
+    <SetSlider name="NippleLength" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="80" />
+    <SetSlider name="NippleSize" size="small" value="60" />
+    <SetSlider name="Waist" size="big" value="100" />
+    <SetSlider name="Waist" size="small" value="80" />
+    <SetSlider name="ChubbyWaist" size="big" value="100" />
+    <SetSlider name="ChubbyWaist" size="small" value="70" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="100" />
+    <SetSlider name="BigBelly" size="big" value="40" />
+    <SetSlider name="Back" size="big" value="100" />
+    <SetSlider name="Back" size="small" value="50" />
+    <SetSlider name="Hipbone" size="big" value="20" />
+    <SetSlider name="Hipbone" size="small" value="20" />
+    <SetSlider name="Hips" size="big" value="40" />
+    <SetSlider name="Hips" size="small" value="20" />
+    <SetSlider name="Butt" size="small" value="100" />
+    <SetSlider name="ButtShape2" size="big" value="20" />
+    <SetSlider name="ButtShape2" size="small" value="20" />
+    <SetSlider name="BigButt" size="big" value="100" />
+    <SetSlider name="BigButt" size="small" value="60" />
+    <SetSlider name="ChubbyButt" size="big" value="100" />
+    <SetSlider name="ChubbyButt" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="20" />
+    <SetSlider name="ChubbyLegs" size="big" value="80" />
+    <SetSlider name="ChubbyLegs" size="small" value="40" />
+    <SetSlider name="Legs" size="small" value="70" />
+    <SetSlider name="CalfSize" size="big" value="60" />
+    <SetSlider name="CalfSize" size="small" value="60" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="80" />
+  </Preset>
+
+	<!-- CT77 CBAdvanced Presets -->
+	<Preset name="CT77 CBAdvanced" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="AppleCheeks" size="big" value="20" />
+    <SetSlider name="Arms" size="small" value="20" />
+    <SetSlider name="Belly" size="big" value="50" />
+    <SetSlider name="BreastGravity" size="big" value="20" />
+    <SetSlider name="BreastGravity" size="small" value="20" />
+    <SetSlider name="BreastPerkiness" size="big" value="40" />
+    <SetSlider name="BreastPerkiness" size="small" value="40" />
+    <SetSlider name="BreastWidth" size="big" value="40" />
+    <SetSlider name="BreastWidth" size="small" value="40" />
+    <SetSlider name="Breasts" size="big" value="80" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Butt" size="small" value="-20" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="80" />
+    <SetSlider name="CalfSize" size="big" value="100" />
+    <SetSlider name="CalfSize" size="small" value="100" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="100" />
+    <SetSlider name="ChubbyArms" size="big" value="20" />
+    <SetSlider name="ChubbyButt" size="small" value="20" />
+    <SetSlider name="ChubbyButt" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="small" value="20" />
+    <SetSlider name="DoubleMelon" size="big" value="20" />
+    <SetSlider name="DoubleMelon" size="small" value="20" />
+    <SetSlider name="Groin" size="big" value="50" />
+    <SetSlider name="Hipbone" size="big" value="-20" />
+    <SetSlider name="Hipbone" size="small" value="-20" />
+    <SetSlider name="Legs" size="big" value="120" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="120" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="50" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+    <SetSlider name="SlimThighs" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="0" />
+	</Preset>
+	<Preset name="CT77 CBAdvanced Pushup" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="AppleCheeks" size="big" value="20" />
+    <SetSlider name="Arms" size="small" value="20" />
+    <SetSlider name="Belly" size="big" value="50" />
+		<SetSlider name="BreastCleavage" size="big" value="50" />
+		<SetSlider name="BreastCleavage" size="small" value="50" />
+		<SetSlider name="PushUp" size="big" value="50" />
+		<SetSlider name="PushUp" size="small" value="50" />
+    <SetSlider name="BreastPerkiness" size="big" value="40" />
+    <SetSlider name="BreastPerkiness" size="small" value="40" />
+    <SetSlider name="BreastWidth" size="big" value="40" />
+    <SetSlider name="BreastWidth" size="small" value="40" />
+    <SetSlider name="Breasts" size="big" value="80" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Butt" size="small" value="-20" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="80" />
+    <SetSlider name="CalfSize" size="big" value="100" />
+    <SetSlider name="CalfSize" size="small" value="100" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="100" />
+    <SetSlider name="ChubbyArms" size="big" value="20" />
+    <SetSlider name="ChubbyButt" size="small" value="20" />
+    <SetSlider name="ChubbyButt" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="small" value="20" />
+    <SetSlider name="DoubleMelon" size="big" value="20" />
+    <SetSlider name="DoubleMelon" size="small" value="20" />
+    <SetSlider name="Groin" size="big" value="50" />
+    <SetSlider name="Hipbone" size="big" value="-20" />
+    <SetSlider name="Hipbone" size="small" value="-20" />
+    <SetSlider name="Legs" size="big" value="120" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="120" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="50" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+    <SetSlider name="SlimThighs" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="0" />
+	</Preset>
+	<Preset name="CT77 Throwback" set="CT77 Chainmail">
+    <Group name="CT77 Throwback" />
+    <SetSlider name="ZapSkirt" size="big" value="100" />
+    <SetSlider name="ZapSkirt" size="small" value="100" />
+    <SetSlider name="ZapBelt" size="big" value="0" />
+    <SetSlider name="ZapBelt" size="small" value="0" />
+    <SetSlider name="ZapBelt2" size="big" value="100" />
+    <SetSlider name="ZapBelt2" size="small" value="100" />
+    <SetSlider name="ZapChest" size="big" value="0" />
+    <SetSlider name="ZapChest" size="small" value="0" />
+    <SetSlider name="ZapChest2" size="big" value="100" />
+    <SetSlider name="ZapChest2" size="small" value="100" />
+    <SetSlider name="ZapPauldrons" size="big" value="0" />
+    <SetSlider name="ZapPauldrons" size="small" value="0" />
+    <SetSlider name="ZapPauldrons2" size="big" value="100" />
+    <SetSlider name="ZapPauldrons2" size="small" value="100" />
+    <SetSlider name="ZapShoulders" size="big" value="100" />
+    <SetSlider name="ZapShoulders" size="small" value="100" />
+    <SetSlider name="AppleCheeks" size="big" value="20" />
+    <SetSlider name="Arms" size="small" value="20" />
+    <SetSlider name="Belly" size="big" value="50" />
+    <SetSlider name="BreastGravity" size="big" value="20" />
+    <SetSlider name="BreastGravity" size="small" value="20" />
+    <SetSlider name="BreastPerkiness" size="big" value="40" />
+    <SetSlider name="BreastPerkiness" size="small" value="40" />
+    <SetSlider name="BreastWidth" size="big" value="40" />
+    <SetSlider name="BreastWidth" size="small" value="40" />
+    <SetSlider name="Breasts" size="big" value="80" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Butt" size="small" value="-20" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="80" />
+    <SetSlider name="CalfSize" size="big" value="100" />
+    <SetSlider name="CalfSize" size="small" value="100" />
+    <SetSlider name="CalfSmooth" size="big" value="100" />
+    <SetSlider name="CalfSmooth" size="small" value="100" />
+    <SetSlider name="ChubbyArms" size="big" value="20" />
+    <SetSlider name="ChubbyButt" size="small" value="20" />
+    <SetSlider name="ChubbyButt" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="big" value="20" />
+    <SetSlider name="ChubbyLegs" size="small" value="20" />
+    <SetSlider name="DoubleMelon" size="big" value="20" />
+    <SetSlider name="DoubleMelon" size="small" value="20" />
+    <SetSlider name="Groin" size="big" value="50" />
+    <SetSlider name="Hipbone" size="big" value="-20" />
+    <SetSlider name="Hipbone" size="small" value="-20" />
+    <SetSlider name="Legs" size="big" value="120" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="120" />
+    <SetSlider name="ShoulderSmooth" size="big" value="100" />
+    <SetSlider name="ShoulderSmooth" size="small" value="50" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+    <SetSlider name="SlimThighs" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="0" />
+	</Preset>
+
+	<!--------------- CBBE presets by Caliente ------------------->	
+  <Preset name="CBBE Classic Zap Panty" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="(zap)Panty" size="big" value="100" />
+		<SetSlider name="(zap)Panty" size="small" value="100" />
+		<SetSlider name="Breasts" size="small" value="20"/>
+    <SetSlider name="Breasts" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Classic Zap Bra" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="(zap)Bra" size="big" value="100" />
+		<SetSlider name="(zap)Bra" size="small" value="100" />
+		<SetSlider name="Breasts" size="small" value="20"/>
+    <SetSlider name="Breasts" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Classic Zap Bra and Panty" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="(zap)Bra" size="big" value="100" />
+		<SetSlider name="(zap)Bra" size="small" value="100" />
+		<SetSlider name="(zap)Panty" size="big" value="100" />
+		<SetSlider name="(zap)Panty" size="small" value="100" />
+		<SetSlider name="Breasts" size="small" value="20"/>
+    <SetSlider name="Breasts" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+	<Group name="CalienteClothing" />
+	<Group name="CalienteArmor" />
+	<Group name="CalienteUnderwear" />
+	<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="Breasts" size="big" value="80"/>
+    <SetSlider name="BreastGravity" size="small" value="40" />
+    <SetSlider name="BreastGravity" size="big" value="70" />
+    <SetSlider name="NippleSize" size="big" value="80" />
+    <SetSlider name="NippleSize" size="small" value="60" />
+    <SetSlider name="Waist" size="small" value="25" />
+    <SetSlider name="Belly" size="big" value="80" />
+    <SetSlider name="Belly" size="small" value="40" />
+    <SetSlider name="Legs" size="small" value="25" />
+    <SetSlider name="Thighs" size="big" value="30" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="Arms" size="small" value="25" />
+    <SetSlider name="ShoulderWidth" size="big" value="75" />
+    <SetSlider name="ShoulderWidth" size="small" value="65" />
+  </Preset>
+  <Preset name="CBBE Classic" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+	<Group name="CalienteArmor"/>
+	<Group name="CalienteVanillaArmor"/>
+	<Group name="CalienteVanillaClothing"/>
+	<Group name="CalienteClothing"/>
+	<Group name="CalienteUnderwear" />
+	<SetSlider name="Breasts" size="small" value="20"/>
+	<SetSlider name="Breasts" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Fixed Breast Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="100"/>
+    <SetSlider name="Breasts" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Fixed Breast Small" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="20"/>
+    <SetSlider name="Breasts" size="big" value="20"/>
+  </Preset>
+  <Preset name="CBBE Fixed Butt Small" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Butt" size="small" value="0"/>
+    <SetSlider name="Butt" size="big" value="0"/>
+  </Preset>
+  <Preset name="CBBE Fixed Butt Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Butt" size="small" value="100"/>
+    <SetSlider name="Butt" size="big" value="300"/>
+  </Preset>
+  <Preset name="CB SmallBottom" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Butt" size="small" value="0"/>
+    <SetSlider name="ButtSmall" size="small" value="40"/>
+    <SetSlider name="Butt" size="big" value="0"/>
+  </Preset>
+  <Preset name="CBBE Silly Huge" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="100"/>
+    <SetSlider name="BreastsSH" size="small" value="0"/>
+    <SetSlider name="BreastsSH" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Slim" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="BreastGravity" size="big" value="30" />
+    <SetSlider name="NippleSize" size="big" value="50" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="55" />
+    <SetSlider name="ButtSmall" size="small" value="30" />
+    <SetSlider name="Waist" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="big" value="40" />
+    <SetSlider name="BreastCleavage" size="small" value="5" />
+    <SetSlider name="Belly" size="big" value="50" />
+    <SetSlider name="Belly" size="small" value="20" />
+    <SetSlider name="Legs" size="big" value="60" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="20" />
+    <SetSlider name="Arms" size="big" value="70" />
+    <SetSlider name="ShoulderWidth" size="big" value="70" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+  </Preset>
+  <Preset name="CBBE Slim Classic" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="0"/>
+    <SetSlider name="NippleSize" size="small" value="30"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="100"/>
+    <SetSlider name="NippleSize" size="big" value="66"/>
+  </Preset>
+  <Preset name="CBBE Slim Fixed Butt Small" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="0"/>
+    <SetSlider name="NippleSize" size="small" value="30"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="100"/>
+    <SetSlider name="NippleSize" size="big" value="66"/>
+    <SetSlider name="Butt" size="small" value="0"/>
+    <SetSlider name="Butt" size="big" value="0"/>
+  </Preset>
+  <Preset name="CBBE Slim Fixed Butt Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+ 		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="0"/>
+    <SetSlider name="NippleSize" size="small" value="30"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="100"/>
+    <SetSlider name="NippleSize" size="big" value="66"/>
+    <SetSlider name="Butt" size="small" value="100"/>
+    <SetSlider name="Butt" size="big" value="100"/>
+  </Preset>
+  <Preset name="CBBE Slim Fixed Breast Big" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="100"/>
+    <SetSlider name="NippleSize" size="small" value="66"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="100"/>
+    <SetSlider name="NippleSize" size="big" value="66"/>
+  </Preset>
+  <Preset name="CBBE Slim Fixed Breast Small" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="0"/>
+    <SetSlider name="NippleSize" size="small" value="33"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="0"/>
+    <SetSlider name="NippleSize" size="big" value="33"/>
+  </Preset>
+  <Preset name="CB Slim SmallBottom" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="small" value="0"/>
+    <SetSlider name="BreastsSmall" size="small" value="0"/>
+    <SetSlider name="NippleSize" size="small" value="30"/>
+    <SetSlider name="Breasts" size="big" value="0"/>
+    <SetSlider name="BreastsSmall" size="big" value="100"/>
+    <SetSlider name="NippleSize" size="big" value="66"/>
+    <SetSlider name="Butt" size="small" value="0"/>
+    <SetSlider name="ButtSmall" size="small" value="40"/>
+    <SetSlider name="Butt" size="big" value="0"/>
+  </Preset>
+  <Preset name="MAKBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+		<SetSlider name="Breasts" size="big" value="70" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="Butt" size="small" value="50" />
+    <SetSlider name="ButtShape2" size="big" value="100" />
+    <SetSlider name="ButtShape2" size="small" value="50" />
+    <SetSlider name="Waist" size="big" value="70" />
+    <SetSlider name="Thighs" size="big" value="70" />
+    <SetSlider name="Thighs" size="small" value="70" />
+  </Preset>
+  <Preset name="CBBE-Plus" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+	<SetSlider name="Breasts" size="big" value="35" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="90" />
+    <SetSlider name="BreastsSSH" size="big" value="30" />
+    <SetSlider name="BreastsSSH" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="80" />
+    <SetSlider name="NippleSize" size="small" value="15" />
+    <SetSlider name="Waist" size="small" value="15" />
+    <SetSlider name="Belly" size="big" value="70" />
+    <SetSlider name="Belly" size="small" value="70" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="55" />
+    <SetSlider name="Thighs" size="small" value="45" />
+    <SetSlider name="Arms" size="small" value="20" />
+    <SetSlider name="ShoulderWidth" size="big" value="75" />
+    <SetSlider name="ShoulderWidth" size="small" value="60" />
+  </Preset>
+
+	<!--------------- Presets for various body types ------------------->	
+  <Preset name="ADECBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="small" value="40" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="BreastGravity" size="big" value="60" />
+    <SetSlider name="BreastGravity" size="small" value="60" />
+    <SetSlider name="Butt" size="big" value="30" />
+    <SetSlider name="ButtSmall" size="small" value="80" />
+    <SetSlider name="ButtShape2" size="big" value="80" />
+    <SetSlider name="ButtShape2" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="30" />
+    <SetSlider name="BreastCleavage" size="big" value="80" />
+    <SetSlider name="BreastCleavage" size="small" value="50" />
+    <SetSlider name="Legs" size="small" value="50" />
+    <SetSlider name="Thighs" size="big" value="70" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="Arms" size="small" value="50" />
+    <SetSlider name="ShoulderWidth" size="big" value="250" />
+    <SetSlider name="ShoulderWidth" size="small" value="150" />
+  </Preset>
+  <Preset name="AS_Body" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="60" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="40" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="BreastsSSH" size="big" value="20" />
+    <SetSlider name="NippleSize" size="small" value="50" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="BreastCleavage" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="small" value="10" />
+    <SetSlider name="ShoulderWidth" size="small" value="0" />
+  </Preset>
+  <Preset name="Athletic" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="20" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="60" />
+    <SetSlider name="ButtSmall" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="Waist" size="small" value="60" />
+    <SetSlider name="Belly" size="big" value="40" />
+    <SetSlider name="Belly" size="small" value="20" />
+    <SetSlider name="Legs" size="big" value="40" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="30" />
+    <SetSlider name="Arms" size="small" value="50" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+  <Preset name="B to D Outfits" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="20" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="55" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Waist" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="small" value="10" />
+    <SetSlider name="Legs" size="big" value="85" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="70" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+  </Preset>
+  <Preset name="B to D Plus" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="20" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="55" />
+    <SetSlider name="BreastGravity" size="big" value="60" />
+    <SetSlider name="BreastGravity" size="small" value="25" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Waist" size="big" value="50" />
+    <SetSlider name="Belly" size="big" value="60" />
+    <SetSlider name="Belly" size="small" value="20" />
+    <SetSlider name="Legs" size="big" value="85" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="70" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+  </Preset>
+  <Preset name="BabBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="50" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastGravity" size="big" value="40" />
+    <SetSlider name="BreastGravity" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="50" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="60" />
+    <SetSlider name="Butt" size="small" value="10" />
+    <SetSlider name="ButtSmall" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="Waist" size="small" value="50" />
+    <SetSlider name="BreastCleavage" size="big" value="60" />
+    <SetSlider name="BreastCleavage" size="small" value="20" />
+    <SetSlider name="Belly" size="big" value="-25" />
+    <SetSlider name="Belly" size="small" value="-50" />
+    <SetSlider name="Legs" size="big" value="0" />
+    <SetSlider name="Legs" size="small" value="-20" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="20" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="Arms" size="small" value="35" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+  <Preset name="BottomHeavy" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="60" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="30" />
+    <SetSlider name="Butt" size="big" value="200" />
+    <SetSlider name="Butt" size="small" value="100" />
+    <SetSlider name="Waist" size="big" value="0" />
+    <SetSlider name="BreastCleavage" size="big" value="30" />
+    <SetSlider name="Belly" size="big" value="85" />
+    <SetSlider name="Belly" size="small" value="45" />
+    <SetSlider name="Legs" size="small" value="60" />
+    <SetSlider name="Thighs" size="big" value="120" />
+    <SetSlider name="Thighs" size="small" value="60" />
+    <SetSlider name="Arms" size="big" value="50" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+    <SetSlider name="ShoulderWidth" size="small" value="90" />
+  </Preset>
+  <Preset name="FantasyFiguresBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="30" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastGravity" size="big" value="60" />
+    <SetSlider name="BreastGravity" size="small" value="40" />
+    <SetSlider name="Butt" size="big" value="120" />
+    <SetSlider name="Butt" size="small" value="60" />
+    <SetSlider name="ButtSmall" size="big" value="20" />
+    <SetSlider name="ButtSmall" size="small" value="-20" />
+    <SetSlider name="Waist" size="big" value="0" />
+    <SetSlider name="Waist" size="small" value="-20" />
+    <SetSlider name="BreastCleavage" size="big" value="65" />
+    <SetSlider name="BreastCleavage" size="small" value="25" />
+    <SetSlider name="Belly" size="big" value="130" />
+    <SetSlider name="Belly" size="small" value="120" />
+    <SetSlider name="Legs" size="big" value="50" />
+    <SetSlider name="Legs" size="small" value="10" />
+    <SetSlider name="Thighs" size="big" value="80" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="Arms" size="small" value="20" />
+    <SetSlider name="ShoulderWidth" size="big" value="60" />
+    <SetSlider name="ShoulderWidth" size="small" value="0" />
+  </Preset>
+  <Preset name="GrowlfBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="30" />
+    <SetSlider name="BreastsSSH" size="big" value="50" />
+    <SetSlider name="BreastsSSH" size="small" value="30" />
+    <SetSlider name="BreastGravity" size="big" value="-100" />
+    <SetSlider name="BreastGravity" size="small" value="-50" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="30" />
+    <SetSlider name="Butt" size="big" value="60" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="50" />
+    <SetSlider name="ButtShape2" size="big" value="60" />
+    <SetSlider name="ButtShape2" size="small" value="40" />
+    <SetSlider name="Waist" size="big" value="50" />
+    <SetSlider name="Waist" size="small" value="20" />
+    <SetSlider name="BreastCleavage" size="big" value="95" />
+    <SetSlider name="BreastCleavage" size="small" value="40" />
+    <SetSlider name="Legs" size="big" value="0" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="20" />
+    <SetSlider name="Arms" size="big" value="50" />
+    <SetSlider name="Arms" size="small" value="10" />
+    <SetSlider name="ShoulderWidth" size="small" value="90" />
+  </Preset>
+  <Preset name="HGECBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="small" value="-10" />
+    <SetSlider name="BreastsSmall" size="small" value="-20" />
+    <SetSlider name="BreastGravity" size="big" value="60" />
+    <SetSlider name="NippleSize" size="big" value="66" />
+    <SetSlider name="NippleSize" size="small" value="30" />
+    <SetSlider name="Butt" size="big" value="40" />
+    <SetSlider name="ButtSmall" size="big" value="60" />
+    <SetSlider name="ButtSmall" size="small" value="-20" />
+    <SetSlider name="ButtShape2" size="big" value="20" />
+    <SetSlider name="Waist" size="big" value="-30" />
+    <SetSlider name="Waist" size="small" value="-70" />
+    <SetSlider name="BreastCleavage" size="big" value="90" />
+    <SetSlider name="BreastCleavage" size="small" value="10" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="70" />
+    <SetSlider name="Legs" size="big" value="70" />
+    <SetSlider name="Thighs" size="big" value="60" />
+    <SetSlider name="Thighs" size="small" value="30" />
+    <SetSlider name="Arms" size="big" value="80" />
+    <SetSlider name="ShoulderWidth" size="big" value="70" />
+    <SetSlider name="ShoulderWidth" size="small" value="70" />
+  </Preset>
+  <Preset name="HourGlass" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="small" value="50" />
+    <SetSlider name="BreastsSH" size="big" value="30" />
+    <SetSlider name="BreastGravity" size="big" value="80" />
+    <SetSlider name="BreastGravity" size="small" value="60" />
+    <SetSlider name="ButtSmall" size="small" value="50" />
+    <SetSlider name="Waist" size="big" value="30" />
+    <SetSlider name="BreastCleavage" size="big" value="85" />
+    <SetSlider name="BreastCleavage" size="small" value="40" />
+    <SetSlider name="Belly" size="big" value="60" />
+    <SetSlider name="Belly" size="small" value="30" />
+    <SetSlider name="Legs" size="big" value="70" />
+    <SetSlider name="Thighs" size="big" value="40" />
+    <SetSlider name="Thighs" size="small" value="30" />
+    <SetSlider name="Arms" size="big" value="80" />
+    <SetSlider name="ShoulderWidth" size="big" value="80" />
+    <SetSlider name="ShoulderWidth" size="small" value="60" />
+  </Preset>
+  <Preset name="Rainmaker&apos;s B to D" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="70" />
+    <SetSlider name="BreastsSmall" size="small" value="25" />
+    <SetSlider name="BreastsSSH" size="big" value="40" />
+    <SetSlider name="BreastsSSH" size="small" value="5" />
+    <SetSlider name="NippleSize" size="big" value="80" />
+    <SetSlider name="NippleSize" size="small" value="10" />
+    <SetSlider name="Butt" size="big" value="80" />
+    <SetSlider name="Butt" size="small" value="10" />
+    <SetSlider name="ButtSmall" size="big" value="50" />
+    <SetSlider name="ButtShape2" size="big" value="10" />
+    <SetSlider name="Waist" size="small" value="40" />
+    <SetSlider name="BreastCleavage" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="small" value="10" />
+    <SetSlider name="Belly" size="big" value="90" />
+    <SetSlider name="Belly" size="small" value="20" />
+    <SetSlider name="Legs" size="big" value="70" />
+    <SetSlider name="Legs" size="small" value="20" />
+    <SetSlider name="Thighs" size="big" value="30" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="Arms" size="big" value="70" />
+    <SetSlider name="Arms" size="small" value="25" />
+    <SetSlider name="ShoulderWidth" size="big" value="75" />
+    <SetSlider name="ShoulderWidth" size="small" value="40" />
+  </Preset>
+  <Preset name="RebirthBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="BreastsSSH" size="big" value="60" />
+    <SetSlider name="BreastsSSH" size="small" value="30" />
+    <SetSlider name="NippleSize" size="small" value="80" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="10" />
+    <SetSlider name="ButtSmall" size="small" value="-10" />
+    <SetSlider name="Waist" size="big" value="50" />
+    <SetSlider name="Waist" size="small" value="20" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="100" />
+    <SetSlider name="Legs" size="small" value="100" />
+    <SetSlider name="Thighs" size="big" value="120" />
+    <SetSlider name="Thighs" size="small" value="100" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+  <Preset name="RobertFemaleBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="70" />
+    <SetSlider name="BreastGravity" size="big" value="40" />
+    <SetSlider name="BreastGravity" size="small" value="20" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="50" />
+    <SetSlider name="ButtSmall" size="small" value="0" />
+    <SetSlider name="Waist" size="small" value="50" />
+    <SetSlider name="BreastCleavage" size="big" value="55" />
+    <SetSlider name="BreastCleavage" size="small" value="25" />
+    <SetSlider name="Belly" size="big" value="60" />
+    <SetSlider name="Belly" size="small" value="40" />
+    <SetSlider name="Legs" size="big" value="50" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="small" value="80" />
+  </Preset>
+  <Preset name="SKINNYBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="-20" />
+    <SetSlider name="BreastsSSH" size="big" value="20" />
+    <SetSlider name="NippleSize" size="small" value="80" />
+    <SetSlider name="Butt" size="big" value="-50" />
+    <SetSlider name="Butt" size="small" value="-80" />
+    <SetSlider name="ButtSmall" size="big" value="-50" />
+    <SetSlider name="ButtSmall" size="small" value="-70" />
+    <SetSlider name="ButtShape2" size="big" value="-50" />
+    <SetSlider name="ButtShape2" size="small" value="-70" />
+    <SetSlider name="Waist" size="big" value="-50" />
+    <SetSlider name="Waist" size="small" value="-70" />
+    <SetSlider name="Legs" size="big" value="20" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Arms" size="big" value="20" />
+    <SetSlider name="ShoulderWidth" size="big" value="250" />
+    <SetSlider name="ShoulderWidth" size="small" value="170" />
+  </Preset>
+  <Preset name="TheGirlNextDoorBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="-20" />
+    <SetSlider name="BreastsSmall" size="big" value="40" />
+    <SetSlider name="BreastsSmall" size="small" value="-20" />
+    <SetSlider name="BreastsSH" size="big" value="20" />
+    <SetSlider name="BreastsSH" size="small" value="40" />
+    <SetSlider name="NippleSize" size="big" value="60" />
+    <SetSlider name="NippleSize" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="50" />
+    <SetSlider name="ButtSmall" size="small" value="25" />
+    <SetSlider name="Waist" size="small" value="60" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="80" />
+    <SetSlider name="Legs" size="big" value="50" />
+    <SetSlider name="Legs" size="small" value="30" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Thighs" size="small" value="10" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="90" />
+    <SetSlider name="ShoulderWidth" size="small" value="80" />
+  </Preset>
+  <Preset name="TopHeavy" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="small" value="60" />
+    <SetSlider name="BreastsSmall" size="small" value="90" />
+    <SetSlider name="BreastsSH" size="big" value="50" />
+    <SetSlider name="BreastsSH" size="small" value="25" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="Butt" size="small" value="-50" />
+    <SetSlider name="ButtSmall" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="small" value="-50" />
+    <SetSlider name="Waist" size="big" value="0" />
+    <SetSlider name="BreastCleavage" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="small" value="25" />
+    <SetSlider name="Legs" size="big" value="0" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+    <SetSlider name="ShoulderWidth" size="small" value="90" />
+  </Preset>
+  <Preset name="UNPBlessedBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="20" />
+    <SetSlider name="BreastsSSH" size="big" value="20" />
+    <SetSlider name="BreastsSSH" size="small" value="20" />
+    <SetSlider name="BreastGravity" size="big" value="50" />
+    <SetSlider name="NippleSize" size="small" value="80" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="40" />
+    <SetSlider name="ButtShape2" size="big" value="50" />
+    <SetSlider name="ButtShape2" size="small" value="30" />
+    <SetSlider name="Waist" size="big" value="60" />
+    <SetSlider name="Waist" size="small" value="30" />
+    <SetSlider name="BreastCleavage" size="big" value="80" />
+    <SetSlider name="BreastCleavage" size="small" value="25" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="60" />
+    <SetSlider name="Legs" size="big" value="30" />
+    <SetSlider name="Legs" size="small" value="10" />
+    <SetSlider name="Thighs" size="big" value="70" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+  <Preset name="UNPBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="10" />
+    <SetSlider name="BreastsSSH" size="big" value="60" />
+    <SetSlider name="BreastGravity" size="small" value="20" />
+    <SetSlider name="NippleSize" size="small" value="80" />
+    <SetSlider name="Butt" size="big" value="0" />
+    <SetSlider name="ButtSmall" size="big" value="80" />
+    <SetSlider name="ButtSmall" size="small" value="40" />
+    <SetSlider name="ButtShape2" size="big" value="50" />
+    <SetSlider name="ButtShape2" size="small" value="30" />
+    <SetSlider name="Waist" size="big" value="60" />
+    <SetSlider name="Waist" size="small" value="30" />
+    <SetSlider name="BreastCleavage" size="big" value="70" />
+    <SetSlider name="BreastCleavage" size="small" value="25" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="60" />
+    <SetSlider name="Legs" size="big" value="30" />
+    <SetSlider name="Legs" size="small" value="10" />
+    <SetSlider name="Thighs" size="big" value="70" />
+    <SetSlider name="Thighs" size="small" value="40" />
+    <SetSlider name="Arms" size="big" value="85" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+  <Preset name="UNPSkinnyBody" set="CBAdvancedBody">
+    <Group name="CBAdvanced" />
+    <SetSlider name="Breasts" size="big" value="0" />
+    <SetSlider name="Breasts" size="small" value="0" />
+    <SetSlider name="BreastsSmall" size="big" value="0" />
+    <SetSlider name="BreastsSmall" size="small" value="0" />
+    <SetSlider name="BreastsSH" size="small" value="1" />
+    <SetSlider name="BreastsSSH" size="big" value="30" />
+    <SetSlider name="NippleSize" size="small" value="80" />
+    <SetSlider name="Butt" size="big" value="-20" />
+    <SetSlider name="Butt" size="small" value="-50" />
+    <SetSlider name="ButtSmall" size="big" value="-20" />
+    <SetSlider name="ButtSmall" size="small" value="-50" />
+    <SetSlider name="ButtShape2" size="big" value="-20" />
+    <SetSlider name="ButtShape2" size="small" value="-50" />
+    <SetSlider name="Waist" size="big" value="0" />
+    <SetSlider name="Waist" size="small" value="-50" />
+    <SetSlider name="BreastCleavage" size="big" value="50" />
+    <SetSlider name="BreastCleavage" size="small" value="10" />
+    <SetSlider name="Belly" size="big" value="100" />
+    <SetSlider name="Belly" size="small" value="30" />
+    <SetSlider name="Legs" size="big" value="20" />
+    <SetSlider name="Thighs" size="big" value="20" />
+    <SetSlider name="Arms" size="big" value="20" />
+    <SetSlider name="ShoulderWidth" size="big" value="120" />
+  </Preset>
+</SliderPresets>

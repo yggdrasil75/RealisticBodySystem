@@ -1,0 +1,66 @@
+<SliderGroups>
+	<Group name="CalienteArmor">
+		<Member name="CalArmor - Draugr" />
+		<Member name="CalArmor - Imperial Light" />
+		<Member name="CalArmor - Imperial Medium" />
+		<Member name="CalArmor - Imperial Heavy" />
+		<Member name="CalArmor - Iron Light" />
+		<Member name="CalArmor - Iron Heavy" />
+		<Member name="CalArmor - Steel Light" />
+		<Member name="CalArmor - Steel" />
+		<Member name="CalArmor - Penitus Oculatus" />
+		<Member name="CalArmor - Steel Plate" />
+		<Member name="CalArmor - Sons of Talos" />
+		<Member name="CalArmor - Leather" />
+		<Member name="CalArmor - Storm Cloaks" />
+		<Member name="CalArmor - Stormcloak Guards" />
+	</Group>
+	<Group name="CalienteSoldier">
+		<Member name="CalArmor - Draugr" />
+		<Member name="CalArmor - Imperial Light" />
+		<Member name="CalArmor - Imperial Medium" />
+		<Member name="CalArmor - Imperial Heavy" />
+		<Member name="CalArmor - Iron Light" />
+		<Member name="CalArmor - Iron Heavy" />
+		<Member name="CalArmor - Steel Light" />
+		<Member name="CalArmor - Steel" />
+		<Member name="CalArmor - Penitus Oculatus" />
+		<Member name="CalArmor - Steel Plate" />
+		<Member name="CalArmor - Sons of Talos" />
+		<Member name="CalArmor - Leather" />
+		<Member name="CalArmor - Storm Cloaks" />
+		<Member name="CalArmor - Stormcloak Guards" />
+	</Group>
+	<Group name="CalienteVanillaArmor">
+		<Member name="CalArmor - Vanilla Draugr" />
+		<Member name="CalArmor - Vanilla Imperial Lt" />
+		<Member name="CalArmor - Vanilla Imperial Med" />
+		<Member name="CalArmor - Vanilla Imperial Hvy" />
+		<Member name="CalArmor - Vanilla Iron Lt" />
+		<Member name="CalArmor - Vanilla Iron Hvy" />
+		<Member name="CalArmor - Vanilla Steel Lt" />
+		<Member name="CalArmor - Vanilla Steel" />
+		<Member name="CalArmor - Vanilla Penitus" />
+		<Member name="CalArmor - Vanilla Steel Plate" />
+		<Member name="CalArmor - Vanilla SOT" />
+		<Member name="CalArmor - Vanilla Leather" />
+		<Member name="CalArmor - Vanilla Storm Cloaks" />
+		<Member name="CalArmor - Vanilla Guards" />
+	</Group>
+	<Group name="CalienteVanillaSoldier">
+		<Member name="CalArmor - Vanilla Draugr" />
+		<Member name="CalArmor - Vanilla Imperial Lt" />
+		<Member name="CalArmor - Vanilla Imperial Med" />
+		<Member name="CalArmor - Vanilla Imperial Hvy" />
+		<Member name="CalArmor - Vanilla Iron Lt" />
+		<Member name="CalArmor - Vanilla Iron Hvy" />
+		<Member name="CalArmor - Vanilla Steel Lt" />
+		<Member name="CalArmor - Vanilla Steel" />
+		<Member name="CalArmor - Vanilla Penitus" />
+		<Member name="CalArmor - Vanilla Steel Plate" />
+		<Member name="CalArmor - Vanilla SOT" />
+		<Member name="CalArmor - Vanilla Leather" />
+		<Member name="CalArmor - Vanilla Storm Cloaks" />
+		<Member name="CalArmor - Vanilla Guards" />
+	</Group>
+</SliderGroups>

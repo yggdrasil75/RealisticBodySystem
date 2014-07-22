@@ -1,0 +1,84 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Penitus Oculatus">
+        <SetFolder>CalPenitus</SetFolder>
+        <SourceFile>CalPenitus.nif</SourceFile>
+        <OutputPath>meshes\armor\generaltulius</OutputPath>
+        <OutputFile>generaltuliusf</OutputFile>
+        <BaseShapeName target="Penitus">Penitus</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="PenitusBreasts" target="Penitus">PenitusBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="PenitusBreastsSmall" target="Penitus">PenitusBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="PenitusBreastsSH" target="Penitus">PenitusBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="PenitusBreastsSSH" target="Penitus">PenitusBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PenitusBreastCleavage" target="Penitus">PenitusBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="PenitusBreastGravity" target="Penitus">PenitusBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="PenitusButt" target="Penitus">PenitusButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="PenitusButtSmall" target="Penitus">PenitusButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="PenitusButtShape2" target="Penitus">PenitusButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="PenitusWaist" target="Penitus">PenitusWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="PenitusBelly" target="Penitus">PenitusBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="PenitusThighs" target="Penitus">PenitusThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="PenitusArms" target="Penitus">PenitusArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="PenitusShoulderWidth" target="Penitus">PenitusShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

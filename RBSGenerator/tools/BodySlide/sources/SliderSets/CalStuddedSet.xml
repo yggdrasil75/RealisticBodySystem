@@ -1,0 +1,108 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Leather">
+        <SetFolder>CalStudded</SetFolder>
+        <SourceFile>CalStudded.nif</SourceFile>
+        <OutputPath>meshes\armor\studded\female</OutputPath>
+        <OutputFile>body</OutputFile>
+        <BaseShapeName target="Studded">Studded</BaseShapeName>
+        <BaseShapeName target="StuddedShoulder">StuddedShoulder</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StuddedFur">StuddedFur</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="StuddedFurBreasts" target="StuddedFur">StuddedFurBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="StuddedShoulderBreasts" target="StuddedShoulder">StuddedShoulderBreasts.bsd</datafile>
+            <datafile name="StuddedBreasts" target="Studded">StuddedBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="StuddedShoulderBreastsSmall" target="StuddedShoulder">StuddedShoulderBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="StuddedBreastsSmall" target="Studded">StuddedBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="StuddedFurBreastsSH" target="StuddedFur">StuddedFurBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="StuddedShoulderBreastsSH" target="StuddedShoulder">StuddedShoulderBreastsSH.bsd</datafile>
+            <datafile name="StuddedBreastsSH" target="Studded">StuddedBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="StuddedFurBreastsSSH" target="StuddedFur">StuddedFurBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="StuddedShoulderBreastsSSH" target="StuddedShoulder">StuddedShoulderBreastsSSH.bsd</datafile>
+            <datafile name="StuddedBreastsSSH" target="Studded">StuddedBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StuddedFurBreastCleavage" target="StuddedFur">StuddedFurBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="StuddedBreastCleavage" target="Studded">StuddedBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="StuddedFurBreastGravity" target="StuddedFur">StuddedFurBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="StuddedShoulderBreastGravity" target="StuddedShoulder">StuddedShoulderBreastGravity.bsd</datafile>
+            <datafile name="StuddedBreastGravity" target="Studded">StuddedBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="StuddedFurButt" target="StuddedFur">StuddedFurButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="StuddedButt" target="Studded">StuddedButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="StuddedFurButtSmall" target="StuddedFur">StuddedFurButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="StuddedShoulderButtSmall" target="StuddedShoulder">StuddedShoulderButtSmall.bsd</datafile>
+            <datafile name="StuddedButtSmall" target="Studded">StuddedButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="StuddedFurButtShape2" target="StuddedFur">StuddedFurButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="StuddedButtShape2" target="Studded">StuddedButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="StuddedFurWaist" target="StuddedFur">StuddedFurWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="StuddedShoulderWaist" target="StuddedShoulder">StuddedShoulderWaist.bsd</datafile>
+            <datafile name="StuddedWaist" target="Studded">StuddedWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="StuddedFurBelly" target="StuddedFur">StuddedFurBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="StuddedBelly" target="Studded">StuddedBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="StuddedFurThighs" target="StuddedFur">StuddedFurThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="StuddedThighs" target="Studded">StuddedThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="StuddedFurArms" target="StuddedFur">StuddedFurArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+            <datafile name="StuddedShoulderArms" target="StuddedShoulder">StuddedShoulderArms.bsd</datafile>
+            <datafile name="StuddedArms" target="Studded">StuddedArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="StuddedFurShoulderWidth" target="StuddedFur">StuddedFurShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="StuddedShoulderShoulderWidth" target="StuddedShoulder">StuddedShoulderShoulderWidth.bsd</datafile>
+            <datafile name="StuddedShoulderWidth" target="Studded">StuddedShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

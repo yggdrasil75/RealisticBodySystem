@@ -1,0 +1,18 @@
+<SliderGroups>
+    <Group name="OCR-Finery_BBP">
+        <Member name="wav-BBP-Finery-FineClothes1" />
+        <Member name="wav-BBP-Finery-FineClothes2" />
+        <Member name="wav-BBP-Finery-WeddingDress" />
+        <Member name="wav-BBP-Finery-Yarl01" />
+        <Member name="wav-BBP-Finery-Yarl02" />
+        <Member name="wav-BBP-Finery-Yarl03" />
+    </Group>
+    <Group name="CBAdvanced">
+        <Member name="wav-BBP-Finery-FineClothes1" />
+        <Member name="wav-BBP-Finery-FineClothes2" />
+        <Member name="wav-BBP-Finery-WeddingDress" />
+        <Member name="wav-BBP-Finery-Yarl01" />
+        <Member name="wav-BBP-Finery-Yarl02" />
+        <Member name="wav-BBP-Finery-Yarl03" />
+    </Group>
+</SliderGroups>

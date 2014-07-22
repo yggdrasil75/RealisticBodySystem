@@ -1,0 +1,490 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Vanilla Draugr">
+        <SetFolder>CalDraugr</SetFolder>
+        <SourceFile>CalDraugr.nif</SourceFile>
+        <OutputPath>meshes/armor/draugr</OutputPath>
+        <OutputFile>draugrarmorfemale</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="Draugr">Draugr</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="DraugrVanilla0" target="Draugr">DraugrVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="DraugrVanilla1" target="Draugr">DraugrVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="DraugrBreastCleavage" target="Draugr">DraugrBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Iron Hvy">
+        <SetFolder>CalIron</SetFolder>
+        <SourceFile>CalienteIron.nif</SourceFile>
+        <OutputPath>meshes\armor\iron\f</OutputPath>
+        <OutputFile>cuirassheavy</OutputFile>
+        <BaseShapeName target="IronArmor">IronArmor</BaseShapeName>
+        <BaseShapeName target="IronSkirt">IronSkirt</BaseShapeName>
+        <BaseShapeName target="IronSatchel">IronSatchel</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="IronPauldron">IronPauldron</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="IronPauldronVanilla0" target="IronPauldron">IronPauldronVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="IronSkirtVanilla0" target="IronSkirt">IronSkirtVanilla0.bsd</datafile>
+            <datafile name="IronArmorVanilla0" target="IronArmor">IronArmorVanilla0.bsd</datafile>
+            <datafile name="IronSatchelVanilla0" target="IronSatchel">IronSatchelVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="IronPauldronVanilla1" target="IronPauldron">IronPauldronVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="IronSkirtVanilla1" target="IronSkirt">IronSkirtVanilla1.bsd</datafile>
+            <datafile name="IronArmorVanilla1" target="IronArmor">IronArmorVanilla1.bsd</datafile>
+            <datafile name="IronSatchelVanilla1" target="IronSatchel">IronSatchelVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="IronPauldronBreastCleavage" target="IronPauldron">IronPauldronBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="IronArmorBreastCleavage" target="IronArmor">IronArmorBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Iron Lt">
+        <SetFolder>CalIron</SetFolder>
+        <SourceFile>CalienteIronLight.nif</SourceFile>
+        <OutputPath>meshes\armor\iron\f</OutputPath>
+        <OutputFile>cuirass</OutputFile>
+        <BaseShapeName target="IronArmor">IronArmor</BaseShapeName>
+        <BaseShapeName target="IronSkirt">IronSkirt</BaseShapeName>
+        <BaseShapeName target="IronSatchel">IronSatchel</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="IronPauldron">IronPauldron</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="IronSkirtVanilla0" target="IronSkirt">IronSkirtVanilla0.bsd</datafile>
+            <datafile name="IronArmorVanilla0" target="IronArmor">IronArmorVanilla0.bsd</datafile>
+            <datafile name="IronSatchelVanilla0" target="IronSatchel">IronSatchelVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="IronSkirtVanilla1" target="IronSkirt">IronSkirtVanilla1.bsd</datafile>
+            <datafile name="IronArmorVanilla1" target="IronArmor">IronArmorVanilla1.bsd</datafile>
+            <datafile name="IronSatchelVanilla1" target="IronSatchel">IronSatchelVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">		
+            <datafile name="IronPauldronBreastCleavage" target="IronPauldron">IronPauldronBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="IronArmorBreastCleavage" target="IronArmor">IronArmorBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Steel">
+        <SetFolder>CalSteel</SetFolder>
+        <SourceFile>CalienteSteel.nif</SourceFile>
+        <OutputPath>meshes\armor\steel\f</OutputPath>
+        <OutputFile>cuirass</OutputFile>
+        <BaseShapeName target="SteelArmor">SteelArmor</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SteelArmorVanilla0" target="SteelArmor">SteelArmorVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="SteelArmorVanilla1" target="SteelArmor">SteelArmorVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="SteelArmorBreastCleavage" target="SteelArmor">SteelArmorBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SteelPauldronZap" invert="false" hidden="true" zap="true" small="0" big="0">
+            <datafile name="SteelPauldronZap" target="SteelArmor">SteelPauldronZap.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Steel Lt">
+        <SetFolder>CalSteel</SetFolder>
+        <SourceFile>CalienteSteel.nif</SourceFile>
+        <OutputPath>meshes\armor\steel\f</OutputPath>
+        <OutputFile>cuirasslight</OutputFile>
+        <BaseShapeName target="SteelArmor">SteelArmor</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SteelArmorVanilla0" target="SteelArmor">SteelArmorVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="SteelArmorVanilla1" target="SteelArmor">SteelArmorVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="SteelArmorBreastCleavage" target="SteelArmor">SteelArmorBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SteelPauldronZap" invert="false" hidden="true" zap="true" small="100" big="100">
+            <datafile name="SteelPauldronZap" target="SteelArmor">SteelPauldronZap.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Imperial Lt">
+        <SetFolder>CalImpLight</SetFolder>
+        <SourceFile>CalImpLight.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirasslight</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="ImpLt">ImpLt</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="0" big="100">
+            <datafile name="ImpLtImpVanillalo" target="ImpLt">ImpLtImpVanillalo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="ImpLtVanilla1" target="ImpLt">ImpLtVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpLtBreastCleavage" target="ImpLt">ImpLtBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Imperial Med">
+        <SetFolder>CalImpMedium</SetFolder>
+        <SourceFile>CalImpMedium.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirassmedium</OutputFile>
+        <BaseShapeName target="ImpMed">ImpMed</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="0" big="100">
+            <datafile name="ImpMedImpVanillalo" target="ImpMed">ImpMedImpVanillalo.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="ImpMedVanilla1" target="ImpMed">ImpMedVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpMedBreastCleavage" target="ImpMed">ImpMedBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Imperial Hvy">
+        <SetFolder>CalImpHeavy</SetFolder>
+        <SourceFile>CalImpHeavy.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirassheavy</OutputFile>
+        <BaseShapeName target="ImpHvySatchel">ImpHvySatchel</BaseShapeName>
+        <BaseShapeName target="ImpCuirassHeavy">ImpCuirassHeavy</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="ImpCuirassHeavyVanilla0" target="ImpCuirassHeavy">ImpCuirassHeavyVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="ImpHvySatchelVanilla0" target="ImpHvySatchel">ImpHvySatchelVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="ImpCuirassHeavyVanilla1" target="ImpCuirassHeavy">ImpCuirassHeavyVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="ImpHvySatchelVanilla1" target="ImpHvySatchel">ImpHvySatchelVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBreastCleavage" target="ImpCuirassHeavy">ImpCuirassHeavyBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastCleavage" target="ImpHvySatchel">ImpHvySatchelBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Penitus">
+        <SetFolder>CalPenitus</SetFolder>
+        <SourceFile>CalPenitus.nif</SourceFile>
+        <OutputPath>meshes\armor\generaltulius</OutputPath>
+        <OutputFile>generaltuliusf</OutputFile>
+        <BaseShapeName target="Penitus">Penitus</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="PenitusVanilla0" target="Penitus">PenitusVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="PenitusVanilla1" target="Penitus">PenitusVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="PenitusBreastCleavage" target="Penitus">PenitusBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Steel Plate">
+        <SetFolder>CalNordPlate</SetFolder>
+        <SourceFile>CalNordPlate.nif</SourceFile>
+        <OutputPath>meshes\armor\nordplate</OutputPath>
+        <OutputFile>nordcuirassf</OutputFile>
+        <BaseShapeName target="NordPlate">NordPlate</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="NordPlateVanilla0" target="NordPlate">NordPlateVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="NordPlateVanilla1" target="NordPlate">NordPlateVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="NordPlateBreastCleavage" target="NordPlate">NordPlateBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla SOT">
+        <SetFolder>CalSonsOfTalos</SetFolder>
+        <SourceFile>CalSonsOfTalos.nif</SourceFile>
+        <OutputPath>meshes\armor\sons of talos</OutputPath>
+        <OutputFile>outfitf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="SonsOfTalos">SonsOfTalos</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SonsOfTalosVanilla0" target="SonsOfTalos">SonsOfTalosVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="SonsOfTalosVanilla1" target="SonsOfTalos">SonsOfTalosVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="SonsOfTalosBreastCleavage" target="SonsOfTalos">SonsOfTalosBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet> <SliderSet name="CalArmor - Vanilla Leather">
+        <SetFolder>CalStudded</SetFolder>
+        <SourceFile>CalStudded.nif</SourceFile>
+        <OutputPath>meshes\armor\studded\female</OutputPath>
+        <OutputFile>body</OutputFile>
+        <BaseShapeName target="Studded">Studded</BaseShapeName>
+        <BaseShapeName target="StuddedShoulder">StuddedShoulder</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StuddedFur">StuddedFur</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="StuddedFurVanilla0" target="StuddedFur">StuddedFurVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="StuddedShoulderVanilla0" target="StuddedShoulder">StuddedShoulderVanilla0.bsd</datafile>
+            <datafile name="StuddedVanilla0" target="Studded">StuddedVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="StuddedFurVanilla1" target="StuddedFur">StuddedFurVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="StuddedShoulderVanilla1" target="StuddedShoulder">StuddedShoulderVanilla1.bsd</datafile>
+            <datafile name="StuddedVanilla1" target="Studded">StuddedVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StuddedBreastCleavage" target="Studded">StuddedBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Storm Cloaks">
+        <SetFolder>CalStormCloaks</SetFolder>
+        <SourceFile>CalStormCloaksSleeves.nif</SourceFile>
+        <OutputPath>meshes\armor\stormcloaks</OutputPath>
+        <OutputFile>cuirassfsleeves</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StormCloakCuirass">StormCloakCuirass</BaseShapeName>
+        <BaseShapeName target="StormCloakSkirt">StormCloakSkirt</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="StormCloakCuirassVanilla0" target="StormCloakSkirt">StormCloakCuirassVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="StormCloakSkirtVanilla0" target="StormCloakCuirass">StormCloakSkirtVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="StormCloakSkirtVanilla1" target="StormCloakSkirt">StormCloakSkirtVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="StormCloakCuirassVanilla1" target="StormCloakCuirass">StormCloakCuirassVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StormCloakCuirassBreastCleavage" target="StormCloakCuirass">StormCloakCuirassBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Vanilla Guards">
+        <SetFolder>CalStormCloaks</SetFolder>
+        <SourceFile>CalStormCloaks.nif</SourceFile>
+        <OutputPath>meshes\armor\stormcloaks</OutputPath>
+        <OutputFile>cuirassf</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="StormCloakCuirass">StormCloakCuirass</BaseShapeName>
+        <BaseShapeName target="StormCloakSkirt">StormCloakSkirt</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="StormCloakCuirassVanilla0" target="StormCloakSkirt">StormCloakCuirassVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="StormCloakSkirtVanilla0" target="StormCloakCuirass">StormCloakSkirtVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" hidden="true" small="0" big="100">
+            <datafile name="StormCloakSkirtVanilla1" target="StormCloakSkirt">StormCloakSkirtVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="StormCloakCuirassVanilla1" target="StormCloakCuirass">StormCloakCuirassVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="StormCloakCuirassBreastCleavage" target="StormCloakCuirass">StormCloakCuirassBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

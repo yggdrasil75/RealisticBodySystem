@@ -1,0 +1,262 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Imperial Light">
+        <SetFolder>CalImpLight</SetFolder>
+        <SourceFile>CalImpLight.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirasslight</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="ImpLt">ImpLt</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="ImpLtBreasts" target="ImpLt">ImpLtBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="ImpLtBreastsSmall" target="ImpLt">ImpLtBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="ImpLtBreastsSH" target="ImpLt">ImpLtBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="ImpLtBreastsSSH" target="ImpLt">ImpLtBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpLtBreastCleavage" target="ImpLt">ImpLtBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="ImpLtBreastGravity" target="ImpLt">ImpLtBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="ImpLtButt" target="ImpLt">ImpLtButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="ImpLtButtSmall" target="ImpLt">ImpLtButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="ImpLtButtShape2" target="ImpLt">ImpLtButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="ImpLtWaist" target="ImpLt">ImpLtWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="ImpLtBelly" target="ImpLt">ImpLtBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="ImpLtThighs" target="ImpLt">ImpLtThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="ImpLtArms" target="ImpLt">ImpLtArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ImpLtShoulderWidth" target="ImpLt">ImpLtShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Imperial Medium">
+        <SetFolder>CalImpMedium</SetFolder>
+        <SourceFile>CalImpMedium.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirassmedium</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="ImpMed">ImpMed</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="ImpMedBreasts" target="ImpMed">ImpMedBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="ImpMedBreastsSmall" target="ImpMed">ImpMedBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="ImpMedBreastsSH" target="ImpMed">ImpMedBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="ImpMedBreastsSSH" target="ImpMed">ImpMedBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpMedBreastCleavage" target="ImpMed">ImpMedBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="ImpMedBreastGravity" target="ImpMed">ImpMedBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="ImpMedButt" target="ImpMed">ImpMedButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="ImpMedButtSmall" target="ImpMed">ImpMedButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="ImpMedButtShape2" target="ImpMed">ImpMedButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="ImpMedWaist" target="ImpMed">ImpMedWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="ImpMedBelly" target="ImpMed">ImpMedBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="ImpMedThighs" target="ImpMed">ImpMedThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="ImpMedArms" target="ImpMed">ImpMedArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ImpMedShoulderWidth" target="ImpMed">ImpMedShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+    <SliderSet name="CalArmor - Imperial Heavy">
+        <SetFolder>CalImpHeavy</SetFolder>
+        <SourceFile>CalImpHeavy.nif</SourceFile>
+        <OutputPath>meshes\armor\imperial\f</OutputPath>
+        <OutputFile>cuirassheavy</OutputFile>
+        <BaseShapeName target="ImpHvySatchel">ImpHvySatchel</BaseShapeName>
+        <BaseShapeName target="ImpCuirassHeavy">ImpCuirassHeavy</BaseShapeName>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="ImpCuirassHeavyBreasts" target="ImpCuirassHeavy">ImpCuirassHeavyBreasts.bsd</datafile>
+            <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+            <datafile name="ImpHvySatchelBreasts" target="ImpHvySatchel">ImpHvySatchelBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="ImpCuirassHeavyBreastsSmall" target="ImpCuirassHeavy">ImpCuirassHeavyBreastsSmall.bsd</datafile>
+            <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastsSmall" target="ImpHvySatchel">ImpHvySatchelBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBreastsSH" target="ImpCuirassHeavy">ImpCuirassHeavyBreastsSH.bsd</datafile>
+            <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastsSH" target="ImpHvySatchel">ImpHvySatchelBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBreastsSSH" target="ImpCuirassHeavy">ImpCuirassHeavyBreastsSSH.bsd</datafile>
+            <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastsSSH" target="ImpHvySatchel">ImpHvySatchelBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBreastCleavage" target="ImpCuirassHeavy">ImpCuirassHeavyBreastCleavage.bsd</datafile>
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastCleavage" target="ImpHvySatchel">ImpHvySatchelBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBreastGravity" target="ImpCuirassHeavy">ImpCuirassHeavyBreastGravity.bsd</datafile>
+            <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+            <datafile name="ImpHvySatchelBreastGravity" target="ImpHvySatchel">ImpHvySatchelBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="ImpCuirassHeavyButt" target="ImpCuirassHeavy">ImpCuirassHeavyButt.bsd</datafile>
+            <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+            <datafile name="ImpHvySatchelButt" target="ImpHvySatchel">ImpHvySatchelButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="ImpCuirassHeavyButtSmall" target="ImpCuirassHeavy">ImpCuirassHeavyButtSmall.bsd</datafile>
+            <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+            <datafile name="ImpHvySatchelButtSmall" target="ImpHvySatchel">ImpHvySatchelButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyButtShape2" target="ImpCuirassHeavy">ImpCuirassHeavyButtShape2.bsd</datafile>
+            <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+            <datafile name="ImpHvySatchelButtShape2" target="ImpHvySatchel">ImpHvySatchelButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="ImpCuirassHeavyWaist" target="ImpCuirassHeavy">ImpCuirassHeavyWaist.bsd</datafile>
+            <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+            <datafile name="ImpHvySatchelWaist" target="ImpHvySatchel">ImpHvySatchelWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyBelly" target="ImpCuirassHeavy">ImpCuirassHeavyBelly.bsd</datafile>
+            <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+            <datafile name="ImpHvySatchelBelly" target="ImpHvySatchel">ImpHvySatchelBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="ImpCuirassHeavyThighs" target="ImpCuirassHeavy">ImpCuirassHeavyThighs.bsd</datafile>
+            <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+            <datafile name="ImpHvySatchelThighs" target="ImpHvySatchel">ImpHvySatchelThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="ImpCuirassHeavyArms" target="ImpCuirassHeavy">ImpCuirassHeavyArms.bsd</datafile>
+            <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="ImpCuirassHeavyShoulderWidth" target="ImpCuirassHeavy">ImpCuirassHeavyShoulderWidth.bsd</datafile>
+            <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+            <datafile name="ImpHvySatchelShoulderWidth" target="ImpHvySatchel">ImpHvySatchelShoulderWidth.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+            <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

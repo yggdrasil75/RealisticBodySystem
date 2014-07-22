@@ -1,0 +1,12 @@
+<SliderPresets>
+    <Preset name="CBBE" set="CalienteVanilla">
+		<Group name="CalienteVanillaUnderwear"/>	
+        <SetSlider name="NippleSize" size="big" value="80" />
+        <SetSlider name="NippleSize" size="small" value="60" />
+    </Preset>
+    <Preset name="CBBE" set="CalienteVanillaNeverNude">
+		<Group name="CalienteVanillaUnderwear"/>		
+        <SetSlider name="NippleSize" size="big" value="80" />
+        <SetSlider name="NippleSize" size="small" value="60" />
+    </Preset>
+</SliderPresets>

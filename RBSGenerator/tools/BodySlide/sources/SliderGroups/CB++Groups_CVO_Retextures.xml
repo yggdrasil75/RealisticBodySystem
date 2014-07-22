@@ -1,0 +1,44 @@
+<SliderGroups>
+	<Group name="CB++ CVO Retextures">
+		<Member name="CB++ Lustrianna - Adamantine" />
+		<Member name="CB++ Lustrianna - Mercenary" />
+		<Member name="CB++ Lustrianna - Tribal Glass" />
+		
+		<Member name="CB++ NobleClothes - For Boots" />
+		<Member name="CB++ NobleClothes - Blue - For Boots" />
+		<Member name="CB++ NobleClothes - Green - For Boots" />
+		<Member name="CB++ NobleClothes - Lavender - For Boots" />
+		<Member name="CB++ NobleClothes - Red - For Boots" />
+		<Member name="CB++ NobleClothes - SkyBlue - For Boots" />
+		<Member name="CB++ NobleClothes - White - For Boots" />
+		<Member name="CB++ NobleClothes - For Shoes" />
+		<Member name="CB++ NobleClothes - Blue - For Shoes" />
+		<Member name="CB++ NobleClothes - Green - For Shoes" />
+		<Member name="CB++ NobleClothes - Lavender - For Shoes" />
+		<Member name="CB++ NobleClothes - Red - For Shoes" />
+		<Member name="CB++ NobleClothes - SkyBlue - For Shoes" />
+		<Member name="CB++ NobleClothes - White - For Shoes" />
+	</Group>
+
+	<!-------------------- CB++ supergroup (for Presets) ----------------------->
+	<Group name="CB++">
+		<Member name="CB++ Lustrianna - Adamantine" />
+		<Member name="CB++ Lustrianna - Mercenary" />
+		<Member name="CB++ Lustrianna - Tribal Glass" />
+		
+		<Member name="CB++ NobleClothes - For Boots" />
+		<Member name="CB++ NobleClothes - Blue - For Boots" />
+		<Member name="CB++ NobleClothes - Green - For Boots" />
+		<Member name="CB++ NobleClothes - Lavender - For Boots" />
+		<Member name="CB++ NobleClothes - Red - For Boots" />
+		<Member name="CB++ NobleClothes - SkyBlue - For Boots" />
+		<Member name="CB++ NobleClothes - White - For Boots" />
+		<Member name="CB++ NobleClothes - For Shoes" />
+		<Member name="CB++ NobleClothes - Blue - For Shoes" />
+		<Member name="CB++ NobleClothes - Green - For Shoes" />
+		<Member name="CB++ NobleClothes - Lavender - For Shoes" />
+		<Member name="CB++ NobleClothes - Red - For Shoes" />
+		<Member name="CB++ NobleClothes - SkyBlue - For Shoes" />
+		<Member name="CB++ NobleClothes - White - For Shoes" />
+	</Group>
+</SliderGroups>

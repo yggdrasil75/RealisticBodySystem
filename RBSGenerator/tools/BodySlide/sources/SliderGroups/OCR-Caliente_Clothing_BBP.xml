@@ -1,0 +1,32 @@
+<SliderGroups>
+    <Group name="CBAdvanced">
+        <Member name="wav-BBP-CVC-Barkeeper" />
+        <Member name="wav-BBP-CVC-Beggar" />
+        <Member name="wav-BBP-CVC-Blacksmith" />
+        <Member name="wav-BBP-CVC-Chef" />
+        <Member name="wav-BBP-CVC-Farmer1" />
+        <Member name="wav-BBP-CVC-Farmer2" />
+        <Member name="wav-BBP-CVC-Farmer3a" />
+        <Member name="wav-BBP-CVC-Farmer3b" />
+        <Member name="wav-BBP-CVC-Farmer4" />
+        <Member name="wav-BBP-CVC-Merchant" />
+        <Member name="wav-BBP-CVC-Miner" />
+        <Member name="wav-BBP-CVC-Wench" />
+        <Member name="wav-BBP-CVC_Prisoner-Nudity" />
+    </Group>
+    <Group name="OCR-Caliente_Clothing_BBP">
+        <Member name="wav-BBP-CVC-Barkeeper" />
+        <Member name="wav-BBP-CVC-Beggar" />
+        <Member name="wav-BBP-CVC-Blacksmith" />
+        <Member name="wav-BBP-CVC-Chef" />
+        <Member name="wav-BBP-CVC-Farmer1" />
+        <Member name="wav-BBP-CVC-Farmer2" />
+        <Member name="wav-BBP-CVC-Farmer3a" />
+        <Member name="wav-BBP-CVC-Farmer3b" />
+        <Member name="wav-BBP-CVC-Farmer4" />
+        <Member name="wav-BBP-CVC-Merchant" />
+        <Member name="wav-BBP-CVC-Miner" />
+        <Member name="wav-BBP-CVC-Wench" />
+        <Member name="wav-BBP-CVC_Prisoner-Nudity" />
+    </Group>
+</SliderGroups>

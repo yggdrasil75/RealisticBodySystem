@@ -1,0 +1,54 @@
+<SliderSetInfo>
+    <SliderSet name="CalArmor - Steel Plate">
+        <SetFolder>CalNordPlate</SetFolder>
+        <SourceFile>CalNordPlate.nif</SourceFile>
+        <OutputPath>meshes\armor\nordplate</OutputPath>
+        <OutputFile>nordcuirassf</OutputFile>
+        <BaseShapeName target="NordPlate">NordPlate</BaseShapeName>
+        <Slider name="Breasts" invert="true" small="20" big="100">
+            <datafile name="NordPlateBreasts" target="NordPlate">NordPlateBreasts.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSmall" invert="true" small="100" big="100">
+            <datafile name="NordPlateBreastsSmall" target="NordPlate">NordPlateBreastsSmall.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSH" invert="false" small="0" big="0">
+            <datafile name="NordPlateBreastsSH" target="NordPlate">NordPlateBreastsSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastsSSH" invert="false" small="0" big="0">
+            <datafile name="NordPlateBreastsSSH" target="NordPlate">NordPlateBreastsSSH.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="NordPlateBreastCleavage" target="NordPlate">NordPlateBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BreastGravity" invert="false" small="0" big="0">
+            <datafile name="NordPlateBreastGravity" target="NordPlate">NordPlateBreastGravity.bsd</datafile>
+        </Slider>
+        <Slider name="Butt" invert="true" small="0" big="100">
+            <datafile name="NordPlateButt" target="NordPlate">NordPlateButt.bsd</datafile>
+        </Slider>
+        <Slider name="ButtSmall" invert="true" small="100" big="100">
+            <datafile name="NordPlateButtSmall" target="NordPlate">NordPlateButtSmall.bsd</datafile>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <datafile name="NordPlateButtShape2" target="NordPlate">NordPlateButtShape2.bsd</datafile>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <datafile name="NordPlateBelly" target="NordPlate">NordPlateBelly.bsd</datafile>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="100">
+            <datafile name="NordPlateWaist" target="NordPlate">NordPlateWaist.bsd</datafile>
+        </Slider>
+        <Slider name="Legs" invert="true" small="0" big="100">
+            <datafile name="NordPlateLegs" target="NordPlate">NordPlateLegs.bsd</datafile>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <datafile name="NordPlateThighs" target="NordPlate">NordPlateThighs.bsd</datafile>
+        </Slider>
+        <Slider name="Arms" invert="true" small="0" big="100">
+            <datafile name="NordPlateArms" target="NordPlate">NordPlateArms.bsd</datafile>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+            <datafile name="NordPlateShoulderWidth" target="NordPlate">NordPlateShoulderWidth.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

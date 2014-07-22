@@ -1,0 +1,8 @@
+<SliderGroups>
+    <Group name="OCR-Robes_BBP">
+        <Member name="wav-BBP-Robes-Monk" />
+    </Group>
+    <Group name="CBAdvanced">
+        <Member name="wav-BBP-Robes-Monk" />
+    </Group>
+</SliderGroups>

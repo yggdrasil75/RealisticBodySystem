@@ -1,0 +1,24 @@
+<SliderGroups>
+
+	<Group name="CBAdvanced Bodies">
+		<Member name="CBAdvanced - UndiesHR TBBP" />
+		<Member name="CBAdvanced - UndiesHR" />
+		<Member name="CBAdvanced - CalUndies" />
+		<Member name="CBAdvanced - CalUndies 2" />
+		<Member name="CalienteBodyAdvanced TBBP" />
+		<Member name="CalienteBodyAdvanced BBP" />
+		<Member name="CalienteBodyAdvanced" />
+	</Group>
+
+	<!-------------------- CB++ supergroup (for Presets) ----------------------->
+	<Group name="CBAdvanced">
+		<Member name="CBAdvanced - UndiesHR TBBP" />
+		<Member name="CBAdvanced - UndiesHR" />
+		<Member name="CBAdvanced - CalUndies" />
+		<Member name="CBAdvanced - CalUndies 2" />
+		<Member name="CalienteBodyAdvanced TBBP" />
+		<Member name="CalienteBodyAdvanced BBP" />
+		<Member name="CalienteBodyAdvanced" />
+	</Group>
+
+</SliderGroups>

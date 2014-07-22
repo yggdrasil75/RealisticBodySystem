@@ -1,0 +1,42 @@
+<SliderSetInfo>
+    <SliderSet name="CalClothesVanillaBeggar">
+        <SetFolder>CalClothesVanillaBeggar</SetFolder>
+        <SourceFile>CalClothes-Beggar.nif</SourceFile>
+        <OutputPath>meshes\clothes\beggarclothes</OutputPath>
+        <OutputFile>torsof</OutputFile>
+        <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+        <BaseShapeName target="BasePants">BasePants</BaseShapeName>
+        <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+        <Slider name="Vanilla0" invert="false" hidden="true" small="100" big="0">
+            <datafile name="BGVanilla0" target="BaseClothes">BGVanilla0.bsd</datafile>
+            <datafile name="VanillaLo" target="BaseShape">VanillaLo.bsd</datafile>
+            <datafile name="BGPVanilla0" target="BasePants">BGPVanilla0.bsd</datafile>
+        </Slider>
+        <Slider name="Vanilla1" invert="false" small="0" big="100">
+            <datafile name="BGVanilla1" target="BaseClothes">BGVanilla1.bsd</datafile>
+            <datafile name="VanillaHi" target="BaseShape">VanillaHi.bsd</datafile>
+            <datafile name="BGPVanilla1" target="BasePants">BGPVanilla1.bsd</datafile>
+        </Slider>
+        <Slider name="BGBreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BGBreastCleavage" target="BaseClothes">BGBreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="BGZapBody" invert="false" hidden="true" zap="true" small="0" big="100">
+            <datafile name="BGZapBody" target="BaseShape" local="true">BGZapBody.bsd</datafile>
+        </Slider>
+        <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+            <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+        </Slider>
+        <Slider name="NipBGone" invert="false" hidden="true" small="100" big="100">
+            <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100">
+            <datafile name="LockSeamHi" target="BaseShape">LockSeamHi.bsd</datafile>
+        </Slider>
+        <Slider name="LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0">
+            <datafile name="LockSeamLo" target="BaseShape">LockSeamLo.bsd</datafile>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

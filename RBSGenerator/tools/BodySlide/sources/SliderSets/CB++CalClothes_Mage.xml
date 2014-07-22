@@ -1,0 +1,466 @@
+<SliderSetInfo>
+  <SliderSet name="CB++ CalClothes - Nocturnal Robe (transparent)">
+    <SetFolder>CalClothingMage</SetFolder>
+    <SourceFile>NocturnalTr.nif</SourceFile>
+    <OutputPath>meshes\clothes\nocturnal</OutputPath>
+    <OutputFile>outfitf</OutputFile>
+    <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+    <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+    <Slider name="(zap)Sleeves" invert="false" zap="true" small="0" big="0" >
+      <datafile name="Nocturnal_Zap_Sleeves" target="BaseClothes" local="true">Nocturnal_Zap_Sleeves.bsd</datafile>
+    </Slider>
+    <Slider name="Skirtlength" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_Skirtlength" target="BaseClothes">Nocturnal_Skirtlength.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+      <datafile name="Nocturnal_Arms" target="BaseClothes">Nocturnal_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyArms" target="BaseClothes">Nocturnal_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+      <datafile name="Nocturnal_ShoulderSmooth" target="BaseClothes">Nocturnal_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_ShoulderWidth" target="BaseClothes">Nocturnal_ShoulderWidth.bsd</datafile>
+      <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+      <datafile name="Nocturnal_BigTorso" target="BaseClothes">Nocturnal_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Nocturnal_Breasts1" target="BaseClothes">Nocturnal_Breasts1.bsd</datafile>
+      <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_BreastsSm" target="BaseClothes">Nocturnal_BreastsSm.bsd</datafile>
+      <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastsSH" target="BaseClothes">Nocturnal_BreastsSH.bsd</datafile>
+      <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastsSSH" target="BaseClothes">Nocturnal_BreastsSSH.bsd</datafile>
+      <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+      <datafile name="Nocturnal_BreastsFantasy" target="BaseClothes">Nocturnal_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0" >
+      <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+      <datafile name="Nocturnal_DoubleMelon" target="BaseClothes">Nocturnal_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastCleavage" target="BaseClothes">Nocturnal_BreastCleavage.bsd</datafile>
+      <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+      <datafile name="Nocturnal_BreastFlatness" target="BaseClothes">Nocturnal_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+      <datafile name="Nocturnal_BreastGravity" target="BaseClothes">Nocturnal_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+      <datafile name="Nocturnal_PushUp" target="BaseClothes">Nocturnal_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+      <datafile name="Nocturnal_BreastHt" target="BaseClothes">Nocturnal_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+      <datafile name="Nocturnal_BreastPerkiness" target="BaseClothes">Nocturnal_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+      <datafile name="Nocturnal_BreastWidth" target="BaseClothes">Nocturnal_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDistance" invert="true" small="100" big="100">
+      <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+      <datafile name="Nocturnal_NippleDistance" target="BaseClothes">Nocturnal_NippleDistance.bsd</datafile>
+    </Slider>
+    <Slider name="NipplePerkiness" small="0" big="0">
+      <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+      <datafile name="Nocturnal_NipplePerkiness" target="BaseClothes">Nocturnal_NipplePerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="NippleLength" small="0" big="0">
+      <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+      <datafile name="Nocturnal_NippleLength" target="BaseClothes">Nocturnal_NippleLength.bsd</datafile>
+    </Slider>
+    <Slider name="NippleSize" invert="true" small="100" big="100">
+      <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+      <datafile name="Nocturnal_NippleSize" target="BaseClothes">Nocturnal_NippleSize.bsd</datafile>
+    </Slider>
+    <Slider name="NippleUp" small="0" big="0">
+      <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+      <datafile name="Nocturnal_NippleUp" target="BaseClothes">Nocturnal_NippleUp.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDown" small="0" big="0">
+      <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+      <datafile name="Nocturnal_NippleDown" target="BaseClothes">Nocturnal_NippleDown.bsd</datafile>
+    </Slider>
+    <Slider name="NippleTip" small="0" big="0">
+      <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+      <datafile name="Nocturnal_NippleTip" target="BaseClothes">Nocturnal_NippleTip.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="false" small="60" big="60">
+      <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="false" small="0" big="100">
+      <datafile name="Nocturnal_Waist" target="BaseClothes">Nocturnal_Waist.bsd</datafile>
+      <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0" >
+      <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+      <datafile name="Nocturnal_WideWaistLine" target="BaseClothes">Nocturnal_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyWaist" target="BaseClothes">Nocturnal_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+      <datafile name="Nocturnal_CalBelly" target="BaseClothes">Nocturnal_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+      <datafile name="Nocturnal_BigBelly" target="BaseClothes">Nocturnal_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+      <datafile name="Nocturnal_PregnancyBelly" target="BaseClothes">Nocturnal_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0" >
+      <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+      <datafile name="Nocturnal_TummyTuck" target="BaseClothes">Nocturnal_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+      <datafile name="Nocturnal_Back" target="BaseClothes">Nocturnal_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+      <datafile name="Nocturnal_Hipbone" target="BaseClothes">Nocturnal_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+      <datafile name="Nocturnal_Hips" target="BaseClothes">Nocturnal_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" small="0" big="0">
+      <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+      <datafile name="Nocturnal_ButtCrack" target="BaseClothes">Nocturnal_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Nocturnal_Butt1" target="BaseClothes">Nocturnal_Butt1.bsd</datafile>
+      <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_ButtSm" target="BaseClothes">Nocturnal_ButtSm.bsd</datafile>
+      <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" invert="false" small="0" big="0">
+      <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+      <datafile name="Nocturnal_MakButt" target="BaseClothes">Nocturnal_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+      <datafile name="Nocturnal_BigButt" target="BaseClothes">Nocturnal_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyButt" target="BaseClothes">Nocturnal_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0" >
+      <datafile name="AppleCheeks" target="BaseShape">AppleCheeks.bsd</datafile>
+      <datafile name="Nocturnal_AppleCheeks" target="BaseClothes">Nocturnal_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0" >
+      <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+      <datafile name="Nocturnal_RoundAss" target="BaseClothes">Nocturnal_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+      <datafile name="Nocturnal_Groin" target="BaseClothes">Nocturnal_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+      <datafile name="Nocturnal_SlimThighs" target="BaseClothes">Nocturnal_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+      <datafile name="Nocturnal_CalThighs" target="BaseClothes">Nocturnal_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyLegs" target="BaseClothes">Nocturnal_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+      <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+      <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100" >
+      <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0" >
+      <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+  <SliderSet name="CB++ CalClothes - Nocturnal Robe">
+    <SetFolder>CalClothingMage</SetFolder>
+    <SourceFile>Nocturnal.nif</SourceFile>
+    <OutputPath>meshes\clothes\nocturnal</OutputPath>
+    <OutputFile>outfitf</OutputFile>
+    <BaseShapeName target="BaseClothes">BaseClothes</BaseShapeName>
+    <BaseShapeName target="BaseShape" DataFolder="CalienteBody">BaseShape</BaseShapeName>
+    <Slider name="(zap)Sleeves" invert="false" zap="true" small="0" big="0" >
+      <datafile name="Nocturnal_Zap_Sleeves" target="BaseClothes" local="true">Nocturnal_Zap_Sleeves.bsd</datafile>
+    </Slider>
+    <Slider name="Skirtlength" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_Skirtlength" target="BaseClothes">Nocturnal_Skirtlength.bsd</datafile>
+    </Slider>
+    <Slider name="Arms" invert="true" small="0" big="100">
+      <datafile name="Arms" target="BaseShape">Arms.bsd</datafile>
+      <datafile name="Nocturnal_Arms" target="BaseClothes">Nocturnal_Arms.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyArms" small="0" big="0">
+      <datafile name="ChubbyArms" target="BaseShape">ChubbyArms.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyArms" target="BaseClothes">Nocturnal_ChubbyArms.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderSmooth" small="0" big="0">
+      <datafile name="ShoulderSmooth" target="BaseShape">ShoulderSmooth.bsd</datafile>
+      <datafile name="Nocturnal_ShoulderSmooth" target="BaseClothes">Nocturnal_ShoulderSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderWidth" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_ShoulderWidth" target="BaseClothes">Nocturnal_ShoulderWidth.bsd</datafile>
+      <datafile name="ShoulderWidth" target="BaseShape">ShoulderWidth.bsd</datafile>
+    </Slider>
+    <Slider name="BigTorso" small="0" big="0">
+      <datafile name="BigTorso" target="BaseShape">BigTorso.bsd</datafile>
+      <datafile name="Nocturnal_BigTorso" target="BaseClothes">Nocturnal_BigTorso.bsd</datafile>
+    </Slider>
+    <Slider name="Breasts" invert="true" small="20" big="100">
+      <datafile name="Nocturnal_Breasts1" target="BaseClothes">Nocturnal_Breasts1.bsd</datafile>
+      <datafile name="Breasts1" target="BaseShape">Breasts1.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSmall" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_BreastsSm" target="BaseClothes">Nocturnal_BreastsSm.bsd</datafile>
+      <datafile name="BreastsSm" target="BaseShape">BreastsSm.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSH" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastsSH" target="BaseClothes">Nocturnal_BreastsSH.bsd</datafile>
+      <datafile name="BreastsSH" target="BaseShape">BreastsSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsSSH" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastsSSH" target="BaseClothes">Nocturnal_BreastsSSH.bsd</datafile>
+      <datafile name="BreastsSSH" target="BaseShape">BreastsSSH.bsd</datafile>
+    </Slider>
+    <Slider name="BreastsFantasy" small="0" big="0">
+      <datafile name="BreastsFantasy" target="BaseShape">BreastsFantasy.bsd</datafile>
+      <datafile name="Nocturnal_BreastsFantasy" target="BaseClothes">Nocturnal_BreastsFantasy.bsd</datafile>
+    </Slider>
+    <Slider name="DoubleMelon" small="0" big="0" >
+      <datafile name="DoubleMelon" target="BaseShape">DoubleMelon.bsd</datafile>
+      <datafile name="Nocturnal_DoubleMelon" target="BaseClothes">Nocturnal_DoubleMelon.bsd</datafile>
+    </Slider>
+    <Slider name="BreastCleavage" invert="false" small="0" big="0">
+      <datafile name="Nocturnal_BreastCleavage" target="BaseClothes">Nocturnal_BreastCleavage.bsd</datafile>
+      <datafile name="BreastCleavage" target="BaseShape">BreastCleavage.bsd</datafile>
+    </Slider>
+    <Slider name="BreastFlatness" small="0" big="0">
+      <datafile name="BreastFlatness" target="BaseShape">BreastFlatness.bsd</datafile>
+      <datafile name="Nocturnal_BreastFlatness" target="BaseClothes">Nocturnal_BreastFlatness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastGravity" small="0" big="0">
+      <datafile name="BreastGravity" target="BaseShape">BreastGravity.bsd</datafile>
+      <datafile name="Nocturnal_BreastGravity" target="BaseClothes">Nocturnal_BreastGravity.bsd</datafile>
+    </Slider>
+    <Slider name="PushUp" small="0" big="0">
+      <datafile name="PushUp" target="BaseShape">PushUp.bsd</datafile>
+      <datafile name="Nocturnal_PushUp" target="BaseClothes">Nocturnal_PushUp.bsd</datafile>
+    </Slider>
+    <Slider name="BreastHeight" small="0" big="0">
+      <datafile name="BreastHt" target="BaseShape">BreastHt.bsd</datafile>
+      <datafile name="Nocturnal_BreastHt" target="BaseClothes">Nocturnal_BreastHt.bsd</datafile>
+    </Slider>
+    <Slider name="BreastPerkiness" small="0" big="0">
+      <datafile name="BreastPerkiness" target="BaseShape">BreastPerkiness.bsd</datafile>
+      <datafile name="Nocturnal_BreastPerkiness" target="BaseClothes">Nocturnal_BreastPerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="BreastWidth" small="0" big="0">
+      <datafile name="BreastWidth" target="BaseShape">BreastWidth.bsd</datafile>
+      <datafile name="Nocturnal_BreastWidth" target="BaseClothes">Nocturnal_BreastWidth.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDistance" invert="true" small="100" big="100">
+      <datafile name="NippleDistance" target="BaseShape">NippleDistance.bsd</datafile>
+      <datafile name="Nocturnal_NippleDistance" target="BaseClothes">Nocturnal_NippleDistance.bsd</datafile>
+    </Slider>
+    <Slider name="NipplePerkiness" small="0" big="0">
+      <datafile name="NipplePerkiness" target="BaseShape">NipplePerkiness.bsd</datafile>
+      <datafile name="Nocturnal_NipplePerkiness" target="BaseClothes">Nocturnal_NipplePerkiness.bsd</datafile>
+    </Slider>
+    <Slider name="NippleLength" small="0" big="0">
+      <datafile name="NippleLength" target="BaseShape">NippleLength.bsd</datafile>
+      <datafile name="Nocturnal_NippleLength" target="BaseClothes">Nocturnal_NippleLength.bsd</datafile>
+    </Slider>
+    <Slider name="NippleSize" invert="true" small="100" big="100">
+      <datafile name="NippleSize" target="BaseShape">NippleSize.bsd</datafile>
+      <datafile name="Nocturnal_NippleSize" target="BaseClothes">Nocturnal_NippleSize.bsd</datafile>
+    </Slider>
+    <Slider name="NippleUp" small="0" big="0">
+      <datafile name="NippleUp" target="BaseShape">NippleUp.bsd</datafile>
+      <datafile name="Nocturnal_NippleUp" target="BaseClothes">Nocturnal_NippleUp.bsd</datafile>
+    </Slider>
+    <Slider name="NippleDown" small="0" big="0">
+      <datafile name="NippleDown" target="BaseShape">NippleDown.bsd</datafile>
+      <datafile name="Nocturnal_NippleDown" target="BaseClothes">Nocturnal_NippleDown.bsd</datafile>
+    </Slider>
+    <Slider name="NippleTip" small="0" big="0">
+      <datafile name="NippleTip" target="BaseShape">NippleTip.bsd</datafile>
+      <datafile name="Nocturnal_NippleTip" target="BaseClothes">Nocturnal_NippleTip.bsd</datafile>
+    </Slider>
+    <Slider name="NipBGone" hidden="true" small="100" big="100">
+      <datafile name="NipBGone" target="BaseShape">NipBGone.bsd</datafile>
+    </Slider>
+    <Slider name="Waist" invert="false" small="0" big="100">
+      <datafile name="Nocturnal_Waist" target="BaseClothes">Nocturnal_Waist.bsd</datafile>
+      <datafile name="Waist" target="BaseShape">Waist.bsd</datafile>
+    </Slider>
+    <Slider name="WideWaistLine" small="0" big="0" >
+      <datafile name="WideWaistLine" target="BaseShape">WideWaistLine.bsd</datafile>
+      <datafile name="Nocturnal_WideWaistLine" target="BaseClothes">Nocturnal_WideWaistLine.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyWaist" small="0" big="0">
+      <datafile name="ChubbyWaist" target="BaseShape">ChubbyWaist.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyWaist" target="BaseClothes">Nocturnal_ChubbyWaist.bsd</datafile>
+    </Slider>
+    <Slider name="Belly" small="0" big="0">
+      <datafile name="CalBelly" target="BaseShape">CalBelly.bsd</datafile>
+      <datafile name="Nocturnal_CalBelly" target="BaseClothes">Nocturnal_CalBelly.bsd</datafile>
+    </Slider>
+    <Slider name="BigBelly" small="0" big="0">
+      <datafile name="BigBelly" target="BaseShape">BigBelly.bsd</datafile>
+      <datafile name="Nocturnal_BigBelly" target="BaseClothes">Nocturnal_BigBelly.bsd</datafile>
+    </Slider>
+    <Slider name="PregnancyBelly" small="0" big="0">
+      <datafile name="PregnancyBelly" target="BaseShape">PregnancyBelly.bsd</datafile>
+      <datafile name="Nocturnal_PregnancyBelly" target="BaseClothes">Nocturnal_PregnancyBelly.bsd</datafile>
+    </Slider>
+    <Slider name="TummyTuck" small="0" big="0" >
+      <datafile name="TummyTuck" target="BaseShape">TummyTuck.bsd</datafile>
+      <datafile name="Nocturnal_TummyTuck" target="BaseClothes">Nocturnal_TummyTuck.bsd</datafile>
+    </Slider>
+    <Slider name="Back" small="0" big="0">
+      <datafile name="Back" target="BaseShape">Back.bsd</datafile>
+      <datafile name="Nocturnal_Back" target="BaseClothes">Nocturnal_Back.bsd</datafile>
+    </Slider>
+    <Slider name="Hipbone" small="0" big="0">
+      <datafile name="Hipbone" target="BaseShape">Hipbone.bsd</datafile>
+      <datafile name="Nocturnal_Hipbone" target="BaseClothes">Nocturnal_Hipbone.bsd</datafile>
+    </Slider>
+    <Slider name="Hips" small="0" big="0">
+      <datafile name="Hips" target="BaseShape">Hips.bsd</datafile>
+      <datafile name="Nocturnal_Hips" target="BaseClothes">Nocturnal_Hips.bsd</datafile>
+    </Slider>
+    <Slider name="ButtCrack" small="0" big="0">
+      <datafile name="ButtCrack" target="BaseShape">ButtCrack.bsd</datafile>
+      <datafile name="Nocturnal_ButtCrack" target="BaseClothes">Nocturnal_ButtCrack.bsd</datafile>
+    </Slider>
+    <Slider name="Butt" invert="true" small="0" big="100">
+      <datafile name="Nocturnal_Butt1" target="BaseClothes">Nocturnal_Butt1.bsd</datafile>
+      <datafile name="Butt1" target="BaseShape">Butt1.bsd</datafile>
+    </Slider>
+    <Slider name="ButtSmall" invert="true" small="100" big="100">
+      <datafile name="Nocturnal_ButtSm" target="BaseClothes">Nocturnal_ButtSm.bsd</datafile>
+      <datafile name="ButtSm" target="BaseShape">ButtSm.bsd</datafile>
+    </Slider>
+    <Slider name="ButtShape2" invert="false" small="0" big="0">
+      <datafile name="MakButt" target="BaseShape">MakButt.bsd</datafile>
+      <datafile name="Nocturnal_MakButt" target="BaseClothes">Nocturnal_MakButt.bsd</datafile>
+    </Slider>
+    <Slider name="BigButt" small="0" big="0">
+      <datafile name="BigButt" target="BaseShape">BigButt.bsd</datafile>
+      <datafile name="Nocturnal_BigButt" target="BaseClothes">Nocturnal_BigButt.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyButt" small="0" big="0">
+      <datafile name="ChubbyButt" target="BaseShape">ChubbyButt.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyButt" target="BaseClothes">Nocturnal_ChubbyButt.bsd</datafile>
+    </Slider>
+    <Slider name="AppleCheeks" small="0" big="0" >
+      <datafile name="AppleCheeks" target="BaseShape">AppleCheeks.bsd</datafile>
+      <datafile name="Nocturnal_AppleCheeks" target="BaseClothes">Nocturnal_AppleCheeks.bsd</datafile>
+    </Slider>
+    <Slider name="RoundAss" small="0" big="0" >
+      <datafile name="RoundAss" target="BaseShape">RoundAss.bsd</datafile>
+      <datafile name="Nocturnal_RoundAss" target="BaseClothes">Nocturnal_RoundAss.bsd</datafile>
+    </Slider>
+    <Slider name="Groin" small="0" big="0">
+      <datafile name="Groin" target="BaseShape">Groin.bsd</datafile>
+      <datafile name="Nocturnal_Groin" target="BaseClothes">Nocturnal_Groin.bsd</datafile>
+    </Slider>
+    <Slider name="SlimThighs" small="0" big="0">
+      <datafile name="SlimThighs" target="BaseShape">SlimThighs.bsd</datafile>
+      <datafile name="Nocturnal_SlimThighs" target="BaseClothes">Nocturnal_SlimThighs.bsd</datafile>
+    </Slider>
+    <Slider name="Thighs" small="0" big="0">
+      <datafile name="CalThighs" target="BaseShape">CalThighs.bsd</datafile>
+      <datafile name="Nocturnal_CalThighs" target="BaseClothes">Nocturnal_CalThighs.bsd</datafile>
+    </Slider>
+    <Slider name="ChubbyLegs" small="0" big="0">
+      <datafile name="ChubbyLegs" target="BaseShape">ChubbyLegs.bsd</datafile>
+      <datafile name="Nocturnal_ChubbyLegs" target="BaseClothes">Nocturnal_ChubbyLegs.bsd</datafile>
+    </Slider>
+    <Slider name="Legs" invert="true" small="0" big="100">
+      <datafile name="Legs" target="BaseShape">Legs.bsd</datafile>
+    </Slider>
+    <Slider name="KneeHeight" small="0" big="0">
+      <datafile name="KneeHeight" target="BaseShape">KneeHeight.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSize" small="0" big="0">
+      <datafile name="CalfSize" target="BaseShape">CalfSize.bsd</datafile>
+    </Slider>
+    <Slider name="CalfSmooth" small="0" big="0">
+      <datafile name="CalfSmooth" target="BaseShape">CalfSmooth.bsd</datafile>
+    </Slider>
+    <Slider name="Ankles" small="100" big="100" invert="true">
+      <datafile name="Ankles" target="BaseShape">Ankles.bsd</datafile>
+    </Slider>
+    <Slider name="SmallSeam" invert="false" hidden="true" small="100" big="0">
+      <datafile name="SeamSm" target="BaseShape">SeamSm.bsd</datafile>
+    </Slider>
+    <Slider name="ShoulderTweak" invert="false" hidden="true" small="100" big="100">
+      <datafile name="ShoulderTweak" target="BaseShape">ShoulderTweak.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamHi" invert="false" hidden="true" clamp="true" small="0" big="100" >
+      <datafile name="NH_LockSeamHi" target="BaseShape">NH_LockSeamHi.bsd</datafile>
+    </Slider>
+    <Slider name="NH_LockSeamLo" invert="false" hidden="true" clamp="true" small="100" big="0" >
+      <datafile name="NH_LockSeamLo" target="BaseShape">NH_LockSeamLo.bsd</datafile>
+    </Slider>
+  </SliderSet>
+</SliderSetInfo>

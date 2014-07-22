@@ -1,0 +1,10 @@
+<SliderGroups>
+    <Group name="OCR-Misc_TBBP">
+        <Member name="wav-TBBP-Misc-Jester" />
+        <Member name="wav-TBBP-Misc-Redguard" />
+    </Group>
+    <Group name="CBAdvanced">
+        <Member name="wav-TBBP-Misc-Jester" />
+        <Member name="wav-TBBP-Misc-Redguard" />
+    </Group>
+</SliderGroups>

@@ -1,0 +1,96 @@
+<SliderGroups>
+	<Group name="CB++ Caliente's Vanilla Armor">
+		<Member name="CB++ CalArmor - Forsworn" />
+		<Member name="CB++ CalArmor - Fur A" />
+		<Member name="CB++ CalArmor - Fur B" />
+		<Member name="CB++ CalArmor - Fur C" />
+		<Member name="CB++ CalArmor - Fur D" />
+		<Member name="CB++ CalArmor - Hide" />
+		<Member name="CB++ CalArmor - Studded" />
+		<Member name="CB++ CalArmor - Scale" />
+		<Member name="CB++ CalArmor - Horned Scale" />
+		
+		<Member name="CB++ CalArmor - Draugr" />
+		<Member name="CB++ CalArmor - Imperial Light" />
+		<Member name="CB++ CalArmor - Imperial Medium" />
+		<Member name="CB++ CalArmor - Imperial Heavy" />
+		<Member name="CB++ CalArmor - Iron Light" />
+		<Member name="CB++ CalArmor - Iron Heavy" />
+		<Member name="CB++ CalArmor - Leather" />
+		<Member name="CB++ CalArmor - Penitus Oculatus" />
+		<Member name="CB++ CalArmor - Steel" />
+		<Member name="CB++ CalArmor - Steel Light" />
+		<Member name="CB++ CalArmor - Steel Plate" />
+		<Member name="CB++ CalArmor - Sons of Talos" />
+		<Member name="CB++ CalArmor - Storm Cloaks" />
+		<Member name="CB++ CalArmor - Stormcloak Guards" />
+	</Group>
+		
+	<Group name="CB++ Caliente's Vanilla Clothes">
+		<Member name="CB++ CalClothes - FarmClothes01" />
+		<Member name="CB++ CalClothes - FarmClothes02" />
+		<Member name="CB++ CalClothes - FarmClothes03" />
+		<Member name="CB++ CalClothes - FarmClothes03Plus" />
+		<Member name="CB++ CalClothes - FarmClothes04" />
+		<Member name="CB++ CalClothes - Barkeep" />
+		<Member name="CB++ CalClothes - Chef" />
+		<Member name="CB++ CalClothes - Wench" />
+		<Member name="CB++ CalClothes - Merchant" />
+		<Member name="CB++ CalClothes - Miner" />
+		<Member name="CB++ CalClothes - Blacksmith" />
+		<Member name="CB++ CalClothes - Beggar" />
+		<Member name="CB++ CalClothes - RoughspunTunic" />
+		<Member name="CB++ CalClothes - Prisoner Rags" />
+		<Member name="CB++ CalClothes - Prisoner Bloody" />
+
+		<Member name="CB++ CalClothes - Nocturnal Robe (transparent)" />
+		<Member name="CB++ CalClothes - Nocturnal Robe" />
+	</Group>
+	
+<!-------------------- CB++ supergroup (for Presets) ----------------------->
+	<Group name="CB++">
+		<Member name="CB++ CalArmor - Forsworn" />
+		<Member name="CB++ CalArmor - Fur A" />
+		<Member name="CB++ CalArmor - Fur B" />
+		<Member name="CB++ CalArmor - Fur C" />
+		<Member name="CB++ CalArmor - Fur D" />
+		<Member name="CB++ CalArmor - Hide" />
+		<Member name="CB++ CalArmor - Studded" />
+		<Member name="CB++ CalArmor - Scale" />
+		<Member name="CB++ CalArmor - Horned Scale" />
+		
+		<Member name="CB++ CalArmor - Draugr" />
+		<Member name="CB++ CalArmor - Imperial Light" />
+		<Member name="CB++ CalArmor - Imperial Medium" />
+		<Member name="CB++ CalArmor - Imperial Heavy" />
+		<Member name="CB++ CalArmor - Iron Light" />
+		<Member name="CB++ CalArmor - Iron Heavy" />
+		<Member name="CB++ CalArmor - Leather" />
+		<Member name="CB++ CalArmor - Penitus Oculatus" />
+		<Member name="CB++ CalArmor - Steel" />
+		<Member name="CB++ CalArmor - Steel Light" />
+		<Member name="CB++ CalArmor - Steel Plate" />
+		<Member name="CB++ CalArmor - Sons of Talos" />
+		<Member name="CB++ CalArmor - Storm Cloaks" />
+		<Member name="CB++ CalArmor - Stormcloak Guards" />
+		
+		<Member name="CB++ CalClothes - FarmClothes01" />
+		<Member name="CB++ CalClothes - FarmClothes02" />
+		<Member name="CB++ CalClothes - FarmClothes03" />
+		<Member name="CB++ CalClothes - FarmClothes03Plus" />
+		<Member name="CB++ CalClothes - FarmClothes04" />
+		<Member name="CB++ CalClothes - Barkeep" />
+		<Member name="CB++ CalClothes - Chef" />
+		<Member name="CB++ CalClothes - Wench" />
+		<Member name="CB++ CalClothes - Merchant" />
+		<Member name="CB++ CalClothes - Miner" />
+		<Member name="CB++ CalClothes - Blacksmith" />
+		<Member name="CB++ CalClothes - Beggar" />
+		<Member name="CB++ CalClothes - RoughspunTunic" />
+		<Member name="CB++ CalClothes - Prisoner Rags" />
+		<Member name="CB++ CalClothes - Prisoner Bloody" />
+
+		<Member name="CB++ CalClothes - Nocturnal Robe (transparent)" />
+		<Member name="CB++ CalClothes - Nocturnal Robe" />
+	</Group>
+</SliderGroups>
