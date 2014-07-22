@@ -8,13 +8,32 @@
 #include <WindowsConstants.au3>
 #include <EditConstants.au3>
 #include <gui.au3>
-global $MeshesPath = _PathFull (@ScriptDir&"\..\..\..\meshes")
-global $BodySlidePath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide")
-global $BodySlideSourcesPath = _PathFull (@ScriptDir&"\..\..\tools\Bodyslide\sources")
-global $modPath = _PathFull (@ScriptDir&"\..\..\..\")
-global $sourcesPath = _PathFull (@ScriptDir&"\..\..\..\RBSGenerator\sources")
-global $hkxcmdPath = _PathFull (@ScriptDir&"\..\..\..\RBSGenerator\tools\")
-global $SkyrimPath = _PathFull (@ScriptDir&"\..\..\..\..\")
+#include <constants.au3>
+
+if ($CmdLine [0] > 0) Then
+   global $scriptDir = $CmdLine [1]
+else
+   global $scriptDir = @ScriptDir
+EndIf
+
+global $MeshesPath = _PathFull ($scriptDir&"\..\..\..\meshes")
+MsgBOX (0,"jajaj", $MeshesPath)
+global $BodySlidePath = _PathFull ($scriptDir&"\..\..\tools\Bodyslide")
+global $BodySlideSourcesPath = _PathFull ($scriptDir&"\..\..\tools\Bodyslide\sources")
+global $modPath = _PathFull ($scriptDir&"\..\..\..\")
+global $sourcesPath = _PathFull ($scriptDir&"\..\..\..\RBSGenerator\sources")
+global $hkxcmdPath = _PathFull ($scriptDir&"\..\..\..\RBSGenerator\tools\")
+global $SkyrimPath = _PathFull ($scriptDir&"\..\..\..\..\")
+
+;global $modPath = _PathFull (@ScriptDir & "\data")
+;global $MeshesPath = _PathFull ($modPath & "\meshes")
+;global $RBSGeneratorPath = _PathFull ($modPath & "\RealisticBodySystem\RBSGenerator\")
+;global $BodySlidePath = _PathFull ($RBSGeneratorPath & "\tools\Bodyslide")
+;global $BodySlideSourcesPath = _PathFull ($BodySlidePath & "\sources")
+;global $sourcesPath = _PathFull ($RBSGeneratorPath & "\sources")
+;global $hkxcmdPath = _PathFull ($RBSGeneratorPath & "\tools\")
+;global $SkyrimPath = _PathFull (@ScriptDir)
+
 global $amountBodyTypes = 30
 global $ArmorNumber = 21
 global $bodyTypeNumber = 1
@@ -25,6 +44,7 @@ global $windowName = "Caliente's BodySlide"
 _GUICreate()
 _CreateLabel()
 _GUIChangeText("Creating MeshesTemp folder")
+
 DirCreate($BodySlidePath & "\MeshesTemp")
 ;FileCopy ($hkxcmdPath & "\hkxcmd.exe", $SkyrimPath ,1 )
 _GUIChangeText("change Path to Skyrim in Bodyslide Config")

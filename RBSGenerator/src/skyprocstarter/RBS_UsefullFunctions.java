@@ -19,4 +19,12 @@ public class RBS_UsefullFunctions {
             System.exit(0);
         }
     }
+    
+        public static void msgbox(int text) {
+        int result = JOptionPane.showConfirmDialog(null, text, "Debug Window", JOptionPane.YES_NO_CANCEL_OPTION);
+        if (result == 2) {
+            System.exit(0);
+        }
+    }
+    
 }

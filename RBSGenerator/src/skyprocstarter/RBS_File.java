@@ -32,7 +32,6 @@ import skyproc.SPGlobal;
 
 public class RBS_File {
 
-
     public static List<String> filelist;
     private static Charset charset;
 

@@ -12,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-
 import static java.nio.file.StandardCopyOption.*;
 import java.util.List;
 import skyproc.gui.SPProgressBarPlug;
@@ -21,7 +20,6 @@ import static skyprocstarter.SkyProcStarter.save;
 public class RBS_Animation {
 
     public static int amountOfAnimationFolders;
-
     private static String defaultFemaleXMLContent;
     private static String dummyDefaultFemaleXMLContent;
     private static List<List<String>> animationsPathWalking = new ArrayList<>();
@@ -160,4 +158,3 @@ public class RBS_Animation {
         }
     }
 }
-

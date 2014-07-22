@@ -157,10 +157,11 @@ EndFunc
 Func cleanBodySlideDirectory()
    Local $sDrive = "", $sDir = "", $sFilename = "", $sExtension = ""
    Local $aPathSplit = _PathSplit(@ScriptFullPath, $sDrive, $sDir, $sFilename, $sExtension)
-   RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (wav-TBBP*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
-   RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CT77*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
-   RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CB++*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
-   RunWait(@ComSpec & " /c"&' '& $sDrive &": & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (cal*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
+
+   RunWait(@ComSpec & " /c"&' '& $sDrive &" & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (wav-TBBP*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
+   RunWait(@ComSpec & " /c"&' '& $sDrive &" & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CT77*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
+   RunWait(@ComSpec & " /c"&' '& $sDrive &" & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (CB++*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
+   RunWait(@ComSpec & " /c"&' '& $sDrive &" & cd """& $BodySlideSourcesPath & "\ShapeData\"" & FOR /d %a in (cal*) DO XCOPY ""%a"" """ & $bodySlidePath & "\ShapeData\%a""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\CalienteBody"" """ & $bodySlidePath &"\ShapeData\CalienteBody""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\killerkeo"" """ & $bodySlidePath &"\ShapeData\killerkeo""  /E /I /Y")
    RunWait(@ComSpec & " /c"&' '&"xcopy """& $BodySlideSourcesPath & "\ShapeData\Caliente Undies"" """ & $bodySlidePath &"\ShapeData\Caliente Undies""  /E /I /Y")
