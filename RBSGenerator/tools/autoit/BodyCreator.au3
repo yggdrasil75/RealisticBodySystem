@@ -51,7 +51,7 @@ DirCreate($BodySlidePath & "\MeshesTemp")
 _GUIChangeText("change Path to Skyrim in Bodyslide Config")
 SetGameDataPath()
 _GUIChangeText("Cleaning Folders and copying sources")
-;cleanBodySlideDirectory()
+cleanBodySlideDirectory()
 _GUIChangeText("Creating RBS_Group.xml for BodySlide")
 createList();
 _GUIChangeText("Waiting for user")

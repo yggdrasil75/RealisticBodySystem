@@ -34,6 +34,7 @@ public class RBS_Animation {
         if (save.getBool(YourSaveFile.Settings.CHECK_FOR_NEW_ANIMATIONS_ON)) {
             CopyHKXCmdIfNotExists();
             copyDefaultFemaleHKXFromRBSFolderIfNotExists();
+            copyDefaultmaleHKXFromRBSFolderIfNotExists();
             HKXcmd(SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml", "SAVE_TEXT_FORMAT");
             readXMLintoDefaultFemaleXMLContent();
             exchangeEntriesInDefaultFemaleXMLContent(SkyProcStarter.amountOfAnimations);
@@ -67,6 +68,16 @@ public class RBS_Animation {
             RBS_File.fileCopy(SkyProcStarter.pathSources + "defaultfemale.hkx", SkyProcStarter.pathToCharactersFemale + "defaultfemale.hkx");
         } else {
             SPProgressBarPlug.setStatus("defaultfemale.hkx found");
+        }
+    }
+
+    public static void copyDefaultmaleHKXFromRBSFolderIfNotExists() throws Exception {
+        SPProgressBarPlug.setStatus("defaultmale.hkx exists?");
+        File f = new File(SkyProcStarter.pathToCharactersMale + "defaultmale.hkx");
+        if (!f.exists()) {
+            RBS_File.fileCopy(SkyProcStarter.pathSources + "defaultmale.hkx", SkyProcStarter.pathToCharactersMale + "defaultmale.hkx");
+        } else {
+            SPProgressBarPlug.setStatus("defaultmale.hkx found");
         }
     }
 

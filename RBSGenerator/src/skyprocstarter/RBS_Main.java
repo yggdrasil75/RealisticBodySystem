@@ -16,7 +16,7 @@ public class RBS_Main {
 
     public RBS_Main() throws Exception {
         
-        String path = new java.io.File(".").getCanonicalPath();
+       // String path = new java.io.File(".").getCanonicalPath();
         //  SPGlobal.pathToData = path.replace("SkyProc\\dist", "");
         //  SPGlobal.pathToData = path.replace("SkyProc", "");
     }
