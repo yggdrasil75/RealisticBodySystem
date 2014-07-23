@@ -83,7 +83,7 @@ public class SkyProcStarter implements SUM {
     public static int megsOfMem = 1024;
     public static ArrayList<String> meshesGroup = new ArrayList<>(3);
     public static int amountOfAnimations;
-    public static int amountBodyTypesFemale = 0;
+    public static int amountBodyTypesFemale;
     public static int amountBodyTypesMale = 7;
 
     public static void main(String[] args) {
@@ -267,6 +267,7 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
         SkyProcStarter.pathSkyrim = new File("..\\..\\..\\").getCanonicalPath() + File.separator;
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
+        
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
 

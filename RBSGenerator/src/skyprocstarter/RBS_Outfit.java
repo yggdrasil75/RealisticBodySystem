@@ -52,6 +52,7 @@ public class RBS_Outfit {
         List<FormID> entriesToBeDeleted = new ArrayList<>();
         String ArmorType = "";
         for (String ID : SkyProcStarter.amountBodyTypesString) {
+            SPProgressBarPlug.setStatus("creating new outfits for BodyType " + ID + "/" +SkyProcStarter.amountBodyTypesString);
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 for (FormID outfitEntry : outfit.getInventoryList()) {
                     String vanillaArmorName = RBS_ARMO.vanillaArmorsMapKeyForm.get(outfitEntry);
@@ -61,11 +62,9 @@ public class RBS_Outfit {
                             entriesToBeAdded.add(FormPatched);
                             entriesToBeDeleted.add(outfitEntry);
                             if (vanillaArmorName.contains("Clothes")) {
-
                                 ArmorType = "clothes";
                             }
                             if (vanillaArmorName.contains("Armor")) {
-
                                 ArmorType = "armor";
                             }
                         }
@@ -78,16 +77,14 @@ public class RBS_Outfit {
                             entriesToBeDeleted.add(outfitEntry);
                         }
                         if (vanillaLLName.contains("Clothes")) {
-
                             ArmorType = "clothes";
                         }
                         if (vanillaLLName.contains("Armors")) {
-
                             ArmorType = "armor";
                         }
                     }
                 }
-
+                SPProgressBarPlug.setStatus("Patching because entries found " + ID + "/" +SkyProcStarter.amountBodyTypesString);
                 if (entriesToBeAdded.size() > 0) {
                     OTFT newOutfit = (OTFT) SkyProcStarter.patch.makeCopy(outfit, outfit.getEDID() + "RBS_F" + folder + ID);
                     if (ArmorType.equals("clothes")) {
@@ -102,10 +99,12 @@ public class RBS_Outfit {
                         patchOutfitsArmorMapKeyForm.put(newOutfit.getForm(), newOutfit.getEDID());
                     }
 
+                    SPProgressBarPlug.setStatus("Deleting Old Entries " + ID + "/" +SkyProcStarter.amountBodyTypesString);
                     entriesToBeDeleted.stream().forEach((Form) -> {
                         newOutfit.removeInventoryItem(Form);
                     });
                     entriesToBeDeleted.clear();
+                    SPProgressBarPlug.setStatus("Adding new Entries " + ID + "/" +SkyProcStarter.amountBodyTypesString);
                     entriesToBeAdded.stream().forEach((Form) -> {
                         newOutfit.addInventoryItem(Form);
                     });
@@ -137,13 +136,12 @@ public class RBS_Outfit {
         MajorRecord MJNew;
 
         SPProgressBarPlug.setStatus("creating new outfits " + folder);
-        for (int i = 1; i <= SkyProcStarter.amountBodyTypesFemale; i++) {
-            String bodyID = RBS_Randomize.createID(i);
+        for (String bodyID : SkyProcStarter.amountBodyTypesString) {
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 boolean patched = false;
                 List<FormID> outfitList = outfit.getInventoryList();
-                for (int list = 0; list < outfitList.size(); list++) {
-                    MJOld = SkyProcStarter.merger.getArmors().get(outfitList.get(list));
+                for (FormID outfitList1 : outfitList) {
+                    MJOld = SkyProcStarter.merger.getArmors().get(outfitList1);
                     if (MJOld != null) {
                         MJNew = SkyProcStarter.patch.getArmors().get(MJOld.getEDID() + "RBS_F" + folder + bodyID);
                         if (MJNew != null) {
@@ -164,7 +162,7 @@ public class RBS_Outfit {
                             SkyProcStarter.patch.addRecord(RBS_Outfit.m_patchOutfit);
                         }
                     }
-                    MJOld = SkyProcStarter.merger.getLeveledItems().get(outfitList.get(list));
+                    MJOld = SkyProcStarter.merger.getLeveledItems().get(outfitList1);
                     if (MJOld != null) {
                         String patchedName = MJOld.getEDID() + "RBS" + bodyID;
                         MJNew = SkyProcStarter.patch.getLeveledItems().get(patchedName);

@@ -41,8 +41,7 @@ Func _2WinWait ($FirstTitle,$SecondTitle,$FirstText = "" ,$SecondText = "" )
 EndFunc
 
 func EnterFilterText($filter)
-
-   while (ClipGet() <> $filter)
+   Do
 	  ControlClick("Caliente", "", "[CLASS:Edit; INSTANCE:2]", "left",2)
 	  sleep(500)
 	  Send($filter)
@@ -51,7 +50,7 @@ func EnterFilterText($filter)
 	  sleep(500)
 	  send("^c")
 	  sleep(500)
-   WEnd
+   Until (ClipGet() == $filter)
 endFunc
 
 Func CreateBodies($folder, $filter, $text, $step, $counter=1)
@@ -59,7 +58,6 @@ Func CreateBodies($folder, $filter, $text, $step, $counter=1)
    $failed = false
    ControlClick("Caliente", "", "[CLASS:wxWindowNR; INSTANCE:8]", "left",2)
    EnterFilterText($filter)
-
    ControlClick("Caliente", "", "[CLASS:ComboBox; INSTANCE:2]", "left",2)
    send ("{home}")
    sleep(2000)
@@ -199,7 +197,9 @@ Func CreateListGeneratedMeshes()
 EndFunc
 
 Func AskAboutAmountBodyTypes()
-   global $AmountBodyTypes = InputBox("Question", "How many Bodytyped do you want to be created (default:30)", "30", "", - 1, -1, 0, 0)
+   Do
+	  global $AmountBodyTypes = InputBox("Question", "How many Bodytypes do you want to be created (default:30, must be more than 2)", "30", "", - 1, -1, 0, 0)
+   Until ($AmountBodyTypes > 2)
    $file = FileOpen($SourcesPath & "\amountBodyTypes.txt", 2)
    FileWrite($file, $AmountBodyTypes)
    FileClose($file)

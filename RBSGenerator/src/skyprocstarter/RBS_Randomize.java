@@ -3,6 +3,7 @@ package skyprocstarter;
 import java.util.Random;
 import skyprocstarter.YourSaveFile.Settings;
 import java.text.*;
+import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_Randomize {
 
@@ -18,6 +19,7 @@ public class RBS_Randomize {
 
     public static String createRandomID(String seed) {
         NumberFormat formatter = new DecimalFormat("000");
+    SPProgressBarPlug.setStatus("" + SkyProcStarter.amountBodyTypesFemale);
         return (formatter.format(toInt(seed, 1, (SkyProcStarter.amountBodyTypesFemale) - 1)));
     }
 
@@ -30,6 +32,7 @@ public class RBS_Randomize {
     public static String createRandomID(int seed) {
         String string = String.valueOf(seed);
         NumberFormat formatter = new DecimalFormat("000");
+        SPProgressBarPlug.setStatus("" + SkyProcStarter.amountBodyTypesFemale);
         return (formatter.format(toInt(string, 1, (SkyProcStarter.amountBodyTypesFemale) - 1)));
     }
 

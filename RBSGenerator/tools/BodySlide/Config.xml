@@ -1,9 +1,9 @@
 <BodySlideConfig>
-	<GameDataPath>C:\Users\Admin\Documents\NetBeansProjects\RealisticBodySystem2\RBSGenerator\tools\Bodyslide\</GameDataPath>
-	<MeshOutputPath>MeshesTemp\</MeshOutputPath>
-	<SelectedPreset>RBS026</SelectedPreset>
-	<BodySlideFrame width="1928" height="1164" x="0" y="19"></BodySlideFrame>
-	<LastGroupFilter></LastGroupFilter>
-	<LastOutfitFilter>TBBP</LastOutfitFilter>
-	<SelectedOutfit>CT77 Imperial Light</SelectedOutfit>
+    <GameDataPath>D:\Mod Organizer\mods\RealisticBodySystem\RBSGenerator\tools\Bodyslide\</GameDataPath>
+    <MeshOutputPath>MeshesTemp\</MeshOutputPath>
+    <SelectedPreset>RBS200</SelectedPreset>
+    <BodySlideFrame width="1928" height="1164" x="0" y="19"></BodySlideFrame>
+    <LastGroupFilter></LastGroupFilter>
+    <LastOutfitFilter>wav-TBBP</LastOutfitFilter>
+    <SelectedOutfit>CT77 Imperial Light</SelectedOutfit>
 </BodySlideConfig>

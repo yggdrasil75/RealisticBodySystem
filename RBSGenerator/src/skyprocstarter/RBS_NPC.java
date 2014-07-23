@@ -45,6 +45,7 @@ public class RBS_NPC {
     public static int ms2 = 1;
 
     RBS_NPC() {
+        
         FormID playerID = new FormID("000007Skyrim.esm");
         SkyProcStarter.merger.getNPCs().removeRecord(playerID);
         boolean hasFemaleHeadPart;
@@ -87,8 +88,10 @@ public class RBS_NPC {
     }
 
     public void changeFemale() throws Exception {
+        SPProgressBarPlug.setStatus("Changing Females");
         int counter = 1;
         int max = ListNPCFemale.size();
+        SPProgressBarPlug.setStatus("Changing " + max + " Females");
         for (NPC_ NPCIterator : ListNPCFemale) {
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
