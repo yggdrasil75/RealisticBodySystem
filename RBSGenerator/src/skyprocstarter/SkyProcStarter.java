@@ -58,7 +58,7 @@ public class SkyProcStarter implements SUM {
     public static Mod patch;
     public ArrayList<ModListing> requiredMods = new ArrayList<>();
     public static String authorName = "VadersApp";
-    public static String version = "1.0";
+    public static String version = "1.1";
     public static Color headerColor = new Color(66, 181, 184);  // Teal
     public static Color settingsColor = new Color(72, 179, 58);  // Green
     public static Font settingsFont = new Font("Serif", Font.BOLD, 15);
