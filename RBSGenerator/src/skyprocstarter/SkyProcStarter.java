@@ -52,7 +52,7 @@ public class SkyProcStarter implements SUM {
         GRUP_TYPE.HDPT,
         GRUP_TYPE.LVLI
     };
-    
+
     public static String myPatchName = "RBS.esp";
     public static Mod merger;
     public static Mod patch;
@@ -75,7 +75,7 @@ public class SkyProcStarter implements SUM {
     public static String pathToCharactersFemale;
     public static String pathToCharactersMale;
     public static String pathToCharacter;
-    public static List<String> amountBodyTypes = new ArrayList<>();
+    public static List<String> amountBodyTypesString = new ArrayList<>();
     public static ArrayList<MajorRecord> usedDefaultOutfits = new ArrayList<>();
     public static ArrayList<MajorRecord> usedLeveledItems = new ArrayList<>();
     public static ArrayList<MajorRecord> usedArmors = new ArrayList<>();
@@ -83,6 +83,9 @@ public class SkyProcStarter implements SUM {
     public static int megsOfMem = 1024;
     public static ArrayList<String> meshesGroup = new ArrayList<>(3);
     public static int amountOfAnimations;
+    public static int amountBodyTypesFemale = 0;
+    public static int amountBodyTypesMale = 7;
+
     public static void main(String[] args) {
         try {
 
@@ -96,7 +99,7 @@ public class SkyProcStarter implements SUM {
 
         save.init();
         try {
-            
+
             SPGlobal.createGlobalLog();
             SUMGUI.open(new SkyProcStarter(), args);
         } catch (Exception e) {
@@ -258,9 +261,7 @@ public class SkyProcStarter implements SUM {
 
     @Override
     public void runChangesToPatch() throws Exception {
-        
-  
-    
+
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
@@ -268,18 +269,18 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
-        
+
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
         SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
-        SkyProcStarter.pathToCharactersMale = SkyProcStarter.pathToCharacter +  "characters" + File.separator;
+        SkyProcStarter.pathToCharactersMale = SkyProcStarter.pathToCharacter + "characters" + File.separator;
         SkyProcStarter.amountOfAnimations = 30;
-         FileReader fr = new FileReader(SkyProcStarter.pathSources + "amountBodyTypes.txt");
-            try (BufferedReader br = new BufferedReader(fr)) {
-            int amountBodyTypesFromFile = Integer.parseInt(br.readLine());
-            for (int i = 1; i <= amountBodyTypesFromFile; i++) {
-                SkyProcStarter.amountBodyTypes.add(RBS_Randomize.createID(i));
+        FileReader fr = new FileReader(SkyProcStarter.pathSources + "amountBodyTypes.txt");
+        try (BufferedReader br = new BufferedReader(fr)) {
+            SkyProcStarter.amountBodyTypesFemale = Integer.parseInt(br.readLine());
+            for (int i = 1; i <= SkyProcStarter.amountBodyTypesFemale; i++) {
+                SkyProcStarter.amountBodyTypesString.add(RBS_Randomize.createID(i));
             }
         }
         RBS_Race rbs_race = new RBS_Race();
@@ -321,15 +322,14 @@ public class SkyProcStarter implements SUM {
             if (save.getBool(Settings.MAK_CLOTHES_ON)) {
                 SkyProcStarter.meshesGroup.add("ct77");
             }
-            
+
             for (String meshesfolder : meshesGroup) {
                 rbs_arma.CreateNewAA(meshesfolder, save.getStr(Settings.BODY));
             }
             rbs_arma.changeNakedTorso();
             //rbs_arma.addModRacesToAA(); //not working as it should
             rbs_armo.changeSkinNaked();
-            
-            
+
             if (save.getBool(Settings.TEXTURE_DEPLOYMENT_ON)) {
                 rbs_texture.CreateTextureSetsSkinBodyFemale_1RBS();
             }

@@ -58,7 +58,7 @@ public class RBS_ARMA {
         SPProgressBarPlug.setStatus("creating " + folder + " Armor Addons");
         ListVanillaAA.stream().forEach((sourceAA) -> {
             if (hasRBSModel(sourceAA.getModelPath(Gender.FEMALE, Perspective.THIRD_PERSON).toLowerCase(), folder, "rbs001")) {
-                SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+                SkyProcStarter.amountBodyTypesString.stream().forEach((id) -> {
                     ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(sourceAA, sourceAA.getEDID() + "RBS_F" + folder + id);
                     patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                     patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());
@@ -73,7 +73,7 @@ public class RBS_ARMA {
         RBS_ARMA.nakedTorsos.stream().forEach((nakedTorso) -> {
             vanillaAAMapKeyEDID.put(nakedTorso.getEDID(), nakedTorso.getForm());
             vanillaAAMapKeyForm.put(nakedTorso.getForm(), nakedTorso.getEDID());
-            SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+            SkyProcStarter.amountBodyTypesString.stream().forEach((id) -> {
                 ARMA targetAA = (ARMA) SkyProcStarter.patch.makeCopy(nakedTorso, nakedTorso.getEDID() + "RBS_F" + id);
                 patchAAMapKeyEDID.put(targetAA.getEDID(), targetAA.getForm());
                 patchAAMapKeyForm.put(targetAA.getForm(), targetAA.getEDID());

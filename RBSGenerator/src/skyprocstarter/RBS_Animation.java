@@ -44,13 +44,14 @@ public class RBS_Animation {
     }
 
     public static void CopyHKXCmdIfNotExists() throws IOException {
+        SPProgressBarPlug.setStatus("Copying hkxcmd to Skyrim Folder");
         if (!RBS_File.fileExists(SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe")) {
             Files.copy(Paths.get(SkyProcStarter.pathToHKXcmd), Paths.get(SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe"));
         }
-
     }
 
     public static void HKXcmd(String source, String destination, String mode) throws Exception {
+        SPProgressBarPlug.setStatus("Converting wiuth hkxcmd " + mode);
         Process process;
         SPProgressBarPlug.setStatus("p " + destination);
         String command = "\"" + SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe" + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
@@ -82,6 +83,7 @@ public class RBS_Animation {
     }
 
     public static List<List<String>> readIntoAnimations(String animationPart) throws Exception {
+        SPProgressBarPlug.setStatus("Reading into Animations List");
         int folder = 0;
         int animations = 0;
         List<File> animationFolderList;
@@ -105,6 +107,7 @@ public class RBS_Animation {
 
     public static void exchangeEntriesInDefaultFemaleXMLContent(int amount) throws Exception {
         for (int i = 1; i <= amount; i++) {
+            SPProgressBarPlug.setStatus("Exchanging Entries in default XML");
             String ChangedDefaultFemaleXMLTmp = defaultFemaleXMLContent;
             for (String item : animationsPathWalking.get(RBS_Randomize.toInt("asdf" + i, 1, animationsPathWalking.size()))) {
                 Path animationPath = Paths.get(item);
@@ -139,10 +142,12 @@ public class RBS_Animation {
     }
 
     public static void readXMLintoDefaultFemaleXMLContent() throws Exception {
+        SPProgressBarPlug.setStatus("Reading XML into Default Female XML Conten");
         defaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathToCharactersFemale + "defaultfemale.xml");
     }
 
     public static void readDUMMYIntoDefaultFemaleXMLContent() {
+        SPProgressBarPlug.setStatus("Reading Dummy into Default Female XML Conten");
         dummyDefaultFemaleXMLContent = RBS_File.readFromFile(SkyProcStarter.pathSources + "defaultfemale.xml");
     }
 

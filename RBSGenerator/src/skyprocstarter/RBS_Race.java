@@ -74,7 +74,7 @@ public class RBS_Race {
         SPProgressBarPlug.setStatus("creating new male races 1");
         // no skeletonbeast for now
         NumberFormat formatter = new DecimalFormat("000");
-        for (int i = 1; i <= RBS_Main.amountBodyTypesMale; i++) {
+        for (int i = 1; i <= SkyProcStarter.amountBodyTypesMale; i++) {
             for (RACE r : ListRBSRacesMerger) {
                 String s = formatter.format(i);
                 RACE copiedRace = (RACE) SkyProcStarter.patch.makeCopy(r, r.getEDID() + "RBS_M" + s);

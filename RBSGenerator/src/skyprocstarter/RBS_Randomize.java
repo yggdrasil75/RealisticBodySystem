@@ -18,7 +18,7 @@ public class RBS_Randomize {
 
     public static String createRandomID(String seed) {
         NumberFormat formatter = new DecimalFormat("000");
-        return (formatter.format(toInt(seed, 1, (RBS_Main.amountBodyTypes) - 1)));
+        return (formatter.format(toInt(seed, 1, (SkyProcStarter.amountBodyTypesFemale) - 1)));
     }
 
     public static String createRandomID(String seed, int min, int max) {
@@ -30,7 +30,7 @@ public class RBS_Randomize {
     public static String createRandomID(int seed) {
         String string = String.valueOf(seed);
         NumberFormat formatter = new DecimalFormat("000");
-        return (formatter.format(toInt(string, 1, (RBS_Main.amountBodyTypes) - 1)));
+        return (formatter.format(toInt(string, 1, (SkyProcStarter.amountBodyTypesFemale) - 1)));
     }
 
     public static String createRandomID(int seed, int min, int max) {

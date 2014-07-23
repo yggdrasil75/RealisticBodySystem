@@ -8,9 +8,8 @@ import java.nio.file.Files;
 public class RBS_Main {
 
     
-    final public static int amountBodyTypes = 30;
 
-    public static int amountBodyTypesMale = 7;
+
     private static RBS_Main instance = null;
     public static String dataPath;
 

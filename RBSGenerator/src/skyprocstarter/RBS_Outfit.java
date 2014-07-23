@@ -51,7 +51,7 @@ public class RBS_Outfit {
         List<FormID> entriesToBeAdded = new ArrayList<>();
         List<FormID> entriesToBeDeleted = new ArrayList<>();
         String ArmorType = "";
-        for (String ID : SkyProcStarter.amountBodyTypes) {
+        for (String ID : SkyProcStarter.amountBodyTypesString) {
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 for (FormID outfitEntry : outfit.getInventoryList()) {
                     String vanillaArmorName = RBS_ARMO.vanillaArmorsMapKeyForm.get(outfitEntry);
@@ -137,7 +137,7 @@ public class RBS_Outfit {
         MajorRecord MJNew;
 
         SPProgressBarPlug.setStatus("creating new outfits " + folder);
-        for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
+        for (int i = 1; i <= SkyProcStarter.amountBodyTypesFemale; i++) {
             String bodyID = RBS_Randomize.createID(i);
             for (OTFT outfit : SkyProcStarter.merger.getOutfits()) {
                 boolean patched = false;

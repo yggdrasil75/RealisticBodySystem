@@ -43,7 +43,7 @@ public class RBS_ARMO {
         NumberFormat formatter = new DecimalFormat("000");
         List<FormID> newAA = new ArrayList<>();
         List<FormID> oldAA = new ArrayList<>();
-        for (int i = 1; i <= RBS_Main.amountBodyTypes; i++) {
+        for (int i = 1; i <= SkyProcStarter.amountBodyTypesFemale; i++) {
             String s = formatter.format(i);
             for (ARMO vanillaArmor : listVanillaArmors) {
                 vanillaArmor.getArmatures().stream().forEach((vanillaARMA) -> {
@@ -70,7 +70,7 @@ public class RBS_ARMO {
     public void changeSkinNaked() {
         SPProgressBarPlug.setStatus("change SkinNaked");
         for (MajorRecord torso : RBS_ARMO.skinNaked) {
-            SkyProcStarter.amountBodyTypes.stream().forEach((id) -> {
+            SkyProcStarter.amountBodyTypesString.stream().forEach((id) -> {
                 ARMO targetArmor = (ARMO) SkyProcStarter.patch.makeCopy(torso, torso.getEDID() + "RBS_F" + id);
                 for (MajorRecord entryAA : RBS_ARMA.nakedTorsos) {
                     targetArmor.getArmatures().remove(entryAA.getForm());

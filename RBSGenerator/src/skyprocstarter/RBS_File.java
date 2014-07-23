@@ -170,7 +170,7 @@ public class RBS_File {
 
     public void copyBodyFiles(String body, String folder) throws Exception {
         NumberFormat formatter = new DecimalFormat("000");
-        for (int bodies = 1; bodies <= RBS_Main.amountBodyTypes; bodies++) {
+        for (int bodies = 1; bodies <= SkyProcStarter.amountBodyTypesFemale; bodies++) {
             String s = formatter.format(bodies);
             fileCopy(SPGlobal.pathToData + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + body + File.separator + "actors" + File.separator + "character" + File.separator + "character assets" + File.separator + "femalebody_1.nif",
                     SPGlobal.pathToData + "meshes" + File.separator + "rbs" + File.separator + "female" + File.separator + "rbs" + s + File.separator + folder + File.separator + "actors" + File.separator + "character" + File.separator + "character assets" + File.separator + "femalebody_1.nif");
