@@ -45,8 +45,8 @@ public class RBS_Animation {
 
     public static void CopyHKXCmdIfNotExists() throws IOException {
         SPProgressBarPlug.setStatus("Copying hkxcmd to Skyrim Folder");
-        if (!RBS_File.fileExists(SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe")) {
-            Files.copy(Paths.get(SkyProcStarter.pathToHKXcmd), Paths.get(SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe"));
+        if (!RBS_File.fileExists(SkyProcStarter.pathSkyrimAppFolder + File.separator + "hkxcmd.exe")) {
+            Files.copy(Paths.get(SkyProcStarter.pathToHKXcmdSource), Paths.get(SkyProcStarter.pathToHKXcmd));
         }
     }
 
@@ -54,7 +54,7 @@ public class RBS_Animation {
         SPProgressBarPlug.setStatus("Converting wiuth hkxcmd " + mode);
         Process process;
         SPProgressBarPlug.setStatus("p " + destination);
-        String command = "\"" + SkyProcStarter.pathSkyrim + File.separator + "hkxcmd.exe" + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
+        String command = "\"" + SkyProcStarter.pathToHKXcmd + "\" convert \"" + source + "\"" + " \"" + destination + "\" -f:\"" + mode + "\"";
         process = Runtime.getRuntime().exec(command);
         SPProgressBarPlug.setStatus("w " + destination);
         process.waitFor();

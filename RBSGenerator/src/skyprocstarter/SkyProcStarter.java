@@ -69,7 +69,8 @@ public class SkyProcStarter implements SUM {
 
     public static String pathNewAnimationsSource;
     public static String pathHKX;
-    public static String pathSkyrim;
+    public static String pathSkyrimAppFolder;
+    public static String pathToHKXcmdSource;
     public static String pathToHKXcmd;
 
     public static String pathToCharactersFemale;
@@ -265,15 +266,16 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        SkyProcStarter.pathSkyrim = new File("..\\..\\..\\").getCanonicalPath() + File.separator;
+        
+        SkyProcStarter.pathSkyrimAppFolder = SPGlobal.getSkyrimAppData() + File.separator;
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
         
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
 
         SkyProcStarter.pathNewAnimationsSource = SkyProcStarter.pathToCharacter + "RBS" + File.separator + "animations" + File.separator;
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
-        SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrim + "hkxcmd.exe";
+        SkyProcStarter.pathToHKXcmdSource = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "tools" + File.separator + "hkxcmd.exe";
+        SkyProcStarter.pathToHKXcmd = SkyProcStarter.pathSkyrimAppFolder + "hkxcmd.exe";
         SkyProcStarter.pathToCharactersFemale = SkyProcStarter.pathToCharacter + "characters female" + File.separator;
         SkyProcStarter.pathToCharactersMale = SkyProcStarter.pathToCharacter + "characters" + File.separator;
         SkyProcStarter.amountOfAnimations = 30;
