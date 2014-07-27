@@ -18,7 +18,6 @@ import skyproc.MajorRecord;
 import skyproc.OTFT;
 import skyproc.gui.SPProgressBarPlug;
 
-
 public class RBS_LeveledList {
 
     public static Map<String, FormID> vanillaLLMapKeyEDID = new ConcurrentHashMap<>();
@@ -86,7 +85,7 @@ public class RBS_LeveledList {
                 vanillaArmorsToBeDeleted.clear();
             }
         }
-      SPProgressBarPlug.setStatus("Creating other leveled Lists from source");
+        SPProgressBarPlug.setStatus("Creating other leveled Lists from source");
         for (LVLI asdf : SkyProcStarter.patch.getLeveledItems()) {
             for (int i = 2; i <= SkyProcStarter.amountBodyTypesFemale; i++) {
                 SPProgressBarPlug.setStatus("Creating other leveled Lists from source now" + i + "/" + SkyProcStarter.amountBodyTypesFemale);

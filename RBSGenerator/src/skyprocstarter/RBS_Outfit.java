@@ -69,6 +69,7 @@ public class RBS_Outfit {
                             }
                         }
                     }
+                    else {
                     String vanillaLLName = RBS_LeveledList.vanillaLLMapKeyForm.get(outfitEntry);
                     if (vanillaLLName != null) {
                         FormID FormPatched = RBS_LeveledList.vanillaLLMapKeyEDID.get(vanillaLLName + "RBS_F" + folder + ID);
@@ -82,6 +83,7 @@ public class RBS_Outfit {
                         if (vanillaLLName.contains("Armors")) {
                             ArmorType = "armor";
                         }
+                    }
                     }
                 }
                 SPProgressBarPlug.setStatus("Patching because entries found " + ID + "/" +SkyProcStarter.amountBodyTypesString);

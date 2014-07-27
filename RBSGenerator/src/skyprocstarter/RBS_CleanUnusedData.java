@@ -5,6 +5,7 @@ import skyproc.ARMA;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
+import skyproc.MajorRecord;
 import skyproc.OTFT;
 
 public class RBS_CleanUnusedData {
@@ -29,7 +30,7 @@ public class RBS_CleanUnusedData {
     public void checkRecursivForLeveledItem(FormID entry) {
         HashSet<FormID> usedLeveledItems = new HashSet();
         if (SkyProcStarter.patch.getLeveledItems().get(entry) != null) {
-            checkForOutfit(entry);
+ 
             checkForArmor(entry);
             if (SkyProcStarter.patch.getLeveledItems().get(entry) != null) {
                 usedLeveledItems.add(entry);
@@ -37,42 +38,57 @@ public class RBS_CleanUnusedData {
             }
         }
         if (usedLeveledItems.size() > 0) {
-            for (FormID newEntry : usedLeveledItems) {
+            usedLeveledItems.stream().forEach((newEntry) -> {
                 checkRecursivForLeveledItem(newEntry);
-            }
+            });
         }
 
     }
 
-    
     public void CheckOutfits() {
-        for (OTFT outfit : SkyProcStarter.patch.getOutfits()) {
-            for (FormID entry : outfit.getInventoryList()) {
-                checkForOutfit(entry);
-                checkForArmor(entry);
-                checkRecursivForLeveledItem(entry);
+        
+        for (LVLI test : SkyProcStarter.patch.getLeveledItems()){
+            if (SkyProcStarter.patch.getArmors().get(test.getForm()) != null) {
+                usedArmors.add((ARMO) SkyProcStarter.patch.getArmors().get(test.getForm()));
             }
         }
+        usedOutfits.addAll(RBS_NPC.ListUsedOutfits);
+        usedOutfits.stream().forEach((outfit) -> {
+            for (FormID entry : outfit.getInventoryList()) {
+                //checkForOutfit(entry);
+                
+                checkForArmor(entry);
+               checkRecursivForLeveledItem(entry);
+            }
+        });
 
         SkyProcStarter.patch.getArmors().clear();
+        SkyProcStarter.patch.getArmors().getRecords().addAll(RBS_NPC.ListUsedArmors);
         usedArmors.stream().forEach((armor) -> {
             SkyProcStarter.patch.getArmors().addRecord(armor);
-            for (FormID entry : armor.getArmatures()) {
-                usedArmorAddons.add((ARMA)SkyProcStarter.patch.getArmatures().get(entry));
-            }
+            armor.getArmatures().stream().forEach((entry) -> {
+                MajorRecord tmp = SkyProcStarter.patch.getArmatures().get(entry);
+                if (tmp != null) {
+                    usedArmorAddons.add((ARMA) SkyProcStarter.patch.getArmatures().get(entry));
+                }
+            });
         });
 
         SkyProcStarter.patch.getOutfits().clear();
         usedOutfits.stream().forEach((outfit) -> {
             SkyProcStarter.patch.getOutfits().addRecord(outfit);
         });
+/*
+        
         SkyProcStarter.patch.getLeveledItems().clear();
         usedLeveledItemsList.stream().forEach((leveledItem) -> {
             SkyProcStarter.patch.getLeveledItems().addRecord(leveledItem);
         });
+*/
+ 
         SkyProcStarter.patch.getArmatures().clear();
-        usedOutfits.stream().forEach((ArmorAddons) -> {
-            SkyProcStarter.patch.getOutfits().addRecord(ArmorAddons);
+        usedArmorAddons.stream().forEach((ArmorAddons) -> {
+            SkyProcStarter.patch.getArmatures().addRecord(ArmorAddons);
         });
 
     }
@@ -159,3 +175,4 @@ public class RBS_CleanUnusedData {
      * keine Armor"); } } }
      */
 }
+

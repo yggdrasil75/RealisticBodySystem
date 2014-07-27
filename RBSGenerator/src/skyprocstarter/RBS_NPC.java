@@ -42,12 +42,13 @@ public class RBS_NPC {
     public static Map<FormID, String> headPartFemaleMap = new ConcurrentHashMap<>();
     public static List<FormID> ListNPCFemalePatched = new ArrayList<>();
     public static HashSet<OTFT> ListUsedOutfits = new HashSet<>();
+    public static HashSet<ARMO> ListUsedArmors = new HashSet<>();
     public static int mn2 = 1;
     public static int mc2 = 1;
     public static int ms2 = 1;
 
     RBS_NPC() {
-        
+
         FormID playerID = new FormID("000007Skyrim.esm");
         SkyProcStarter.merger.getNPCs().removeRecord(playerID);
         boolean hasFemaleHeadPart;
@@ -95,10 +96,11 @@ public class RBS_NPC {
         int max = ListNPCFemale.size();
         SPProgressBarPlug.setStatus("Changing " + max + " Females");
         for (NPC_ NPCIterator : ListNPCFemale) {
+            ARMO skinNew;
             String ID = RBS_Randomize.createRandomID(NPCIterator.getName());
             SPProgressBarPlug.setStatusNumbered(counter, max, "processing changes for females");
             if (!"No FormID".equals(NPCIterator.getDefaultOutfit().getFormStr())) {
-          
+
                 OTFT vanillaOutfit = (OTFT) SPDatabase.getMajor(NPCIterator.getDefaultOutfit());
                 if (vanillaOutfit != null) {
                     NPCIterator = setSpeedMult(NPCIterator);
@@ -109,18 +111,19 @@ public class RBS_NPC {
                     String skin = NPCIterator.getSkin().getFormStr();
                     if (skin.equals("No FormID")) {
                         if (RBS_Race.ListBeastRaces.contains(NPCIterator.getRace())) {
-                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
+                            skinNew = (ARMO) SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID);
                         } else {
-                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                            skinNew = (ARMO) SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID);
                         }
                     } else {
                         if (RBS_Race.ListHumanRaces.contains(NPCIterator.getRace())) {
-                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID).getForm());
+                            skinNew = (ARMO) SkyProcStarter.patch.getArmors().get("SkinNakedRBS_F" + ID);
                         } else {
-                            NPCIterator.setSkin(SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID).getForm());
+                            skinNew = (ARMO) SkyProcStarter.patch.getArmors().get("SkinNakedBeastRBS_F" + ID);
                         }
                     }
-
+                    ListUsedArmors.add(skinNew);
+                    NPCIterator.setSkin(skinNew.getForm());
                     if (SkyProcStarter.save.getBool(YourSaveFile.Settings.CHANGE_WEIGHT_BY_JOB_ON)) {
                         NPCIterator = changeWeight(NPCIterator, vanillaOutfit.getEDID());
                     }
@@ -287,8 +290,9 @@ public class RBS_NPC {
         return NPCIterator;
     }
 
-    private void setDefaultOutfit(NPC_ NPCIterator, OTFT outfit, String ID) {
-        String outfitName = outfit.getEDID();
+    private void setDefaultOutfit(NPC_ NPCIterator, OTFT outfitSource, String ID) {
+        String outfitName = outfitSource.getEDID();
+        OTFT outfit;
         List<OTFT> ListOfAllArmorsWithID = new ArrayList<>();
         MajorRecord MJ;
         String test;
@@ -305,17 +309,17 @@ public class RBS_NPC {
         //if (RBS_NPC.m_npc.getEDID().equals("Delphine") || RBS_NPC.m_npc.getEDID().equals("dunPOIWitchAnise") || RBS_NPC.m_raceName.toLowerCase().contains("elder")) {
         //} else {
         if (MJ != null) {
-            RBS_NPC.ListUsedOutfits.add((OTFT) MJ);
+
             NPCIterator.setDefaultOutfit(MJ.getForm());
-            
+            RBS_NPC.ListUsedOutfits.add((OTFT)MJ);
         } else {
-            for (FormID entry : outfit.getInventoryList()) {
+            for (FormID entry : outfitSource.getInventoryList()) {
                 test = RBS_ARMO.vanillaArmorsMapKeyForm.get(entry); //check if entry is armor
                 if (test == null) {
                     test = RBS_LeveledList.vanillaLLMapKeyForm.get(entry); //if its not an armor check if its a leveled list
                 }
                 if (test != null) {
-                    if (test.contains("Clothes") ) {
+                    if (test.contains("Clothes")) {
                         for (OTFT armor : RBS_Outfit.clothes) {
                             if (armor.getEDID().contains(ID)) {
                                 ListOfAllArmorsWithID.add(armor);
@@ -324,6 +328,7 @@ public class RBS_NPC {
                         outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
                         if (outfit != null) {
                             NPCIterator.setDefaultOutfit(outfit.getForm());
+                            RBS_NPC.ListUsedOutfits.add(outfit);
                         }
                     }
                     if (test.contains("Armor")) {
@@ -335,8 +340,9 @@ public class RBS_NPC {
                         }
                         outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
                         if (outfit != null) {
-                            RBS_NPC.ListUsedOutfits.add(outfit);
+
                             NPCIterator.setDefaultOutfit(outfit.getForm());
+                            RBS_NPC.ListUsedOutfits.add(outfit);
                         }
                     }
                     ListOfAllArmorsWithID.clear();

@@ -120,7 +120,7 @@ public class SkyProcStarter implements SUM {
             SkyProcStarter.path = SPGlobal.pathToData;
         }
         String nonew = "-NONEW";
-
+        arguments.add("-NOBOSS");
         if (!arguments.contains(nonew)) {
 // Less than .85 * max memory desired
             if (Runtime.getRuntime().maxMemory() < 1200 * 0.85 * 1200 * 1024) {
@@ -266,10 +266,10 @@ public class SkyProcStarter implements SUM {
         SkyProcStarter.patch = SPGlobal.getGlobalPatch();
         SkyProcStarter.merger = new Mod(getName() + "Merger", false);
         SkyProcStarter.merger.addAsOverrides(SPGlobal.getDB());
-        
+
         SkyProcStarter.pathSkyrimAppFolder = SPGlobal.getSkyrimAppData() + File.separator;
         SkyProcStarter.canonicalPath = new File(path).getCanonicalPath() + File.separator;
-        
+
         SkyProcStarter.pathSources = SkyProcStarter.canonicalPath + "RBSGenerator" + File.separator + "sources" + File.separator;
         SkyProcStarter.pathToCharacter = SkyProcStarter.canonicalPath + "meshes" + File.separator + "Actors" + File.separator + "Character" + File.separator;
 
@@ -349,7 +349,6 @@ public class SkyProcStarter implements SUM {
             }
 
             rbs_leveledList.checkItemsOfLeveledListsForPatching();
-
             if (save.getBool(Settings.POOL_OF_CLOTHES_ON)) {
                 rbs_leveledList.LItemBootsAll("standard");
                 rbs_leveledList.LItemHatsAll("standard");
@@ -362,6 +361,7 @@ public class SkyProcStarter implements SUM {
             //rbs_npc.femalize();
             rbs_npc.changeFemale();
         }
+        //   rbs_leveledList.exchangeLeveledLists();
 
         if (SkyProcStarter.save.getBool(YourSaveFile.Settings.HAIR_DEPLOYMENT_ON)) {
             rbs_hair.changeHairAllFemales();
@@ -401,9 +401,7 @@ public class SkyProcStarter implements SUM {
             rbs_quest.addQuest();
         }
         //  rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
-
-        rbs_leveledList.exchangeLeveledLists();
+//rbs_cleanUnusedData.CheckOutfits();
         //  rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
-         rbs_cleanUnusedData.CheckOutfits();
     }
 }
