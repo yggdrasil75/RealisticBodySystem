@@ -6,6 +6,7 @@ package skyprocstarter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -40,6 +41,7 @@ public class RBS_NPC {
     public static Map<FormID, String> headPartMaleMap = new ConcurrentHashMap<>();
     public static Map<FormID, String> headPartFemaleMap = new ConcurrentHashMap<>();
     public static List<FormID> ListNPCFemalePatched = new ArrayList<>();
+    public static HashSet<OTFT> ListUsedOutfits = new HashSet<>();
     public static int mn2 = 1;
     public static int mc2 = 1;
     public static int ms2 = 1;
@@ -303,15 +305,17 @@ public class RBS_NPC {
         //if (RBS_NPC.m_npc.getEDID().equals("Delphine") || RBS_NPC.m_npc.getEDID().equals("dunPOIWitchAnise") || RBS_NPC.m_raceName.toLowerCase().contains("elder")) {
         //} else {
         if (MJ != null) {
+            RBS_NPC.ListUsedOutfits.add((OTFT) MJ);
             NPCIterator.setDefaultOutfit(MJ.getForm());
+            
         } else {
             for (FormID entry : outfit.getInventoryList()) {
-                test = RBS_ARMO.vanillaArmorsMapKeyForm.get(entry);
+                test = RBS_ARMO.vanillaArmorsMapKeyForm.get(entry); //check if entry is armor
                 if (test == null) {
-                    test = RBS_LeveledList.vanillaLLMapKeyForm.get(entry);
+                    test = RBS_LeveledList.vanillaLLMapKeyForm.get(entry); //if its not an armor check if its a leveled list
                 }
                 if (test != null) {
-                    if (test.contains("Clothes")) {
+                    if (test.contains("Clothes") ) {
                         for (OTFT armor : RBS_Outfit.clothes) {
                             if (armor.getEDID().contains(ID)) {
                                 ListOfAllArmorsWithID.add(armor);
@@ -331,7 +335,7 @@ public class RBS_NPC {
                         }
                         outfit = ListOfAllArmorsWithID.get(RBS_Randomize.toInt(NPCIterator.getEDID(), 1, ListOfAllArmorsWithID.size()));
                         if (outfit != null) {
-
+                            RBS_NPC.ListUsedOutfits.add(outfit);
                             NPCIterator.setDefaultOutfit(outfit.getForm());
                         }
                     }

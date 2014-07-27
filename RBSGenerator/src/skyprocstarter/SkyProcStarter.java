@@ -404,6 +404,6 @@ public class SkyProcStarter implements SUM {
 
         rbs_leveledList.exchangeLeveledLists();
         //  rbs_leveledList.RemoveVanillaEntriesInLeveledLists();
-        //   rbs_cleanUnusedData.cleanUnusedData();
+         rbs_cleanUnusedData.CheckOutfits();
     }
 }
