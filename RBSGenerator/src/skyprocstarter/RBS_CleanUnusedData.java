@@ -1,6 +1,7 @@
 package skyprocstarter;
 
 import java.util.HashSet;
+import skyproc.ARMA;
 import skyproc.ARMO;
 import skyproc.FormID;
 import skyproc.LVLI;
@@ -11,6 +12,7 @@ public class RBS_CleanUnusedData {
     public HashSet<ARMO> usedArmors = new HashSet();
     public HashSet<LVLI> usedLeveledItemsList = new HashSet();
     public HashSet<OTFT> usedOutfits = new HashSet();
+    public HashSet<ARMA> usedArmorAddons = new HashSet();
 
     public void checkForOutfit(FormID entry) {
         if (SkyProcStarter.patch.getOutfits().get(entry) != null) {
@@ -42,6 +44,7 @@ public class RBS_CleanUnusedData {
 
     }
 
+    
     public void CheckOutfits() {
         for (OTFT outfit : SkyProcStarter.patch.getOutfits()) {
             for (FormID entry : outfit.getInventoryList()) {
@@ -54,6 +57,9 @@ public class RBS_CleanUnusedData {
         SkyProcStarter.patch.getArmors().clear();
         usedArmors.stream().forEach((armor) -> {
             SkyProcStarter.patch.getArmors().addRecord(armor);
+            for (FormID entry : armor.getArmatures()) {
+                usedArmorAddons.add((ARMA)SkyProcStarter.patch.getArmatures().get(entry));
+            }
         });
 
         SkyProcStarter.patch.getOutfits().clear();
@@ -63,6 +69,10 @@ public class RBS_CleanUnusedData {
         SkyProcStarter.patch.getLeveledItems().clear();
         usedLeveledItemsList.stream().forEach((leveledItem) -> {
             SkyProcStarter.patch.getLeveledItems().addRecord(leveledItem);
+        });
+        SkyProcStarter.patch.getArmatures().clear();
+        usedOutfits.stream().forEach((ArmorAddons) -> {
+            SkyProcStarter.patch.getOutfits().addRecord(ArmorAddons);
         });
 
     }
