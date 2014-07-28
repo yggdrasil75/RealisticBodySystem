@@ -63,7 +63,7 @@ public class RBS_CleanUnusedData {
         });
 
         SkyProcStarter.patch.getArmors().clear();
-        SkyProcStarter.patch.getArmors().getRecords().addAll(RBS_NPC.ListUsedArmors);
+        usedArmors.addAll(RBS_NPC.ListUsedArmors);
         usedArmors.stream().forEach((armor) -> {
             SkyProcStarter.patch.getArmors().addRecord(armor);
             armor.getArmatures().stream().forEach((entry) -> {
