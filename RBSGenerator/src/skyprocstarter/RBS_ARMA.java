@@ -15,7 +15,7 @@ import skyproc.genenums.Perspective;
 import skyproc.gui.SPProgressBarPlug;
 
 public class RBS_ARMA {
-
+//test
     public static ArrayList<ARMA> ListVanillaAA = new ArrayList<>(100000);
     public static Map<String, FormID> vanillaAAMapKeyEDID = new ConcurrentHashMap<>();
     public static Map<FormID, String> vanillaAAMapKeyForm = new ConcurrentHashMap<>();
